@@ -296,4 +296,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("Talpine");
    //Edge symbol end:'Talpine'
 
+   //=========================================================
+   
+   //Edge symbol: 'Coda'
+   (function(symbolName) {   
+   
+   })("Coda");
+   //Edge symbol end:'Coda'
+
 })(jQuery, AdobeEdge, "Quadro02");
