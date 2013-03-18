@@ -1544,7 +1544,7 @@
 			"animationEnabled":"true",
 			"locked":"false",
 			"invisible":"false"}},
-	"TransitionIdCounter":"8716",
+	"TransitionIdCounter":"8732",
 	"symbol_Down-level":{
 		"defaultStageParentWidth":"1024px",
 		"defaultStageParentHeight":"768px",
@@ -1566,6 +1566,6 @@
 	"expanded:Pezzi/":"true",
 	"Viola-Default Timeline_playhead_ms":"0",
 	"Cavolo-Default Timeline_playhead_ms":"0",
-	"pref__general__AutoKeyframePropertiesArmed":"true",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"Braccio-Default Timeline_mark_ms":"-1",
 	"Api-Default Timeline_playhead_ms":"0"}

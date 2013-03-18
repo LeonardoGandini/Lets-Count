@@ -62,15 +62,21 @@ loadResources(aLoader, doDelayLoad);
 preContent={
    dom: [
    {
-      id:'Poster2',
+      id:'preloader3',
       type:'image',
       tag:'img',
       rect:['0px','0px','1024px','768px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/Poster4.png','0px','0px']
+      fill:["rgba(0,0,0,0)",'images/Poster6.png','0px','0px']
    }]};//simpleContent
 
-dlContent={dom: [
-]}
-;//simpleContent
+dlContent={
+   dom: [
+   {
+      id:'Poster6',
+      type:'image',
+      tag:'img',
+      rect:['0','0','1024px','768px','auto','auto'],
+      fill:["rgba(0,0,0,0)",'images/Poster6.png','0px','0px']
+   }]};//simpleContent
 
 })( "Quadro02");
