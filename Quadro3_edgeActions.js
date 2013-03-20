@@ -37,11 +37,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
       
-      $(".fioreani, .innaffia").bind('touchstart', function(){
+      $(".fioreani, .innaffia, .pomostatico, .Talpona").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
       
-      $(".cavolini").bind('touchstart', function(){
+      $(".pomostatico").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       	AudioFoglie.load();
       	AudioFoglie.play();	
@@ -245,21 +245,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'SOLE'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2288, function(sym, e) {
-         // stop the timeline at the given position (ms or label)
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-   })("SOLE");
-   //Edge symbol end:'SOLE'
-
-   //=========================================================
-   
    //Edge symbol: 'Giallo'
    (function(symbolName) {   
    
@@ -303,5 +288,37 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("Coda");
    //Edge symbol end:'Coda'
+
+   //=========================================================
+   
+   //Edge symbol: 'Pomodori-Statici'
+   (function(symbolName) {   
+   
+   })("Pomodori-Statici");
+   //Edge symbol end:'Pomodori-Statici'
+
+   //=========================================================
+   
+   //Edge symbol: 'Pomodori-Giusti'
+   (function(symbolName) {   
+   
+   })("Pomodori-Giusti");
+   //Edge symbol end:'Pomodori-Giusti'
+
+   //=========================================================
+   
+   //Edge symbol: 'PomoStatico'
+   (function(symbolName) {   
+   
+   })("PomoStatico");
+   //Edge symbol end:'PomoStatico'
+
+   //=========================================================
+   
+   //Edge symbol: 'Talpona'
+   (function(symbolName) {   
+   
+   })("Talpona");
+   //Edge symbol end:'Talpona'
 
 })(jQuery, AdobeEdge, "Quadro02");
