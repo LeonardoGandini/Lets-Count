@@ -32,12 +32,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioTada2 = new Audio('Suoni/Tada2.mp3');  
          AudioAnt = new Audio('Suoni/squek.mp3');
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
-      	sym.$(".fumo").css({'-webkit-filter': 'blur(1px)'});
+       
          sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
       
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
       
-      $(".fioreani, .innaffia, .pomostatico, .Talpona").bind('touchstart', function(){
+      $(".fioreani, .innaffia, .pomostatico, .Talpona, .talpine").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
       
@@ -56,24 +56,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	sym.getSymbol(".CAVOLO_BIG_2").play("in");
       });
       $(".codatrigger").bind('touchstart', function(){
-      	sym.getSymbol(".coda").play("in");
+      	sym.getSymbol(".codaani").play("in");
+      	sym.getSymbol(".lbcoda").play("in");
       });
-      $(".Sole_Button").bind('touchstart', function(){
-      	sym.getSymbol(".SOLE").play("in");
-      });
-      $(".apibutton").bind('touchstart', function(){
-      	sym.getSymbol(".api").play("in");
-      	AudioApi.load();
-      	AudioApi.play();
-      });
+      
       sym.getSymbol("FUMELLO").play("in");
       
-      /*$(".formica").bind('touchstart click', function(){
-      sym.getSymbol(this).play("in");
-             var div=$(".formica");
-             div.animate({top:'-=25px'},"500");
-             div.animate({top:'+=25px'},"1");
-         });*/
       $(".formica").bind('touchstart', function(){
       	AudioAnt.load();
       	AudioAnt.play();	
@@ -275,14 +263,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'Talpine'
-   (function(symbolName) {   
-   
-   })("Talpine");
-   //Edge symbol end:'Talpine'
-
-   //=========================================================
-   
    //Edge symbol: 'Coda'
    (function(symbolName) {   
    
@@ -320,5 +300,29 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("Talpona");
    //Edge symbol end:'Talpona'
+
+   //=========================================================
+   
+   //Edge symbol: 'CodaAni'
+   (function(symbolName) {   
+   
+   })("CodaAni");
+   //Edge symbol end:'CodaAni'
+
+   //=========================================================
+   
+   //Edge symbol: 'Talpine'
+   (function(symbolName) {   
+   
+   })("Talpine");
+   //Edge symbol end:'Talpine'
+
+   //=========================================================
+   
+   //Edge symbol: 'Ladybird-Coda'
+   (function(symbolName) {   
+   
+   })("Ladybird-Coda");
+   //Edge symbol end:'Ladybird-Coda'
 
 })(jQuery, AdobeEdge, "Quadro02");
