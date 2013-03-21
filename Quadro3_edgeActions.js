@@ -279,14 +279,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'Pomodori-Giusti'
-   (function(symbolName) {   
-   
-   })("Pomodori-Giusti");
-   //Edge symbol end:'Pomodori-Giusti'
-
-   //=========================================================
-   
    //Edge symbol: 'PomoStatico'
    (function(symbolName) {   
    
@@ -324,5 +316,29 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("Ladybird-Coda");
    //Edge symbol end:'Ladybird-Coda'
+
+   //=========================================================
+   
+   //Edge symbol: 'PomodoroG-1'
+   (function(symbolName) {   
+   
+   })("PomodoroG-1");
+   //Edge symbol end:'PomodoroG-1'
+
+   //=========================================================
+   
+   //Edge symbol: 'PomodoroG-2'
+   (function(symbolName) {   
+   
+   })("PomodoroG-2");
+   //Edge symbol end:'PomodoroG-2'
+
+   //=========================================================
+   
+   //Edge symbol: 'PomodoroG-3'
+   (function(symbolName) {   
+   
+   })("PomodoroG-3");
+   //Edge symbol end:'PomodoroG-3'
 
 })(jQuery, AdobeEdge, "Quadro02");
