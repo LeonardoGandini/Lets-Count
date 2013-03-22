@@ -32,11 +32,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioTada2 = new Audio('Suoni/Tada2.mp3');  
          AudioAnt = new Audio('Suoni/squek.mp3');
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
-       
+         
          sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
-      
+         
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
-      
+         
       $(".fioreani, .innaffia, .pomostatico, .Talpona, .talpine").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
@@ -47,14 +47,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	AudioFoglie.play();	
       });
       
-      $(".cavolo2trigger").hide();
-      $(".CAVOLO_BIG_1").bind('touchstart', function(){
+      $(".pomo2trigger, .pomo3trigger").hide();
+      $(".PomodoroG-1").bind('touchstart click', function(){
       	sym.getSymbol(this).play("in");
-      	$(".cavolo2trigger").show();
+      	$(".pomo2trigger").show();
       });
-      $(".cavolo2trigger").bind('touchstart', function(){
-      	sym.getSymbol(".CAVOLO_BIG_2").play("in");
+      $(".pomo2trigger").bind('touchstart click', function(){
+      	sym.getSymbol(".PomodoroG-2").play("in");
+      	$(".pomo3trigger").show();
       });
+      $(".pomo3trigger").bind('touchstart click', function(){
+      	sym.getSymbol(".PomodoroG-3").play("in");
+      });
+      
+      
+      
+      
       $(".codatrigger").bind('touchstart', function(){
       	sym.getSymbol(".codaani").play("in");
       	sym.getSymbol(".lbcoda").play("in");
@@ -178,14 +186,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindElementAction(compId, symbolName, "${_NEXT}", "touchstart", function(sym, e) {
          sym.getComposition().getStage().getSymbol("MENUz").getSymbol("NEXT").play("in");
-         window.open("Quadro3.html", "_self");
+         window.open("Quadro4.html", "_self");
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_PREV}", "touchstart", function(sym, e) {
          sym.getComposition().getStage().getSymbol("MENUz").getSymbol("PREV").play("in");
-         window.open("./Quadro1.html", "_self");
+         window.open("./Quadro2.html", "_self");
 
       });
       //Edge binding end
@@ -322,6 +330,23 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'PomodoroG-1'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1178, function(sym, e) {
+         sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 549, function(sym, e) {
+         sym.getSymbol(".scoiattolo").play("in");
+         //Se il fumello è giù, tiralo su!
+         var position = sym.$(".fumello").position();
+          if (position.top >= 100){
+         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
+         }
+
+      });
+      //Edge binding end
+
    })("PomodoroG-1");
    //Edge symbol end:'PomodoroG-1'
 
@@ -330,6 +355,23 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'PomodoroG-2'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 573, function(sym, e) {
+         sym.getSymbol(".scoiattolo").play("in");
+         //Se il fumello è giù, tiralo su!
+         var position = sym.$(".fumello").position();
+          if (position.top >= 100){
+         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1202, function(sym, e) {
+         sym.$(".due").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
+
+      });
+      //Edge binding end
+
    })("PomodoroG-2");
    //Edge symbol end:'PomodoroG-2'
 
@@ -338,7 +380,32 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'PomodoroG-3'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 471, function(sym, e) {
+         sym.getSymbol(".scoiattolo").play("in");
+         //Se il fumello è giù, tiralo su!
+         var position = sym.$(".fumello").position();
+          if (position.top >= 100){
+         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1100, function(sym, e) {
+         sym.$(".tre").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
+
+      });
+      //Edge binding end
+
    })("PomodoroG-3");
    //Edge symbol end:'PomodoroG-3'
+
+   //=========================================================
+   
+   //Edge symbol: 'Scoiattolo'
+   (function(symbolName) {   
+   
+   })("Scoiattolo");
+   //Edge symbol end:'Scoiattolo'
 
 })(jQuery, AdobeEdge, "Quadro02");
