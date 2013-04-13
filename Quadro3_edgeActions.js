@@ -226,21 +226,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-     //Edge symbol: 'FioreAni'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
-         // stop the timeline at the given position (ms or label)
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-   })("FioreAni");
-   //Edge symbol end:'FioreAni'
-
-   //=========================================================
-   
    //Edge symbol: 'Giallo'
    (function(symbolName) {   
    

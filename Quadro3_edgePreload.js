@@ -66,7 +66,7 @@ preContent={
       type:'image',
       tag:'img',
       rect:['0px','0px','1024px','768px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/Poster6.png','0px','0px']
+      fill:["rgba(0,0,0,0)",'images/Q3-Poster.png','0px','0px']
    }]};//simpleContent
 
 dlContent={
@@ -76,7 +76,7 @@ dlContent={
       type:'image',
       tag:'img',
       rect:['0','0','1024px','768px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/Poster6.png','0px','0px']
+      fill:["rgba(0,0,0,0)",'images/Q3-Poster.png','0px','0px']
    }]};//simpleContent
 
 })( "Quadro02");

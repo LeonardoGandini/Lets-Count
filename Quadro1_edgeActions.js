@@ -288,14 +288,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'PREV'
-   (function(symbolName) {   
-   
-   })("PREV");
-   //Edge symbol end:'PREV'
-
-   //=========================================================
-   
    //Edge symbol: 'NEXT'
    (function(symbolName) {   
    

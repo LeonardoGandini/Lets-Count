@@ -135,21 +135,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'TESTA'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3959, function(sym, e) {
-         // stop the timeline at the given position (ms or label)
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-   })("TESTA");
-   //Edge symbol end:'TESTA'
-
-   //=========================================================
-   
    //Edge symbol: 'FUMELLO'
    (function(symbolName) {   
    
@@ -288,36 +273,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("NEXT");
    //Edge symbol end:'NEXT'
-
-   //=========================================================
-   
-   //Edge symbol: 'Lumachina'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 62500, function(sym, e) {
-         // play the timeline from the given position (ms or label)
-         sym.play(0);
-
-      });
-      //Edge binding end
-
-   })("Lumachina");
-   //Edge symbol end:'Lumachina'
-
-   //=========================================================
-   
-     //Edge symbol: 'FioreAni'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
-         // stop the timeline at the given position (ms or label)
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-   })("FioreAni");
-   //Edge symbol end:'FioreAni'
 
    //=========================================================
    
