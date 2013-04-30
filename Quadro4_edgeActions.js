@@ -37,11 +37,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
          
-      $(".fioreani, .innaffia, .pomostatico, .Talpona, .talpine").bind('touchstart', function(){
+      $(".fioreani, .FioreFragole").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
       
-      $(".pomostatico").bind('touchstart', function(){
+      $(".FragStat").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       	AudioFoglie.load();
       	AudioFoglie.play();	
@@ -65,17 +65,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       $(".codatrigger").bind('touchstart', function(){
       	sym.getSymbol(".codaani").play("in");
-      	sym.getSymbol(".lbcoda").play("in");
       });
       
       sym.getSymbol("FUMELLO").play("in");
       
+      /*
       $(".formica").bind('touchstart', function(){
       	AudioAnt.load();
       	AudioAnt.play();	
       	$(this).animate({top:'-=20px'},"140");
       	$(this).animate({top:'+=20px'},"1");
       });
+      */
 
       });//Edge binding end
       
@@ -226,22 +227,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'Giallo'
-   (function(symbolName) {   
-   
-   })("Giallo");
-   //Edge symbol end:'Giallo'
-
-   //=========================================================
-   
-   //Edge symbol: 'Viola'
-   (function(symbolName) {   
-   
-   })("Viola");
-   //Edge symbol end:'Viola'
-
-   //=========================================================
-   
    //Edge symbol: 'Coda'
    (function(symbolName) {   
    
@@ -255,5 +240,53 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("CodaAni");
    //Edge symbol end:'CodaAni'
+
+   //=========================================================
+   
+   //Edge symbol: 'Cespuglio-Giuncoso'
+   (function(symbolName) {   
+   
+   })("Cespuglio-Giuncoso");
+   //Edge symbol end:'Cespuglio-Giuncoso'
+
+   //=========================================================
+   
+   //Edge symbol: 'Scoiattolo'
+   (function(symbolName) {   
+   
+   })("Scoiattolo");
+   //Edge symbol end:'Scoiattolo'
+
+   //=========================================================
+   
+   //Edge symbol: 'Fiore-Fragole'
+   (function(symbolName) {   
+   
+   })("Fiore-Fragole");
+   //Edge symbol end:'Fiore-Fragole'
+
+   //=========================================================
+   
+   //Edge symbol: 'FragoleStatiche'
+   (function(symbolName) {   
+   
+   })("FragoleStatiche");
+   //Edge symbol end:'FragoleStatiche'
+
+   //=========================================================
+   
+   //Edge symbol: 'Fragola-1'
+   (function(symbolName) {   
+   
+   })("Fragola-1");
+   //Edge symbol end:'Fragola-1'
+
+   //=========================================================
+   
+   //Edge symbol: 'FragStat'
+   (function(symbolName) {   
+   
+   })("FragStat");
+   //Edge symbol end:'FragStat'
 
 })(jQuery, AdobeEdge, "Quadro02");
