@@ -32,11 +32,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioTada2 = new Audio('Suoni/Tada2.mp3');  
          AudioAnt = new Audio('Suoni/squek.mp3');
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
-         
+      
          sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
-         
+      
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
-         
+      
       $(".fioreani, .FioreFragole").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
@@ -47,19 +47,29 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	AudioFoglie.play();	
       });
       
-      $(".pomo2trigger, .pomo3trigger").hide();
-      $(".PomodoroG-1").bind('touchstart click', function(){
-      	sym.getSymbol(this).play("in");
-      	$(".pomo2trigger").show();
-      });
-      $(".pomo2trigger").bind('touchstart click', function(){
-      	sym.getSymbol(".PomodoroG-2").play("in");
-      	$(".pomo3trigger").show();
-      });
-      $(".pomo3trigger").bind('touchstart click', function(){
-      	sym.getSymbol(".PomodoroG-3").play("in");
+      
+      $(".libellulaTrigger").bind('touchstart', function(){
+      	sym.getSymbol(".libellulalat").play("in");
       });
       
+      $(".fragola2trigger, .fragola3trigger, .fragola4trigger").hide();
+      
+      $(".fragola1").bind('touchstart', function(){
+      	sym.getSymbol(this).play("in");
+      	$(".fragola2trigger").show();
+      });
+      
+      $(".fragola2trigger").bind('touchstart', function(){
+      	sym.getSymbol(".fragola2").play("in");
+      	$(".fragola3trigger").show();
+      });
+      $(".fragola3trigger").bind('touchstart', function(){
+      	sym.getSymbol(".fragola3").play("in");
+      	$(".fragola4trigger").show();
+      });
+      $(".fragola4trigger").bind('touchstart', function(){
+      	sym.getSymbol(".fragola4").play("in");
+      });
       
       
       
@@ -69,15 +79,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       sym.getSymbol("FUMELLO").play("in");
       
-      /*
-      $(".formica").bind('touchstart', function(){
-      	AudioAnt.load();
-      	AudioAnt.play();	
-      	$(this).animate({top:'-=20px'},"140");
+      
+      $(".riccio").bind('touchstart', function(){
+      	/*AudioAnt.load();
+      	AudioAnt.play();	*/
+      	$(this).animate({top:'-=20px'},"190");
       	$(this).animate({top:'+=20px'},"1");
       });
-      */
-
+      
       });//Edge binding end
       
 
@@ -278,6 +287,23 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'Fragola-1'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 428, function(sym, e) {
+         sym.getSymbol(".scoiattolo").play("in");
+         //Se il fumello è giù, tiralo su!
+         var position = sym.$(".fumello").position();
+          if (position.top >= 100){
+         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1250, function(sym, e) {
+         sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
+
+      });
+      //Edge binding end
+
    })("Fragola-1");
    //Edge symbol end:'Fragola-1'
 
@@ -289,4 +315,103 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("FragStat");
    //Edge symbol end:'FragStat'
 
-})(jQuery, AdobeEdge, "Quadro02");
+   //=========================================================
+   
+   //Edge symbol: 'Ricci'
+   (function(symbolName) {   
+   
+   })("Ricci");
+   //Edge symbol end:'Ricci'
+
+   //=========================================================
+   
+   //Edge symbol: 'LibellulaAuto'
+   (function(symbolName) {   
+   
+   })("LibellulaAuto");
+   //Edge symbol end:'LibellulaAuto'
+
+   //=========================================================
+   
+   //Edge symbol: 'Fragola-1_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 428, function(sym, e) {
+         sym.getSymbol(".scoiattolo").play("in");
+         //Se il fumello è giù, tiralo su!
+         var position = sym.$(".fumello").position();
+          if (position.top >= 100){
+         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
+         }
+
+      });
+         //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1250, function(sym, e) {
+         sym.$(".due").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
+
+      });
+         //Edge binding end
+
+      })("Fragola-2");
+   //Edge symbol end:'Fragola-2'
+
+   //=========================================================
+   
+   //Edge symbol: 'Fragola-2_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 428, function(sym, e) {
+         sym.getSymbol(".scoiattolo").play("in");
+         //Se il fumello è giù, tiralo su!
+         var position = sym.$(".fumello").position();
+          if (position.top >= 100){
+         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
+         }
+
+      });
+         //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1250, function(sym, e) {
+         sym.$(".tre").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
+
+      });
+         //Edge binding end
+
+      })("Fragola-3");
+   //Edge symbol end:'Fragola-3'
+
+   //=========================================================
+   
+   //Edge symbol: 'Fragola-3_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 428, function(sym, e) {
+         sym.getSymbol(".scoiattolo").play("in");
+         //Se il fumello è giù, tiralo su!
+         var position = sym.$(".fumello").position();
+          if (position.top >= 100){
+         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
+         }
+
+      });
+         //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1250, function(sym, e) {
+         sym.$(".tre").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
+
+      });
+         //Edge binding end
+
+      })("Fragola-4");
+   //Edge symbol end:'Fragola-4'
+
+   //=========================================================
+   
+   //Edge symbol: 'libellulalat'
+   (function(symbolName) {   
+   
+   })("libellulalat");
+   //Edge symbol end:'libellulalat'
+
+})(jQuery, AdobeEdge, "Quadro04");

@@ -52,8 +52,8 @@ if(document.addEventListener ){
    aLoader = [
     { load: "edge_includes/jquery-1.7.1.min.js"},
     { load: "edge_includes/edge.1.5.0.min.js"},
-          { load: "Quadro4_edge.js"},
-          { load: "Quadro4_edgeActions.js"}];
+          { load: "Quadro5_edge.js"},
+          { load: "Quadro5_edgeActions.js"}];
 
 if (AdobeEdge.bootstrapLoading) { signaledLoading = true; AdobeEdge.loadResources=doLoadResources; AdobeEdge.playWhenReady=playWhenReady; }
 
@@ -66,7 +66,7 @@ preContent={
       type:'image',
       tag:'img',
       rect:['0px','0px','1024px','768px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/Q4-Poster.png','0px','0px']
+      fill:["rgba(0,0,0,0)",'images/Q3-Poster.png','0px','0px']
    }]};//simpleContent
 
 dlContent={
@@ -76,7 +76,7 @@ dlContent={
       type:'image',
       tag:'img',
       rect:['0','0','1024px','768px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/Q4-Poster.png','0px','0px']
+      fill:["rgba(0,0,0,0)",'images/Q3-Poster.png','0px','0px']
    }]};//simpleContent
 
-})( "Quadro04");
+})( "Quadro02");
