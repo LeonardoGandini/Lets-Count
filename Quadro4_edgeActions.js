@@ -320,6 +320,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'Ricci'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 25500, function(sym, e) {
+         // play the timeline from the given position (ms or label)
+         sym.play(0);
+
+      });
+      //Edge binding end
+
    })("Ricci");
    //Edge symbol end:'Ricci'
 
@@ -385,7 +392,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'Fragola-3_1'
    (function(symbolName) {   
-   
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 428, function(sym, e) {
          sym.getSymbol(".scoiattolo").play("in");
          //Se il fumello è giù, tiralo su!
@@ -393,13 +400,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
           if (position.top >= 100){
          	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
          }
-
+      
       });
          //Edge binding end
-
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1250, function(sym, e) {
-         sym.$(".tre").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
-
+         sym.$(".quattro").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
+      
       });
          //Edge binding end
 
