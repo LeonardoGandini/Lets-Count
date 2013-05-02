@@ -79,4 +79,4 @@ dlContent={
       fill:["rgba(0,0,0,0)",'images/Q3-Poster.png','0px','0px']
    }]};//simpleContent
 
-})( "Quadro02");
+})( "Quadro03");

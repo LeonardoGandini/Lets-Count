@@ -304,6 +304,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 887, function(sym, e) {
+            AudioTada1.load();
+            AudioTada1.play();
+
+      });
+      //Edge binding end
+
    })("Fragola-1");
    //Edge symbol end:'Fragola-1'
 
@@ -360,6 +367,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
          //Edge binding end
 
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 902, function(sym, e) {
+            AudioTada1.load();
+            AudioTada1.play();
+
+      });
+      //Edge binding end
+
       })("Fragola-2");
    //Edge symbol end:'Fragola-2'
 
@@ -385,6 +399,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
          //Edge binding end
 
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 878, function(sym, e) {
+            AudioTada1.load();
+            AudioTada1.play();
+
+      });
+      //Edge binding end
+
       })("Fragola-3");
    //Edge symbol end:'Fragola-3'
 
@@ -409,6 +430,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       });
          //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 739, function(sym, e) {
+            AudioTada2.load();
+            AudioTada2.play();
+
+      });
+      //Edge binding end
 
       })("Fragola-4");
    //Edge symbol end:'Fragola-4'

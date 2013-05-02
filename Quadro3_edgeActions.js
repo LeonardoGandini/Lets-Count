@@ -332,6 +332,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
+            AudioTada1.load();
+            AudioTada1.play();
+
+      });
+      //Edge binding end
+
    })("PomodoroG-1");
    //Edge symbol end:'PomodoroG-1'
 
@@ -353,6 +360,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1202, function(sym, e) {
          sym.$(".due").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});	
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
+            AudioTada1.load();
+            AudioTada1.play();
 
       });
       //Edge binding end
@@ -382,6 +396,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 862, function(sym, e) {
+            AudioTada2.load();
+            AudioTada2.play();
+
+      });
+      //Edge binding end
+
    })("PomodoroG-3");
    //Edge symbol end:'PomodoroG-3'
 
@@ -393,4 +414,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("Scoiattolo");
    //Edge symbol end:'Scoiattolo'
 
-})(jQuery, AdobeEdge, "Quadro02");
+})(jQuery, AdobeEdge, "Quadro03");

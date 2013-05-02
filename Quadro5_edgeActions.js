@@ -227,4 +227,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("CodaAni");
    //Edge symbol end:'CodaAni'
 
-})(jQuery, AdobeEdge, "Quadro02");
+})(jQuery, AdobeEdge, "Quadro05");

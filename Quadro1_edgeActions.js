@@ -26,7 +26,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioBird = new Audio('Suoni/cip01.mp3');
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioLumaca = new Audio('Suoni/Lumaca01.mp3');
-         AudioNumero = new Audio('Suoni/TadaTest.mp3');
+         AudioTada1 = new Audio('Suoni/Tada1.mp3');
+         
          /*Nasconde il numero 1*/sym.$(".Numero_1_col").css({'display': 'none'});
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       
@@ -145,7 +146,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1583, function(sym, e) {
-         AudioNumero.play();
+         AudioTada1.load();
+         AudioTada1.play();
 
       });
       //Edge binding end
