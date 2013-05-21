@@ -27,7 +27,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
          /*AUDIO*/
          AudioFoglie = new Audio('Suoni/foglia.mp3');
-         AudioApi = new Audio('Suoni/Bees.mp3');
+         AudioBird = new Audio('Suoni/cip01.mp3');
          AudioTada1 = new Audio('Suoni/Tada1.mp3');
          AudioTada2 = new Audio('Suoni/Tada2.mp3');  
          AudioAnt = new Audio('Suoni/squek.mp3');
@@ -48,34 +48,36 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       
       $(".pomo2trigger, .pomo3trigger").hide();
-      $(".PomodoroG-1").bind('touchstart click', function(){
+      $(".PomodoroG-1").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       	$(".pomo2trigger").show();
       });
-      $(".pomo2trigger").bind('touchstart click', function(){
+      $(".pomo2trigger").bind('touchstart', function(){
       	sym.getSymbol(".PomodoroG-2").play("in");
       	$(".pomo3trigger").show();
       });
-      $(".pomo3trigger").bind('touchstart click', function(){
+      $(".pomo3trigger").bind('touchstart', function(){
       	sym.getSymbol(".PomodoroG-3").play("in");
       });
       
       
+      $(".BirdPala, .BirdTerra").bind('touchstart', function(){
+      	sym.getSymbol(this).play("in");
+      	AudioBird.load();
+      	AudioBird.play();	
+      });
       
-      
+      $(".triggerverme").bind('touchstart', function(){
+      	sym.getSymbol(".verme").play("in");
+      });
+      $(".Trigger-Mela-Easter").bind('touchstart', function(){
+      	sym.getSymbol(".melaeaster").play("in");
+      });
       $(".codatrigger").bind('touchstart', function(){
       	sym.getSymbol(".codaani").play("in");
       });
       
       sym.getSymbol("FUMELLO").play("in");
-      
-      
-      $(".riccio").bind('touchstart click', function(){
-      	/*AudioAnt.load();
-      	AudioAnt.play();	*/
-      	$(this).animate({top:'-=20px'},"140");
-      	$(this).animate({top:'+=20px'},"1");
-      });
 
       });//Edge binding end
       
@@ -274,5 +276,45 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("FioreBlu");
    //Edge symbol end:'FioreBlu'
+
+   //=========================================================
+   
+   //Edge symbol: 'Bird-Pala'
+   (function(symbolName) {   
+   
+   })("Bird-Pala");
+   //Edge symbol end:'Bird-Pala'
+
+   //=========================================================
+   
+   //Edge symbol: 'Bird-Tereno'
+   (function(symbolName) {   
+   
+   })("Bird-Tereno");
+   //Edge symbol end:'Bird-Tereno'
+
+   //=========================================================
+   
+   //Edge symbol: 'Scoiattolo'
+   (function(symbolName) {   
+   
+   })("Scoiattolo");
+   //Edge symbol end:'Scoiattolo'
+
+   //=========================================================
+   
+   //Edge symbol: 'Mela-Easter-Egg'
+   (function(symbolName) {   
+   
+   })("Mela-Easter-Egg");
+   //Edge symbol end:'Mela-Easter-Egg'
+
+   //=========================================================
+   
+   //Edge symbol: 'Down-level'
+   (function(symbolName) {   
+   
+   })("Down-level");
+   //Edge symbol end:'Down-level'
 
 })(jQuery, AdobeEdge, "Quadro05");

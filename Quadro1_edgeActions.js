@@ -30,9 +30,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          /*Nasconde il numero 1*/sym.$(".Numero_1_col").css({'display': 'none'});
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
-      
+         
          sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
-      
+         
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
         /* $(".fioreani").click(function(){
          	sym.getSymbol(this).play("in");
@@ -51,7 +51,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getSymbol(".coda").play("in");
          });
       
-         sym.$(".uccellino, .carota").css({'-webkit-filter': 'drop-shadow(0 2px 3px rgba(0,0,0,.35))'});
+        //sym.$(".uccellino, .carota").css({'-webkit-filter': 'drop-shadow(0 2px 3px rgba(0,0,0,.35))'});
          sym.getSymbol(".lumacacontainer").play("in");
          $(".lumacacontainer").bind('touchstart', function(){
          	AudioLumaca.load();
@@ -63,7 +63,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          /*Tira giù il fumello*/sym.getSymbol("FUMELLO").play();
       
       
-      
+
       });
       //Edge binding end
       
@@ -348,5 +348,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("Coda");
    //Edge symbol end:'Coda'
+
+   //=========================================================
+   
+   //Edge symbol: 'Down-level'
+   (function(symbolName) {   
+   
+   })("Down-level");
+   //Edge symbol end:'Down-level'
 
 })(jQuery, AdobeEdge, "Quadro01");

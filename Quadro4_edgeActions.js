@@ -459,4 +459,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("libellulalat");
    //Edge symbol end:'libellulalat'
 
+   //=========================================================
+   
+   //Edge symbol: 'Down-level'
+   (function(symbolName) {   
+   
+   })("Down-level");
+   //Edge symbol end:'Down-level'
+
 })(jQuery, AdobeEdge, "Quadro04");

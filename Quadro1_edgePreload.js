@@ -62,21 +62,22 @@ loadResources(aLoader, doDelayLoad);
 preContent={
    dom: [
    {
-      id:'Poster',
+      id:'G-Fondo-Preloader',
       type:'image',
       tag:'img',
-      rect:['0px','1px','1024px','768px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/Q1-Poster.png','0px','0px']
+      rect:['-88px','-216px','1200px','1200px','auto','auto'],
+      fill:["rgba(0,0,0,0)",'images/G-Fondo-Preloader.png','0px','0px']
+   },
+   {
+      id:'G-Preloader',
+      type:'image',
+      tag:'img',
+      rect:['387px','259px','250px','250px','auto','auto'],
+      fill:["rgba(0,0,0,0)",'images/G-Preloader.gif','0px','0px']
    }]};//simpleContent
 
 dlContent={
    dom: [
-   {
-      id:'Poster3',
-      type:'image',
-      tag:'img',
-      rect:['0','0','1024px','768px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/Q1-Poster.png','0px','0px']
-   }]};//simpleContent
+]};//simpleContent
 
 })( "Quadro01");
