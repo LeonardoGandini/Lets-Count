@@ -37,11 +37,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
          
-      $(".fioreani, .FioreFragole").bind('touchstart', function(){
+      $(".fioreani").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
       
-      $(".FragStat").bind('touchstart', function(){
+      $(".MelaStat").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       	AudioFoglie.load();
       	AudioFoglie.play();	
@@ -226,5 +226,53 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("CodaAni");
    //Edge symbol end:'CodaAni'
+
+   //=========================================================
+   
+   //Edge symbol: 'Verme'
+   (function(symbolName) {   
+   
+   })("Verme");
+   //Edge symbol end:'Verme'
+
+   //=========================================================
+   
+   //Edge symbol: 'Mela-Statica'
+   (function(symbolName) {   
+   
+   })("Mela-Statica");
+   //Edge symbol end:'Mela-Statica'
+
+   //=========================================================
+   
+   //Edge symbol: 'Mela-Bella-1'
+   (function(symbolName) {   
+   
+   })("Mela-Bella-1");
+   //Edge symbol end:'Mela-Bella-1'
+
+   //=========================================================
+   
+   //Edge symbol: 'FioreGialllo'
+   (function(symbolName) {   
+   
+   })("FioreGialllo");
+   //Edge symbol end:'FioreGialllo'
+
+   //=========================================================
+   
+   //Edge symbol: 'FioreRosa'
+   (function(symbolName) {   
+   
+   })("FioreRosa");
+   //Edge symbol end:'FioreRosa'
+
+   //=========================================================
+   
+   //Edge symbol: 'FioreBlu'
+   (function(symbolName) {   
+   
+   })("FioreBlu");
+   //Edge symbol end:'FioreBlu'
 
 })(jQuery, AdobeEdge, "Quadro05");

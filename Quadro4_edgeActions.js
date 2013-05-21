@@ -25,6 +25,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
+      /*
+      yepnope( { load: "http//cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.3.1/jquery.mobile.min.js" } );
+      
+      
+           	$(".ilminkia").bind('taphold', function(event){
+      			AudioFoglie.load();
+      			AudioFoglie.play();	
+      		});
+      */
          /*AUDIO*/
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioApi = new Audio('Suoni/Bees.mp3');
@@ -46,6 +55,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	AudioFoglie.load();
       	AudioFoglie.play();	
       });
+      
       
       
       $(".libellulaTrigger").bind('touchstart', function(){
@@ -86,7 +96,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	$(this).animate({top:'-=20px'},"190");
       	$(this).animate({top:'+=20px'},"1");
       });
-      
+
       });//Edge binding end
       
 
