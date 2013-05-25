@@ -22,7 +22,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-         /*AUDIO*/
+      yepnope({
+           load: ["libs/jplayer.min.js",
+           			"libs/playBG-min.js"
+           			],
+           complete: function() {}
+      });
+      
+      /*AUDIO*/
          AudioBird = new Audio('Suoni/cip01.mp3');
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioLumaca = new Audio('Suoni/Lumaca01.mp3');

@@ -25,12 +25,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-         /*AUDIO*/
+      yepnope({
+           load: ["libs/jplayer.min.js",
+           			"libs/playBG-min.js"
+           			],
+           complete: function() {}
+      });
+      
+      /*AUDIO*/
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioApi = new Audio('Suoni/Bees.mp3');
          AudioTada1 = new Audio('Suoni/Tada1.mp3');
          AudioTada2 = new Audio('Suoni/Tada2.mp3');  
-         AudioAnt = new Audio('Suoni/squek.mp3');
+         AudioAnt = new Audio('Suoni/Lumaca01.mp3');
+      
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       	sym.$(".fumo").css({'-webkit-filter': 'blur(1px)'});
          sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});

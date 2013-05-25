@@ -45,7 +45,7 @@ if(document.addEventListener ){
 
    requiresSVG=false;
 
-   doDelayLoad=false;
+   doDelayLoad=true;
    htFallbacks={
     };
 
@@ -61,13 +61,6 @@ loadResources(aLoader, doDelayLoad);
 
 preContent={
    dom: [
-   {
-      id:'G-Fondo-Preloader',
-      type:'image',
-      tag:'img',
-      rect:['-88px','-216px','1200px','1200px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/G-Fondo-Preloader.png','0px','0px']
-   },
    {
       id:'G-Preloader',
       type:'image',
