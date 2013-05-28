@@ -91,7 +91,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       $(".riccio").bind('touchstart', function(){
       	AudioRicci.load();
       	AudioRicci.play();
-      	$(this).animate({top:'-=20px'},"190");
+      	$(this).animate({top:'-=20px'},"200");
       	$(this).animate({top:'+=20px'},"1");
       });
 

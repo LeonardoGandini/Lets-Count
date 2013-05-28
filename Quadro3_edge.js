@@ -247,48 +247,48 @@ var symbols = {
             ["style", "width", '172px']
          ],
          "${_Viola}": [
-            ["transform", "scaleX", '0.68068'],
             ["style", "top", '353px'],
+            ["style", "left", '11px'],
             ["transform", "scaleY", '0.68068'],
-            ["style", "left", '11px']
+            ["transform", "scaleX", '0.68068']
          ],
          "${_Tereno}": [
-            ["style", "height", '522px'],
             ["style", "top", '266px'],
+            ["style", "height", '522px'],
             ["style", "left", '-6px'],
             ["style", "width", '1035px']
          ],
          "${_Pianta2}": [
-            ["style", "height", '247px'],
             ["style", "top", '181px'],
+            ["style", "height", '247px'],
             ["style", "left", '912px'],
             ["style", "width", '172px']
          ],
          "${_Pomodori-Statici}": [
             ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.36)'],
             ["subproperty", "filter.hue-rotate", '-17deg'],
-            ["subproperty", "filter.drop-shadow.blur", '7px'],
+            ["subproperty", "filter.drop-shadow.offsetH", '1px'],
             ["subproperty", "filter.drop-shadow.offsetV", '1px'],
-            ["subproperty", "filter.drop-shadow.offsetH", '1px']
+            ["subproperty", "filter.drop-shadow.blur", '7px']
          ],
          "${_Giallo}": [
-            ["transform", "scaleX", '0.69006'],
             ["style", "top", '331px'],
+            ["style", "left", '70px'],
             ["transform", "scaleY", '0.6647'],
-            ["style", "left", '70px']
+            ["transform", "scaleX", '0.69006']
          ],
          "${_AudioTappeto}": [
             ["style", "opacity", '0']
          ],
          "${_Cielo2}": [
-            ["style", "height", '522px'],
             ["style", "top", '-42px'],
+            ["style", "height", '522px'],
             ["style", "left", '-11px'],
             ["style", "width", '1050px']
          ],
          "${_AlberoPomodoro2}": [
-            ["style", "height", '491px'],
             ["style", "top", '167px'],
+            ["style", "height", '491px'],
             ["style", "left", '214px'],
             ["style", "width", '390px']
          ],
@@ -305,19 +305,9 @@ var symbols = {
          ],
          "${_Stage}": [
             ["color", "background-color", 'rgba(190,240,241,1.00)'],
-            ["style", "overflow", 'hidden'],
+            ["style", "width", '1024px'],
             ["style", "height", '768px'],
-            ["style", "width", '1024px']
-         ],
-         "${_Cestino}": [
-            ["style", "height", '103px'],
-            ["style", "top", '580px'],
-            ["style", "left", '736px'],
-            ["style", "width", '194px']
-         ],
-         "${_FUMELLO}": [
-            ["style", "left", '552px'],
-            ["style", "top", '-207px']
+            ["style", "overflow", 'hidden']
          ],
          "${_pomo2trigger}": [
             ["style", "top", '324px'],
@@ -325,6 +315,16 @@ var symbols = {
             ["style", "opacity", '0'],
             ["style", "left", '433px'],
             ["style", "width", '96px']
+         ],
+         "${_FUMELLO}": [
+            ["style", "left", '552px'],
+            ["style", "top", '-207px']
+         ],
+         "${_Cestino}": [
+            ["style", "top", '580px'],
+            ["style", "height", '103px'],
+            ["style", "left", '736px'],
+            ["style", "width", '194px']
          ]
       }
    },
@@ -343,23 +343,21 @@ var symbols = {
             { id: "eid8759", tween: [ "transform", "${_Viola}", "scaleY", '0.68068', { fromValue: '0.68068'}], position: 0, duration: 0 },
             { id: "eid8762", tween: [ "style", "${_Giallo}", "left", '70px', { fromValue: '70px'}], position: 0, duration: 0 },
             { id: "eid8766", tween: [ "style", "${_Viola}", "top", '353px', { fromValue: '353px'}], position: 0, duration: 0 },
-            { id: "eid8862", tween: [ "style", "${_NUVOLA}", "top", '-15px', { fromValue: '-15px'}], position: 0, duration: 0 },
             { id: "eid8872", tween: [ "subproperty", "${_Pomodori-Statici}", "filter.drop-shadow.offsetH", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
             { id: "eid8874", tween: [ "subproperty", "${_Pomodori-Statici}", "filter.drop-shadow.blur", '7px', { fromValue: '7px'}], position: 0, duration: 0 },
-            { id: "eid4941", tween: [ "style", "${_NUVOLA}", "left", '80px', { fromValue: '80px'}], position: 0, duration: 0, easing: "easeOutBack" },
             { id: "eid549", tween: [ "style", "${_MENUz}", "top", '575px', { fromValue: '696px'}], position: 0, duration: 196, easing: "easeInOutQuad" },
             { id: "eid625", tween: [ "style", "${_MENUz}", "top", '694px', { fromValue: '575px'}], position: 223, duration: 116, easing: "easeInOutQuad" },
             { id: "eid8785", tween: [ "subproperty", "${_ViolaCopy}", "filter.saturate", '2.1538461538462', { fromValue: '2.1538461538462'}], position: 0, duration: 0 },
-            { id: "eid8790", tween: [ "style", "${_Giallo}", "top", '331px', { fromValue: '331px'}], position: 0, duration: 0 },
+            { id: "eid8784", tween: [ "subproperty", "${_ViolaCopy}", "filter.hue-rotate", '-98deg', { fromValue: '-98deg'}], position: 0, duration: 0 },
             { id: "eid9555", tween: [ "style", "${_FUMELLO}", "top", '-207px', { fromValue: '-207px'}], position: 0, duration: 0 },
             { id: "eid8873", tween: [ "subproperty", "${_Pomodori-Statici}", "filter.drop-shadow.offsetV", '1px', { fromValue: '1px'}], position: 0, duration: 0 },
             { id: "eid8771", tween: [ "transform", "${_ViolaCopy}", "scaleX", '0.68068', { fromValue: '0.68068'}], position: 0, duration: 0 },
-            { id: "eid8777", tween: [ "style", "${_ViolaCopy}", "left", '139px', { fromValue: '139px'}], position: 0, duration: 0 },
-            { id: "eid8754", tween: [ "transform", "${_Giallo}", "scaleX", '0.69006', { fromValue: '0.69006'}], position: 0, duration: 0 },
             { id: "eid8755", tween: [ "transform", "${_Giallo}", "scaleY", '0.6647', { fromValue: '0.6647'}], position: 0, duration: 0 },
+            { id: "eid8754", tween: [ "transform", "${_Giallo}", "scaleX", '0.69006', { fromValue: '0.69006'}], position: 0, duration: 0 },
+            { id: "eid8777", tween: [ "style", "${_ViolaCopy}", "left", '139px', { fromValue: '139px'}], position: 0, duration: 0 },
             { id: "eid8776", tween: [ "style", "${_ViolaCopy}", "top", '353px', { fromValue: '353px'}], position: 0, duration: 0 },
-            { id: "eid8784", tween: [ "subproperty", "${_ViolaCopy}", "filter.hue-rotate", '-98deg', { fromValue: '-98deg'}], position: 0, duration: 0 },
-            { id: "eid194", trigger: [ function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${_NUVOLA}', [] ], ""], position: 0 }         ]
+            { id: "eid8790", tween: [ "style", "${_Giallo}", "top", '331px', { fromValue: '331px'}], position: 0, duration: 0 },
+            { id: "eid9632", trigger: [ function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${_NUVOLA}', [] ], ""], position: 0 }         ]
       }
    }
 },
@@ -374,17 +372,17 @@ var symbols = {
    content: {
    dom: [
    {
-      userClass: 'fumello',
-      id: 'Fumello',
       type: 'image',
+      id: 'Fumello',
       rect: ['0px','0px','446px','287px','auto','auto'],
+      userClass: 'fumello',
       fill: ['rgba(0,0,0,0)','images/Fumello-Q3.png','0px','0px','445.97px','286.67px']
    },
    {
-      type: 'rect',
+      rect: ['-8px','172px','466px','287px','auto','auto'],
       id: 'Rectangle',
       stroke: [0,'rgba(0,0,0,1)','none'],
-      rect: ['-8px','172px','466px','287px','auto','auto'],
+      type: 'rect',
       fill: ['rgba(192,192,192,1)']
    }],
    symbolInstances: [
@@ -402,8 +400,8 @@ var symbols = {
             ["style", "-o-transform-origin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}]
          ],
          "${_Fumello}": [
-            ["style", "top", '-8px'],
             ["style", "height", '287px'],
+            ["style", "top", '-8px'],
             ["style", "left", '0px'],
             ["style", "width", '446px']
          ],
@@ -424,15 +422,15 @@ var symbols = {
             "USCITA": 1000
          },
          timeline: [
-            { id: "eid96", tween: [ "style", "${_Rectangle}", "top", '172px', { fromValue: '-69px'}], position: 0, duration: 614, easing: "easeOutBack" },
-            { id: "eid511", tween: [ "style", "${_Rectangle}", "top", '-65px', { fromValue: '172px'}], position: 1000, duration: 500, easing: "easeOutBack" },
+            { id: "eid99", tween: [ "style", "${_Rectangle}", "-webkit-transform-origin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" },
+            { id: "eid9633", tween: [ "style", "${_Rectangle}", "-moz-transform-origin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" },
+            { id: "eid9634", tween: [ "style", "${_Rectangle}", "-ms-transform-origin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" },
+            { id: "eid9635", tween: [ "style", "${_Rectangle}", "msTransformOrigin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" },
+            { id: "eid9636", tween: [ "style", "${_Rectangle}", "-o-transform-origin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" },
             { id: "eid93", tween: [ "style", "${_Fumello}", "top", '177px', { fromValue: '-8px'}], position: 0, duration: 614, easing: "easeOutBack" },
             { id: "eid95", tween: [ "style", "${_Fumello}", "top", '0px', { fromValue: '177px'}], position: 1000, duration: 500, easing: "easeOutBack" },
-            { id: "eid99", tween: [ "style", "${_Rectangle}", "-webkit-transform-origin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" },
-            { id: "eid9564", tween: [ "style", "${_Rectangle}", "-moz-transform-origin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" },
-            { id: "eid9565", tween: [ "style", "${_Rectangle}", "-ms-transform-origin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" },
-            { id: "eid9566", tween: [ "style", "${_Rectangle}", "msTransformOrigin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" },
-            { id: "eid9567", tween: [ "style", "${_Rectangle}", "-o-transform-origin", [50,91], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,91]}], position: 0, duration: 0, easing: "easeOutBack" }         ]
+            { id: "eid96", tween: [ "style", "${_Rectangle}", "top", '172px', { fromValue: '-69px'}], position: 0, duration: 614, easing: "easeOutBack" },
+            { id: "eid511", tween: [ "style", "${_Rectangle}", "top", '-65px', { fromValue: '172px'}], position: 1000, duration: 500, easing: "easeOutBack" }         ]
       }
    }
 },
@@ -458,8 +456,8 @@ var symbols = {
    states: {
       "Base State": {
          "${_Nuvola}": [
-            ["style", "height", '132px'],
             ["style", "top", '22px'],
+            ["style", "height", '132px'],
             ["style", "left", '-180px'],
             ["style", "width", '185px']
          ],
@@ -476,8 +474,8 @@ var symbols = {
          duration: 105000,
          autoPlay: false,
          timeline: [
-            { id: "eid183", tween: [ "style", "${_Nuvola}", "left", '1003px', { fromValue: '-180px'}], position: 0, duration: 105000, easing: "swing" },
-            { id: "eid185", tween: [ "style", "${_Nuvola}", "top", '-83px', { fromValue: '22px'}], position: 0, duration: 105000, easing: "swing" }         ]
+            { id: "eid185", tween: [ "style", "${_Nuvola}", "top", '-83px', { fromValue: '22px'}], position: 0, duration: 105000, easing: "swing" },
+            { id: "eid183", tween: [ "style", "${_Nuvola}", "left", '1003px', { fromValue: '-180px'}], position: 0, duration: 105000, easing: "swing" }         ]
       }
    }
 },
@@ -492,12 +490,12 @@ var symbols = {
    content: {
    dom: [
    {
-      transform: [],
-      fill: ['rgba(0,0,0,0)','images/G-HOME.png','0px','0px'],
-      id: 'HOME',
       type: 'image',
+      boxShadow: ['inset',8,3,18,6,'rgba(0,0,0,0.648438)'],
+      id: 'HOME',
       rect: ['0px','0px','103px','97px','auto','auto'],
-      boxShadow: ['inset',8,3,18,6,'rgba(0,0,0,0.648438)']
+      transform: [],
+      fill: ['rgba(0,0,0,0)','images/G-HOME.png','0px','0px']
    }],
    symbolInstances: [
    ]
@@ -512,11 +510,11 @@ var symbols = {
             ["style", "width", '103px'],
             ["style", "top", '0px'],
             ["transform", "scaleY", '1'],
-            ["subproperty", "boxShadow.offsetV", '0px'],
+            ["subproperty", "boxShadow.blur", '0px'],
             ["style", "height", '97px'],
-            ["subproperty", "boxShadow.spread", '0px'],
+            ["subproperty", "boxShadow.offsetV", '0px'],
             ["subproperty", "boxShadow.offsetH", '0px'],
-            ["subproperty", "boxShadow.blur", '0px']
+            ["subproperty", "boxShadow.spread", '0px']
          ],
          "${symbolSelector}": [
             ["style", "height", '97px'],
@@ -549,10 +547,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
+      rect: ['0px','21px','1160px','217px','auto','auto'],
       id: 'Menu',
       opacity: 0.7,
-      rect: ['0px','21px','1160px','217px','auto','auto'],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/G-Menu.png','0px','0px']
    },
    {
@@ -567,54 +565,54 @@ var symbols = {
       rect: ['93px','95px','auto','auto','auto','auto']
    },
    {
-      type: 'rect',
-      id: 'PREV',
       rect: ['212px','103px','auto','auto','auto','auto'],
-      userClass: 'prev',
-      transform: [[0,0],[],[],['0.69','0.69']]
-   },
-   {
+      id: 'PREV',
+      transform: [[0,0],[],[],['0.69','0.69']],
       type: 'rect',
-      id: 'NEXT',
-      rect: ['1031px','103px','auto','auto','auto','auto'],
-      userClass: 'next',
-      transform: [[0,0],[],[],['0.69','0.69']]
+      userClass: 'prev'
    },
    {
-      userClass: 'uno',
+      rect: ['1031px','103px','auto','auto','auto','auto'],
+      id: 'NEXT',
+      transform: [[0,0],[],[],['0.69','0.69']],
+      type: 'rect',
+      userClass: 'next'
+   },
+   {
       rect: ['27.7%','29.5%','125px','98px','auto','auto'],
+      userClass: 'uno',
       id: 'Numero_1',
       opacity: 1,
       type: 'image',
       fill: ['rgba(0,0,0,0)','images/1_col.png','0px','0px']
    },
    {
-      userClass: 'due',
       rect: ['39.1%','29.5%','124px','97px','auto','auto'],
+      userClass: 'due',
       id: 'Numero_2',
       opacity: 1,
       type: 'image',
       fill: ['rgba(0,0,0,0)','images/2_col.png','0px','0px']
    },
    {
-      userClass: 'tre',
       rect: ['50.3%','29.5%','124px','97px','auto','auto'],
+      userClass: 'tre',
       id: 'Numero_3',
       opacity: 1,
       type: 'image',
       fill: ['rgba(0,0,0,0)','images/3_col.png','0px','0px']
    },
    {
-      userClass: 'quattro',
       rect: ['61.5%','29.5%','124px','97px','auto','auto'],
+      userClass: 'quattro',
       id: 'Numero_4',
       opacity: 1,
       type: 'image',
       fill: ['rgba(0,0,0,0)','images/4_col.png','0px','0px']
    },
    {
-      userClass: 'cinque',
       rect: ['72.5%','29.5%','124px','97px','auto','auto'],
+      userClass: 'cinque',
       id: 'Numero_5',
       opacity: 1,
       type: 'image',
@@ -643,8 +641,8 @@ var symbols = {
          ],
          "${_Testina}": [
             ["style", "top", '0px'],
-            ["transform", "rotateZ", '0deg'],
             ["style", "overflow", 'hidden'],
+            ["transform", "rotateZ", '0deg'],
             ["style", "height", '97px'],
             ["style", "-webkit-transform-origin", [50,91], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}],
@@ -694,13 +692,13 @@ var symbols = {
             ["style", "height", '238px'],
             ["style", "width", '1160px']
          ],
-         "${_Numero_1}": [
+         "${_Numero_2}": [
             ["style", "top", '29.46%'],
             ["style", "overflow", 'hidden'],
-            ["style", "height", '98px'],
+            ["style", "height", '97px'],
             ["style", "opacity", '1'],
-            ["style", "left", '27.71%'],
-            ["style", "width", '125px']
+            ["style", "left", '39.1%'],
+            ["style", "width", '124px']
          ],
          "${_Numero_5}": [
             ["style", "top", '29.46%'],
@@ -710,13 +708,13 @@ var symbols = {
             ["style", "left", '72.54%'],
             ["style", "width", '124px']
          ],
-         "${_Numero_2}": [
+         "${_Numero_1}": [
             ["style", "top", '29.46%'],
             ["style", "overflow", 'hidden'],
-            ["style", "height", '97px'],
+            ["style", "height", '98px'],
             ["style", "opacity", '1'],
-            ["style", "left", '39.1%'],
-            ["style", "width", '124px']
+            ["style", "left", '27.71%'],
+            ["style", "width", '125px']
          ]
       }
    },
@@ -751,10 +749,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
       rect: ['-8px','-11px','72px','98px','auto','auto'],
-      id: 'PrevImg',
       transform: [[0,0],[],[],['0.77','0.77']],
+      id: 'PrevImg',
+      type: 'image',
       clip: ['rect(-12px 81px 110px -7px)'],
       fill: ['rgba(0,0,0,0)','images/G-Prev.png','0px','0px']
    }],
@@ -763,19 +761,19 @@ var symbols = {
    },
    states: {
       "Base State": {
-         "${_PrevImg}": [
-            ["style", "top", '-11px'],
-            ["style", "height", '98px'],
-            ["transform", "scaleY", '1'],
-            ["style", "overflow", 'hidden'],
-            ["transform", "scaleX", '1'],
-            ["style", "clip", [-12,81,110,-7], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
-            ["style", "left", '-8px'],
-            ["style", "width", '72px']
-         ],
          "${symbolSelector}": [
             ["style", "height", '75px'],
             ["style", "width", '55px']
+         ],
+         "${_PrevImg}": [
+            ["style", "top", '-11px'],
+            ["transform", "scaleX", '1'],
+            ["transform", "scaleY", '1'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '98px'],
+            ["style", "left", '-8px'],
+            ["style", "clip", [-12,81,110,-7], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
+            ["style", "width", '72px']
          ]
       }
    },
@@ -804,10 +802,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
       rect: ['-8px','-11px','72px','98px','auto','auto'],
-      id: 'NextImg',
       transform: [[0,0],[],[],['0.77','0.77']],
+      id: 'NextImg',
+      type: 'image',
       clip: ['rect(-8px 79px 107px -14px)'],
       fill: ['rgba(0,0,0,0)','images/G-Next.png','0px','0px']
    }],
@@ -818,12 +816,12 @@ var symbols = {
       "Base State": {
          "${_NextImg}": [
             ["style", "top", '-11px'],
-            ["style", "height", '98px'],
+            ["transform", "scaleX", '1'],
             ["transform", "scaleY", '1'],
             ["style", "overflow", 'hidden'],
-            ["transform", "scaleX", '1'],
-            ["style", "clip", [-8,79,107,-14], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
+            ["style", "height", '98px'],
             ["style", "left", '-8px'],
+            ["style", "clip", [-8,79,107,-14], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
             ["style", "width", '72px']
          ],
          "${symbolSelector}": [
@@ -867,10 +865,6 @@ var symbols = {
    },
    states: {
       "Base State": {
-         "${symbolSelector}": [
-            ["style", "height", '63px'],
-            ["style", "width", '67px']
-         ],
          "${_Fiore-Giallo}": [
             ["style", "top", '0px'],
             ["transform", "scaleY", '1'],
@@ -878,6 +872,10 @@ var symbols = {
             ["style", "height", '63px'],
             ["transform", "scaleX", '1'],
             ["style", "left", '0px'],
+            ["style", "width", '67px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '63px'],
             ["style", "width", '67px']
          ]
       }
@@ -918,6 +916,10 @@ var symbols = {
    },
    states: {
       "Base State": {
+         "${symbolSelector}": [
+            ["style", "height", '47px'],
+            ["style", "width", '57px']
+         ],
          "${_Fiore-Viola}": [
             ["style", "top", '0px'],
             ["transform", "scaleY", '1'],
@@ -925,10 +927,6 @@ var symbols = {
             ["style", "height", '47px'],
             ["transform", "scaleX", '1'],
             ["style", "left", '0px'],
-            ["style", "width", '57px']
-         ],
-         "${symbolSelector}": [
-            ["style", "height", '47px'],
             ["style", "width", '57px']
          ]
       }
@@ -940,11 +938,11 @@ var symbols = {
          duration: 978,
          autoPlay: false,
          timeline: [
-            { id: "eid5536", tween: [ "transform", "${_Fiore-Viola}", "scaleY", '1.1', { fromValue: '1'}], position: 0, duration: 477, easing: "easeOutQuad" },
-            { id: "eid5537", tween: [ "transform", "${_Fiore-Viola}", "scaleY", '1', { fromValue: '1.1'}], position: 477, duration: 501, easing: "easeOutQuad" },
-            { id: "eid5538", tween: [ "transform", "${_Fiore-Viola}", "rotateZ", '360deg', { fromValue: '0deg'}], position: 0, duration: 978, easing: "easeOutQuad" },
             { id: "eid5534", tween: [ "transform", "${_Fiore-Viola}", "scaleX", '1.1', { fromValue: '1'}], position: 0, duration: 477, easing: "easeOutQuad" },
-            { id: "eid5535", tween: [ "transform", "${_Fiore-Viola}", "scaleX", '1', { fromValue: '1.1'}], position: 477, duration: 501, easing: "easeOutQuad" }         ]
+            { id: "eid5535", tween: [ "transform", "${_Fiore-Viola}", "scaleX", '1', { fromValue: '1.1'}], position: 477, duration: 501, easing: "easeOutQuad" },
+            { id: "eid5538", tween: [ "transform", "${_Fiore-Viola}", "rotateZ", '360deg', { fromValue: '0deg'}], position: 0, duration: 978, easing: "easeOutQuad" },
+            { id: "eid5536", tween: [ "transform", "${_Fiore-Viola}", "scaleY", '1.1', { fromValue: '1'}], position: 0, duration: 477, easing: "easeOutQuad" },
+            { id: "eid5537", tween: [ "transform", "${_Fiore-Viola}", "scaleY", '1', { fromValue: '1.1'}], position: 477, duration: 501, easing: "easeOutQuad" }         ]
       }
    }
 },
@@ -969,20 +967,20 @@ var symbols = {
    },
    states: {
       "Base State": {
-         "${symbolSelector}": [
-            ["style", "height", '209px'],
-            ["style", "width", '237px']
-         ],
          "${_Coda}": [
+            ["style", "top", '0px'],
+            ["transform", "rotateZ", '0deg'],
+            ["style", "height", '209px'],
             ["style", "-webkit-transform-origin", [92,93], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [92,93],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [92,93],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [92,93],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [92,93],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["transform", "rotateZ", '0deg'],
-            ["style", "height", '209px'],
-            ["style", "top", '0px'],
             ["style", "left", '0px'],
+            ["style", "width", '237px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '209px'],
             ["style", "width", '237px']
          ]
       }
@@ -1011,10 +1009,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: 'Coda',
       rect: ['0px','0px','194px','239px','auto','auto'],
+      id: 'Coda',
       transform: [[0,0],['13']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/Q1-Coda.png','0px','0px']
    }],
    symbolInstances: [
@@ -1022,20 +1020,20 @@ var symbols = {
    },
    states: {
       "Base State": {
+         "${symbolSelector}": [
+            ["style", "height", '239px'],
+            ["style", "width", '194px']
+         ],
          "${_Coda}": [
+            ["style", "top", '0px'],
+            ["transform", "rotateZ", '13deg'],
+            ["style", "height", '239px'],
             ["style", "-webkit-transform-origin", [13,90], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [13,90],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [13,90],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [13,90],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [13,90],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["transform", "rotateZ", '13deg'],
-            ["style", "height", '239px'],
-            ["style", "top", '0px'],
             ["style", "left", '0px'],
-            ["style", "width", '194px']
-         ],
-         "${symbolSelector}": [
-            ["style", "height", '239px'],
             ["style", "width", '194px']
          ]
       }
@@ -1064,32 +1062,32 @@ var symbols = {
    {
       id: 'PomoStatico',
       type: 'rect',
-      userClass: 'pomostatico',
-      rect: ['190','40','auto','auto','auto','auto']
+      rect: ['190','40','auto','auto','auto','auto'],
+      userClass: 'pomostatico'
    },
    {
       id: 'PomoStaticoCopy',
       type: 'rect',
-      userClass: 'pomostatico',
-      rect: ['190','40','auto','auto','auto','auto']
+      rect: ['190','40','auto','auto','auto','auto'],
+      userClass: 'pomostatico'
    },
    {
       id: 'PomoStaticoCopy4',
       type: 'rect',
-      userClass: 'pomostatico',
-      rect: ['190','40','auto','auto','auto','auto']
+      rect: ['190','40','auto','auto','auto','auto'],
+      userClass: 'pomostatico'
    },
    {
       id: 'PomoStaticoCopy2',
       type: 'rect',
-      userClass: 'pomostatico',
-      rect: ['190','40','auto','auto','auto','auto']
+      rect: ['190','40','auto','auto','auto','auto'],
+      userClass: 'pomostatico'
    },
    {
       id: 'PomoStaticoCopy3',
       type: 'rect',
-      userClass: 'pomostatico',
-      rect: ['190','40','auto','auto','auto','auto']
+      rect: ['190','40','auto','auto','auto','auto'],
+      userClass: 'pomostatico'
    }],
    symbolInstances: [
    {
@@ -1145,13 +1143,13 @@ var symbols = {
          autoPlay: false,
          timeline: [
             { id: "eid8954", tween: [ "style", "${_PomoStaticoCopy2}", "left", '17px', { fromValue: '17px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-            { id: "eid9194", tween: [ "style", "${_PomoStaticoCopy}", "left", '280px', { fromValue: '280px'}], position: 0, duration: 0 },
             { id: "eid9214", tween: [ "style", "${_PomoStaticoCopy4}", "top", '247px', { fromValue: '247px'}], position: 0, duration: 0 },
-            { id: "eid8957", tween: [ "style", "${_PomoStaticoCopy3}", "left", '17px', { fromValue: '17px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
+            { id: "eid9195", tween: [ "style", "${_PomoStaticoCopy}", "top", '318px', { fromValue: '318px'}], position: 0, duration: 0 },
+            { id: "eid8956", tween: [ "style", "${_PomoStaticoCopy3}", "top", '334px', { fromValue: '334px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
             { id: "eid8955", tween: [ "style", "${_PomoStaticoCopy2}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
             { id: "eid9213", tween: [ "style", "${_PomoStaticoCopy4}", "left", '173px', { fromValue: '173px'}], position: 0, duration: 0 },
-            { id: "eid8956", tween: [ "style", "${_PomoStaticoCopy3}", "top", '334px', { fromValue: '334px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-            { id: "eid9195", tween: [ "style", "${_PomoStaticoCopy}", "top", '318px', { fromValue: '318px'}], position: 0, duration: 0 }         ]
+            { id: "eid9194", tween: [ "style", "${_PomoStaticoCopy}", "left", '280px', { fromValue: '280px'}], position: 0, duration: 0 },
+            { id: "eid8957", tween: [ "style", "${_PomoStaticoCopy3}", "left", '17px', { fromValue: '17px'}], position: 0, duration: 0, easing: "easeInOutQuad" }         ]
       }
    }
 },
@@ -1166,12 +1164,12 @@ var symbols = {
    content: {
    dom: [
    {
-      rect: ['-2px','-4px','70px','87px','auto','auto'],
       transform: [[0,0],[],[],['0.9','0.9']],
+      rect: ['-2px','-4px','70px','87px','auto','auto'],
       filter: [0,0,1,1,0,0,0,0,'rgba(0,0,0,0)',0,0,0],
       id: 'PomodoroStatico',
-      userClass: 'pomodostatico',
       type: 'image',
+      userClass: 'pomodostatico',
       fill: ['rgba(0,0,0,0)','images/Q3-Pomodoro.png','0px','0px']
    }],
    symbolInstances: [
@@ -1237,10 +1235,10 @@ var symbols = {
       fill: ['rgba(0,0,0,0)','images/Q3-ToppaBucaSX.png','0px','0px']
    },
    {
-      type: 'image',
-      id: 'Mani-Talpa-Grande',
       rect: ['124px','67px','49px','29px','auto','auto'],
+      id: 'Mani-Talpa-Grande',
       transform: [],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/Q3-Mani-Talpa-Grande.png','0px','0px']
    }],
    symbolInstances: [
@@ -1248,35 +1246,35 @@ var symbols = {
    },
    states: {
       "Base State": {
-         "${_Mani-Talpa-Grande}": [
-            ["style", "top", '67px'],
-            ["transform", "rotateZ", '0deg'],
-            ["style", "height", '29px'],
-            ["style", "-webkit-transform-origin", [18,29], {valueTemplate:'@@0@@% @@1@@%'} ],
-            ["style", "-moz-transform-origin", [18,29],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "-ms-transform-origin", [18,29],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "msTransformOrigin", [18,29],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "-o-transform-origin", [18,29],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "left", '124px'],
-            ["style", "width", '49px']
+         "${_ToppaBucaSX}": [
+            ["style", "height", '173px'],
+            ["style", "top", '0px'],
+            ["style", "left", '0px'],
+            ["style", "width", '226px']
          ],
          "${_Talpa-Grande}": [
-            ["style", "top", '40px'],
-            ["transform", "rotateZ", '0deg'],
-            ["style", "height", '106px'],
             ["style", "-webkit-transform-origin", [34,87], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [34,87],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [34,87],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [34,87],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [34,87],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["transform", "rotateZ", '0deg'],
+            ["style", "height", '106px'],
+            ["style", "top", '40px'],
             ["style", "left", '55px'],
             ["style", "width", '115px']
          ],
-         "${_ToppaBucaSX}": [
-            ["style", "top", '0px'],
-            ["style", "height", '173px'],
-            ["style", "left", '0px'],
-            ["style", "width", '226px']
+         "${_Mani-Talpa-Grande}": [
+            ["style", "-webkit-transform-origin", [18,29], {valueTemplate:'@@0@@% @@1@@%'} ],
+            ["style", "-moz-transform-origin", [18,29],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "-ms-transform-origin", [18,29],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "msTransformOrigin", [18,29],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "-o-transform-origin", [18,29],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["transform", "rotateZ", '0deg'],
+            ["style", "height", '29px'],
+            ["style", "top", '67px'],
+            ["style", "left", '124px'],
+            ["style", "width", '49px']
          ],
          "${symbolSelector}": [
             ["style", "height", '173px'],
@@ -1291,11 +1289,11 @@ var symbols = {
          duration: 838,
          autoPlay: false,
          timeline: [
-            { id: "eid8966", tween: [ "style", "${_Talpa-Grande}", "left", '62px', { fromValue: '55px'}], position: 0, duration: 250, easing: "easeOutQuad" },
-            { id: "eid8975", tween: [ "style", "${_Talpa-Grande}", "left", '55px', { fromValue: '62px'}], position: 648, duration: 190, easing: "easeOutQuad" },
             { id: "eid8967", tween: [ "style", "${_Talpa-Grande}", "top", '-2px', { fromValue: '40px'}], position: 0, duration: 250, easing: "easeOutQuad" },
             { id: "eid8969", tween: [ "style", "${_Talpa-Grande}", "top", '-11px', { fromValue: '-2px'}], position: 250, duration: 397, easing: "easeOutQuad" },
             { id: "eid8976", tween: [ "style", "${_Talpa-Grande}", "top", '40px', { fromValue: '-11px'}], position: 648, duration: 190, easing: "easeOutQuad" },
+            { id: "eid8966", tween: [ "style", "${_Talpa-Grande}", "left", '62px', { fromValue: '55px'}], position: 0, duration: 250, easing: "easeOutQuad" },
+            { id: "eid8975", tween: [ "style", "${_Talpa-Grande}", "left", '55px', { fromValue: '62px'}], position: 648, duration: 190, easing: "easeOutQuad" },
             { id: "eid8979", tween: [ "transform", "${_Mani-Talpa-Grande}", "rotateZ", '5deg', { fromValue: '0deg'}], position: 0, duration: 250, easing: "easeOutQuad" },
             { id: "eid8980", tween: [ "transform", "${_Mani-Talpa-Grande}", "rotateZ", '6deg', { fromValue: '5deg'}], position: 250, duration: 397, easing: "easeOutQuad" },
             { id: "eid8981", tween: [ "transform", "${_Mani-Talpa-Grande}", "rotateZ", '0deg', { fromValue: '6deg'}], position: 647, duration: 191, easing: "easeOutQuad" },
@@ -1328,6 +1326,10 @@ var symbols = {
    },
    states: {
       "Base State": {
+         "${symbolSelector}": [
+            ["style", "height", '252px'],
+            ["style", "width", '228px']
+         ],
          "${_Coda2}": [
             ["style", "top", '-10px'],
             ["transform", "scaleY", '0.91213'],
@@ -1339,10 +1341,6 @@ var symbols = {
             ["style", "-ms-transform-origin", [12,91],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [12,91],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [12,91],{valueTemplate:'@@0@@% @@1@@%'}]
-         ],
-         "${symbolSelector}": [
-            ["style", "height", '252px'],
-            ["style", "width", '228px']
          ]
       }
    },
@@ -1405,14 +1403,14 @@ var symbols = {
    states: {
       "Base State": {
          "${_Talpa-Piccola-2}": [
+            ["style", "top", '18px'],
+            ["transform", "rotateZ", '0deg'],
+            ["style", "height", '98px'],
             ["style", "-webkit-transform-origin", [66,88], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [66,88],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [66,88],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [66,88],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [66,88],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["transform", "rotateZ", '0deg'],
-            ["style", "height", '98px'],
-            ["style", "top", '18px'],
             ["style", "left", '51px'],
             ["style", "width", '66px']
          ],
@@ -1422,10 +1420,10 @@ var symbols = {
             ["style", "-ms-transform-origin", [67,95],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [67,95],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [67,95],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "height", '76px'],
+            ["transform", "scaleX", '1'],
             ["transform", "scaleY", '1'],
             ["transform", "rotateZ", '0deg'],
-            ["transform", "scaleX", '1'],
+            ["style", "height", '76px'],
             ["style", "top", '38px'],
             ["style", "left", '23px'],
             ["style", "width", '71px']
@@ -1435,8 +1433,8 @@ var symbols = {
             ["style", "width", '172px']
          ],
          "${_ToppaBucaDX}": [
-            ["style", "top", '26px'],
             ["style", "height", '140px'],
+            ["style", "top", '26px'],
             ["style", "left", '0px'],
             ["style", "width", '172px']
          ],
@@ -1448,14 +1446,14 @@ var symbols = {
             ["style", "width", '48px']
          ],
          "${_Talpa-Piccola-3}": [
+            ["style", "top", '42px'],
+            ["transform", "rotateZ", '0deg'],
+            ["style", "height", '72px'],
             ["style", "-webkit-transform-origin", [76,96], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [76,96],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [76,96],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [76,96],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [76,96],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["transform", "rotateZ", '0deg'],
-            ["style", "height", '72px'],
-            ["style", "top", '42px'],
             ["style", "left", '77px'],
             ["style", "width", '79px']
          ]
@@ -1468,8 +1466,7 @@ var symbols = {
          duration: 1816,
          autoPlay: false,
          timeline: [
-            { id: "eid9073", tween: [ "style", "${_Talpa-Piccola-2}", "top", '-19px', { fromValue: '18px'}], position: 349, duration: 796, easing: "easeInOutQuart" },
-            { id: "eid9079", tween: [ "style", "${_Talpa-Piccola-2}", "top", '18px', { fromValue: '-19px'}], position: 1146, duration: 670, easing: "easeInOutQuart" },
+            { id: "eid9205", tween: [ "style", "${_Mani-Talpa-Piccole}", "height", '23px', { fromValue: '23px'}], position: 250, duration: 0 },
             { id: "eid9060", tween: [ "style", "${_Talpa-Piccola-1}", "top", '-2px', { fromValue: '38px'}], position: 0, duration: 855, easing: "easeInOutQuart" },
             { id: "eid9062", tween: [ "style", "${_Talpa-Piccola-1}", "top", '38px', { fromValue: '-2px'}], position: 855, duration: 592, easing: "easeInOutQuart" },
             { id: "eid9059", tween: [ "style", "${_Talpa-Piccola-1}", "left", '-1px', { fromValue: '23px'}], position: 0, duration: 855, easing: "easeInOutQuart" },
@@ -1481,7 +1478,8 @@ var symbols = {
             { id: "eid9080", tween: [ "transform", "${_Talpa-Piccola-2}", "rotateZ", '0deg', { fromValue: '-14deg'}], position: 1146, duration: 670, easing: "easeInOutQuart" },
             { id: "eid9092", tween: [ "transform", "${_Mani-Talpa-Piccole}", "rotateZ", '-3deg', { fromValue: '0deg'}], position: 250, duration: 727, easing: "easeInOutBack" },
             { id: "eid9093", tween: [ "transform", "${_Mani-Talpa-Piccole}", "rotateZ", '0deg', { fromValue: '-3deg'}], position: 977, duration: 469, easing: "easeInOutBack" },
-            { id: "eid9205", tween: [ "style", "${_Mani-Talpa-Piccole}", "height", '23px', { fromValue: '23px'}], position: 250, duration: 0 },
+            { id: "eid9073", tween: [ "style", "${_Talpa-Piccola-2}", "top", '-19px', { fromValue: '18px'}], position: 349, duration: 796, easing: "easeInOutQuart" },
+            { id: "eid9079", tween: [ "style", "${_Talpa-Piccola-2}", "top", '18px', { fromValue: '-19px'}], position: 1146, duration: 670, easing: "easeInOutQuart" },
             { id: "eid9084", tween: [ "style", "${_Talpa-Piccola-3}", "left", '56px', { fromValue: '77px'}], position: 250, duration: 768, easing: "easeInOutQuart" },
             { id: "eid9087", tween: [ "style", "${_Talpa-Piccola-3}", "left", '77px', { fromValue: '56px'}], position: 1018, duration: 639, easing: "easeInOutQuart" },
             { id: "eid9085", tween: [ "style", "${_Talpa-Piccola-3}", "top", '15px', { fromValue: '42px'}], position: 250, duration: 768, easing: "easeInOutQuart" },
@@ -1514,15 +1512,15 @@ var symbols = {
    },
    states: {
       "Base State": {
+         "${symbolSelector}": [
+            ["style", "height", '59px'],
+            ["style", "width", '46px']
+         ],
          "${_LB-in-Piedi}": [
             ["style", "top", '0px'],
             ["transform", "rotateZ", '0deg'],
             ["style", "height", '59px'],
             ["style", "left", '0px'],
-            ["style", "width", '46px']
-         ],
-         "${symbolSelector}": [
-            ["style", "height", '59px'],
             ["style", "width", '46px']
          ]
       }
@@ -1558,10 +1556,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: 'PomodoroCopy2',
       rect: ['0px','0px','70px','87px','auto','auto'],
+      id: 'PomodoroCopy2',
       userClass: 'pomodoro1',
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/Q3-Pomodoro.png','0px','0px']
    },
    {
@@ -1577,10 +1575,10 @@ var symbols = {
       "Base State": {
          "${_PomodoroCopy2}": [
             ["style", "top", '0px'],
-            ["style", "height", '87px'],
+            ["transform", "scaleX", '1'],
             ["transform", "scaleY", '1'],
             ["transform", "rotateZ", '0deg'],
-            ["transform", "scaleX", '1'],
+            ["style", "height", '87px'],
             ["style", "-webkit-transform-origin", [53,35], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [53,35],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [53,35],{valueTemplate:'@@0@@% @@1@@%'}],
@@ -1613,20 +1611,15 @@ var symbols = {
             "colore": 1178
          },
          timeline: [
-            { id: "eid9282", tween: [ "style", "${__1_col}", "left", '-256.45%', { fromValue: '-660%'}], position: 739, duration: 439, easing: "easeInQuad" },
-            { id: "eid9287", tween: [ "style", "${__1_col}", "left", '-154.29%', { fromValue: '-257.14%'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
+            { id: "eid9279", tween: [ "style", "${__1_col}", "top", '-318.01%', { fromValue: '104.6%'}], position: 739, duration: 439, easing: "easeInOutQuad" },
+            { id: "eid9320", tween: [ "style", "${__1_col}", "top", '589.85%', { fromValue: '-318.01%'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
             { id: "eid9239", tween: [ "style", "${_PomodoroCopy2}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
             { id: "eid9243", tween: [ "style", "${_PomodoroCopy2}", "top", '-275px', { fromValue: '0px'}], position: 625, duration: 446 },
             { id: "eid9248", tween: [ "style", "${_PomodoroCopy2}", "top", '272px', { fromValue: '-275px'}], position: 1635, duration: 426 },
             { id: "eid9249", tween: [ "style", "${_PomodoroCopy2}", "top", '249px', { fromValue: '272px'}], position: 2061, duration: 78 },
             { id: "eid9251", tween: [ "style", "${_PomodoroCopy2}", "top", '271px', { fromValue: '249px'}], position: 2139, duration: 111 },
-            { id: "eid9230", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '16deg', { fromValue: '0deg'}], position: 0, duration: 256 },
-            { id: "eid9231", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '-13deg', { fromValue: '16deg'}], position: 256, duration: 215 },
-            { id: "eid9232", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '29deg', { fromValue: '-13deg'}], position: 471, duration: 154 },
-            { id: "eid9233", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '355deg', { fromValue: '29deg'}], position: 625, duration: 375 },
-            { id: "eid9256", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '341deg', { fromValue: '355deg'}], position: 1635, duration: 426 },
-            { id: "eid9254", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '367deg', { fromValue: '341deg'}], position: 2061, duration: 78 },
-            { id: "eid9255", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '338deg', { fromValue: '367deg'}], position: 2139, duration: 111 },
+            { id: "eid9282", tween: [ "style", "${__1_col}", "left", '-256.45%', { fromValue: '-660%'}], position: 739, duration: 439, easing: "easeInQuad" },
+            { id: "eid9287", tween: [ "style", "${__1_col}", "left", '-154.29%', { fromValue: '-257.14%'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
             { id: "eid9314", tween: [ "transform", "${__1_col}", "scaleY", '1.25', { fromValue: '0'}], position: 739, duration: 439, easing: "easeInOutQuad" },
             { id: "eid9318", tween: [ "transform", "${__1_col}", "scaleY", '0.02', { fromValue: '1.25'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
             { id: "eid9238", tween: [ "style", "${_PomodoroCopy2}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
@@ -1636,8 +1629,13 @@ var symbols = {
             { id: "eid9252", tween: [ "style", "${_PomodoroCopy2}", "left", '502px', { fromValue: '500px'}], position: 2139, duration: 111 },
             { id: "eid9312", tween: [ "transform", "${__1_col}", "scaleX", '1.25', { fromValue: '0'}], position: 739, duration: 439, easing: "easeInOutQuad" },
             { id: "eid9317", tween: [ "transform", "${__1_col}", "scaleX", '0.02', { fromValue: '1.25'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
-            { id: "eid9279", tween: [ "style", "${__1_col}", "top", '-318.01%', { fromValue: '104.6%'}], position: 739, duration: 439, easing: "easeInOutQuad" },
-            { id: "eid9320", tween: [ "style", "${__1_col}", "top", '589.85%', { fromValue: '-318.01%'}], position: 1700, duration: 601, easing: "easeInOutQuad" }         ]
+            { id: "eid9230", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '16deg', { fromValue: '0deg'}], position: 0, duration: 256 },
+            { id: "eid9231", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '-13deg', { fromValue: '16deg'}], position: 256, duration: 215 },
+            { id: "eid9232", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '29deg', { fromValue: '-13deg'}], position: 471, duration: 154 },
+            { id: "eid9233", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '355deg', { fromValue: '29deg'}], position: 625, duration: 375 },
+            { id: "eid9256", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '341deg', { fromValue: '355deg'}], position: 1635, duration: 426 },
+            { id: "eid9254", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '367deg', { fromValue: '341deg'}], position: 2061, duration: 78 },
+            { id: "eid9255", tween: [ "transform", "${_PomodoroCopy2}", "rotateZ", '338deg', { fromValue: '367deg'}], position: 2139, duration: 111 }         ]
       }
    }
 },
@@ -1658,10 +1656,10 @@ var symbols = {
       fill: ['rgba(0,0,0,0)','images/2_col.png','0px','0px']
    },
    {
-      type: 'image',
-      id: 'Pomodoro',
       rect: ['0px','0px','70px','87px','auto','auto'],
+      id: 'Pomodoro',
       userClass: 'pomodoro1',
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/Q3-Pomodoro.png','0px','0px']
    }],
    symbolInstances: [
@@ -1669,20 +1667,12 @@ var symbols = {
    },
    states: {
       "Base State": {
-         "${__2_col}": [
-            ["style", "top", '104.6%'],
-            ["transform", "scaleY", '0'],
-            ["transform", "scaleX", '0'],
-            ["style", "height", '211px'],
-            ["style", "left", '-660%'],
-            ["style", "width", '270px']
-         ],
          "${_Pomodoro}": [
             ["style", "top", '0px'],
-            ["transform", "scaleX", '1'],
+            ["style", "height", '87px'],
             ["transform", "scaleY", '1'],
             ["transform", "rotateZ", '0deg'],
-            ["style", "height", '87px'],
+            ["transform", "scaleX", '1'],
             ["style", "-webkit-transform-origin", [53,35], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [53,35],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [53,35],{valueTemplate:'@@0@@% @@1@@%'}],
@@ -1690,6 +1680,14 @@ var symbols = {
             ["style", "-o-transform-origin", [53,35],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "left", '0px'],
             ["style", "width", '70px']
+         ],
+         "${__2_col}": [
+            ["style", "top", '104.6%'],
+            ["transform", "scaleY", '0'],
+            ["transform", "scaleX", '0'],
+            ["style", "height", '211px'],
+            ["style", "left", '-660%'],
+            ["style", "width", '270px']
          ],
          "${symbolSelector}": [
             ["style", "height", '87px'],
@@ -1723,12 +1721,12 @@ var symbols = {
             { id: "eid9384", tween: [ "transform", "${_Pomodoro}", "rotateZ", '341deg', { fromValue: '355deg'}], position: 1635, duration: 426 },
             { id: "eid9385", tween: [ "transform", "${_Pomodoro}", "rotateZ", '367deg', { fromValue: '341deg'}], position: 2061, duration: 78 },
             { id: "eid9389", tween: [ "transform", "${_Pomodoro}", "rotateZ", '358deg', { fromValue: '367deg'}], position: 2139, duration: 51 },
+            { id: "eid9354", tween: [ "transform", "${__2_col}", "scaleX", '1.25', { fromValue: '0'}], position: 739, duration: 439, easing: "easeInOutQuad" },
+            { id: "eid9355", tween: [ "transform", "${__2_col}", "scaleX", '0.02', { fromValue: '1.25'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
             { id: "eid9358", tween: [ "style", "${__2_col}", "left", '-256.45%', { fromValue: '-660%'}], position: 739, duration: 439, easing: "easeInQuad" },
             { id: "eid9359", tween: [ "style", "${__2_col}", "left", '-154.29%', { fromValue: '-257.14%'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
             { id: "eid9356", tween: [ "style", "${__2_col}", "top", '-318.01%', { fromValue: '104.6%'}], position: 739, duration: 439, easing: "easeInOutQuad" },
-            { id: "eid9357", tween: [ "style", "${__2_col}", "top", '589.85%', { fromValue: '-318.01%'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
-            { id: "eid9354", tween: [ "transform", "${__2_col}", "scaleX", '1.25', { fromValue: '0'}], position: 739, duration: 439, easing: "easeInOutQuad" },
-            { id: "eid9355", tween: [ "transform", "${__2_col}", "scaleX", '0.02', { fromValue: '1.25'}], position: 1700, duration: 601, easing: "easeInOutQuad" }         ]
+            { id: "eid9357", tween: [ "style", "${__2_col}", "top", '589.85%', { fromValue: '-318.01%'}], position: 1700, duration: 601, easing: "easeInOutQuad" }         ]
       }
    }
 },
@@ -1749,10 +1747,10 @@ var symbols = {
       fill: ['rgba(0,0,0,0)','images/3_col.png','0px','0px']
    },
    {
-      type: 'image',
-      id: 'PomodoroCopy',
       rect: ['0px','0px','70px','87px','auto','auto'],
+      id: 'PomodoroCopy',
       userClass: 'pomodoro1',
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/Q3-Pomodoro.png','0px','0px']
    }],
    symbolInstances: [
@@ -1770,10 +1768,10 @@ var symbols = {
          ],
          "${_PomodoroCopy}": [
             ["style", "top", '0px'],
-            ["style", "height", '87px'],
+            ["transform", "scaleX", '1'],
             ["transform", "scaleY", '1'],
             ["transform", "rotateZ", '0deg'],
-            ["transform", "scaleX", '1'],
+            ["style", "height", '87px'],
             ["style", "-webkit-transform-origin", [53,35], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [53,35],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [53,35],{valueTemplate:'@@0@@% @@1@@%'}],
@@ -1848,8 +1846,8 @@ var symbols = {
    {
       id: 'CodaAni',
       type: 'rect',
-      rect: ['172px','131px','auto','auto','auto','auto'],
-      userClass: 'codaani'
+      userClass: 'codaani',
+      rect: ['172px','131px','auto','auto','auto','auto']
    },
    {
       id: 'Corpo',
@@ -1866,14 +1864,14 @@ var symbols = {
    states: {
       "Base State": {
          "${_Testa}": [
-            ["style", "top", '0px'],
-            ["transform", "rotateZ", '0deg'],
-            ["style", "height", '230px'],
             ["style", "-webkit-transform-origin", [31,98], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [31,98],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [31,98],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [31,98],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [31,98],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["transform", "rotateZ", '0deg'],
+            ["style", "height", '230px'],
+            ["style", "top", '0px'],
             ["style", "left", '86px'],
             ["style", "width", '216px']
          ],
@@ -1886,20 +1884,20 @@ var symbols = {
             ["style", "width", '402px']
          ],
          "${_Corpo}": [
-            ["style", "top", '192px'],
             ["style", "height", '263px'],
+            ["style", "top", '192px'],
             ["style", "left", '50px'],
             ["style", "width", '308px']
          ],
          "${_Braccio}": [
-            ["style", "top", '177px'],
-            ["transform", "rotateZ", '0deg'],
-            ["style", "height", '66px'],
             ["style", "-webkit-transform-origin", [96,83], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [96,83],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [96,83],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [96,83],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [96,83],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["transform", "rotateZ", '0deg'],
+            ["style", "height", '66px'],
+            ["style", "top", '177px'],
             ["style", "left", '0px'],
             ["style", "width", '136px']
          ]
@@ -1912,13 +1910,13 @@ var symbols = {
          duration: 1250,
          autoPlay: false,
          timeline: [
+            { id: "eid9339", tween: [ "transform", "${_Testa}", "rotateZ", '2deg', { fromValue: '0deg'}], position: 0, duration: 421, easing: "easeInOutQuad" },
+            { id: "eid9340", tween: [ "transform", "${_Testa}", "rotateZ", '-1deg', { fromValue: '2deg'}], position: 421, duration: 329, easing: "easeInQuad" },
+            { id: "eid9341", tween: [ "transform", "${_Testa}", "rotateZ", '0deg', { fromValue: '-1deg'}], position: 750, duration: 250, easing: "easeOutQuad" },
             { id: "eid9334", tween: [ "transform", "${_Braccio}", "rotateZ", '25deg', { fromValue: '0deg'}], position: 0, duration: 434, easing: "easeInOutCubic" },
             { id: "eid9335", tween: [ "transform", "${_Braccio}", "rotateZ", '-7deg', { fromValue: '25deg'}], position: 434, duration: 306, easing: "easeInOutCubic" },
             { id: "eid9336", tween: [ "transform", "${_Braccio}", "rotateZ", '20deg', { fromValue: '-7deg'}], position: 740, duration: 246, easing: "easeInOutCubic" },
             { id: "eid9337", tween: [ "transform", "${_Braccio}", "rotateZ", '0deg', { fromValue: '20deg'}], position: 985, duration: 265, easing: "easeInOutCubic" },
-            { id: "eid9339", tween: [ "transform", "${_Testa}", "rotateZ", '2deg', { fromValue: '0deg'}], position: 0, duration: 421, easing: "easeInOutQuad" },
-            { id: "eid9340", tween: [ "transform", "${_Testa}", "rotateZ", '-1deg', { fromValue: '2deg'}], position: 421, duration: 329, easing: "easeInQuad" },
-            { id: "eid9341", tween: [ "transform", "${_Testa}", "rotateZ", '0deg', { fromValue: '-1deg'}], position: 750, duration: 250, easing: "easeOutQuad" },
             { id: "eid9033", tween: [ "style", "${_CodaAni}", "left", '174px', { fromValue: '174px'}], position: 0, duration: 0, easing: "easeInOutBack" },
             { id: "eid9032", tween: [ "style", "${_CodaAni}", "top", '117px', { fromValue: '117px'}], position: 0, duration: 0, easing: "easeInOutBack" }         ]
       }
