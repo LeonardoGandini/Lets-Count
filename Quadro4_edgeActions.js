@@ -44,7 +44,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
       
-      $(".fioreani, .FioreFragole").bind('touchstart', function(){
+      $(".fioreani, .FioreFragole, .home").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
       
@@ -94,6 +94,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	$(this).animate({top:'-=20px'},"200");
       	$(this).animate({top:'+=20px'},"1");
       });
+      	$(".musica").bind('touchstart', function(){
+      			sym.getSymbol(this).play("in");
+      	});
 
       });//Edge binding end
       
@@ -187,14 +190,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       
-      Symbol.bindElementAction(compId, symbolName, "${_HOME_butt}", "touchstart", function(sym, e) {
-         sym.getComposition().getStage().getSymbol("MENUz").getSymbol("HOME_butt").play("in");
-         // Navigate to a new URL in the current window
-         // (replace "_self" with appropriate target attribute for a new window)
-         window.open("index.html", "_self");
-
-      });
-      //Edge binding end
+      
       
       
       
@@ -458,5 +454,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("Down-level");
    //Edge symbol end:'Down-level'
+
+   //=========================================================
+   
+   //Edge symbol: 'musica'
+   (function(symbolName) {   
+   
+   })("musica");
+   //Edge symbol end:'musica'
 
 })(jQuery, AdobeEdge, "Quadro04");

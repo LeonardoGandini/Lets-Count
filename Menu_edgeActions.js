@@ -34,23 +34,35 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
         
       yepnope({
            load: ["libs/jplayer.min.js",
-           			//"libs/playBG-min.js",
+           			"libs/playBGMenu.js"
            			//"http://cdn.edgecommons.org/an/1.0.0/js/min/EdgeCommons.js"
            			],
            complete: function() {}
       });
       
       $(".popuppo").hide();
-      			$(".InfoButt").bind('touchstart click', function(){
+      			$(".InfoButt").bind('touchstart', function(){
       					$(".popuppo").toggle();
+      					sym.getSymbol(this).play("in");
       			});  
-      			$(".chiudix").bind('touchstart click', function(){
+      			$(".chiudix").bind('touchstart', function(){
       					$(".popuppo").hide();
       			}); 			
       
-      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo").bind('touchstart click', function(){
+      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
+      
+      
+      $(".musica").bind('touchstart', function(){
+      		sym.getSymbol(this).play("in");
+      });
+      $('.musica').toggle(function () {
+          $(".musica").css({'-webkit-filter': 'saturate(0%)', 'opacity':'1'});
+      }, function () {
+          $(".musica").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+      });
+      
 
       });//Edge binding end
       
@@ -207,5 +219,35 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("uno");
    //Edge symbol end:'uno'
+
+   //=========================================================
+   
+   //Edge symbol: 'musica'
+   (function(symbolName) {   
+   
+   })("musica");
+   //Edge symbol end:'musica'
+
+   //=========================================================
+   
+   //Edge symbol: 'AudioMenuTappeto'
+   (function(symbolName) {   
+   
+   })("AudioMenuTappeto");
+   //Edge symbol end:'AudioMenuTappeto'
+
+   //=========================================================
+   
+   //Edge symbol: 'Scoiattolo'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3500, function(sym, e) {
+         sym.play(0);
+
+      });
+      //Edge binding end
+
+   })("Scoiattolo");
+   //Edge symbol end:'Scoiattolo'
 
 })(jQuery, AdobeEdge, "Menu");

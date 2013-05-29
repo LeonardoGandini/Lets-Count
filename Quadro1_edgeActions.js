@@ -34,17 +34,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioLumaca = new Audio('Suoni/Lumaca01.mp3');
          AudioTada1 = new Audio('Suoni/Tada1.mp3');
-         
+      
          /*Nasconde il numero 1*/sym.$(".Numero_1_col").css({'display': 'none'});
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
-         
+      
          sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
-         
+      
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
         /* $(".fioreani").click(function(){
          	sym.getSymbol(this).play("in");
          });*/
-      $(".fioreani").bind('touchstart', function(){
+      $(".fioreani, .home").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
       
@@ -68,7 +68,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
              div.animate({top:'+=25px'},"1");
          });
          /*Tira giù il fumello*/sym.getSymbol("FUMELLO").play();
-      
+         
+      	$(".musica").bind('touchstart', function(){
+      			sym.getSymbol(this).play("in");
+      	});
       
 
       });
@@ -251,6 +254,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'HOME_butt'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 406, function(sym, e) {
+         window.open("index.html", "_self");
+
+      });
+      //Edge binding end
+
    })("HOME_butt");
    //Edge symbol end:'HOME_butt'
 
@@ -263,12 +272,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       
-      Symbol.bindElementAction(compId, symbolName, "${_HOME_butt}", "touchstart", function(sym, e) {
-         sym.getComposition().getStage().getSymbol("MENUz").getSymbol("HOME_butt").play("in");
-         window.open("index.html", "_self");
-
-      });
-      //Edge binding end
+      
       
       
       
@@ -282,6 +286,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       });
       //Edge binding end
+
+      
 
       
 
@@ -363,5 +369,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("Down-level");
    //Edge symbol end:'Down-level'
+
+   //=========================================================
+   
+   //Edge symbol: 'musica'
+   (function(symbolName) {   
+   
+   })("musica");
+   //Edge symbol end:'musica'
 
 })(jQuery, AdobeEdge, "Quadro01");

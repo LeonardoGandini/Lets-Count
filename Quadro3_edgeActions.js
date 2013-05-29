@@ -39,14 +39,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioTada2 = new Audio('Suoni/Tada2.mp3');  
          AudioTalpa = new Audio('Suoni/Lumaca01.mp3');
          AudioTalpe = new Audio('Suoni/Talpe.mp3');
-        
+      
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       
          sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
       
          sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
       
-      $(".fioreani, .innaffia, .pomostatico").bind('touchstart', function(){
+      $(".fioreani, .innaffia, .pomostatico, .home").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
       
@@ -96,6 +96,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	$(this).animate({top:'-=20px'},"140");
       	$(this).animate({top:'+=20px'},"1");
       });
+      
+      	$(".musica").bind('touchstart', function(){
+      			sym.getSymbol(this).play("in");
+      	});
 
       });//Edge binding end
       
@@ -189,14 +193,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       
-      Symbol.bindElementAction(compId, symbolName, "${_HOME_butt}", "touchstart", function(sym, e) {
-         sym.getComposition().getStage().getSymbol("MENUz").getSymbol("HOME_butt").play("in");
-         // Navigate to a new URL in the current window
-         // (replace "_self" with appropriate target attribute for a new window)
-         window.open("index.html", "_self");
-
-      });
-      //Edge binding end
+      
       
       
       
@@ -441,5 +438,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("Down-level");
    //Edge symbol end:'Down-level'
+
+   //=========================================================
+   
+   //Edge symbol: 'musica'
+   (function(symbolName) {   
+   
+   })("musica");
+   //Edge symbol end:'musica'
 
 })(jQuery, AdobeEdge, "Quadro03");

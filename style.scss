@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+@mixin vendor-prefix($name, $argument) {
+	     #{$name}: $argument;
+ -webkit-#{$name}: $argument;
+ 	 -ms-#{$name}: $argument;
+ 	-moz-#{$name}: $argument;
+      -o-#{$name}: $argument;
+}
+
+
+*{  
+	@include vendor-prefix(touch-callout, none !important);
+	@include vendor-prefix(tap-highlight-color, rgba(0,0,0,0) !important);
+	@include vendor-prefix(user-select, none !important);    
+}
+
+.edgeLoad-Quadro01,
+.edgeLoad-Quadro02,
+.edgeLoad-Quadro03,
+.edgeLoad-Quadro04,
+.edgeLoad-Quadro05,
+.edgeLoad-Menu{visibility:hidden;}
+
+body,
+html,
+#Stage,
+.Quadro01,
+.Quadro02,
+.Quadro03,
+.Quadro04,
+.Quadro05,
+.Menu
+{
+    overflow:hidden !important;
+}
+body{
+/*
+	margin: 0px 0px 0px 0px;
+	padding: 0 !important;
+	width: 100% !important;
+*/
+	margin: -20px 0px 0px 0px;
+	}
+
+#Stage{
+		@include vendor-prefix(transform-origin, 0 0);
+	    overflow: hidden;
+	    margin: 0 auto;
+	    padding:0;
+    }

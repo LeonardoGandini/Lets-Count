@@ -24,4 +24,15 @@ $(document).ready(function(){
 };
 document.documentElement.addEventListener(click, kickoff, true);
 
-   
+
+
+$('.musica').toggle(function () {
+    $(".AudioTappetino").jPlayer("pause");
+}, function () {
+    $(".AudioTappetino").jPlayer("play");
+});
+$('.musica').toggle(function () {
+    $(".musica").css({'-webkit-filter': 'saturate(0%)', 'opacity':'1'});
+}, function () {
+    $(".musica").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+});
