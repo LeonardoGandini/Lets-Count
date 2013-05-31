@@ -53,19 +53,35 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	sym.getSymbol(this).play("in");
       });
       
+      $(".musica").bind('touchstart, click', function(){
+      		sym.getSymbol(this).play("in");
+      		 $(".ilminkia").css({'filter': "url('#grayscale')"});
+      });
+      $('.musica').toggle(function () {
+          $(".musicanrm").css({'display': 'none'});
+          $(".musicagray").css({'display': 'block'});    	
+      }, function () {
+          $(".musicanrm").css({'display': 'block'});
+          $(".musicagray").css({'display': 'none'});   
+      });
       
+      
+      /*
       $(".musica").bind('touchstart', function(){
       		sym.getSymbol(this).play("in");
       });
       $('.musica').toggle(function () {
-          $(".musica").css({'-webkit-filter': 'saturate(0%)', 'opacity':'1'});
+          $(".musica").css({
+          	'-webkit-filter': 'saturate(0%)',
+          	});
       }, function () {
-          $(".musica").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+          $(".musica").css({
+          	'-webkit-filter': 'saturate(100%)',
+          	});
       });
-      
+      */
 
       });//Edge binding end
-      
 
    })("stage");
    //Edge symbol end:'stage'

@@ -62,11 +62,11 @@ loadResources(aLoader, doDelayLoad);
 preContent={
    dom: [
    {
-      id:'preloader2',
+      id:'preloader52',
       type:'image',
       tag:'img',
-      rect:['481','375','62px','18px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/preloader2.gif','0px','0px']
+      rect:['468','330','88px','88px','auto','auto'],
+      fill:["rgba(0,0,0,0)",'images/preloader5.gif','0px','0px']
    }]};//simpleContent
 
 dlContent={

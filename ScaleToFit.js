@@ -1,14 +1,19 @@
 $(document).ready(function() {
 
-	var altez = ($(document).height()/748);
+	var altez = ($(document).height() / 748);
+	var altezZ = ($(document).height());
 	
 	$("#Stage").css({
-		'-webkit-transform': 'scale('+ altez +')',
-				'transform': 'scale('+ altez +')',
-			'-ms-transform': 'scale('+ altez +')',
-		   '-moz-transform': 'scale('+ altez +')',
-		     '-o-transform': 'scale('+ altez +')'
-		});
+				'transform': 'scale(' + altez + ')',
+		'-webkit-transform': 'scale(' + altez + ')',
+			'-ms-transform': 'scale(' + altez + ')',
+		   '-moz-transform': 'scale(' + altez + ')',
+		     '-o-transform': 'scale(' + altez + ')'
+	});
+	
+	$("body").css({
+		'height': altezZ
+	});
 /* 	$(".Menu").css({'-webkit-transform': 'scale(1.2)'}); */
 
 });
