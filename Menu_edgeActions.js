@@ -49,7 +49,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       					$(".popuppo").hide();
       			}); 			
       
-      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo").bind('touchstart', function(){
+      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo").bind('touchstart, click', function(){
       	sym.getSymbol(this).play("in");
       });
       
@@ -155,16 +155,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'popuppo'
    (function(symbolName) {   
    
+      Symbol.bindElementAction(compId, symbolName, "${_Rectangle3}", "touchstart", function(sym, e) {
+         // Navigate to a new URL in the current window
+         // (replace "_self" with appropriate target attribute for a new window)
+         window.open("http://m.leonardogandini.com", "_blank");
+         
+
+      });
+      //Edge binding end
+
    })("popuppo");
    //Edge symbol end:'popuppo'
-
-   //=========================================================
-   
-   //Edge symbol: 'chiudix'
-   (function(symbolName) {   
-   
-   })("chiudix");
-   //Edge symbol end:'chiudix'
 
    //=========================================================
    
