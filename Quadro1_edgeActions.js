@@ -11,15 +11,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //Edge symbol: 'stage'
    (function(symbolName) {
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 196, function(sym, e) {
-         sym.stop();
-      });
-      //Edge binding end
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 339, function(sym, e) {
-         // stop the timeline at the given position (ms or label)
-         sym.stop(0);
-      });
-      //Edge binding end
+      
+      
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
       yepnope({
@@ -40,7 +33,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
          sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
       
-         sym.$(".next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
+      
       
       	$(".fioreani, .home").bind('touchstart', function(){
       		sym.getSymbol(this).play("in");
@@ -58,7 +51,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
         //sym.$(".uccellino, .carota").css({'-webkit-filter': 'drop-shadow(0 2px 3px rgba(0,0,0,.35))'});
          sym.getSymbol(".lumacacontainer").play("in");
-         
+      
          $(".lumacacontainer").bind('touchstart', function(){
          	AudioLumaca.load();
          	AudioLumaca.play();
@@ -68,19 +61,25 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          });
          /*Tira giù il fumello*/sym.getSymbol("FUMELLO").play();
       
-      	$(".musica").bind('touchstart', function(){
+      
+      
+      	/*MENU START*/
+      	$(".testina").bind('touchstart', function(){
+      			sym.getSymbol(this).play("in");
+      			sym.getSymbol(".menu").play("in");
+      	});
+      		$(".musica, .next, .prev").bind('touchstart', function(){
       			sym.getSymbol(this).play("in");
       	});
       
+      	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
+      
+      	/*MENU STOP*/
 
       });
       //Edge binding end
       
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
       
-      });
-      //Edge binding end
       
       Symbol.bindElementAction(compId, symbolName, "${_BIRD}", "touchstart", function(sym, e) {
          sym.getSymbol("BIRD").play("in");
@@ -277,23 +276,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_NEXT}", "touchstart", function(sym, e) {
-         sym.getComposition().getStage().getSymbol("MENUz").getSymbol("NEXT").play("in");
-         window.open("Quadro2.html", "_self");
-
-      });
-      //Edge binding end
+      
 
       
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_Testina}", "touchstart", function(sym, e) {
-         sym.play();
-         sym.getComposition().getStage().play();
-
-      });
-      //Edge binding end
+      
 
    })("MENUz");
    //Edge symbol end:'MENUz'
@@ -303,6 +292,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'NEXT'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 140, function(sym, e) {
+         window.open("Quadro2.html", "_self");
+
+      });
+      //Edge binding end
+
    })("NEXT");
    //Edge symbol end:'NEXT'
 
@@ -374,5 +369,38 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("musica");
    //Edge symbol end:'musica'
+
+   //=========================================================
+   
+   //Edge symbol: 'Menu'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 196, function(sym, e) {
+         sym.stop();
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 339, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("Menu");
+   //Edge symbol end:'Menu'
+
+   //=========================================================
+   
+   //Edge symbol: 'testina'
+   (function(symbolName) {   
+   
+   })("testina");
+   //Edge symbol end:'testina'
 
 })(jQuery, AdobeEdge, "Quadro01");
