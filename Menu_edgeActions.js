@@ -34,11 +34,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
         
       yepnope({
            load: ["libs/jplayer.min.js",
-           			"libs/playBGMenu.js"
-           			//"http://cdn.edgecommons.org/an/1.0.0/js/min/EdgeCommons.js"
-           			],
-           complete: function() {}
-      });
+           			"libs/playBG-min.js",
+           			"libs/jquery-ui-1.10.3.custom.min.js",
+           			"libs/jquery.ui.touch-punch.min.js"
+           			],complete: init});
+      
+      function init(){
+           	$(".testona").draggable();
+      };
       
       $(".popuppo").hide();
       			$(".InfoButt").bind('touchstart', function(){
@@ -49,11 +52,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       					$(".popuppo").hide();
       			}); 			
       
-      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo").bind('touchstart, click', function(){
+      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
       
-      $(".musica").bind('touchstart, click', function(){
+      $(".musica").bind('touchstart', function(){
       		sym.getSymbol(this).play("in");
       		 $(".ilminkia").css({'filter': "url('#grayscale')"});
       });
