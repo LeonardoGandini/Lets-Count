@@ -34,7 +34,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
         
       yepnope({
            load: ["libs/jplayer.min.js",
-           			"libs/playBG-min.js",
+           			"libs/playBGMenu.js",
            			"libs/jquery-ui-1.10.3.custom.min.js",
            			"libs/jquery.ui.touch-punch.min.js"
            			],complete: init});
@@ -44,21 +44,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       };
       
       $(".popuppo").hide();
-      			$(".InfoButt").bind('touchstart', function(){
+      			$(".InfoButt").bind('touchstart MSPointerDown', function(){
       					$(".popuppo").toggle();
       					sym.getSymbol(this).play("in");
       			});  
-      			$(".chiudix").bind('touchstart', function(){
+      			$(".chiudix").bind('touchstart MSPointerDown', function(){
       					$(".popuppo").hide();
       			}); 			
       
-      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo").bind('touchstart', function(){
+      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       });
       
-      $(".musica").bind('touchstart', function(){
+      $(".musica").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
-      		 $(".ilminkia").css({'filter': "url('#grayscale')"});
+      		//$(".ilminkia").css({'filter': "url('#grayscale')"});
       });
       $('.musica').toggle(function () {
           $(".musicanrm").css({'display': 'none'});
@@ -70,7 +70,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       /*
-      $(".musica").bind('touchstart', function(){
+      $(".musica").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       });
       $('.musica').toggle(function () {

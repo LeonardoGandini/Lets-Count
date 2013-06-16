@@ -24,7 +24,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       function init(){
            	//$(".uccellino").draggable();
-           //	sym.$('RRect').draggable();
+           // sym.$('RRect').draggable();
       };
       
       avanti = "Quadro2.html";
@@ -36,37 +36,38 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioLumaca = new Audio('Suoni/Lumaca01.mp3');
          AudioTada1 = new Audio('Suoni/numbers/one.mp3');
       
+      
       	AudioQ1.load();
       	AudioQ1.play();
-         	
-         	
+      
+      
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       
-         $(".fioreani, .home").bind('touchstart', function(){
+         $(".fioreani, .home").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       	});
       
-         $(".foglina").bind('touchstart', function(){
+         $(".foglina").bind('touchstart MSPointerDown', function(){
          	sym.getSymbol(this).play("in");
          	AudioFoglie.load();
          	AudioFoglie.play();
          });
       
-      	$(".uccellino").bind('touchstart', function(){
+      	$(".uccellino").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       		AudioBird.load();
       		AudioBird.play();
       	});
       
       	sym.getSymbol(".coda").play("animaziocoda");
-         $(".triggercoda").bind('touchstart', function(){
+         $(".triggercoda").bind('touchstart MSPointerDown', function(){
          	sym.getSymbol(".coda").play("animaziocoda");
          });
       
         //sym.$(".uccellino, .carota").css({'-webkit-filter': 'drop-shadow(0 2px 3px rgba(0,0,0,.35))'});
          sym.getSymbol(".lumacacontainer").play("in");
       
-         $(".lumacacontainer").bind('touchstart', function(){
+         $(".lumacacontainer").bind('touchstart MSPointerDown', function(){
          	AudioLumaca.load();
          	AudioLumaca.play();
              var div=$(".lumacacontainer");
@@ -75,12 +76,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          });
          /*Tira giù il fumello*/sym.getSymbol("FUMELLO").play();
       
-      	$(".musica, .next, .prev, .carota").bind('touchstart', function(){
+      	$(".musica, .next, .prev, .carota").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       	});
       
       /*MENU START*/
-      	$(".testina").bind('touchstart', function(){
+      	$(".testina").bind('touchstart MSPointerDown', function(){
       			sym.getSymbol(".menu").play();
       	});
          sym.$(".prev").css({'display': 'none'});
