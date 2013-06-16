@@ -30,12 +30,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       avanti = "Quadro2.html";
       
       /*AUDIO*/
+      	AudioQ1 = new Audio('Suoni/quadri/Q1.mp3');
          AudioBird = new Audio('Suoni/cip01.mp3');
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioLumaca = new Audio('Suoni/Lumaca01.mp3');
-         AudioTada1 = new Audio('Suoni/Tada1.mp3');
+         AudioTada1 = new Audio('Suoni/numbers/one.mp3');
       
-      
+      	AudioQ1.load();
+      	AudioQ1.play();
+         	
+         	
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       
          $(".fioreani, .home").bind('touchstart', function(){
