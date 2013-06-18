@@ -45,7 +45,7 @@ if(document.addEventListener ){
 
    requiresSVG=false;
 
-   doDelayLoad=false;
+   doDelayLoad=true;
    htFallbacks={
     };
 
@@ -62,11 +62,18 @@ loadResources(aLoader, doDelayLoad);
 preContent={
    dom: [
    {
-      id:'preloader5',
+      id:'G-Preloader',
       type:'image',
       tag:'img',
-      rect:['468','340','88px','88px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/preloader5.gif','0px','0px']
+      rect:['315','300','250px','250px','auto','auto'],
+      fill:["rgba(0,0,0,0)",'images/G-Preloader.gif','0px','0px']
+   },
+   {
+      id:'LoadingTXT',
+      type:'image',
+      tag:'img',
+      rect:['333','567','250px','77px','auto','auto'],
+      fill:["rgba(0,0,0,0)",'images/LoadingTXT.png','0px','0px']
    }]};//simpleContent
 
 dlContent={

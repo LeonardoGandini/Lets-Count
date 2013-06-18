@@ -27,7 +27,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
            // sym.$('RRect').draggable();
       };
       
-      avanti = "Quadro2.html";
       
       /*AUDIO*/
       	AudioQ1 = new Audio('Suoni/quadri/Q1.mp3');
@@ -81,6 +80,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	});
       
       /*MENU START*/
+      	avanti = "Quadro2.html";
       	$(".testina").bind('touchstart MSPointerDown', function(){
       			sym.getSymbol(".menu").play();
       	});
@@ -331,6 +331,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'FarfallaContainer'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 60000, function(sym, e) {
+         sym.play(0);
+
+      });
+      //Edge binding end
+
    })("FarfallaContainer");
    //Edge symbol end:'FarfallaContainer'
 
@@ -440,7 +446,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    (function(symbolName) {   
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 140, function(sym, e) {
-         window.open(avanti, "_self");
+         window.open(indietro, "_self");
 
       });
          //Edge binding end

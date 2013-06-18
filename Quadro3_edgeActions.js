@@ -11,19 +11,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //Edge symbol: 'stage'
    (function(symbolName) {
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 196, function(sym, e) {
-         sym.stop();
-      });
-      //Edge binding end
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 339, function(sym, e) {
-         // stop the timeline at the given position (ms or label)
-         sym.stop(0);
-      });
-      //Edge binding end
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
-      });
-      //Edge binding end
+      
+      
+      
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
       yepnope({
            load: ["libs/jplayer.min.js",
@@ -42,64 +32,69 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       
-         sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
-      
-         sym.$(".prev, .next").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
-      
-      $(".fioreani, .innaffia, .pomostatico, .home").bind('touchstart', function(){
+      $(".fioreani, .innaffia, .pomostatico, .home").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       });
       
-      $(".Talpona").bind('touchstart', function(){
+      $(".Talpona").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       	AudioTalpa.load();
       	AudioTalpa.play();	
       });
-      $(".talpine").bind('touchstart', function(){
+      $(".talpine").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       	AudioTalpe.load();
       	AudioTalpe.play();	
       });
       
-      $(".pomostatico").bind('touchstart', function(){
+      $(".pomostatico").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       	AudioFoglie.load();
       	AudioFoglie.play();	
       });
       
       $(".pomo2trigger, .pomo3trigger").hide();
-      $(".PomodoroG-1").bind('touchstart click', function(){
+      $(".PomodoroG-1").bind('touchstart MSPointerDown click', function(){
       	sym.getSymbol(this).play("in");
       	$(".pomo2trigger").show();
       });
-      $(".pomo2trigger").bind('touchstart click', function(){
+      $(".pomo2trigger").bind('touchstart MSPointerDown click', function(){
       	sym.getSymbol(".PomodoroG-2").play("in");
       	$(".pomo3trigger").show();
       });
-      $(".pomo3trigger").bind('touchstart click', function(){
+      $(".pomo3trigger").bind('touchstart MSPointerDown click', function(){
       	sym.getSymbol(".PomodoroG-3").play("in");
       });
       
       
       
       
-      $(".codatrigger").bind('touchstart', function(){
+      $(".codatrigger").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(".codaani").play("in");
       	sym.getSymbol(".lbcoda").play("in");
       });
       
       sym.getSymbol("FUMELLO").play("in");
       
-      $(".formica").bind('touchstart', function(){
+      $(".formica").bind('touchstart MSPointerDown', function(){
       	AudioAnt.load();
       	AudioAnt.play();	
       	$(this).animate({top:'-=20px'},"140");
       	$(this).animate({top:'+=20px'},"1");
       });
       
-      	$(".musica").bind('touchstart', function(){
-      			sym.getSymbol(this).play("in");
+      /*MENU START*/
+      	avanti = "Quadro4.html";
+      	indietro = "Quadro2.html";
+      	$(".musica").bind('touchstart MSPointerDown', function(){
+      		sym.getSymbol(this).play("in");
       	});
+      	$(".testina").bind('touchstart MSPointerDown', function(){
+      			sym.getSymbol(".menu").play();
+      	});
+      	sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
+      	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
+      /*MENU STOP*/
 
       });//Edge binding end
       
@@ -175,77 +170,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("Preloader");
    //Edge symbol end:'Preloader'
-
-   //=========================================================
-   
-   //Edge symbol: 'HOME_butt'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 406, function(sym, e) {
-         window.open("index.html", "_self");
-
-      });
-      //Edge binding end
-
-   })("HOME_butt");
-   //Edge symbol end:'HOME_butt'
-
-   //=========================================================
-   
-   //Edge symbol: 'MENUz'
-   (function(symbolName) {   
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-      Symbol.bindElementAction(compId, symbolName, "${_NEXT}", "touchstart", function(sym, e) {
-         sym.getComposition().getStage().getSymbol("MENUz").getSymbol("NEXT").play("in");
-         window.open("Quadro4.html", "_self");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${_PREV}", "touchstart", function(sym, e) {
-         sym.getComposition().getStage().getSymbol("MENUz").getSymbol("PREV").play("in");
-         window.open("./Quadro2.html", "_self");
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${_Testina}", "touchstart", function(sym, e) {
-         sym.play();
-         sym.getComposition().getStage().play();
-
-      });
-      //Edge binding end
-
-   })("MENUz");
-   //Edge symbol end:'MENUz'
-
-   //=========================================================
-   
-   //Edge symbol: 'PREV'
-   (function(symbolName) {   
-   
-   })("PREV");
-   //Edge symbol end:'PREV'
-
-   //=========================================================
-   
-   //Edge symbol: 'NEXT'
-   (function(symbolName) {   
-   
-   })("NEXT");
-   //Edge symbol end:'NEXT'
 
    //=========================================================
    
@@ -452,5 +376,120 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("musica");
    //Edge symbol end:'musica'
+
+   //=========================================================
+   
+   //Edge symbol: 'PREV'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 140, function(sym, e) {
+         window.open(indietro, "_self");
+
+      });
+      //Edge binding end
+
+   })("PREV");
+   //Edge symbol end:'PREV'
+
+   //=========================================================
+   
+   //Edge symbol: 'NEXT'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 140, function(sym, e) {
+         window.open(avanti, "_self");
+
+      });
+      //Edge binding end
+
+   })("NEXT");
+   //Edge symbol end:'NEXT'
+
+   //=========================================================
+   
+   //Edge symbol: 'Menu'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         //sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 14, function(sym, e) {
+         sym.getSymbol(".testina").play();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 196, function(sym, e) {
+         sym.stop();
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 223, function(sym, e) {
+         sym.play();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 236, function(sym, e) {
+         sym.getSymbol(".testina").play();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 384, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("Menu");
+   //Edge symbol end:'Menu'
+
+   //=========================================================
+   
+   //Edge symbol: 'HOME_butt'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 406, function(sym, e) {
+         window.open("index.html", "_self");
+
+      });
+      //Edge binding end
+
+   })("HOME_butt");
+   //Edge symbol end:'HOME_butt'
+
+   //=========================================================
+   
+   //Edge symbol: 'MENUz'
+   (function(symbolName) {   
+   
+   })("MENUz");
+   //Edge symbol end:'MENUz'
+
+   //=========================================================
+   
+   //Edge symbol: 'testina'
+   (function(symbolName) {   
+   
+   })("testina");
+   //Edge symbol end:'testina'
+
+   //=========================================================
+   
+   //Edge symbol: 'LadybirdVolante'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 60000, function(sym, e) {
+         sym.play(0);
+
+      });
+      //Edge binding end
+
+   })("LadybirdVolante");
+   //Edge symbol end:'LadybirdVolante'
 
 })(jQuery, AdobeEdge, "Quadro03");

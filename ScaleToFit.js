@@ -10,7 +10,13 @@ $(document).ready(function() {
 		   '-moz-transform': 'scale(' + altez + ')',
 		     '-o-transform': 'scale(' + altez + ')'
 	});
-	
+/*
+	$(".edgePreloadQuadro01").css({
+				'transform': 'scale(' + altez + ')',
+		'-webkit-transform': 'scale(' + altez + ')',
+			'-ms-transform': 'scale(' + altez + ')'
+	});
+*/
 	$("body").css({
 		'height': altezZ
 	});

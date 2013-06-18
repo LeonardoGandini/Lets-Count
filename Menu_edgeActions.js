@@ -42,6 +42,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       function init(){
            	$(".testona").draggable();
       };
+      	AudioLetsCount = new Audio('Suoni/LetsCount.mp3');
+         AudioLetsCount.load();
+         
+      $(".letscount").bind('touchstart MSPointerDown', function(){
+         AudioLetsCount.load();
+         AudioLetsCount.play();
+      });
       
       $(".popuppo").hide();
       			$(".InfoButt").bind('touchstart MSPointerDown', function(){
@@ -60,6 +67,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       		sym.getSymbol(this).play("in");
       		//$(".ilminkia").css({'filter': "url('#grayscale')"});
       });
+      
       $('.musica').toggle(function () {
           $(".musicanrm").css({'display': 'none'});
           $(".musicagray").css({'display': 'block'});    	

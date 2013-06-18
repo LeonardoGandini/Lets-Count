@@ -238,11 +238,6 @@ var symbols = {
             fill:["rgba(0,0,0,0)",im+"Q5-Cestino.png",'0px','0px']
          },
          {
-            id:'FUMELLO',
-            type:'rect',
-            rect:['112','-226','auto','auto','auto','auto']
-         },
-         {
             id:'Trigger-Verme',
             type:'rect',
             rect:['125px','596px','80px','77px','auto','auto'],
@@ -266,17 +261,23 @@ var symbols = {
             transform:[[],[],[],['0.859','0.859']]
          },
          {
-            id:'MENUz',
-            type:'rect',
-            rect:['354','634','auto','auto','auto','auto']
-         },
-         {
             id:'AudioTappeto',
             type:'rect',
             rect:['-272px','164px','60px','60px','auto','auto'],
             fill:["rgba(192,192,192,1)"],
             stroke:[0,"rgba(0,0,0,1)","none"],
             userClass:"AudioTappetino"
+         },
+         {
+            id:'Menu',
+            type:'rect',
+            rect:['-73px','696px','auto','auto','auto','auto'],
+            userClass:"menu"
+         },
+         {
+            id:'FUMELLO',
+            type:'rect',
+            rect:['112px','-226px','auto','auto','auto','auto']
          }],
          symbolInstances: [
          {
@@ -316,28 +317,28 @@ var symbols = {
             symbolName:'Mela-Bella-4'
          },
          {
-            id:'Mela-Bella-5',
-            symbolName:'Mela-Bella-5'
+            id:'FUMELLO',
+            symbolName:'FUMELLO'
+         },
+         {
+            id:'Mela-Statica-4',
+            symbolName:'Mela-Statica'
          },
          {
             id:'Bird-Tereno',
             symbolName:'Bird-Tereno'
          },
          {
-            id:'FUMELLO',
-            symbolName:'FUMELLO'
-         },
-         {
             id:'Verme',
             symbolName:'Verme'
          },
          {
-            id:'MENUz',
-            symbolName:'MENUz'
+            id:'Mela-Bella-5',
+            symbolName:'Mela-Bella-5'
          },
          {
-            id:'Mela-Statica-4',
-            symbolName:'Mela-Statica'
+            id:'Menu',
+            symbolName:'Menu'
          },
          {
             id:'NUVOLA',
@@ -363,11 +364,10 @@ var symbols = {
       },
    states: {
       "Base State": {
-         "${_Bird-Pala}": [
-            ["style", "top", '474px'],
-            ["subproperty", "filter.drop-shadow.offsetH", '-2px'],
-            ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.24)'],
-            ["subproperty", "filter.drop-shadow.blur", '3px']
+         "${_Mela-Statica}": [
+            ["style", "top", '18px'],
+            ["style", "left", '777px'],
+            ["subproperty", "filter.hue-rotate", '20deg']
          ],
          "${_Mela-Statica-2}": [
             ["style", "top", '83px'],
@@ -387,19 +387,20 @@ var symbols = {
             ["style", "left", '326px'],
             ["style", "width", '196px']
          ],
-         "${_Mela3Trigger}": [
-            ["style", "top", '-11px'],
-            ["style", "opacity", '0'],
-            ["style", "left", '664px']
+         "${_Menu}": [
+            ["style", "top", '696px'],
+            ["style", "left", '-73px']
+         ],
+         "${_Q5-Pala}": [
+            ["style", "top", '223px'],
+            ["transform", "scaleY", '0.66'],
+            ["transform", "rotateZ", '-16deg'],
+            ["transform", "scaleX", '0.66'],
+            ["style", "left", '-43px']
          ],
          "${_Mela-Statica-4}": [
             ["style", "top", '131px'],
             ["style", "left", '886px'],
-            ["subproperty", "filter.hue-rotate", '20deg']
-         ],
-         "${_Mela-Statica}": [
-            ["style", "top", '18px'],
-            ["style", "left", '777px'],
             ["subproperty", "filter.hue-rotate", '20deg']
          ],
          "${_Verme}": [
@@ -414,38 +415,34 @@ var symbols = {
             ["style", "left", '125px'],
             ["style", "width", '80px']
          ],
-         "${_Q5-Farfa-2}": [
-            ["subproperty", "filter.drop-shadow.color", 'rgba(255,255,255,0.71)'],
-            ["subproperty", "filter.hue-rotate", '-2deg'],
-            ["style", "left", '64px'],
-            ["style", "width", '96px'],
-            ["style", "top", '191px'],
-            ["style", "height", '78px'],
-            ["subproperty", "filter.drop-shadow.offsetH", '3px'],
-            ["subproperty", "filter.drop-shadow.blur", '3px'],
-            ["subproperty", "filter.drop-shadow.offsetV", '2px']
+         "${_Trigger-Mela-Easter}": [
+            ["style", "top", '593px'],
+            ["style", "height", '56px'],
+            ["style", "opacity", '0'],
+            ["style", "left", '766px'],
+            ["style", "width", '64px']
          ],
-         "${_Q5-Pala}": [
-            ["style", "top", '223px'],
-            ["transform", "scaleY", '0.66'],
-            ["transform", "rotateZ", '-16deg'],
-            ["transform", "scaleX", '0.66'],
-            ["style", "left", '-43px']
+         "${_Mela3Trigger}": [
+            ["style", "top", '-11px'],
+            ["style", "opacity", '0'],
+            ["style", "left", '664px']
          ],
          "${_Mela-Statica-3}": [
             ["style", "top", '-15px'],
             ["style", "left", '922px'],
             ["subproperty", "filter.hue-rotate", '20deg']
          ],
-         "${_MENUz}": [
-            ["style", "left", '-73px'],
-            ["style", "top", '696px']
-         ],
          "${_Q5-TerraToppa}": [
             ["transform", "scaleX", '0.31'],
             ["style", "top", '460px'],
             ["style", "left", '-381px'],
             ["transform", "scaleY", '0.31']
+         ],
+         "${_Bird-Pala}": [
+            ["style", "top", '474px'],
+            ["subproperty", "filter.drop-shadow.offsetH", '-2px'],
+            ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.24)'],
+            ["subproperty", "filter.drop-shadow.blur", '3px']
          ],
          "${_Q5-Farfa-12}": [
             ["subproperty", "filter.drop-shadow.color", 'rgba(255,255,255,0.71)'],
@@ -461,16 +458,22 @@ var symbols = {
          "${_Mela2Trigger}": [
             ["style", "opacity", '0']
          ],
-         "${_Trigger-Mela-Easter}": [
-            ["style", "top", '593px'],
-            ["style", "height", '56px'],
-            ["style", "opacity", '0'],
-            ["style", "left", '766px'],
-            ["style", "width", '64px']
+         "${_Q5-Farfa-2}": [
+            ["subproperty", "filter.drop-shadow.color", 'rgba(255,255,255,0.71)'],
+            ["subproperty", "filter.hue-rotate", '-2deg'],
+            ["style", "left", '64px'],
+            ["style", "width", '96px'],
+            ["style", "top", '191px'],
+            ["style", "height", '78px'],
+            ["subproperty", "filter.drop-shadow.offsetH", '3px'],
+            ["subproperty", "filter.drop-shadow.blur", '3px'],
+            ["subproperty", "filter.drop-shadow.offsetV", '2px']
          ],
-         "${_Mela-Bella-1}": [
-            ["subproperty", "filter.hue-rotate", '30deg'],
-            ["subproperty", "filter.saturate", '1.05']
+         "${_Q5-Cestino2}": [
+            ["style", "height", '148px'],
+            ["style", "top", '486px'],
+            ["style", "left", '307px'],
+            ["style", "width", '216px']
          ],
          "${_Bird-Tereno}": [
             ["style", "top", '563px'],
@@ -482,11 +485,9 @@ var symbols = {
             ["style", "left", '893px'],
             ["subproperty", "filter.drop-shadow.blur", '6px']
          ],
-         "${_Q5-Cestino2}": [
-            ["style", "height", '148px'],
-            ["style", "top", '486px'],
-            ["style", "left", '307px'],
-            ["style", "width", '216px']
+         "${_Mela-Bella-1}": [
+            ["subproperty", "filter.hue-rotate", '30deg'],
+            ["subproperty", "filter.saturate", '1.05']
          ],
          "${_Mela4Trigger}": [
             ["style", "top", '40px'],
@@ -561,37 +562,35 @@ var symbols = {
       "Default Timeline": {
          fromState: "Base State",
          toState: "",
-         duration: 339,
+         duration: 0,
          autoPlay: true,
          timeline: [
-            { id: "eid10035", tween: [ "style", "${_Mela-Statica}", "left", '777px', { fromValue: '777px'}], position: 0, duration: 0 },
-            { id: "eid9941", tween: [ "style", "${_FUMELLO}", "left", '22px', { fromValue: '22px'}], position: 0, duration: 0, easing: "easeOutBack" },
+            { id: "eid10017", tween: [ "style", "${_Mela-Statica-2}", "top", '83px', { fromValue: '83px'}], position: 0, duration: 0 },
             { id: "eid10094", tween: [ "subproperty", "${_Verme}", "filter.drop-shadow.blur", '10px', { fromValue: '10px'}], position: 0, duration: 0 },
             { id: "eid10091", tween: [ "subproperty", "${_Bird-Pala}", "filter.drop-shadow.color", 'rgba(0,0,0,0.24)', { fromValue: 'rgba(0,0,0,0.24)'}], position: 0, duration: 0 },
             { id: "eid10032", tween: [ "subproperty", "${_Mela-Statica-2}", "filter.hue-rotate", '20deg', { fromValue: '20deg'}], position: 0, duration: 0 },
             { id: "eid10099", tween: [ "subproperty", "${_Bird-Tereno}", "filter.contrast", '0.99', { fromValue: '0.99'}], position: 0, duration: 0 },
-            { id: "eid10092", tween: [ "subproperty", "${_Verme}", "filter.drop-shadow.offsetH", '-7px', { fromValue: '-7px'}], position: 0, duration: 0 },
-            { id: "eid10037", tween: [ "style", "${_Mela-Statica-4}", "left", '886px', { fromValue: '886px'}], position: 0, duration: 0 },
-            { id: "eid10033", tween: [ "subproperty", "${_Mela-Statica}", "filter.hue-rotate", '20deg', { fromValue: '20deg'}], position: 0, duration: 0 },
+            { id: "eid10035", tween: [ "style", "${_Mela-Statica}", "left", '777px', { fromValue: '777px'}], position: 0, duration: 0 },
             { id: "eid10093", tween: [ "subproperty", "${_Verme}", "filter.drop-shadow.color", 'rgba(0,0,0,0.58)', { fromValue: 'rgba(0,0,0,0.58)'}], position: 0, duration: 0 },
+            { id: "eid10033", tween: [ "subproperty", "${_Mela-Statica}", "filter.hue-rotate", '20deg', { fromValue: '20deg'}], position: 0, duration: 0 },
+            { id: "eid10092", tween: [ "subproperty", "${_Verme}", "filter.drop-shadow.offsetH", '-7px', { fromValue: '-7px'}], position: 0, duration: 0 },
             { id: "eid10089", tween: [ "subproperty", "${_Bird-Pala}", "filter.drop-shadow.offsetH", '-2px', { fromValue: '-2px'}], position: 0, duration: 0 },
-            { id: "eid10038", tween: [ "style", "${_Mela-Statica-4}", "top", '131px', { fromValue: '131px'}], position: 0, duration: 0 },
-            { id: "eid10034", tween: [ "subproperty", "${_Mela-Statica-3}", "filter.hue-rotate", '20deg', { fromValue: '20deg'}], position: 0, duration: 0 },
-            { id: "eid10102", tween: [ "subproperty", "${_Bird-Tereno}", "filter.drop-shadow.blur", '6px', { fromValue: '6px'}], position: 0, duration: 0 },
-            { id: "eid10036", tween: [ "style", "${_Mela-Statica}", "top", '18px', { fromValue: '18px'}], position: 0, duration: 0 },
-            { id: "eid10013", tween: [ "style", "${_Mela-Statica-3}", "top", '-15px', { fromValue: '-15px'}], position: 0, duration: 0 },
-            { id: "eid4941", tween: [ "style", "${_NUVOLA}", "left", '80px', { fromValue: '80px'}], position: 0, duration: 0, easing: "easeOutBack" },
-            { id: "eid549", tween: [ "style", "${_MENUz}", "top", '575px', { fromValue: '696px'}], position: 0, duration: 196, easing: "easeInOutQuad" },
-            { id: "eid625", tween: [ "style", "${_MENUz}", "top", '694px', { fromValue: '575px'}], position: 223, duration: 116, easing: "easeInOutQuad" },
-            { id: "eid10090", tween: [ "subproperty", "${_Bird-Pala}", "filter.drop-shadow.blur", '3px', { fromValue: '3px'}], position: 0, duration: 0 },
+            { id: "eid10031", tween: [ "subproperty", "${_Mela-Statica-4}", "filter.hue-rotate", '20deg', { fromValue: '20deg'}], position: 0, duration: 0 },
             { id: "eid11484", tween: [ "style", "${_Bird-Pala}", "top", '474px', { fromValue: '474px'}], position: 0, duration: 0 },
-            { id: "eid10017", tween: [ "style", "${_Mela-Statica-2}", "top", '83px', { fromValue: '83px'}], position: 0, duration: 0 },
+            { id: "eid10102", tween: [ "subproperty", "${_Bird-Tereno}", "filter.drop-shadow.blur", '6px', { fromValue: '6px'}], position: 0, duration: 0 },
+            { id: "eid10013", tween: [ "style", "${_Mela-Statica-3}", "top", '-15px', { fromValue: '-15px'}], position: 0, duration: 0 },
+            { id: "eid10037", tween: [ "style", "${_Mela-Statica-4}", "left", '886px', { fromValue: '886px'}], position: 0, duration: 0 },
+            { id: "eid4941", tween: [ "style", "${_NUVOLA}", "left", '80px', { fromValue: '80px'}], position: 0, duration: 0, easing: "easeOutBack" },
+            { id: "eid10038", tween: [ "style", "${_Mela-Statica-4}", "top", '131px', { fromValue: '131px'}], position: 0, duration: 0 },
+            { id: "eid10090", tween: [ "subproperty", "${_Bird-Pala}", "filter.drop-shadow.blur", '3px', { fromValue: '3px'}], position: 0, duration: 0 },
+            { id: "eid10034", tween: [ "subproperty", "${_Mela-Statica-3}", "filter.hue-rotate", '20deg', { fromValue: '20deg'}], position: 0, duration: 0 },
+            { id: "eid10036", tween: [ "style", "${_Mela-Statica}", "top", '18px', { fromValue: '18px'}], position: 0, duration: 0 },
             { id: "eid10026", tween: [ "subproperty", "${_Mela-Bella-1}", "filter.saturate", '1.05', { fromValue: '1.05'}], position: 0, duration: 0 },
             { id: "eid9967", tween: [ "style", "${_FUMELLO}", "top", '-207px', { fromValue: '-207px'}], position: 0, duration: 0 },
             { id: "eid10025", tween: [ "subproperty", "${_Mela-Bella-1}", "filter.hue-rotate", '30deg', { fromValue: '30deg'}], position: 0, duration: 0 },
             { id: "eid10101", tween: [ "subproperty", "${_Bird-Tereno}", "filter.drop-shadow.color", 'rgba(0,0,0,0.70)', { fromValue: 'rgba(0,0,0,0.70)'}], position: 0, duration: 0 },
             { id: "eid10016", tween: [ "style", "${_Mela-Statica-2}", "left", '667px', { fromValue: '667px'}], position: 0, duration: 0 },
-            { id: "eid10031", tween: [ "subproperty", "${_Mela-Statica-4}", "filter.hue-rotate", '20deg', { fromValue: '20deg'}], position: 0, duration: 0 },
+            { id: "eid9941", tween: [ "style", "${_FUMELLO}", "left", '22px', { fromValue: '22px'}], position: 0, duration: 0, easing: "easeOutBack" },
             { id: "eid8862", tween: [ "style", "${_NUVOLA}", "top", '-15px', { fromValue: '-15px'}], position: 0, duration: 0 },
             { id: "eid10100", tween: [ "subproperty", "${_Bird-Tereno}", "filter.drop-shadow.offsetH", '3px', { fromValue: '3px'}], position: 0, duration: 0 },
             { id: "eid10012", tween: [ "style", "${_Mela-Statica-3}", "left", '922px', { fromValue: '922px'}], position: 0, duration: 0 },
@@ -610,10 +609,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: 'Fumello',
       rect: ['0px','0px','446px','287px','auto','auto'],
+      id: 'Fumello',
       userClass: 'fumello',
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/Fumello-Q5.png','0px','0px','445.97px','286.67px']
    },
    {
@@ -717,316 +716,6 @@ var symbols = {
       }
    }
 },
-"HOME_butt": {
-   version: "2.0.0",
-   minimumCompatibleVersion: "2.0.0",
-   build: "2.0.0.250",
-   baseState: "Base State",
-   initialState: "Base State",
-   gpuAccelerate: false,
-   resizeInstances: false,
-   content: {
-   dom: [
-   {
-      type: 'image',
-      boxShadow: ['inset',8,3,18,6,'rgba(0,0,0,0.648438)'],
-      id: 'HOME',
-      rect: ['0px','0px','103px','97px','auto','auto'],
-      transform: [],
-      fill: ['rgba(0,0,0,0)','images/G-HOME.png','0px','0px']
-   }],
-   symbolInstances: [
-   ]
-   },
-   states: {
-      "Base State": {
-         "${_HOME}": [
-            ["subproperty", "boxShadow.inset", 'inset'],
-            ["subproperty", "boxShadow.blur", '0px'],
-            ["transform", "scaleX", '1'],
-            ["style", "left", '0px'],
-            ["style", "width", '103px'],
-            ["style", "top", '0px'],
-            ["transform", "scaleY", '1'],
-            ["subproperty", "boxShadow.color", 'rgba(225,0,0,0.65)'],
-            ["style", "height", '97px'],
-            ["subproperty", "boxShadow.spread", '0px'],
-            ["subproperty", "boxShadow.offsetH", '0px'],
-            ["subproperty", "boxShadow.offsetV", '0px']
-         ],
-         "${symbolSelector}": [
-            ["style", "height", '97px'],
-            ["style", "width", '103px']
-         ]
-      }
-   },
-   timelines: {
-      "Default Timeline": {
-         fromState: "Base State",
-         toState: "",
-         duration: 406,
-         autoPlay: false,
-         timeline: [
-            { id: "eid355", tween: [ "transform", "${_HOME}", "scaleY", '0.81', { fromValue: '1'}], position: 0, duration: 75 },
-            { id: "eid357", tween: [ "transform", "${_HOME}", "scaleY", '1', { fromValue: '0.81'}], position: 75, duration: 50 },
-            { id: "eid354", tween: [ "transform", "${_HOME}", "scaleX", '0.81', { fromValue: '1'}], position: 0, duration: 75 },
-            { id: "eid356", tween: [ "transform", "${_HOME}", "scaleX", '1', { fromValue: '0.81'}], position: 75, duration: 50 }         ]
-      }
-   }
-},
-"MENUz": {
-   version: "2.0.0",
-   minimumCompatibleVersion: "2.0.0",
-   build: "2.0.0.250",
-   baseState: "Base State",
-   initialState: "Base State",
-   gpuAccelerate: false,
-   resizeInstances: false,
-   content: {
-   dom: [
-   {
-      rect: ['0px','21px','1160px','217px','auto','auto'],
-      id: 'Menu',
-      opacity: 0.7,
-      type: 'image',
-      fill: ['rgba(0,0,0,0)','images/G-Menu.png','0px','0px']
-   },
-   {
-      id: 'Testina',
-      type: 'image',
-      rect: ['1013px','0px','84px','97px','auto','auto'],
-      fill: ['rgba(0,0,0,0)','images/G-Testina.png','0px','0px']
-   },
-   {
-      userClass: 'prev',
-      id: 'PREV',
-      type: 'rect',
-      transform: [[0,0],[],[],['0.69','0.69']],
-      rect: ['212px','103px','auto','auto','auto','auto']
-   },
-   {
-      rect: ['27.7%','29.5%','125px','98px','auto','auto'],
-      userClass: 'uno',
-      id: 'Numero_1',
-      opacity: 1,
-      type: 'image',
-      fill: ['rgba(0,0,0,0)','images/1_col.png','0px','0px']
-   },
-   {
-      rect: ['39.1%','29.5%','124px','97px','auto','auto'],
-      userClass: 'due',
-      id: 'Numero_2',
-      opacity: 1,
-      type: 'image',
-      fill: ['rgba(0,0,0,0)','images/2_col.png','0px','0px']
-   },
-   {
-      rect: ['50.3%','29.5%','124px','97px','auto','auto'],
-      userClass: 'tre',
-      id: 'Numero_3',
-      opacity: 1,
-      type: 'image',
-      fill: ['rgba(0,0,0,0)','images/3_col.png','0px','0px']
-   },
-   {
-      rect: ['61.5%','29.5%','124px','97px','auto','auto'],
-      userClass: 'quattro',
-      id: 'Numero_4',
-      opacity: 1,
-      type: 'image',
-      fill: ['rgba(0,0,0,0)','images/4_col.png','0px','0px']
-   },
-   {
-      rect: ['72.5%','29.5%','124px','97px','auto','auto'],
-      userClass: 'cinque',
-      id: 'Numero_5',
-      opacity: 1,
-      type: 'image',
-      fill: ['rgba(0,0,0,0)','images/5_col.png','0px','0px']
-   },
-   {
-      id: 'HOME_buttCopy',
-      type: 'rect',
-      userClass: 'home',
-      rect: ['93px','95px','auto','auto','auto','auto']
-   },
-   {
-      userClass: 'musica',
-      id: 'musica',
-      type: 'rect',
-      transform: [[0,0],[],[],['0.74','0.74']],
-      rect: ['91px','117px','auto','auto','auto','auto']
-   }],
-   symbolInstances: [
-   {
-      id: 'PREV',
-      symbolName: 'PREV'
-   },
-   {
-      id: 'musica',
-      symbolName: 'musica'
-   },
-   {
-      id: 'HOME_buttCopy',
-      symbolName: 'HOME_butt'
-   }   ]
-   },
-   states: {
-      "Base State": {
-         "${_HOME_buttCopy}": [
-            ["style", "top", '51px'],
-            ["transform", "scaleY", '0.59344'],
-            ["style", "overflow", 'hidden'],
-            ["transform", "scaleX", '0.59344'],
-            ["style", "left", '80px']
-         ],
-         "${_PREV}": [
-            ["style", "top", '103px'],
-            ["transform", "scaleY", '0.69'],
-            ["transform", "scaleX", '0.69']
-         ],
-         "${_Testina}": [
-            ["style", "top", '0px'],
-            ["style", "overflow", 'hidden'],
-            ["transform", "rotateZ", '0deg'],
-            ["style", "height", '97px'],
-            ["style", "-webkit-transform-origin", [50,91], {valueTemplate:'@@0@@% @@1@@%'} ],
-            ["style", "-moz-transform-origin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "-ms-transform-origin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "msTransformOrigin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "-o-transform-origin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "left", '1013px'],
-            ["style", "width", '84px']
-         ],
-         "${_Numero_4}": [
-            ["style", "top", '29.46%'],
-            ["style", "overflow", 'hidden'],
-            ["style", "height", '97px'],
-            ["style", "opacity", '1'],
-            ["style", "left", '61.5%'],
-            ["style", "width", '124px']
-         ],
-         "${_Menu}": [
-            ["style", "top", '21px'],
-            ["style", "overflow", 'hidden'],
-            ["style", "height", '217px'],
-            ["style", "opacity", '0.7'],
-            ["style", "left", '0px'],
-            ["style", "width", '1160px']
-         ],
-         "${_musica}": [
-            ["transform", "scaleX", '0.74'],
-            ["style", "top", '117px'],
-            ["style", "left", '91px'],
-            ["transform", "scaleY", '0.74']
-         ],
-         "${_Numero_2}": [
-            ["style", "top", '29.46%'],
-            ["style", "overflow", 'hidden'],
-            ["style", "height", '97px'],
-            ["style", "opacity", '1'],
-            ["style", "left", '39.1%'],
-            ["style", "width", '124px']
-         ],
-         "${_Numero_3}": [
-            ["style", "top", '29.46%'],
-            ["style", "overflow", 'hidden'],
-            ["style", "height", '97px'],
-            ["style", "opacity", '1'],
-            ["style", "left", '50.29%'],
-            ["style", "width", '124px']
-         ],
-         "${symbolSelector}": [
-            ["style", "height", '238px'],
-            ["style", "width", '1160px']
-         ],
-         "${_Numero_5}": [
-            ["style", "top", '29.46%'],
-            ["style", "overflow", 'hidden'],
-            ["style", "height", '97px'],
-            ["style", "opacity", '1'],
-            ["style", "left", '72.54%'],
-            ["style", "width", '124px']
-         ],
-         "${_Numero_1}": [
-            ["style", "top", '29.46%'],
-            ["style", "overflow", 'hidden'],
-            ["style", "height", '98px'],
-            ["style", "opacity", '1'],
-            ["style", "left", '27.71%'],
-            ["style", "width", '125px']
-         ]
-      }
-   },
-   timelines: {
-      "Default Timeline": {
-         fromState: "Base State",
-         toState: "",
-         duration: 721,
-         autoPlay: false,
-         timeline: [
-            { id: "eid487", tween: [ "transform", "${_Testina}", "rotateZ", '10deg', { fromValue: '0deg'}], position: 0, duration: 65, easing: "easeOutBounce" },
-            { id: "eid488", tween: [ "transform", "${_Testina}", "rotateZ", '-8deg', { fromValue: '10deg'}], position: 65, duration: 44, easing: "easeOutBounce" },
-            { id: "eid489", tween: [ "transform", "${_Testina}", "rotateZ", '5deg', { fromValue: '-8deg'}], position: 108, duration: 47, easing: "easeOutBounce" },
-            { id: "eid490", tween: [ "transform", "${_Testina}", "rotateZ", '0deg', { fromValue: '5deg'}], position: 156, duration: 49, easing: "easeOutBounce" },
-            { id: "eid500", tween: [ "transform", "${_Testina}", "rotateZ", '24deg', { fromValue: '0deg'}], position: 500, duration: 129 },
-            { id: "eid501", tween: [ "transform", "${_Testina}", "rotateZ", '0deg', { fromValue: '24deg'}], position: 629, duration: 92 }         ]
-      }
-   }
-},
-"PREV": {
-   version: "2.0.0",
-   minimumCompatibleVersion: "2.0.0",
-   build: "2.0.0.250",
-   baseState: "Base State",
-   initialState: "Base State",
-   gpuAccelerate: false,
-   resizeInstances: false,
-   content: {
-   dom: [
-   {
-      transform: [[0,0],[],[],['0.77','0.77']],
-      type: 'image',
-      id: 'PrevImg',
-      rect: ['-8px','-11px','72px','98px','auto','auto'],
-      clip: ['rect(-12px 81px 110px -7px)'],
-      fill: ['rgba(0,0,0,0)','images/G-Prev.png','0px','0px']
-   }],
-   symbolInstances: [
-   ]
-   },
-   states: {
-      "Base State": {
-         "${symbolSelector}": [
-            ["style", "height", '75px'],
-            ["style", "width", '55px']
-         ],
-         "${_PrevImg}": [
-            ["style", "top", '-11px'],
-            ["transform", "scaleX", '1'],
-            ["transform", "scaleY", '1'],
-            ["style", "overflow", 'hidden'],
-            ["style", "height", '98px'],
-            ["style", "left", '-8px'],
-            ["style", "clip", [-12,81,110,-7], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
-            ["style", "width", '72px']
-         ]
-      }
-   },
-   timelines: {
-      "Default Timeline": {
-         fromState: "Base State",
-         toState: "",
-         duration: 125,
-         autoPlay: false,
-         timeline: [
-            { id: "eid1365", tween: [ "transform", "${_PrevImg}", "scaleY", '0.81', { fromValue: '1'}], position: 0, duration: 75 },
-            { id: "eid1366", tween: [ "transform", "${_PrevImg}", "scaleY", '1', { fromValue: '0.81'}], position: 75, duration: 50 },
-            { id: "eid1363", tween: [ "transform", "${_PrevImg}", "scaleX", '0.81', { fromValue: '1'}], position: 0, duration: 75 },
-            { id: "eid1364", tween: [ "transform", "${_PrevImg}", "scaleX", '1', { fromValue: '0.81'}], position: 75, duration: 50 }         ]
-      }
-   }
-},
 "Coda": {
    version: "2.0.0",
    minimumCompatibleVersion: "2.0.0",
@@ -1038,10 +727,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: 'Coda',
       rect: ['156px','33px','194px','239px','auto','auto'],
+      id: 'Coda',
       transform: [[0,0],['-8'],[],['-1.013']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/Q1-Coda.png','0px','0px']
    }],
    symbolInstances: [
@@ -1146,10 +835,10 @@ var symbols = {
    content: {
    dom: [
    {
-      transform: [[0,0],['25'],[],['0.3','0.3']],
-      id: 'Q5-Verme',
       type: 'image',
+      id: 'Q5-Verme',
       rect: ['-42px','-163px','183px','250px','auto','auto'],
+      transform: [[0,0],['25'],[],['0.3','0.3']],
       fill: ['rgba(0,0,0,0)','images/Q5-Verme.png','0px','0px']
    }],
    symbolInstances: [
@@ -1204,10 +893,10 @@ var symbols = {
    content: {
    dom: [
    {
-      rect: ['-33px','-24px','153px','176px','auto','auto'],
-      id: 'Q5-Mela',
       transform: [[0,0],['8'],[],['0.34','0.34']],
+      id: 'Q5-Mela',
       type: 'image',
+      rect: ['-33px','-24px','153px','176px','auto','auto'],
       fill: ['rgba(0,0,0,0)','images/Q5-Mela.png','0px','0px']
    }],
    symbolInstances: [
@@ -1509,24 +1198,24 @@ var symbols = {
       fill: ['rgba(0,0,0,0)','images/Q5-Bird-1.png','0px','0px']
    },
    {
-      transform: [[0,0],[],[],['0.377','0.51']],
+      type: 'image',
       id: 'Q1-Nota',
-      type: 'image',
       rect: ['77px','-44px','76px','95px','auto','auto'],
+      transform: [[0,0],[],[],['0.377','0.51']],
       fill: ['rgba(0,0,0,0)','images/Q1-Nota.png','0px','0px']
    },
    {
-      transform: [[0,0],['35'],[],['0.377','0.51']],
+      type: 'image',
       id: 'Q1-NotaCopy3',
-      type: 'image',
       rect: ['62px','-44px','76px','95px','auto','auto'],
+      transform: [[0,0],['35'],[],['0.377','0.51']],
       fill: ['rgba(0,0,0,0)','images/Q1-Nota.png','0px','0px']
    },
    {
-      transform: [[0,0],['-34'],[],['0.377','0.51']],
-      id: 'Q1-NotaCopy4',
       type: 'image',
+      id: 'Q1-NotaCopy4',
       rect: ['85px','-126px','76px','95px','auto','auto'],
+      transform: [[0,0],['-34'],[],['0.377','0.51']],
       fill: ['rgba(0,0,0,0)','images/Q1-Nota.png','0px','0px']
    }],
    symbolInstances: [
@@ -1637,17 +1326,17 @@ var symbols = {
    content: {
    dom: [
    {
-      transform: [[0,0],[],[],['0.437','0.442']],
-      id: 'G-Bird-Gambe2',
       type: 'image',
+      id: 'G-Bird-Gambe2',
       rect: ['2px','79px','100px','102px','auto','auto'],
+      transform: [[0,0],[],[],['0.437','0.442']],
       fill: ['rgba(0,0,0,0)','images/G-Bird-Gambe.png','0px','0px']
    },
    {
-      transform: [[0,0],[],[],['0.976','0.976']],
-      id: 'Q5-Bird-3',
       type: 'image',
+      id: 'Q5-Bird-3',
       rect: ['-1px','-3px','123px','91px','auto','auto'],
+      transform: [[0,0],[],[],['0.976','0.976']],
       fill: ['rgba(0,0,0,0)','images/Q5-Bird-3.png','0px','0px']
    },
    {
@@ -1659,17 +1348,17 @@ var symbols = {
       fill: ['rgba(0,0,0,0)','images/Q1-Nota.png','0px','0px']
    },
    {
-      transform: [[0,0],['39'],[],['0.543','0.537']],
-      id: 'Q1-Nota2Copy4',
       type: 'image',
+      id: 'Q1-Nota2Copy4',
       rect: ['-42px','-109px','76px','95px','auto','auto'],
+      transform: [[0,0],['39'],[],['0.543','0.537']],
       fill: ['rgba(0,0,0,0)','images/Q1-Nota.png','0px','0px']
    },
    {
-      transform: [[0,0],['-34'],[],['0.543','0.537']],
-      id: 'Q1-Nota2Copy5',
       type: 'image',
+      id: 'Q1-Nota2Copy5',
       rect: ['-78px','-146px','76px','95px','auto','auto'],
+      transform: [[0,0],['-34'],[],['0.543','0.537']],
       fill: ['rgba(0,0,0,0)','images/Q1-Nota.png','0px','0px']
    }],
    symbolInstances: [
@@ -1789,10 +1478,10 @@ var symbols = {
       transform: [[0,0],[],[],['0.972','0.972']]
    },
    {
-      transform: [[0,0],['10']],
-      id: 'Q5-Braccio2',
       type: 'image',
+      id: 'Q5-Braccio2',
       rect: ['280px','117px','106px','164px','auto','auto'],
+      transform: [[0,0],['10']],
       fill: ['rgba(0,0,0,0)','images/Q5-Braccio.png','0px','0px']
    },
    {
@@ -1802,10 +1491,10 @@ var symbols = {
       fill: ['rgba(0,0,0,0)','images/Q5-Corpo.png','0px','0px']
    },
    {
-      transform: [[0,0],['15'],[],['0.9','0.9']],
-      id: 'Q5-Testa',
       type: 'image',
+      id: 'Q5-Testa',
       rect: ['11px','0px','343px','293px','auto','auto'],
+      transform: [[0,0],['15'],[],['0.9','0.9']],
       fill: ['rgba(0,0,0,0)','images/Q5-Testa.png','0px','0px']
    }],
    symbolInstances: [
@@ -2240,13 +1929,10 @@ var symbols = {
          duration: 2301,
          autoPlay: false,
          timeline: [
+            { id: "eid11318", tween: [ "style", "${__5}", "left", '-1835.77%', { fromValue: '-1845.93%'}], position: 739, duration: 439, easing: "easeInQuad" },
+            { id: "eid11319", tween: [ "style", "${__5}", "left", '-1557.18%', { fromValue: '-1835.77%'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
             { id: "eid11314", tween: [ "transform", "${__5}", "scaleX", '1.25', { fromValue: '0'}], position: 739, duration: 439, easing: "easeInOutQuad" },
             { id: "eid11315", tween: [ "transform", "${__5}", "scaleX", '0.02', { fromValue: '1.25'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
-            { id: "eid11325", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0, easing: "easeOutQuad" },
-            { id: "eid11326", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '-615px', { fromValue: '0px'}], position: 545, duration: 633, easing: "easeOutQuad" },
-            { id: "eid11327", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '-638px', { fromValue: '-615px'}], position: 1700, duration: 367, easing: "easeOutQuad" },
-            { id: "eid11328", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '-640px', { fromValue: '-638px'}], position: 2067, duration: 79, easing: "easeOutQuad" },
-            { id: "eid11329", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '-648px', { fromValue: '-640px'}], position: 2146, duration: 64, easing: "easeOutQuad" },
             { id: "eid11330", tween: [ "transform", "${_Q5-MelaBellaCopy3}", "rotateZ", '24deg', { fromValue: '0deg'}], position: 0, duration: 64, easing: "easeOutQuad" },
             { id: "eid11331", tween: [ "transform", "${_Q5-MelaBellaCopy3}", "rotateZ", '-16deg', { fromValue: '24deg'}], position: 64, duration: 102, easing: "easeOutQuad" },
             { id: "eid11332", tween: [ "transform", "${_Q5-MelaBellaCopy3}", "rotateZ", '-1deg', { fromValue: '-16deg'}], position: 166, duration: 166, easing: "easeOutQuad" },
@@ -2263,8 +1949,263 @@ var symbols = {
             { id: "eid11324", tween: [ "style", "${_Q5-MelaBellaCopy3}", "top", '429px', { fromValue: '349px'}], position: 2146, duration: 64, easing: "easeOutQuad" },
             { id: "eid11312", tween: [ "style", "${__5}", "top", '2.25%', { fromValue: '83.7%'}], position: 739, duration: 439, easing: "easeInOutQuad" },
             { id: "eid11313", tween: [ "style", "${__5}", "top", '970.16%', { fromValue: '2.25%'}], position: 1700, duration: 601, easing: "easeInOutQuad" },
-            { id: "eid11318", tween: [ "style", "${__5}", "left", '-1835.77%', { fromValue: '-1845.93%'}], position: 739, duration: 439, easing: "easeInQuad" },
-            { id: "eid11319", tween: [ "style", "${__5}", "left", '-1557.18%', { fromValue: '-1835.77%'}], position: 1700, duration: 601, easing: "easeInOutQuad" }         ]
+            { id: "eid11325", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0, easing: "easeOutQuad" },
+            { id: "eid11326", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '-615px', { fromValue: '0px'}], position: 545, duration: 633, easing: "easeOutQuad" },
+            { id: "eid11327", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '-638px', { fromValue: '-615px'}], position: 1700, duration: 367, easing: "easeOutQuad" },
+            { id: "eid11328", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '-640px', { fromValue: '-638px'}], position: 2067, duration: 79, easing: "easeOutQuad" },
+            { id: "eid11329", tween: [ "style", "${_Q5-MelaBellaCopy3}", "left", '-648px', { fromValue: '-640px'}], position: 2146, duration: 64, easing: "easeOutQuad" }         ]
+      }
+   }
+},
+"MENUz": {
+   version: "2.0.0",
+   minimumCompatibleVersion: "2.0.0",
+   build: "2.0.0.250",
+   baseState: "Base State",
+   initialState: "Base State",
+   gpuAccelerate: false,
+   resizeInstances: false,
+   content: {
+   dom: [
+   {
+      rect: ['0px','21px','1160px','217px','auto','auto'],
+      id: 'Fondo-Menu',
+      opacity: 0.7,
+      type: 'image',
+      fill: ['rgba(0,0,0,0)','images/G-Menu.png','0px','0px']
+   },
+   {
+      id: 'HOME_butt',
+      type: 'rect',
+      userClass: 'home',
+      rect: ['93px','95px','auto','auto','auto','auto']
+   },
+   {
+      rect: ['997px','99px','auto','auto','auto','auto'],
+      id: 'NEXT',
+      transform: [[0,0],[],[],['0.7','0.7']],
+      type: 'rect',
+      userClass: 'next'
+   },
+   {
+      rect: ['225px','98px','auto','auto','auto','auto'],
+      id: 'PREV',
+      transform: [[0,0],[],[],['0.7','0.7']],
+      type: 'rect',
+      userClass: 'prev'
+   },
+   {
+      rect: ['27.2%','33.2%','125px','98px','auto','auto'],
+      userClass: 'uno',
+      id: 'Numero_1',
+      opacity: 1,
+      type: 'image',
+      fill: ['rgba(0,0,0,0)','images/1_col.png','0px','0px']
+   },
+   {
+      rect: ['38.6%','33.2%','124px','97px','auto','auto'],
+      userClass: 'due',
+      id: 'Numero_2',
+      opacity: 1,
+      type: 'image',
+      fill: ['rgba(0,0,0,0)','images/2_col.png','0px','0px']
+   },
+   {
+      rect: ['49.8%','33.2%','124px','97px','auto','auto'],
+      userClass: 'tre',
+      id: 'Numero_3',
+      opacity: 1,
+      type: 'image',
+      fill: ['rgba(0,0,0,0)','images/3_col.png','0px','0px']
+   },
+   {
+      rect: ['61%','33.2%','124px','97px','auto','auto'],
+      userClass: 'quattro',
+      id: 'Numero_4',
+      opacity: 1,
+      type: 'image',
+      fill: ['rgba(0,0,0,0)','images/4_col.png','0px','0px']
+   },
+   {
+      rect: ['72%','33.2%','124px','97px','auto','auto'],
+      userClass: 'cinque',
+      id: 'Numero_5',
+      opacity: 1,
+      type: 'image',
+      fill: ['rgba(0,0,0,0)','images/5_col.png','0px','0px']
+   },
+   {
+      rect: ['95px','118px','auto','auto','auto','auto'],
+      id: 'musica',
+      transform: [[0,0],[],[],['0.74','0.74']],
+      type: 'rect',
+      userClass: 'musica'
+   },
+   {
+      id: 'Testina-Menu',
+      type: 'rect',
+      userClass: 'testina',
+      rect: ['1013','0','auto','auto','auto','auto']
+   }],
+   symbolInstances: [
+   {
+      id: 'PREV',
+      symbolName: 'PREV'
+   },
+   {
+      id: 'Testina-Menu',
+      symbolName: 'testina'
+   },
+   {
+      id: 'musica',
+      symbolName: 'musica'
+   },
+   {
+      id: 'NEXT',
+      symbolName: 'NEXT'
+   },
+   {
+      id: 'HOME_butt',
+      symbolName: 'HOME_butt'
+   }   ]
+   },
+   states: {
+      "Base State": {
+         "${_PREV}": [
+            ["transform", "scaleX", '0.7'],
+            ["transform", "scaleY", '0.7'],
+            ["style", "left", '225px'],
+            ["style", "top", '98px']
+         ],
+         "${_Numero_4}": [
+            ["style", "top", '33.23%'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '97px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '61.01%'],
+            ["style", "width", '124px']
+         ],
+         "${_Numero_5}": [
+            ["style", "top", '33.23%'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '97px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '72.02%'],
+            ["style", "width", '124px']
+         ],
+         "${_HOME_butt}": [
+            ["style", "top", '52px'],
+            ["transform", "scaleY", '0.59344'],
+            ["style", "overflow", 'hidden'],
+            ["transform", "scaleX", '0.59344'],
+            ["style", "left", '84px']
+         ],
+         "${_NEXT}": [
+            ["transform", "scaleX", '0.7'],
+            ["style", "top", '99px'],
+            ["transform", "scaleY", '0.7'],
+            ["style", "left", '997px']
+         ],
+         "${_Numero_1}": [
+            ["style", "top", '33.23%'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '98px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '27.18%'],
+            ["style", "width", '125px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '238px'],
+            ["style", "width", '1160px']
+         ],
+         "${_musica}": [
+            ["transform", "scaleX", '0.74'],
+            ["style", "left", '95px'],
+            ["transform", "scaleY", '0.74'],
+            ["style", "top", '118px']
+         ],
+         "${_Numero_3}": [
+            ["style", "top", '33.23%'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '97px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '49.77%'],
+            ["style", "width", '124px']
+         ],
+         "${_Numero_2}": [
+            ["style", "top", '33.23%'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '97px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '38.55%'],
+            ["style", "width", '124px']
+         ],
+         "${_Fondo-Menu}": [
+            ["style", "top", '21px'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '217px'],
+            ["style", "opacity", '0.7'],
+            ["style", "left", '0px'],
+            ["style", "width", '1160px']
+         ]
+      }
+   },
+   timelines: {
+      "Default Timeline": {
+         fromState: "Base State",
+         toState: "",
+         duration: 415,
+         autoPlay: false,
+         timeline: [
+            { id: "eid454", tween: [ "transform", "${_HOME_butt}", "scaleX", '0.59344', { fromValue: '0.59344'}], position: 415, duration: 0 },
+            { id: "eid455", tween: [ "transform", "${_HOME_butt}", "scaleY", '0.59344', { fromValue: '0.59344'}], position: 415, duration: 0 },
+            { id: "eid460", tween: [ "style", "${_HOME_butt}", "top", '52px', { fromValue: '52px'}], position: 415, duration: 0 },
+            { id: "eid459", tween: [ "style", "${_HOME_butt}", "left", '84px', { fromValue: '84px'}], position: 415, duration: 0 }         ]
+      }
+   }
+},
+"Menu": {
+   version: "2.0.0",
+   minimumCompatibleVersion: "2.0.0",
+   build: "2.0.0.250",
+   baseState: "Base State",
+   initialState: "Base State",
+   gpuAccelerate: false,
+   resizeInstances: false,
+   content: {
+   dom: [
+   {
+      id: 'MENUz',
+      type: 'rect',
+      rect: ['427px','-62px','auto','auto','auto','auto']
+   }],
+   symbolInstances: [
+   {
+      id: 'MENUz',
+      symbolName: 'MENUz'
+   }   ]
+   },
+   states: {
+      "Base State": {
+         "${_MENUz}": [
+            ["style", "left", '0px'],
+            ["style", "top", '0px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '238px'],
+            ["style", "width", '1160px']
+         ]
+      }
+   },
+   timelines: {
+      "Default Timeline": {
+         fromState: "Base State",
+         toState: "",
+         duration: 384,
+         autoPlay: false,
+         timeline: [
+            { id: "eid549", tween: [ "style", "${_MENUz}", "top", '-121px', { fromValue: '0px'}], position: 0, duration: 196, easing: "easeInOutQuad" },
+            { id: "eid625", tween: [ "style", "${_MENUz}", "top", '-2px', { fromValue: '-121px'}], position: 223, duration: 161, easing: "easeInOutQuad" }         ]
       }
    }
 },
@@ -2313,6 +2254,222 @@ var symbols = {
             { id: "eid11554", tween: [ "transform", "${_Q0-Music}", "scaleX", '1', { fromValue: '0.8'}], position: 223, duration: 170, easing: "swing" },
             { id: "eid11551", tween: [ "transform", "${_Q0-Music}", "scaleY", '0.8', { fromValue: '1'}], position: 0, duration: 223, easing: "swing" },
             { id: "eid11552", tween: [ "transform", "${_Q0-Music}", "scaleY", '1', { fromValue: '0.8'}], position: 223, duration: 170, easing: "swing" }         ]
+      }
+   }
+},
+"HOME_butt": {
+   version: "2.0.0",
+   minimumCompatibleVersion: "2.0.0",
+   build: "2.0.0.250",
+   baseState: "Base State",
+   initialState: "Base State",
+   gpuAccelerate: false,
+   resizeInstances: false,
+   content: {
+   dom: [
+   {
+      transform: [],
+      boxShadow: ['inset',8,3,18,6,'rgba(0,0,0,0.648438)'],
+      id: 'HOME',
+      type: 'image',
+      rect: ['0px','0px','103px','97px','auto','auto'],
+      fill: ['rgba(0,0,0,0)','images/G-HOME.png','0px','0px']
+   }],
+   symbolInstances: [
+   ]
+   },
+   states: {
+      "Base State": {
+         "${_HOME}": [
+            ["subproperty", "boxShadow.inset", 'inset'],
+            ["subproperty", "boxShadow.color", 'rgba(225,0,0,0.65)'],
+            ["transform", "scaleX", '1'],
+            ["style", "left", '0px'],
+            ["style", "width", '103px'],
+            ["style", "top", '0px'],
+            ["transform", "scaleY", '1'],
+            ["subproperty", "boxShadow.blur", '0px'],
+            ["style", "height", '97px'],
+            ["subproperty", "boxShadow.offsetV", '0px'],
+            ["subproperty", "boxShadow.offsetH", '0px'],
+            ["subproperty", "boxShadow.spread", '0px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '97px'],
+            ["style", "width", '103px']
+         ]
+      }
+   },
+   timelines: {
+      "Default Timeline": {
+         fromState: "Base State",
+         toState: "",
+         duration: 406,
+         autoPlay: false,
+         timeline: [
+            { id: "eid355", tween: [ "transform", "${_HOME}", "scaleY", '0.81', { fromValue: '1'}], position: 0, duration: 218 },
+            { id: "eid357", tween: [ "transform", "${_HOME}", "scaleY", '1', { fromValue: '0.81'}], position: 218, duration: 146 },
+            { id: "eid354", tween: [ "transform", "${_HOME}", "scaleX", '0.81', { fromValue: '1'}], position: 0, duration: 218 },
+            { id: "eid356", tween: [ "transform", "${_HOME}", "scaleX", '1', { fromValue: '0.81'}], position: 218, duration: 146 }         ]
+      }
+   }
+},
+"NEXT": {
+   version: "2.0.0",
+   minimumCompatibleVersion: "2.0.0",
+   build: "2.0.0.250",
+   baseState: "Base State",
+   initialState: "Base State",
+   gpuAccelerate: false,
+   resizeInstances: false,
+   content: {
+   dom: [
+   {
+      transform: [[0,0],[],[],['0.77','0.77']],
+      type: 'image',
+      id: 'NextImg',
+      rect: ['-8px','-11px','72px','98px','auto','auto'],
+      clip: ['rect(-8px 79px 107px -14px)'],
+      fill: ['rgba(0,0,0,0)','images/G-Next.png','0px','0px']
+   }],
+   symbolInstances: [
+   ]
+   },
+   states: {
+      "Base State": {
+         "${_NextImg}": [
+            ["style", "top", '-11px'],
+            ["transform", "scaleX", '1'],
+            ["transform", "scaleY", '1'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '98px'],
+            ["style", "left", '-8px'],
+            ["style", "clip", [-8,79,107,-14], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
+            ["style", "width", '72px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '76px'],
+            ["style", "width", '56px']
+         ]
+      }
+   },
+   timelines: {
+      "Default Timeline": {
+         fromState: "Base State",
+         toState: "",
+         duration: 140,
+         autoPlay: false,
+         timeline: [
+            { id: "eid1367", tween: [ "transform", "${_NextImg}", "scaleX", '0.81', { fromValue: '1'}], position: 0, duration: 75 },
+            { id: "eid1368", tween: [ "transform", "${_NextImg}", "scaleX", '1', { fromValue: '0.81'}], position: 75, duration: 50 },
+            { id: "eid1369", tween: [ "transform", "${_NextImg}", "scaleY", '0.81', { fromValue: '1'}], position: 0, duration: 75 },
+            { id: "eid1370", tween: [ "transform", "${_NextImg}", "scaleY", '1', { fromValue: '0.81'}], position: 75, duration: 50 }         ]
+      }
+   }
+},
+"PREV": {
+   version: "2.0.0",
+   minimumCompatibleVersion: "2.0.0",
+   build: "2.0.0.250",
+   baseState: "Base State",
+   initialState: "Base State",
+   gpuAccelerate: false,
+   resizeInstances: false,
+   content: {
+   dom: [
+   {
+      transform: [[0,0],[],[],['0.77','0.77']],
+      type: 'image',
+      id: 'NextImg',
+      rect: ['-8px','-11px','72px','98px','auto','auto'],
+      clip: ['rect(-8px 79px 107px -14px)'],
+      fill: ['rgba(0,0,0,0)','images/G-Prev.png','0px','0px']
+   }],
+   symbolInstances: [
+   ]
+   },
+   states: {
+      "Base State": {
+         "${_NextImg}": [
+            ["style", "top", '-11px'],
+            ["style", "height", '98px'],
+            ["transform", "scaleY", '1'],
+            ["style", "overflow", 'hidden'],
+            ["transform", "scaleX", '1'],
+            ["style", "clip", [-8,79,107,-14], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
+            ["style", "left", '-8px'],
+            ["style", "width", '72px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '76px'],
+            ["style", "width", '56px']
+         ]
+      }
+   },
+   timelines: {
+      "Default Timeline": {
+         fromState: "Base State",
+         toState: "",
+         duration: 140,
+         autoPlay: false,
+         timeline: [
+            { id: "eid1367", tween: [ "transform", "${_NextImg}", "scaleX", '0.81', { fromValue: '1'}], position: 0, duration: 75 },
+            { id: "eid1368", tween: [ "transform", "${_NextImg}", "scaleX", '1', { fromValue: '0.81'}], position: 75, duration: 50 },
+            { id: "eid1369", tween: [ "transform", "${_NextImg}", "scaleY", '0.81', { fromValue: '1'}], position: 0, duration: 75 },
+            { id: "eid1370", tween: [ "transform", "${_NextImg}", "scaleY", '1', { fromValue: '0.81'}], position: 75, duration: 50 }         ]
+      }
+   }
+},
+"testina": {
+   version: "2.0.0",
+   minimumCompatibleVersion: "2.0.0",
+   build: "2.0.0.250",
+   baseState: "Base State",
+   initialState: "Base State",
+   gpuAccelerate: false,
+   resizeInstances: false,
+   content: {
+   dom: [
+   {
+      id: 'Testina',
+      type: 'image',
+      rect: ['0px','0px','84px','97px','auto','auto'],
+      fill: ['rgba(0,0,0,0)','images/G-Testina.png','0px','0px']
+   }],
+   symbolInstances: [
+   ]
+   },
+   states: {
+      "Base State": {
+         "${_Testina}": [
+            ["style", "top", '0px'],
+            ["transform", "rotateZ", '0deg'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '97px'],
+            ["style", "-webkit-transform-origin", [50,91], {valueTemplate:'@@0@@% @@1@@%'} ],
+            ["style", "-moz-transform-origin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "-ms-transform-origin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "msTransformOrigin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "-o-transform-origin", [50,91],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "left", '0px'],
+            ["style", "width", '84px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '97px'],
+            ["style", "width", '84px']
+         ]
+      }
+   },
+   timelines: {
+      "Default Timeline": {
+         fromState: "Base State",
+         toState: "",
+         duration: 610,
+         autoPlay: false,
+         timeline: [
+            { id: "eid5429", tween: [ "transform", "${_Testina}", "rotateZ", '21deg', { fromValue: '0deg'}], position: 0, duration: 201, easing: "easeInOutBounce" },
+            { id: "eid5430", tween: [ "transform", "${_Testina}", "rotateZ", '-15deg', { fromValue: '21deg'}], position: 201, duration: 224, easing: "easeInOutBounce" },
+            { id: "eid5431", tween: [ "transform", "${_Testina}", "rotateZ", '0deg', { fromValue: '-15deg'}], position: 425, duration: 185, easing: "easeInOutBounce" }         ]
       }
    }
 }
