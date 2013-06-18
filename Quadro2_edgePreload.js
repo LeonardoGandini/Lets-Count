@@ -51,7 +51,7 @@ if(document.addEventListener ){
 
    aLoader = [
     { load: "edge_includes/jquery-1.7.1.min.js"},
-    { load: "edge_includes/edge.1.5.0.min.js"},
+    { load: "edge_includes/edge.2.0.0.min.js"},
           { load: "Quadro2_edge.js"},
           { load: "Quadro2_edgeActions.js"}];
 
