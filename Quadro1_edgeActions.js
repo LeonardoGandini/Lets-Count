@@ -17,9 +17,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
       yepnope({
            load: ["libs/jplayer.min.js",
-           			"libs/playBG-min.js",
+           			"libs/playBG-min.js"/*,
            			"libs/jquery-ui-1.10.3.custom.min.js",
-           			"libs/jquery.ui.touch-punch.min.js"
+           			"libs/jquery.ui.touch-punch.min.js"*/
            			],complete: init});
       
       function init(){

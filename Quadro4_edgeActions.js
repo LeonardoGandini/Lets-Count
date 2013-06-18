@@ -30,7 +30,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioRicci = new Audio('Suoni/Lumaca01.mp3');
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       
-      $(".fioreani, .FioreFragole, .home").bind('touchstart MSPointerDown', function(){
+      $(".fioreani, .FioreFragole").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       });
       
@@ -84,7 +84,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       /*MENU START*/
       	avanti = "Quadro5.html";
       	indietro = "Quadro3.html";
-      	$(".musica").bind('touchstart MSPointerDown', function(){
+      	$(".musica, .next, .prev, .home").bind('touchstart', function(){
       		sym.getSymbol(this).play("in");
       	});
       	$(".testina").bind('touchstart MSPointerDown', function(){

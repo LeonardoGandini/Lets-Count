@@ -11,19 +11,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //Edge symbol: 'stage'
    (function(symbolName) {
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 196, function(sym, e) {
-         sym.stop();
-      });
-      //Edge binding end
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 339, function(sym, e) {
-         // stop the timeline at the given position (ms or label)
-         sym.stop(0);
-      });
-      //Edge binding end
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
-      });
-      //Edge binding end
+      
+      
+      
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
       yepnope({
            load: ["libs/jplayer.min.js",
@@ -42,7 +32,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       	//sym.$(".fumo").css({'-webkit-filter': 'blur(2px)'});
       
-      $(".fioreani, .innaffia, .home").bind('touchstart', function(){
+      $(".fioreani, .innaffia").bind('touchstart', function(){
       	sym.getSymbol(this).play("in");
       });
       
@@ -86,7 +76,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       /*MENU START*/
       	avanti = "Quadro3.html";
       	indietro = "Quadro1.html";
-      	$(".musica").bind('touchstart', function(){
+      	$(".musica, .next, .prev, .home").bind('touchstart', function(){
       		sym.getSymbol(this).play("in");
       	});
       	$(".testina").bind('touchstart MSPointerDown', function(){

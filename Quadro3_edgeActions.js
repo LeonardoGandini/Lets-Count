@@ -32,7 +32,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       
-      $(".fioreani, .innaffia, .pomostatico, .home").bind('touchstart MSPointerDown', function(){
+      $(".fioreani, .innaffia, .pomostatico").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       });
       
@@ -86,7 +86,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       /*MENU START*/
       	avanti = "Quadro4.html";
       	indietro = "Quadro2.html";
-      	$(".musica").bind('touchstart MSPointerDown', function(){
+      	$(".musica, .next, .prev, .home").bind('touchstart', function(){
       		sym.getSymbol(this).play("in");
       	});
       	$(".testina").bind('touchstart MSPointerDown', function(){
