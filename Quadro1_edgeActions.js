@@ -190,42 +190,42 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'FUMELLO'
    (function(symbolName) {   
-   
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 614, function(sym, e) {
          sym.stop();
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function(sym, e) {
          sym.stop(0);
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
          sym.play();
-
+      
       });
       //Edge binding end
-
       
-
       
-
       
-
       
-
-      Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "touchstart", function(sym, e) {
+      
+      
+      
+      
+      
+      Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "touchstart MSPointerDown", function(sym, e) {
          sym.play(1000);
-
+      
       });
       //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${_Fumello}", "touchstart", function(sym, e) {
+      
+      Symbol.bindElementAction(compId, symbolName, "${_Fumello}", "touchstart MSPointerDown", function(sym, e) {
          sym.play();
-
+      
       });
       //Edge binding end
 
