@@ -21,14 +21,17 @@ $Ombra: rgba(0,0,0,0.4);
 .edgeLoad-Quadro03,
 .edgeLoad-Quadro04,
 .edgeLoad-Quadro05,
-.edgeLoad-Menu,{visibility:hidden;}
+.edgeLoad-Menu,
+.edgeLoad-QuadroFinale
+{visibility:hidden;}
 
 .Quadro01,
 .Quadro02,
 .Quadro03,
 .Quadro04,
 .Quadro05,
-.Menu
+.Menu,
+.QuadroFinale
 {
 /*     overflow:hidden !important; */
     @include vendor-prefix(transform-origin, 50% 0);
@@ -39,15 +42,14 @@ $Ombra: rgba(0,0,0,0.4);
 	
 }
 
+/*
 .edgePreloadQuadro01{
-/*     overflow:visible !important; */
     margin: 0 25% !important;
     position: absolute;
-/* 	width: 100% !important */
-/*     @include vendor-prefix(transform-origin, 50% 0); */
     padding: 0;
     
     }
+*/
 
 /*
 .Menu{

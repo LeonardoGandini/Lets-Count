@@ -17,53 +17,68 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
       yepnope({
            load: ["libs/jplayer.min.js",
-           			"libs/playBG-min.js"
-           			],
-           complete: function() {}
-      });
+           			"libs/playBG-min.js"/*,
+           			"libs/jquery-ui-1.10.3.custom.min.js",
+           			"libs/jquery.ui.touch-punch.min.js"*/
+           			],complete: init});
+      
+      function init(){
+           	//$(".SOLE").draggable();
+           // sym.$('RRect').draggable();
+      };
       
       /*AUDIO*/
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioApi = new Audio('Suoni/Bees.mp3');
-         AudioTada1 = new Audio('Suoni/Tada1.mp3');
-         AudioTada2 = new Audio('Suoni/Tada2.mp3');  
+         AudioUno = new Audio('Suoni/numbers/one.mp3');
+         AudioDue = new Audio('Suoni/numbers/two.mp3');  
          AudioAnt = new Audio('Suoni/Lumaca01.mp3');
+      	AudioQ2 = new Audio('Suoni/quadri/Q2.mp3');
+      
+      	AudioQ2.load();
+      	AudioQ2.play();
+      	
+         $(".playvoce").bind('touchstart MSPointerDown', function(){
+      		sym.getSymbol(this).play("in");
+      		AudioQ2.load();
+      		AudioQ2.play();
+      	});
       
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       	//sym.$(".fumo").css({'-webkit-filter': 'blur(2px)'});
       
-      $(".fioreani, .innaffia").bind('touchstart', function(){
+      $(".fioreani, .innaffia").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       });
       
-      $(".cavolini").bind('touchstart', function(){
+      $(".cavolini").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       	AudioFoglie.load();
       	AudioFoglie.play();	
       });
       
       $(".cavolo2trigger").hide();
-      $(".CAVOLO_BIG_1").bind('touchstart', function(){
+      $(".CAVOLO_BIG_1").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       	$(".cavolo2trigger").show();
       });
-      $(".cavolo2trigger").bind('touchstart', function(){
+      $(".cavolo2trigger").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(".CAVOLO_BIG_2").play("in");
       });
-      $(".codatrigger").bind('touchstart', function(){
+      $(".codatrigger").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(".coda").play("in");
       });
-      $(".Sole_Button").bind('touchstart', function(){
+      $(".Sole_Button").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(".SOLE").play("in");
       });
-      $(".apibutton").bind('touchstart', function(){
+      $(".apibutton").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(".api").play("in");
       	AudioApi.load();
       	AudioApi.play();
       });
       sym.getSymbol("FUMELLO").play("in");
       
-      $(".formica").bind('touchstart', function(){
+      $(".formica").bind('touchstart MSPointerDown', function(){
       	AudioAnt.load();
       	AudioAnt.play();	
       	$(this).animate({top:'-=20px'},"140");
@@ -76,8 +91,19 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       /*MENU START*/
       	avanti = "Quadro3.html";
       	indietro = "Quadro1.html";
-      	$(".musica, .next, .prev, .home").bind('touchstart', function(){
+      	$(".next, .prev, .musica, .home").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
+      	});
+      	$('.musica').toggle(function () {
+      		 $(".musica").css({
+      			'-webkit-filter': 'saturate(0%)',
+      			'opacity':'0.6'
+      			});
+      	}, function () {
+      		 $(".musica").css({
+      			'-webkit-filter': 'saturate(100%)',
+      			'opacity':'1'
+      			});
       	});
       	$(".testina").bind('touchstart MSPointerDown', function(){
       			sym.getSymbol(".menu").play();
@@ -122,15 +148,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3910, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4675, function(sym, e) {
          sym.stop();
+         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1583, function(sym, e) {
-         AudioTada1.load();
-         AudioTada1.play();
+         AudioUno.load();
+         AudioUno.play();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3125, function(sym, e) {
+         sym.getSymbol(".menu").play("in");
 
       });
       //Edge binding end
@@ -142,42 +175,42 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'FUMELLO'
    (function(symbolName) {   
-   
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 614, function(sym, e) {
          sym.stop();
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function(sym, e) {
          sym.stop(0);
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
          sym.play();
-
+      
       });
       //Edge binding end
-
       
-
       
-
       
-
       
-
-      Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "touchstart", function(sym, e) {
+      
+      
+      
+      
+      
+      Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "touchstart MSPointerDown", function(sym, e) {
          sym.play(1000);
-
+      
       });
       //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${_Fumello}", "touchstart", function(sym, e) {
+      
+      Symbol.bindElementAction(compId, symbolName, "${_Fumello}", "touchstart MSPointerDown", function(sym, e) {
          sym.play();
-
+      
       });
       //Edge binding end
 
@@ -316,8 +349,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1324, function(sym, e) {
-         AudioTada2.load();
-         AudioTada2.play();
+         AudioDue.load();
+         AudioDue.play();
 
       });
          //Edge binding end
@@ -328,11 +361,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
          //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3910, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4919, function(sym, e) {
          sym.stop();
+         sym.getSymbol(".menu").play(197);
 
       });
          //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3289, function(sym, e) {
+         sym.getSymbol(".menu").play("in");
+
+      });
+      //Edge binding end
 
       })("Cavolo_2");
    //Edge symbol end:'Cavolo_2'
@@ -564,10 +604,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'Swipe'
+   //Edge symbol: 'play'
    (function(symbolName) {   
    
-   })("Swipe");
-   //Edge symbol end:'Swipe'
+   })("play");
+   //Edge symbol end:'play'
 
 })(jQuery, AdobeEdge, "Quadro02");

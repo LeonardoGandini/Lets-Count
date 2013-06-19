@@ -33,12 +33,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioBird = new Audio('Suoni/cip01.mp3');
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioLumaca = new Audio('Suoni/Lumaca01.mp3');
-         AudioTada1 = new Audio('Suoni/numbers/one.mp3');
-      
+         AudioUno = new Audio('Suoni/numbers/one.mp3');
       
       	AudioQ1.load();
       	AudioQ1.play();
-      
+      	
+         $(".playvoce").bind('touchstart MSPointerDown', function(){
+      		sym.getSymbol(this).play("in");
+      		AudioQ1.load();
+      		AudioQ1.play();
+      	});
       
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       
@@ -75,8 +79,19 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          });
          /*Tira giù il fumello*/sym.getSymbol("FUMELLO").play();
       
-      	$(".musica, .next, .prev, .carota").bind('touchstart MSPointerDown', function(){
+      	$(".next, .prev, .home, .carota, .musica").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
+      	});
+      	$('.musica').toggle(function () {
+      		 $(".musica").css({
+      			'-webkit-filter': 'saturate(0%)',
+      			'opacity':'0.6'
+      			});
+      	}, function () {
+      		 $(".musica").css({
+      			'-webkit-filter': 'saturate(100%)',
+      			'opacity':'1'
+      			});
       	});
       
       /*MENU START*/
@@ -141,14 +156,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2052, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1801, function(sym, e) {
          /*sym.getComposition().getStage().getSymbol("MENUz").$("Numero_1").hide();
          sym.getComposition().getStage().getSymbol("MENUz").$("Numero_1_col").css({
          	'display': 'block'
          });*/
          sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
-         AudioTada1.load();
-         AudioTada1.play();
+         AudioUno.load();
+         AudioUno.play();
 
       });
       //Edge binding end
@@ -219,13 +234,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "touchstart MSPointerDown", function(sym, e) {
          sym.play(1000);
-      
+
       });
       //Edge binding end
       
       Symbol.bindElementAction(compId, symbolName, "${_Fumello}", "touchstart MSPointerDown", function(sym, e) {
          sym.play();
-      
+
       });
       //Edge binding end
 
@@ -453,5 +468,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       })("PREV");
    //Edge symbol end:'PREV'
+
+   //=========================================================
+   
+   //Edge symbol: 'musica_1'
+   (function(symbolName) {   
+   
+      })("play");
+   //Edge symbol end:'play'
 
 })(jQuery, AdobeEdge, "Quadro01");

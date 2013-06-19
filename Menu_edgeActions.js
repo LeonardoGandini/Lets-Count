@@ -11,19 +11,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //Edge symbol: 'stage'
    (function(symbolName) {
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 196, function(sym, e) {
-         sym.stop();
-      });
-      //Edge binding end
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 339, function(sym, e) {
-         // stop the timeline at the given position (ms or label)
-         sym.stop(0);
-      });
-      //Edge binding end
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
-      });
-      //Edge binding end
+      
+      
+      
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
          /*AUDIO*/
         /* AudioTappetino = new Audio('Suoni/LaMadeline.mp3');
@@ -34,63 +24,65 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
         
       yepnope({
            load: ["libs/jplayer.min.js",
-           			"libs/playBGMenu.js",
+           			"libs/playBGMenu.js"/*,
            			"libs/jquery-ui-1.10.3.custom.min.js",
-           			"libs/jquery.ui.touch-punch.min.js"
+           			"libs/jquery.ui.touch-punch.min.js"*/
            			],complete: init});
       
       function init(){
-           	$(".testona").draggable();
+           	//$(".testona").draggable();
       };
       	AudioLetsCount = new Audio('Suoni/LetsCount.mp3');
          AudioLetsCount.load();
-         
+      
       $(".letscount").bind('touchstart MSPointerDown', function(){
          AudioLetsCount.load();
          AudioLetsCount.play();
       });
       
       $(".popuppo").hide();
-      			$(".InfoButt").bind('touchstart MSPointerDown', function(){
-      					$(".popuppo").toggle();
-      					sym.getSymbol(this).play("in");
-      			});  
-      			$(".chiudix").bind('touchstart MSPointerDown', function(){
-      					$(".popuppo").hide();
-      			}); 			
       
-      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo").bind('touchstart MSPointerDown', function(){
+      $(".InfoButt").bind('touchstart MSPointerDown', function(){
+      		$(".popuppo").toggle();
+      		sym.getSymbol(this).play("in");
+      });  
+      $(".chiudix").bind('touchstart MSPointerDown', function(){
+      		$(".popuppo").hide();
+      }); 			
+      
+      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo, .musica, .roberta").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       });
-      
-      $(".musica").bind('touchstart MSPointerDown', function(){
-      		sym.getSymbol(this).play("in");
-      		//$(".ilminkia").css({'filter': "url('#grayscale')"});
-      });
-      
-      $('.musica').toggle(function () {
-          $(".musicanrm").css({'display': 'none'});
-          $(".musicagray").css({'display': 'block'});    	
-      }, function () {
-          $(".musicanrm").css({'display': 'block'});
-          $(".musicagray").css({'display': 'none'});   
-      });
-      
       
       /*
       $(".musica").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       });
+      */
+      /*$('.musica').toggle(function () {
+          $(".musicanrm").css({'display': 'none'});
+          $(".musicagray").css({'display': 'block'});    	
+      }, function () {
+          $(".musicanrm").css({'display': 'block'});
+          $(".musicagray").css({'display': 'none'});   
+      });*/
+      
+      
+      /*
+      $(".musica, .roberta").bind('touchstart MSPointerDown click', function(){
+      		sym.getSymbol(this).play("in");
+      });*/
       $('.musica').toggle(function () {
           $(".musica").css({
           	'-webkit-filter': 'saturate(0%)',
+          	'opacity':'0.6'
           	});
       }, function () {
           $(".musica").css({
           	'-webkit-filter': 'saturate(100%)',
+          	'opacity':'1'
           	});
       });
-      */
 
       });//Edge binding end
 
@@ -277,5 +269,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("Scoiattolo");
    //Edge symbol end:'Scoiattolo'
+
+   //=========================================================
+   
+   //Edge symbol: 'RobertaName'
+   (function(symbolName) {   
+   
+   })("RobertaName");
+   //Edge symbol end:'RobertaName'
 
 })(jQuery, AdobeEdge, "Menu");

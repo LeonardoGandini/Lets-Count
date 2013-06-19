@@ -67,13 +67,6 @@ preContent={
       tag:'img',
       rect:['387px','259px','250px','250px','auto','auto'],
       fill:["rgba(0,0,0,0)",'images/G-Preloader.gif','0px','0px']
-   },
-   {
-      id:'LoadingTXT',
-      type:'image',
-      tag:'img',
-      rect:['387px','509px','250px','77px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/LoadingTXT.png','0px','0px']
    }]};//simpleContent
 
 dlContent={

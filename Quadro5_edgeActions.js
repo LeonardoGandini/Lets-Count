@@ -31,12 +31,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioBird = new Audio('Suoni/cip01.mp3');
-         AudioTada1 = new Audio('Suoni/Tada1.mp3');
-         AudioTada2 = new Audio('Suoni/Tada2.mp3');  
-        // AudioAnt = new Audio('Suoni/squek.mp3');
+         AudioUno = new Audio('Suoni/numbers/one.mp3');
+         AudioDue = new Audio('Suoni/numbers/two.mp3');  
+         AudioTre = new Audio('Suoni/numbers/three.mp3');  
+         AudioQuattro = new Audio('Suoni/numbers/four.mp3');  
+         AudioCinque = new Audio('Suoni/numbers/five.mp3');  
          AudioVerme = new Audio('Suoni/Lumaca01.mp3');
       
-      
+      	/*AudioQ5.load();
+      	AudioQ5.play();*/
+      	
+         $(".playvoce").bind('touchstart MSPointerDown', function(){
+      		sym.getSymbol(this).play("in");
+      		/*AudioQ5.load();
+      		AudioQ5.play();*/
+      	});
          sym.getSymbol("FUMELLO").play("in");
       
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
@@ -96,8 +105,19 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       /*MENU START*/
       	avanti = "QuadroFinale.html";
       	indietro = "Quadro4.html";
-      	$(".musica, .next, .prev, .home").bind('touchstart MSPointerDown', function(){
+      	$(".next, .prev, .home").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
+      	});
+      	$('.musica').toggle(function () {
+      		 $(".musica").css({
+      			'-webkit-filter': 'saturate(0%)',
+      			'opacity':'0.6'
+      			});
+      	}, function () {
+      		 $(".musica").css({
+      			'-webkit-filter': 'saturate(100%)',
+      			'opacity':'1'
+      			});
       	});
       	$(".testina").bind('touchstart MSPointerDown', function(){
       			sym.getSymbol(".menu").play();
@@ -116,42 +136,42 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    //Edge symbol: 'FUMELLO'
    (function(symbolName) {   
-   
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 614, function(sym, e) {
          sym.stop();
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function(sym, e) {
          sym.stop(0);
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
          sym.play();
-
+      
       });
       //Edge binding end
-
       
-
       
-
       
-
       
-
-      Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "touchstart", function(sym, e) {
+      
+      
+      
+      
+      
+      Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "touchstart MSPointerDown", function(sym, e) {
          sym.play(1000);
-
+      
       });
       //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${_Fumello}", "touchstart", function(sym, e) {
+      
+      Symbol.bindElementAction(compId, symbolName, "${_Fumello}", "touchstart MSPointerDown", function(sym, e) {
          sym.play();
-
+      
       });
       //Edge binding end
 
@@ -230,9 +250,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 933, function(sym, e) {
-         AudioTada1.load();
-         AudioTada1.play();
+         AudioUno.load();
+         AudioUno.play();
          sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2104, function(sym, e) {
+         sym.getSymbol(".menu").play("in");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
+         sym.stop();
+         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
@@ -321,9 +354,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 862, function(sym, e) {
-         AudioTada1.load();
-         AudioTada1.play();
+         AudioDue.load();
+         AudioDue.play();
          sym.$(".due").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2099, function(sym, e) {
+         sym.getSymbol(".menu").play("in");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
+         sym.stop();
+         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
@@ -348,9 +394,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 862, function(sym, e) {
-         AudioTada1.load();
-         AudioTada1.play();
+         AudioTre.load();
+         AudioTre.play();
          sym.$(".tre").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2098, function(sym, e) {
+         sym.getSymbol(".menu").play("in");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
+         sym.stop();
+         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
@@ -375,9 +434,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 862, function(sym, e) {
-         AudioTada1.load();
-         AudioTada1.play();
+         AudioQuattro.load();
+         AudioQuattro.play();
          sym.$(".quattro").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2111, function(sym, e) {
+         sym.getSymbol(".menu").play("in");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
+         sym.stop();
+         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
@@ -402,9 +474,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 859, function(sym, e) {
-         AudioTada2.load();
-         AudioTada2.play();
+         AudioCinque.load();
+         AudioCinque.play();
          sym.$(".cinque").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2104, function(sym, e) {
+         sym.getSymbol(".menu").play("in");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
+         sym.stop();
+         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
@@ -520,5 +605,27 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("testina");
    //Edge symbol end:'testina'
+
+   //=========================================================
+   
+   //Edge symbol: 'Farfalle'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 72000, function(sym, e) {
+         sym.play(0);
+
+      });
+      //Edge binding end
+
+   })("Farfalle");
+   //Edge symbol end:'Farfalle'
+
+   //=========================================================
+   
+   //Edge symbol: 'play'
+   (function(symbolName) {   
+   
+   })("play");
+   //Edge symbol end:'play'
 
 })(jQuery, AdobeEdge, "Quadro05");
