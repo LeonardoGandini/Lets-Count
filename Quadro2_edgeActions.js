@@ -26,7 +26,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
            	//$(".SOLE").draggable();
            // sym.$('RRect').draggable();
       };
-      
+         $("#prelo").hide();
       /*AUDIO*/
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioApi = new Audio('Suoni/Bees.mp3');
@@ -37,7 +37,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       	AudioQ2.load();
       	AudioQ2.play();
-      	
+      
          $(".playvoce").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       		AudioQ2.load();
@@ -65,8 +65,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       $(".cavolo2trigger").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(".CAVOLO_BIG_2").play("in");
       });
+      
+      sym.getSymbol(".coda").play("in");
       $(".codatrigger").bind('touchstart MSPointerDown', function(){
-      	sym.getSymbol(".coda").play("in");
+      	sym.getSymbol(".coda").play("animaziocoda");
       });
       $(".Sole_Button").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(".SOLE").play("in");
@@ -418,11 +420,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'Innaffiatoio'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
-
-      });
-      //Edge binding end
+      
 
    })("Innaffiatoio");
    //Edge symbol end:'Innaffiatoio'
@@ -432,8 +430,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'APONA'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8500, function(sym, e) {
-         sym.stop();
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 55000, function(sym, e) {
+         sym.play(0);
 
       });
       //Edge binding end
@@ -446,8 +444,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'ContenitoreCoda'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
+      
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 30000, function(sym, e) {
+         sym.play(0);
 
       });
       //Edge binding end

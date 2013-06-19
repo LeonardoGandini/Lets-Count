@@ -21,7 +21,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
            			],
            complete: function() {}
       });
-      
+      $("#prelo").hide();
       /*AUDIO*/
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioApi = new Audio('Suoni/Bees.mp3');
@@ -33,7 +33,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       	/*AudioQ3.load();
       	AudioQ3.play();*/
-      	
+      
          $(".playvoce").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       		/*AudioQ3.load();
@@ -77,11 +77,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       
       
-      
+      sym.getSymbol(".codaani").play("in");
       
       $(".codatrigger").bind('touchstart MSPointerDown', function(){
-      	sym.getSymbol(".codaani").play("in");
-      	sym.getSymbol(".lbcoda").play("in");
+      	sym.getSymbol(".codaani").play("animaziocoda");
       });
       
       sym.getSymbol("FUMELLO").play("in");
@@ -96,7 +95,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       /*MENU START*/
       	avanti = "Quadro4.html";
       	indietro = "Quadro2.html";
-      	$(".next, .prev, .home").bind('touchstart MSPointerDown', function(){
+      	$(".next, .prev, .home, .musica").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       	});
       	$('.musica').toggle(function () {
@@ -259,6 +258,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'CodaAni'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 35000, function(sym, e) {
+         sym.play(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 769, function(sym, e) {
+         sym.getSymbol(".lbcoda").play("in");
+
+      });
+      //Edge binding end
+
    })("CodaAni");
    //Edge symbol end:'CodaAni'
 

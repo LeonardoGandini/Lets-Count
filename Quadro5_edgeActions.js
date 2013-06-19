@@ -28,7 +28,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
            			],
            complete: function() {}
       });
-      
+         $("#prelo").hide();
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioBird = new Audio('Suoni/cip01.mp3');
          AudioUno = new Audio('Suoni/numbers/one.mp3');
@@ -40,7 +40,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       	/*AudioQ5.load();
       	AudioQ5.play();*/
-      	
+      
          $(".playvoce").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       		/*AudioQ5.load();
@@ -98,14 +98,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       $(".Trigger-Mela-Easter").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(".melaeaster").play("in");
       });
+      
+      sym.getSymbol(".codaani").play("in");
       $(".codatrigger").bind('touchstart MSPointerDown', function(){
-      	sym.getSymbol(".codaani").play("in");
+      	sym.getSymbol(".codaani").play("animaziocoda");
       });
       
       /*MENU START*/
       	avanti = "QuadroFinale.html";
       	indietro = "Quadro4.html";
-      	$(".next, .prev, .home").bind('touchstart MSPointerDown', function(){
+      	$(".next, .prev, .home, .musica").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       	});
       	$('.musica').toggle(function () {
@@ -206,6 +208,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'Coda'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 37481, function(sym, e) {
+         sym.play(0);
+
+      });
+      //Edge binding end
+
    })("Coda");
    //Edge symbol end:'Coda'
 

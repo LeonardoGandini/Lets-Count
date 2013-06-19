@@ -22,7 +22,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
+      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
+            $("#prelo").hide();
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
+
+   //=========================================================
+   
+   //Edge symbol: 'Preloader'
+   (function(symbolName) {   
+   
+   })("Preloader");
+   //Edge symbol end:'Preloader'
 
 })(jQuery, AdobeEdge, "QuadroFinale");

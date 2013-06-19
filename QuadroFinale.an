@@ -1,7 +1,20 @@
 {
 
 	"HTMLFileName":"QuadroFinale.html",
+	"symbol_Preloader":{
+		"dummyStageParentWidth":"1024px",
+		"dummyStageParentHeight":"768px",
+		"defaultStageParentWidth":"1024px",
+		"element_${_preloader-new}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"animationEnabled":"false",
+			"timelineColor":"0x00bda4"},
+		"defaultStageParentHeight":"768px"},
+	"CompZoomFactor":"100",
+	"StageZoomFactor":"100",
 	"symbol_stage":{
+		"codeTreeElementPopupFilter":"",
 		"defaultStageParentHeight":"768px",
 		"element_${_Ellipse}":{
 			"timelineColor2":"0x4fa275",
@@ -19,11 +32,10 @@
 			"timelineColor3":"0x7b7652",
 			"timelineColor":"0xeedf79"},
 		"dummyStageParentWidth":"1024px"},
-	"CompZoomFactor":"100",
-	"StageZoomFactor":"100",
-	"viewStartY":"0",
+	"stage-Default Timeline_playhead_ms":"0",
+	"Preloader-Default Timeline_playhead_ms":"0",
 	"usedBOM":"false",
-	"nextElementColorIndex":"4",
+	"nextElementColorIndex":"5",
 	"PreloaderType":"Polite",
 	"pref__general__FilterNonAnimatedElements":"false",
 	"ModelData":"{\
@@ -34,11 +46,12 @@
    }},\
 \"Preloader\": {\
    \"timelines\": {\
-\
+      \"Default Timeline\": {\
+      }\
    }},\
 \"Down-level\": {\
    \"timelines\": {\
 \
    }}\
 }",
-	"stage-Default Timeline_playhead_ms":"0"}
+	"viewStartY":"0"}

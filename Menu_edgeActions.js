@@ -32,6 +32,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       function init(){
            	//$(".testona").draggable();
       };
+      
+         $("#prelo").hide();
+         
       	AudioLetsCount = new Audio('Suoni/LetsCount.mp3');
          AudioLetsCount.load();
       

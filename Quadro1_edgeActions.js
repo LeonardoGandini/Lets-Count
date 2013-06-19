@@ -27,7 +27,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
            // sym.$('RRect').draggable();
       };
       
-      
+      $("#prelo").hide();
       /*AUDIO*/
       	AudioQ1 = new Audio('Suoni/quadri/Q1.mp3');
          AudioBird = new Audio('Suoni/cip01.mp3');
@@ -37,7 +37,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       	AudioQ1.load();
       	AudioQ1.play();
-      	
+      
          $(".playvoce").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       		AudioQ1.load();
@@ -370,7 +370,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'Coda'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 15000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 22000, function(sym, e) {
          // stop the timeline at the given position (ms or label)
          sym.play(0);
 

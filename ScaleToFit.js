@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var altez = ($(document).height() / 748);
+	var altez = ($(document).height() / 768);/*was 748*/
 	var altezZ = ($(document).height());
 	
 	$("#Stage").css({
