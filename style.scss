@@ -10,6 +10,12 @@
       -o-#{$name}: $argument;
 }
 
+@font-face {
+    font-family: Luckiest Guy;
+    src: url(libs/LuckiestGuy.ttf);
+    font-weight:400;
+}
+
 $Ombra: rgba(0,0,0,0.4);
 
 *{  
@@ -44,6 +50,10 @@ $Ombra: rgba(0,0,0,0.4);
     position: absolute;
 	@include vendor-prefix(box-shadow, (18px 0px 25px $Ombra, -18px 0px 25px $Ombra));
 	
+}
+
+.welldone{
+	font-family: 'Luckiest Guy';
 }
 
 /*
