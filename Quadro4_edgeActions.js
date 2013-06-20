@@ -317,7 +317,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'LibellulaAuto'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 60000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 20000, function(sym, e) {
          sym.play(0);
 
       });
