@@ -34,6 +34,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
               	//$(".uno").draggable();
          };
          
+         //sym.$(".welldone").html("<p>Well done,</p><p>you can count to 5 !</p>");
+         
+         
          $("#prelo").hide();
          
             $(".home, .musica, .uno, .due, .tre, .quattro, .cinque").bind('touchstart MSPointerDown', function(){
@@ -61,6 +64,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
          	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});*/
          /*MENU STOP*/
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_nextCopy}", "touchstart", function(sym, e) {
+         // Navigate to a new URL in the current window
+         // (replace "_self" with appropriate target attribute for a new window)
+         window.open("https://itunes.apple.com/us/app/dragon-maps-for-elder-scrolls/id479661422?ls=1&mt=8", "_self");
+         
 
       });
       //Edge binding end
@@ -143,6 +155,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'Scoia'
    (function(symbolName) {   
    
+
    })("Scoia");
    //Edge symbol end:'Scoia'
 

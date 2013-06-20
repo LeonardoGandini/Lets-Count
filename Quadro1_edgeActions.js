@@ -46,8 +46,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       
+        
+      	
          $(".fioreani, .home").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
+      		//sym.$(".nuvo").css({'-webkit-filter': 'blur(20px)'});
       	});
       
          $(".foglina").bind('touchstart MSPointerDown', function(){
@@ -331,7 +334,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'Lumachina'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 62500, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 70000, function(sym, e) {
          // play the timeline from the given position (ms or label)
          sym.play(0);
 
@@ -346,7 +349,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'FarfallaContainer'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 60000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 32446, function(sym, e) {
          sym.play(0);
 
       });
