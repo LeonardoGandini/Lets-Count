@@ -54,16 +54,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          			'opacity':'1'
          			});
          	});
-         
-         /*MENU START*/
-         /*	avanti = "Quadro2.html";
-         	$(".testina").bind('touchstart MSPointerDown', function(){
-         			sym.getSymbol(".menu").play();
-         	});
-            sym.$(".prev").css({'display': 'none'});
-         	sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
-         	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});*/
-         /*MENU STOP*/
 
       });
       //Edge binding end

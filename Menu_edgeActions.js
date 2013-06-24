@@ -15,13 +15,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-         /*AUDIO*/
-        /* AudioTappetino = new Audio('Suoni/LaMadeline.mp3');
-         AudioTappetino.load();
-         AudioTappetino.play();	
-         AudioTappetino.volume = 0.1;
-         */
-        
       yepnope({
            load: ["libs/jplayer.min.js",
            			"libs/playBGMenu.js"/*,
@@ -34,9 +27,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       };
       
          $("#prelo").hide();
-         
+      
       	AudioLetsCount = new Audio('Suoni/LetsCount.mp3');
-         AudioLetsCount.load();
       
       $(".letscount").bind('touchstart MSPointerDown', function(){
          AudioLetsCount.load();
@@ -46,7 +38,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       $(".popuppo").hide();
       
       $(".InfoButt").bind('touchstart MSPointerDown', function(){
-      		$(".popuppo").toggle();
       		sym.getSymbol(this).play("in");
       });  
       $(".chiudix").bind('touchstart MSPointerDown', function(){
@@ -57,24 +48,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	sym.getSymbol(this).play("in");
       });
       
-      /*
-      $(".musica").bind('touchstart MSPointerDown', function(){
-      		sym.getSymbol(this).play("in");
-      });
-      */
-      /*$('.musica').toggle(function () {
-          $(".musicanrm").css({'display': 'none'});
-          $(".musicagray").css({'display': 'block'});    	
-      }, function () {
-          $(".musicanrm").css({'display': 'block'});
-          $(".musicagray").css({'display': 'none'});   
-      });*/
-      
-      
-      /*
-      $(".musica, .roberta").bind('touchstart MSPointerDown click', function(){
-      		sym.getSymbol(this).play("in");
-      });*/
       $('.musica').toggle(function () {
           $(".musica").css({
           	'-webkit-filter': 'saturate(0%)',
@@ -153,6 +126,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'InfoButt'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 393, function(sym, e) {
+         $(".popuppo").toggle();
+
+      });
+      //Edge binding end
+
    })("InfoButt");
    //Edge symbol end:'InfoButt'
 
