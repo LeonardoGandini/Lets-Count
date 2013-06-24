@@ -30,14 +30,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioTre = new Audio('Suoni/numbers/three.mp3');  
          AudioTalpa = new Audio('Suoni/Lumaca01.mp3');
          AudioTalpe = new Audio('Suoni/Talpe.mp3');
-      
-      	/*AudioQ3.load();
-      	AudioQ3.play();*/
+		 AudioQ3 = new Audio('Suoni/quadri/Q3.mp3');
+     
+      	AudioQ3.load();
+      	AudioQ3.play();
       
          $(".playvoce").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
-      		/*AudioQ3.load();
-      		AudioQ3.play();*/
+      		AudioQ3.load();
+      		AudioQ3.play();
       	});
       
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});

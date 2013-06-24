@@ -31,6 +31,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	AudioLetsCount = new Audio('Suoni/LetsCount.mp3');
       
       $(".letscount").bind('touchstart MSPointerDown', function(){
+      	sym.getSymbol(this).play("in");
          AudioLetsCount.load();
          AudioLetsCount.play();
       });
@@ -259,5 +260,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("RobertaName");
    //Edge symbol end:'RobertaName'
+
+   //=========================================================
+   
+   //Edge symbol: 'letscountsymbolo'
+   (function(symbolName) {   
+   
+   })("letscountsymbolo");
+   //Edge symbol end:'letscountsymbolo'
 
 })(jQuery, AdobeEdge, "Menu");

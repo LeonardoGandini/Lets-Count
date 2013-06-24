@@ -37,14 +37,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioQuattro = new Audio('Suoni/numbers/four.mp3');  
          AudioCinque = new Audio('Suoni/numbers/five.mp3');  
          AudioVerme = new Audio('Suoni/Lumaca01.mp3');
+         AudioQ5 = new Audio('Suoni/quadri/Q5.mp3');
+
       
-      	/*AudioQ5.load();
-      	AudioQ5.play();*/
+      	AudioQ5.load();
+      	AudioQ5.play();
       
          $(".playvoce").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
-      		/*AudioQ5.load();
-      		AudioQ5.play();*/
+      		AudioQ5.load();
+      		AudioQ5.play();
       	});
          sym.getSymbol("FUMELLO").play("in");
       

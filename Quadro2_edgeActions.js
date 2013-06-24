@@ -33,7 +33,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          AudioUno = new Audio('Suoni/numbers/one.mp3');
          AudioDue = new Audio('Suoni/numbers/two.mp3');  
          AudioAnt = new Audio('Suoni/Lumaca01.mp3');
-      	AudioQ2 = new Audio('Suoni/quadri/Q2.mp3');
+		 AudioQ2 = new Audio('Suoni/quadri/Q2.mp3');
       
       	AudioQ2.load();
       	AudioQ2.play();
