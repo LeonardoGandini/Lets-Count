@@ -42,6 +42,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
        document.addEventListener("deviceready", onDeviceReady, false);
 
        var my_media = null;
+       var AudioUno = null;
+       var AudioDue = null;
+       var AudioTre = null;
+       var AudioQuattro = null;
+       var AudioCinque = null;
+
 
 /* Tappetino Start*/	        
         function playAudio(src) {
@@ -60,6 +66,53 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
         function onDeviceReady() {    
 			playAudio("Suoni/LaMadeline.mp3");
         }
+       function playAudioUno (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioUno = new Media(src);
+            AudioUno.play();   
+        }
+       function playAudioDue (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioDue = new Media(src);
+            AudioDue.play();   
+        }
+       function playAudioTre (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioTre = new Media(src);
+            AudioTre.play();   
+        }
+       function playAudioQuattro (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioQuattro = new Media(src);
+            AudioQuattro.play();   
+        }
+       function playAudioCinque (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioCinque = new Media(src);
+            AudioCinque.play();   
+        }
+
+            $(".uno").bind('touchstart MSPointerDown', function(){
+         		sym.getSymbol(this).play("in");
+         		playAudioUno('Suoni/numbers/Singoli-one.mp3');
+         	});        
+            $(".due").bind('touchstart MSPointerDown', function(){
+         		sym.getSymbol(this).play("in");
+         		playAudioDue('Suoni/numbers/Singoli-two.mp3');
+         	});        
+            $(".tre").bind('touchstart MSPointerDown', function(){
+         		sym.getSymbol(this).play("in");
+         		playAudioTre('Suoni/numbers/Singoli-three.mp3');
+         	});        
+            $(".quattro").bind('touchstart MSPointerDown', function(){
+         		sym.getSymbol(this).play("in");
+         		playAudioQuattro('Suoni/numbers/Singoli-four.mp3');
+         	});        
+            $(".cinque").bind('touchstart MSPointerDown', function(){
+         		sym.getSymbol(this).play("in");
+         		playAudioCinque('Suoni/numbers/Singoli-five.mp3');
+         	});        
+
 
       $('.musica').toggle(function () {
           $(".musica").css({
@@ -81,7 +134,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
          $("#prelo").css({'display':'none'});
 
-            $(".home, .musica, .uno, .due, .tre, .quattro, .cinque").bind('touchstart MSPointerDown', function(){
+            $(".home, .musica").bind('touchstart MSPointerDown', function(){
          		sym.getSymbol(this).play("in");
          	});
 /*
