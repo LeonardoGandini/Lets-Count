@@ -66,7 +66,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
         	setTimeout(function(){
         			playAudioQ1("Suoni/quadri/Q1.mp3");
-        		},2500);      
+        		},2000);      
 
 			playAudio("Suoni/LaMadeline.mp3");
         }

@@ -23,49 +23,79 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-         yepnope({
-              load: ["libs/jplayer.min.js",
-              			"libs/playBGMenu.js"/*,
-              			"libs/jquery-ui-1.10.3.custom.min.js",
-              			"libs/jquery.ui.touch-punch.min.js"*/
-              			],complete: init});
-         
-         function init(){
-              	//$(".uno").draggable();
-         };
-         
-         //sym.$(".welldone").html("<p>Well done,</p><p>you can count to 5 !</p>");
-         
-         
+      
+		if((navigator.userAgent.match(/MSIE/i))){
+		  yepnope({load: ["libs/cordovaIE.js"],complete: init});
+		}
+
+		if((navigator.userAgent.match(/android/gi))){
+			yepnope({load: ["libs/cordova.js"],complete: init});
+		}
+
+		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
+			yepnope({load: ["libs/cordovaIOS.js"],complete: init});
+		}
+
+
+      function init(){
+
+       document.addEventListener("deviceready", onDeviceReady, false);
+
+       var my_media = null;
+
+/* Tappetino Start*/	        
+        function playAudio(src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        	my_media = new Media(src);
+        	my_media.play();
+        }      
+    	function pauseAudio() {
+    		if (my_media) {
+    			my_media.pause();
+    		}
+    	}
+/* Tappetino Stop*/	        
+
+
+        function onDeviceReady() {    
+			playAudio("Suoni/LaMadeline.mp3");
+        }
+
+      $('.musica').toggle(function () {
+          $(".musica").css({
+          	'-webkit-filter': 'saturate(0%)',
+          	'opacity':'0.6'
+          	});
+          	pauseAudio();
+      }, function () {
+          $(".musica").css({
+          	'-webkit-filter': 'saturate(100%)',
+          	'opacity':'1'
+          	});
+          	playAudio("Suoni/LaMadeline.mp3");
+      });		        
+};/*INIT STOP*/  
+
+
+
+
          $("#prelo").css({'display':'none'});
-         
+
             $(".home, .musica, .uno, .due, .tre, .quattro, .cinque").bind('touchstart MSPointerDown', function(){
          		sym.getSymbol(this).play("in");
          	});
-         
-         	$('.musica').toggle(function () {
-         		 $(".musica").css({
-         			'-webkit-filter': 'saturate(0%)',
-         			'opacity':'0.6'
-         			});
-         	}, function () {
-         		 $(".musica").css({
-         			'-webkit-filter': 'saturate(100%)',
-         			'opacity':'1'
-         			});
+/*
+            $(".nextchapter").bind('touchstart MSPointerDown', function(){
+         		sym.getSymbol(this).play("in");
+         		window.open("https://itunes.apple.com/us/app/dragon-maps-for-elder-scrolls/id479661422?ls=1&mt=8", "_self");
          	});
+*/				
+
 
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_nextCopy}", "touchstart", function(sym, e) {
-         // Navigate to a new URL in the current window
-         // (replace "_self" with appropriate target attribute for a new window)
-         window.open("https://itunes.apple.com/us/app/dragon-maps-for-elder-scrolls/id479661422?ls=1&mt=8", "_self");
-         
 
-      });
-      //Edge binding end
 
    })("stage");
    //Edge symbol end:'stage'

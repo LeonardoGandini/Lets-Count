@@ -32,16 +32,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       function init(){
 
-      /*AUDIO*/
-/*
-         AudioFoglie = new Audio('Suoni/foglia.mp3');
-         AudioApi = new Audio('Suoni/Bees.mp3');
-         AudioUno = new Audio('Suoni/numbers/one.mp3');
-         AudioDue = new Audio('Suoni/numbers/two.mp3');  
-         AudioAnt = new Audio('Suoni/Lumaca01.mp3');
-		 AudioQ2 = new Audio('Suoni/quadri/Q2.mp3');
-*/
-
 
        document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -67,7 +57,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 /* Tappetino Stop*/	        
 
 /* Testo Q2 Start*/	        
-        function playAudioQ1(src) {
+        function playAudioQ2(src) {
         if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
         	AudioQ2 = new Media(src);
         	AudioQ2.play();
@@ -77,8 +67,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
         function onDeviceReady() {
 
         	setTimeout(function(){
-        			playAudioQ1("Suoni/quadri/Q2.mp3");
-        		},2500);      
+        			playAudioQ2("Suoni/quadri/Q2.mp3");
+        		},2000);      
 
 			playAudio("Suoni/LaMadeline.mp3");
         }
@@ -157,7 +147,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          $(".cavolo2trigger").bind('touchstart MSPointerDown', function(){
 			sym.getSymbol(".CAVOLO_BIG_2").play("in");
         	setTimeout(function(){
-        			playAudioUno('Suoni/numbers/two.mp3');
+        			playAudioDue('Suoni/numbers/two.mp3');
 					sym.$(".due").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
 			},1801);      
 	     });
