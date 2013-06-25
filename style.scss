@@ -29,7 +29,6 @@ body{
 
 	@include vendor-prefix(transform, translate3d(0,0,0));
 	@include vendor-prefix(transform, translateZ(0));
-	
 	@include vendor-prefix(touch-action, none !important);
 	
 /* 	margin: -20px 0px 0px 0px; */
@@ -46,8 +45,6 @@ body{
 
 
 }
-
-
 
 
 
@@ -100,10 +97,13 @@ body{
 
 
 #prelo {
+	position: fixed;
+	z-index: 1;
 	color:rgba(255,255,255,0.99);
 	font-family:'Luckiest Guy';
 	font-size:3em;
-	margin:35% auto;
+	width: 100%;
+	top: 40%;
 	text-align:center;
-	text-shadow:2px 2px 2px rgba(255,0,0,0.81)
+	text-shadow:2px 2px 2px rgba(255,0,0,0.81);
 }

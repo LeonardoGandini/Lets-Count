@@ -14,27 +14,91 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       
-      Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-      yepnope({
-           load: ["libs/jplayer.min.js",
-           			"libs/playBGMenu.js"/*,
-           			"libs/jquery-ui-1.10.3.custom.min.js",
-           			"libs/jquery.ui.touch-punch.min.js"*/
-           			],complete: init});
-      
-      function init(){
+Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
+        
+           
+if((navigator.userAgent.match(/android/gi))){
+	yepnope({load: ["libs/cordova.js"],complete: init});
+}
+
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
+	yepnope({load: ["libs/cordovaIOS.js"],complete: init});
+}
+
+
+            
+function init(){
            	//$(".testona").draggable();
-      };
-      
-         $("#prelo").hide();
-      
-      	AudioLetsCount = new Audio('Suoni/LetsCount.mp3');
-      
+
+	        document.addEventListener("deviceready", onDeviceReady, false);
+
+
+	        var my_media = null;
+
+	        function playAudio(src) {
+            if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+	        	my_media = new Media(src);
+	        	my_media.play();
+	        }
+
+	        function stopAudio() {
+	        	if (my_media) {
+	        		my_media.stop();
+	        	}
+	        }
+	        	function pauseAudio() {
+	        		if (my_media) {
+	        			my_media.pause();
+	        		}
+	        	}
+	        	
+	        function onDeviceReady() {
+	        	playAudio("Suoni/Ghost.mp3");
+	        }
+	        
+	        
+      $('.musica').toggle(function () {
+          $(".musica").css({
+          	'-webkit-filter': 'saturate(0%)',
+          	'opacity':'0.6'
+          	});
+          	pauseAudio();
+      }, function () {
+          $(".musica").css({
+          	'-webkit-filter': 'saturate(100%)',
+          	'opacity':'1'
+          	});
+          	playAudio("Suoni/Ghost.mp3");
+      });	        
+	        
+	        
+	       var AudioLetsCount = null;
+	       
+	       function playAudioLetsCount (src) {
+            if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+	            AudioLetsCount = new Media(src);
+	            AudioLetsCount.play();   
+	        }
       $(".letscount").bind('touchstart MSPointerDown', function(){
-      	sym.getSymbol(this).play("in");
-         AudioLetsCount.load();
-         AudioLetsCount.play();
-      });
+      	sym.getSymbol(this).play("in");	
+		playAudioLetsCount('Suoni/LetsCount.mp3');
+		
+      });	        
+	        
+	        
+};/*INIT STOP*/
+      
+
+
+
+
+
+
+        $("#prelo").css({'display':'none'});
+        
+		$(".musica").bind('touchstart MSPointerDown', function() {
+	    	sym.getSymbol(this).play("in");
+		});      
       
       $(".popuppo").hide();
       
@@ -45,21 +109,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       		$(".popuppo").hide();
       }); 			
       
-      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo, .musica, .roberta").bind('touchstart MSPointerDown', function(){
+      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo, .roberta").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");
       });
       
-      $('.musica').toggle(function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(0%)',
-          	'opacity':'0.6'
-          	});
-      }, function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(100%)',
-          	'opacity':'1'
-          	});
-      });
+
 
       });//Edge binding end
 

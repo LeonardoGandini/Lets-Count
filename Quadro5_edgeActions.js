@@ -28,7 +28,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
            			],
            complete: function() {}
       });
-         $("#prelo").hide();
+         $("#prelo").css({'display':'none'});
          AudioFoglie = new Audio('Suoni/foglia.mp3');
          AudioBird = new Audio('Suoni/cip01.mp3');
          AudioUno = new Audio('Suoni/numbers/one.mp3');

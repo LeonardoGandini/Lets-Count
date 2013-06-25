@@ -37,7 +37,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          //sym.$(".welldone").html("<p>Well done,</p><p>you can count to 5 !</p>");
          
          
-         $("#prelo").hide();
+         $("#prelo").css({'display':'none'});
          
             $(".home, .musica, .uno, .due, .tre, .quattro, .cinque").bind('touchstart MSPointerDown', function(){
          		sym.getSymbol(this).play("in");

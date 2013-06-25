@@ -27,7 +27,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
            // sym.$('RRect').draggable();
       };
       
-      $("#prelo").hide();
+      $("#prelo").css({'display':'none'});
       /*AUDIO*/
       	AudioQ1 = new Audio('Suoni/quadri/Q1.mp3');
          AudioBird = new Audio('Suoni/cip01.mp3');
