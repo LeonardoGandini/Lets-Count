@@ -1,0 +1,8 @@
+/***********************
+* Adobe Edge Animate Composition Actions
+*
+* Edit this file with caution, being careful to preserve 
+* function signatures and comments starting with 'Edge' to maintain the 
+* ability to interact with these actions from within Adobe Edge Animate
+*
+***********************/(function(e,t,n){var r=t.Composition,i=t.Symbol;(function(t){i.bindElementAction(n,t,"${_Text}","touchstart",function(e,t){window.open("index.html","_self")});i.bindElementAction(n,t,"document","compositionReady",function(t,n){function r(){}yepnope({load:["libs/jplayer.min.js","libs/playBGMenu.js"],complete:r});e("#prelo").css({display:"none"});e(".home, .musica, .uno, .due, .tre, .quattro, .cinque").bind("touchstart MSPointerDown",function(){t.getSymbol(this).play("in")});e(".musica").toggle(function(){e(".musica").css({"-webkit-filter":"saturate(0%)",opacity:"0.6"})},function(){e(".musica").css({"-webkit-filter":"saturate(100%)",opacity:"1"})})});i.bindElementAction(n,t,"${_nextCopy}","touchstart",function(e,t){window.open("https://itunes.apple.com/us/app/dragon-maps-for-elder-scrolls/id479661422?ls=1&mt=8","_self")})})("stage");(function(e){})("Preloader");(function(e){})("musica");(function(e){i.bindTriggerAction(n,e,"Default Timeline",406,function(e,t){window.open("index.html","_self")})})("HOME_butt");(function(e){})("uno");(function(e){})("due");(function(e){})("tre");(function(e){})("quattro");(function(e){})("cinque");(function(e){})("Scoia")})(jQuery,AdobeEdge,"QuadroFinale");

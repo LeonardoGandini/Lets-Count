@@ -15,94 +15,171 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-      yepnope({
-           load: ["libs/jplayer.min.js",
-           			"libs/playBG-min.js"/*,
-           			"libs/jquery-ui-1.10.3.custom.min.js",
-           			"libs/jquery.ui.touch-punch.min.js"*/
-           			],complete: init});
-      
-      function init(){
-           	//$(".uccellino").draggable();
-           // sym.$('RRect').draggable();
-      };
-      
-      $("#prelo").css({'display':'none'});
-      /*AUDIO*/
-      	AudioQ1 = new Audio('Suoni/quadri/Q1.mp3');
-         AudioBird = new Audio('Suoni/cip01.mp3');
-         AudioFoglie = new Audio('Suoni/foglia.mp3');
-         AudioLumaca = new Audio('Suoni/Lumaca01.mp3');
-         AudioUno = new Audio('Suoni/numbers/one.mp3');
-      
-      	AudioQ1.load();
-      	AudioQ1.play();
-      
+		
+		if((navigator.userAgent.match(/MSIE/i))){
+		  yepnope({load: ["libs/cordovaIE.js"],complete: init});
+		}
+		
+		if((navigator.userAgent.match(/android/gi))){
+			yepnope({load: ["libs/cordova.js"],complete: init});
+		}
+		
+		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
+			yepnope({load: ["libs/cordovaIOS.js"],complete: init});
+		}
+		
+		
+		
+		function init(){
+		
+       document.addEventListener("deviceready", onDeviceReady, false);
+
+       var my_media = null;
+       var AudioQ1 = null;
+       var AudioBird = null;
+       var AudioFoglie = null;
+       var AudioLumaca = null;
+       var AudioUno = null;
+
+/* Tappetino Start*/	        
+        function playAudio(src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        	my_media = new Media(src);
+        	my_media.play();
+        }      
+    	function pauseAudio() {
+    		if (my_media) {
+    			my_media.pause();
+    		}
+    	}
+/* Tappetino Stop*/	        
+
+/* Testo Q1 Start*/	        
+        function playAudioQ1(src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        	AudioQ1 = new Media(src);
+        	AudioQ1.play();
+        }
+/* Testo Q1 Stop*/	        
+
+        function onDeviceReady() {
+
+        	setTimeout(function(){
+        			playAudioQ1("Suoni/quadri/Q1.mp3");
+        		},2500);      
+
+			playAudio("Suoni/LaMadeline.mp3");
+        }
+
+
+       function playAudioBird (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioBird = new Media(src);
+            AudioBird.play();   
+        }
+       function playAudioFoglie (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioFoglie = new Media(src);
+            AudioFoglie.play();   
+        }
+       function playAudioLumaca (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioLumaca = new Media(src);
+            AudioLumaca.play();   
+        }
+       function playAudioUno (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioUno = new Media(src);
+            AudioUno.play();   
+        }
+       function playAudioQ1 (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioQ1 = new Media(src);
+            AudioQ1.play();   
+        }
+
          $(".playvoce").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
-      		AudioQ1.load();
-      		AudioQ1.play();
+		 	playAudioQ1('Suoni/quadri/Q1.mp3');
       	});
-      
-         /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
-      
-        
-      	
-         $(".fioreani, .home").bind('touchstart MSPointerDown', function(){
-      		sym.getSymbol(this).play("in");
-      		//sym.$(".nuvo").css({'-webkit-filter': 'blur(20px)'});
-      	});
-      
+
          $(".foglina").bind('touchstart MSPointerDown', function(){
          	sym.getSymbol(this).play("in");
-         	AudioFoglie.load();
-         	AudioFoglie.play();
+		 	playAudioFoglie('Suoni/foglia.mp3');
          });
-      
+
       	$(".uccellino").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
-      		AudioBird.load();
-      		AudioBird.play();
+		 	playAudioBird('Suoni/cip01.mp3');
+      	});      
+         $(".lumacacontainer").bind('touchstart MSPointerDown', function(){
+		 	playAudioLumaca('Suoni/Lumaca01.mp3');
+             var div=$(".lumacacontainer");
+             div.animate({top:'-=25px'},"500");
+             div.animate({top:'+=25px'},"1");
+         });      
+         
+
+         $(".carota").bind('touchstart MSPointerDown', function(){
+			sym.getSymbol(this).play("in");
+        	setTimeout(function(){
+        			playAudioUno('Suoni/numbers/one.mp3');
+					sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+			},1801);      
+	     });
+
+
+      $('.musica').toggle(function () {
+          $(".musica").css({
+          	'-webkit-filter': 'saturate(0%)',
+          	'opacity':'0.6'
+          	});
+          	pauseAudio();
+      }, function () {
+          $(".musica").css({
+          	'-webkit-filter': 'saturate(100%)',
+          	'opacity':'1'
+          	});
+          	playAudio("Suoni/LaMadeline.mp3");
+      });		        
+};/*INIT STOP*/      
+
+
+
+
+
+
+
+      	$("#prelo").css({'display':'none'});     
+
+         /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
+
+
+
+         $(".fioreani, .home").bind('touchstart MSPointerDown', function(){
+      		sym.getSymbol(this).play("in");
       	});
-      
+
       	sym.getSymbol(".coda").play("animaziocoda");
          $(".triggercoda").bind('touchstart MSPointerDown', function(){
          	sym.getSymbol(".coda").play("animaziocoda");
          });
-      
-        //sym.$(".uccellino, .carota").css({'-webkit-filter': 'drop-shadow(0 2px 3px rgba(0,0,0,.35))'});
+
          sym.getSymbol(".lumacacontainer").play("in");
-      
-         $(".lumacacontainer").bind('touchstart MSPointerDown', function(){
-         	AudioLumaca.load();
-         	AudioLumaca.play();
-             var div=$(".lumacacontainer");
-             div.animate({top:'-=25px'},"500");
-             div.animate({top:'+=25px'},"1");
-         });
+
+
          /*Tira giù il fumello*/sym.getSymbol("FUMELLO").play();
-      
-      	$(".next, .prev, .home, .carota, .musica").bind('touchstart MSPointerDown', function(){
+
+      	$(".next, .prev, .home, .musica").bind('touchstart MSPointerDown', function(){
       		sym.getSymbol(this).play("in");
       	});
-      	$('.musica').toggle(function () {
-      		 $(".musica").css({
-      			'-webkit-filter': 'saturate(0%)',
-      			'opacity':'0.6'
-      			});
-      	}, function () {
-      		 $(".musica").css({
-      			'-webkit-filter': 'saturate(100%)',
-      			'opacity':'1'
-      			});
-      	});
-      
+
       /*MENU START*/
       	avanti = "Quadro2.html";
       	$(".testina").bind('touchstart MSPointerDown', function(){
       			sym.getSymbol(".menu").play();
       	});
-         sym.$(".prev").css({'display': 'none'});
+        sym.$(".prev").css({'display': 'none'});
       	sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
       	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
       /*MENU STOP*/
@@ -153,23 +230,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         sym.stop();
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1801, function(sym, e) {
-         /*sym.getComposition().getStage().getSymbol("MENUz").$("Numero_1").hide();
-         sym.getComposition().getStage().getSymbol("MENUz").$("Numero_1_col").css({
-         	'display': 'block'
-         });*/
-         sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
-         AudioUno.load();
-         AudioUno.play();
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4575, function(sym, e) {
          sym.stop();

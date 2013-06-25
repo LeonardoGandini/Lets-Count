@@ -16,6 +16,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
 Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
         
+
+/*-- /IEMobile/i --*/
+if((navigator.userAgent.match(/MSIE/i))){
+  yepnope({load: ["libs/cordovaIE.js"],complete: init});
+}
            
 if((navigator.userAgent.match(/android/gi))){
 	yepnope({load: ["libs/cordova.js"],complete: init});
@@ -25,36 +30,29 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
 	yepnope({load: ["libs/cordovaIOS.js"],complete: init});
 }
 
-
-            
+  
 function init(){
-           	//$(".testona").draggable();
 
-	        document.addEventListener("deviceready", onDeviceReady, false);
+       	//$(".testona").draggable();
+       document.addEventListener("deviceready", onDeviceReady, false);
 
+       var my_media = null;
+       var AudioLetsCount = null;
 
-	        var my_media = null;
-
-	        function playAudio(src) {
-            if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
-	        	my_media = new Media(src);
-	        	my_media.play();
-	        }
-
-	        function stopAudio() {
-	        	if (my_media) {
-	        		my_media.stop();
-	        	}
-	        }
-	        	function pauseAudio() {
-	        		if (my_media) {
-	        			my_media.pause();
-	        		}
-	        	}
-	        	
-	        function onDeviceReady() {
-	        	playAudio("Suoni/Ghost.mp3");
-	        }
+        function playAudio(src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        	my_media = new Media(src);
+        	my_media.play();
+        }
+    	function pauseAudio() {
+    		if (my_media) {
+    			my_media.pause();
+    		}
+    	}
+        function onDeviceReady() {
+        	playAudio("Suoni/Ghost.mp3");
+        }
+	        
 	        
 	        
       $('.musica').toggle(function () {
@@ -71,20 +69,19 @@ function init(){
           	playAudio("Suoni/Ghost.mp3");
       });	        
 	        
-	        
-	       var AudioLetsCount = null;
-	       
-	       function playAudioLetsCount (src) {
-            if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
-	            AudioLetsCount = new Media(src);
-	            AudioLetsCount.play();   
-	        }
+       function playAudioLetsCount (src) {
+        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+            AudioLetsCount = new Media(src);
+            AudioLetsCount.play();   
+        }
+      
       $(".letscount").bind('touchstart MSPointerDown', function(){
       	sym.getSymbol(this).play("in");	
 		playAudioLetsCount('Suoni/LetsCount.mp3');
-		
+				
       });	        
 	        
+
 	        
 };/*INIT STOP*/
       
