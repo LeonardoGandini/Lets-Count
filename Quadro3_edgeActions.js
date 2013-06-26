@@ -68,7 +68,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
         			playAudioQ3("Suoni/quadri/Q3.mp3");
         		},2000);      
 
-			playAudio("Suoni/LaMadeline.mp3");
+			        	(function(){
+			    playAudio("Suoni/LaMadeline.mp3");
+			    setTimeout(arguments.callee, 301200);
+			})();			
+
         }
 
 
@@ -171,7 +175,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
           	'-webkit-filter': 'saturate(100%)',
           	'opacity':'1'
           	});
-          	playAudio("Suoni/LaMadeline.mp3");
+          	        	(function(){
+			    playAudio("Suoni/LaMadeline.mp3");
+			    setTimeout(arguments.callee, 301200);
+			})();			
+
       });		        
 };/*INIT STOP*/      
       

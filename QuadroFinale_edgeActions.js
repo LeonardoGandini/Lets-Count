@@ -64,7 +64,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
         function onDeviceReady() {    
-			playAudio("Suoni/LaMadeline.mp3");
+			        	(function(){
+			    playAudio("Suoni/LaMadeline.mp3");
+			    setTimeout(arguments.callee, 301200);
+			})();			
+
         }
        function playAudioUno (src) {
         if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
@@ -125,7 +129,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
           	'-webkit-filter': 'saturate(100%)',
           	'opacity':'1'
           	});
-          	playAudio("Suoni/LaMadeline.mp3");
+          	        	(function(){
+			    playAudio("Suoni/LaMadeline.mp3");
+			    setTimeout(arguments.callee, 301200);
+			})();			
+
       });		        
 };/*INIT STOP*/  
 

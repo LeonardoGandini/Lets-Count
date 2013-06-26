@@ -49,8 +49,14 @@ function init(){
     			my_media.pause();
     		}
     	}
+    	
         function onDeviceReady() {
-        	playAudio("Suoni/Ghost.mp3");
+        	
+        	(function(){
+			    playAudio("Suoni/Ghost.mp3");
+			    setTimeout(arguments.callee, 38000);
+			})();
+			
         }
 	        
 	        
@@ -66,8 +72,11 @@ function init(){
           	'-webkit-filter': 'saturate(100%)',
           	'opacity':'1'
           	});
-          	playAudio("Suoni/Ghost.mp3");
-      });	        
+        	(function(){
+			    playAudio("Suoni/Ghost.mp3");
+			    setTimeout(arguments.callee, 38000);
+			})();
+		});	        
 	        
        function playAudioLetsCount (src) {
         if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
