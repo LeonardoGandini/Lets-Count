@@ -73,7 +73,16 @@ body{
     margin: 0 auto !important;
     position: absolute;
 	@include vendor-prefix(box-shadow, (18px 0px 25px $Ombra, -18px 0px 25px $Ombra));
-	
+
+
+/*
+	@media only screen and (device-height:962px) and (orientation:landscape) {
+		width: 100% !important;
+	} 
+
+*/
+
+
 }
 
 .welldone{
