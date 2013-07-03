@@ -43,6 +43,7 @@ function init(){
         if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
         	my_media = new Media(src);
         	my_media.play();
+        	
         }
     	function pauseAudio() {
     		if (my_media) {
@@ -81,7 +82,7 @@ function init(){
        function playAudioLetsCount (src) {
         if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
             AudioLetsCount = new Media(src);
-            AudioLetsCount.play();   
+            AudioLetsCount.play();
         }
       
       $(".letscount").bind('touchstart MSPointerDown', function(){

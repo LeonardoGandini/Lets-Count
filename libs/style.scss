@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import "Meyer-Reset";
 
 @mixin vendor-prefix($name, $argument) {
@@ -17,7 +16,7 @@
 }
 
 $Ombra: rgba(0,0,0,0.4);
-
+$MediaQ: "only screen and (max-width : 1280px)";
 *{  
 	@include vendor-prefix(touch-callout, none !important);
 	@include vendor-prefix(tap-highlight-color, rgba(0,0,0,0) !important);
@@ -67,28 +66,50 @@ body{
 .Menu,
 .QuadroFinale
 {
-/*     overflow:hidden !important; */
-    @include vendor-prefix(transform-origin, 50% 0);
-    padding: 0;
-    margin: 0 auto !important;
-    position: absolute;
+    @include vendor-prefix(transform-origin, 50% 0 0);
 	@include vendor-prefix(box-shadow, (18px 0px 25px $Ombra, -18px 0px 25px $Ombra));
-
-
+	padding:0;
+	position:absolute;
+    width: 1024px;
+/*     top: 100px !important; */
+    left:calc(50% - 1024px/2) !important;
 /*
-	@media only screen and (device-height:962px) and (orientation:landscape) {
-		width: 100% !important;
-	} 
-
+	-moz-box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
+	-moz-transform-origin:50% 0;
+	-ms-box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
+	-ms-transform-origin:50% 0;
+	-o-box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
+	-o-transform-origin:50% 0;
+	-webkit-box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
+	-webkit-transform-origin:50% 0;
+	box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
+	padding:0;
+	position:absolute;
+	transform-origin:50% 0;
+    width: 1024px;
+    left:calc(50% - 1024px/2);
 */
-
+	@media #{$MediaQ} {
+	
+	    @include vendor-prefix(transform-origin, 40% 0 0);
+		left:0px !important;
+		
+		}
+	@media only screen and (max-width: 800px) {
+	
+	    @include vendor-prefix(transform-origin, 10% 0 0);
+		left:0px !important;
+		
+		}		
 
 }
 
+/*
 .welldone{
 	font-family: 'Luckiest Guy';
 }
 
+*/
 /*
 .edgePreloadQuadro01{
     margin: 0 25% !important;
