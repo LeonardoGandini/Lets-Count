@@ -18,6 +18,7 @@ Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", fun
         
 
 /*-- /IEMobile/i --*/
+/*
 if((navigator.userAgent.match(/MSIE/i))){
   yepnope({load: ["libs/cordovaIE.js"],complete: init});
 }
@@ -29,8 +30,9 @@ if((navigator.userAgent.match(/android/gi))){
 if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
 	yepnope({load: ["libs/cordovaIOS.js"],complete: init});
 }
-
-  
+*/
+yepnope({load: ["cordova.js"],complete: init});
+  toccomagico = 'touchstart MSPointerDown pointerdown'
 function init(){
 
        	//$(".testona").draggable();
@@ -40,7 +42,7 @@ function init(){
        var AudioLetsCount = null;
 
         function playAudio(src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	my_media = new Media(src);
         	my_media.play();
         	
@@ -80,12 +82,12 @@ function init(){
 		});	        
 	        
        function playAudioLetsCount (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioLetsCount = new Media(src);
             AudioLetsCount.play();
         }
       
-      $(".letscount").bind('touchstart MSPointerDown', function(){
+      $(".letscount").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");	
 		playAudioLetsCount('Suoni/LetsCount.mp3');
 				
@@ -103,20 +105,20 @@ function init(){
 
         $("#prelo").css({'display':'none'});
         
-		$(".musica").bind('touchstart MSPointerDown', function() {
+		$(".musica").bind(toccomagico, function() {
 	    	sym.getSymbol(this).play("in");
 		});      
       
       $(".popuppo").hide();
       
-      $(".InfoButt").bind('touchstart MSPointerDown', function(){
+      $(".InfoButt").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       });  
-      $(".chiudix").bind('touchstart MSPointerDown', function(){
+      $(".chiudix").bind(toccomagico, function(){
       		$(".popuppo").hide();
       }); 			
       
-      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo, .roberta").bind('touchstart MSPointerDown', function(){
+      $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo, .roberta").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");
       });
       

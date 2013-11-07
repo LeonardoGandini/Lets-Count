@@ -15,6 +15,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
+/*
 		if((navigator.userAgent.match(/MSIE/i))){
 		  yepnope({load: ["libs/cordovaIE.js"],complete: init});
 		}
@@ -26,7 +27,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
 			yepnope({load: ["libs/cordovaIOS.js"],complete: init});
 		}
-		
+*/
+	yepnope({load: ["cordova.js"],complete: init});	
+	toccomagico = 'touchstart MSPointerDown pointerdown'
       function init(){
 
        document.addEventListener("deviceready", onDeviceReady, false);
@@ -44,7 +47,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /* Tappetino Start*/	        
         function playAudio(src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	my_media = new Media(src);
         	my_media.play();
         }      
@@ -57,7 +60,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /* Testo Q5 Start*/	        
         function playAudioQ5(src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	AudioQ5 = new Media(src);
         	AudioQ5.play();
         }
@@ -77,73 +80,73 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
        function playAudioQ5 (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioQ5 = new Media(src);
             AudioQ5.play();   
         }
        function playAudioFoglie (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioFoglie = new Media(src);
             AudioFoglie.play();   
         }
        function playAudioUno (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioUno = new Media(src);
             AudioUno.play();   
         }
        function playAudioDue (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioDue = new Media(src);
             AudioDue.play();   
         }
        function playAudioTre (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioTre = new Media(src);
             AudioTre.play();   
         }
        function playAudioQuattro (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioQuattro = new Media(src);
             AudioQuattro.play();   
         }
        function playAudioCinque (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioCinque = new Media(src);
             AudioCinque.play();   
         }
        function playAudioBird (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioBird = new Media(src);
             AudioBird.play();   
         }
        function playAudioVerme (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioVerme = new Media(src);
             AudioVerme.play();   
         }
 
 
 
-         $(".playvoce").bind('touchstart MSPointerDown', function(){
+         $(".playvoce").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
 		 	playAudioQ5('Suoni/quadri/Q5.mp3');
       	 });
-	      $(".MelaStat").bind('touchstart MSPointerDown', function(){
+	      $(".MelaStat").bind(toccomagico, function(){
 		      	sym.getSymbol(this).play("in");
 			 	playAudioFoglie('Suoni/foglia.mp3');
 	      });
 
-	      $(".BirdPala, .BirdTerra").bind('touchstart MSPointerDown', function(){
+	      $(".BirdPala, .BirdTerra").bind(toccomagico, function(){
 	      	sym.getSymbol(this).play("in");
 	      	playAudioBird('Suoni/cip01.mp3');
 	      });
-      $(".triggerverme").bind('touchstart MSPointerDown', function(){
+      $(".triggerverme").bind(toccomagico, function(){
 		  playAudioVerme('Suoni/Lumaca01.mp3');
 		  sym.getSymbol(".verme").play("in");
       });
 
 
-      $(".MelaBella1").bind('touchstart MSPointerDown', function(){
+      $(".MelaBella1").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");
       	$(".Mela2Trigger").show();
         	setTimeout(function(){
@@ -152,7 +155,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			},860);          	      	
 
       });
-      $(".Mela2Trigger").bind('touchstart MSPointerDown', function(){
+      $(".Mela2Trigger").bind(toccomagico, function(){
       	sym.getSymbol(".MelaBella2").play("in");
       	$(".Mela3Trigger").show();
         	setTimeout(function(){
@@ -160,7 +163,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 					sym.$(".due").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
 			},860);          	      	      	
       });
-      $(".Mela3Trigger").bind('touchstart MSPointerDown', function(){
+      $(".Mela3Trigger").bind(toccomagico, function(){
       	sym.getSymbol(".MelaBella3").play("in");
       	$(".Mela4Trigger").show();
         	setTimeout(function(){
@@ -168,7 +171,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 					sym.$(".tre").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
 			},860);            	      	
       });
-      $(".Mela4Trigger").bind('touchstart MSPointerDown', function(){
+      $(".Mela4Trigger").bind(toccomagico, function(){
       	sym.getSymbol(".MelaBella4").play("in");
       	$(".Mela5Trigger").show();
         	setTimeout(function(){
@@ -176,7 +179,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 					sym.$(".quattro").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
 			},860);            	      	
       });
-      $(".Mela5Trigger").bind('touchstart MSPointerDown', function(){
+      $(".Mela5Trigger").bind(toccomagico, function(){
       	sym.getSymbol(".MelaBella5").play("in");
         	setTimeout(function(){
         			playAudioCinque('Suoni/numbers/five.mp3');
@@ -238,7 +241,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
 
-      $(".fioreani").bind('touchstart MSPointerDown', function(){
+      $(".fioreani").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");
       });
 
@@ -246,23 +249,23 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       $(".Mela2Trigger, .Mela3Trigger, .Mela4Trigger, .Mela5Trigger").hide();
 
-      $(".Trigger-Mela-Easter").bind('touchstart MSPointerDown', function(){
+      $(".Trigger-Mela-Easter").bind(toccomagico, function(){
       	sym.getSymbol(".melaeaster").play("in");
       });
 
       sym.getSymbol(".codaani").play("in");
-      $(".codatrigger").bind('touchstart MSPointerDown', function(){
+      $(".codatrigger").bind(toccomagico, function(){
       	sym.getSymbol(".codaani").play("animaziocoda");
       });
 
       /*MENU START*/
       	avanti = "QuadroFinale.html";
       	indietro = "Quadro4.html";
-      	$(".next, .prev, .home, .musica").bind('touchstart MSPointerDown', function(){
+      	$(".next, .prev, .home, .musica").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       	});
 
-      	$(".testina").bind('touchstart MSPointerDown', function(){
+      	$(".testina").bind(toccomagico, function(){
       			sym.getSymbol(".menu").play();
       	});
       	sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});

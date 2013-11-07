@@ -24,6 +24,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
       
+/*
 		if((navigator.userAgent.match(/MSIE/i))){
 		  yepnope({load: ["libs/cordovaIE.js"],complete: init});
 		}
@@ -35,7 +36,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
 			yepnope({load: ["libs/cordovaIOS.js"],complete: init});
 		}
+*/
+yepnope({load: ["cordova.js"],complete: init});
 
+toccomagico = 'touchstart MSPointerDown pointerdown'
 
       function init(){
 
@@ -51,7 +55,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /* Tappetino Start*/	        
         function playAudio(src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	my_media = new Media(src);
         	my_media.play();
         }      
@@ -71,48 +75,48 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
         }
        function playAudioUno (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioUno = new Media(src);
             AudioUno.play();   
         }
        function playAudioDue (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioDue = new Media(src);
             AudioDue.play();   
         }
        function playAudioTre (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioTre = new Media(src);
             AudioTre.play();   
         }
        function playAudioQuattro (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioQuattro = new Media(src);
             AudioQuattro.play();   
         }
        function playAudioCinque (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioCinque = new Media(src);
             AudioCinque.play();   
         }
 
-            $(".uno").bind('touchstart MSPointerDown', function(){
+            $(".uno").bind(toccomagico, function(){
          		sym.getSymbol(this).play("in");
          		playAudioUno('Suoni/numbers/Singoli-one.mp3');
          	});        
-            $(".due").bind('touchstart MSPointerDown', function(){
+            $(".due").bind(toccomagico, function(){
          		sym.getSymbol(this).play("in");
          		playAudioDue('Suoni/numbers/Singoli-two.mp3');
          	});        
-            $(".tre").bind('touchstart MSPointerDown', function(){
+            $(".tre").bind(toccomagico, function(){
          		sym.getSymbol(this).play("in");
          		playAudioTre('Suoni/numbers/Singoli-three.mp3');
          	});        
-            $(".quattro").bind('touchstart MSPointerDown', function(){
+            $(".quattro").bind(toccomagico, function(){
          		sym.getSymbol(this).play("in");
          		playAudioQuattro('Suoni/numbers/Singoli-four.mp3');
          	});        
-            $(".cinque").bind('touchstart MSPointerDown', function(){
+            $(".cinque").bind(toccomagico, function(){
          		sym.getSymbol(this).play("in");
          		playAudioCinque('Suoni/numbers/Singoli-five.mp3');
          	});        
@@ -142,11 +146,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
          $("#prelo").css({'display':'none'});
 
-            $(".home, .musica").bind('touchstart MSPointerDown', function(){
+            $(".home, .musica").bind(toccomagico, function(){
          		sym.getSymbol(this).play("in");
          	});
 /*
-            $(".nextchapter").bind('touchstart MSPointerDown', function(){
+            $(".nextchapter").bind(toccomagico, function(){
          		sym.getSymbol(this).play("in");
          		window.open("https://itunes.apple.com/us/app/dragon-maps-for-elder-scrolls/id479661422?ls=1&mt=8", "_self");
          	});

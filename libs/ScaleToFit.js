@@ -1,7 +1,7 @@
 $(document).ready(function() {/*was 748*/
 
-	var altez = ($(document).height() / 768);
-	var altezZ = ($(document).height());
+	var altez = ($(window).height() / 768);
+	var altezZ = ($(window).height());
 	
 	$("#Stage").css({
 				'transform': 'scale(' + altez + ')',

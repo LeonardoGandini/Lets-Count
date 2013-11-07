@@ -16,6 +16,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
 		
+/*
 		if((navigator.userAgent.match(/MSIE/i))){
 		  yepnope({load: ["libs/cordovaIE.js"],complete: init});
 		}
@@ -27,9 +28,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
 			yepnope({load: ["libs/cordovaIOS.js"],complete: init});
 		}
+*/
 		
-		
-		
+yepnope({load: ["cordova.js"],complete: init});		
+
+toccomagico = 'touchstart MSPointerDown pointerdown'		
 		function init(){
 		
        document.addEventListener("deviceready", onDeviceReady, false);
@@ -41,9 +44,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
        var AudioLumaca = null;
        var AudioUno = null;
 
+
+///***BK***///
+////if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+
 /* Tappetino Start*/	        
         function playAudio(src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	my_media = new Media(src);
         	my_media.play();
         }      
@@ -56,7 +63,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /* Testo Q1 Start*/	        
         function playAudioQ1(src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	AudioQ1 = new Media(src);
         	AudioQ1.play();
         }
@@ -77,46 +84,46 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
        function playAudioBird (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioBird = new Media(src);
             AudioBird.play();   
         }
        function playAudioFoglie (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioFoglie = new Media(src);
             AudioFoglie.play();   
         }
        function playAudioLumaca (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioLumaca = new Media(src);
             AudioLumaca.play();   
         }
        function playAudioUno (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioUno = new Media(src);
             AudioUno.play();   
         }
        function playAudioQ1 (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioQ1 = new Media(src);
             AudioQ1.play();   
         }
 
-         $(".playvoce").bind('touchstart MSPointerDown', function(){
+         $(".playvoce").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
 		 	playAudioQ1('Suoni/quadri/Q1.mp3');
       	});
 
-         $(".foglina").bind('touchstart MSPointerDown', function(){
+         $(".foglina").bind(toccomagico, function(){
          	sym.getSymbol(this).play("in");
 		 	playAudioFoglie('Suoni/foglia.mp3');
          });
 
-      	$(".uccellino").bind('touchstart MSPointerDown', function(){
+      	$(".uccellino").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
 		 	playAudioBird('Suoni/cip01.mp3');
       	});      
-         $(".lumacacontainer").bind('touchstart MSPointerDown', function(){
+         $(".lumacacontainer").bind(toccomagico, function(){
 		 	playAudioLumaca('Suoni/Lumaca01.mp3');
              var div=$(".lumacacontainer");
              div.animate({top:'-=25px'},"500");
@@ -124,7 +131,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          });      
          
 
-         $(".carota").bind('touchstart MSPointerDown', function(){
+         $(".carota").bind(toccomagico, function(){
 			sym.getSymbol(this).play("in");
         	setTimeout(function(){
         			playAudioUno('Suoni/numbers/one.mp3');
@@ -164,12 +171,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 
-         $(".fioreani, .home").bind('touchstart MSPointerDown', function(){
+         $(".fioreani, .home").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       	});
 
       	sym.getSymbol(".coda").play("animaziocoda");
-         $(".triggercoda").bind('touchstart MSPointerDown', function(){
+         $(".triggercoda").bind(toccomagico, function(){
          	sym.getSymbol(".coda").play("animaziocoda");
          });
 
@@ -178,13 +185,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
          /*Tira giù il fumello*/sym.getSymbol("FUMELLO").play();
 
-      	$(".next, .prev, .home, .musica").bind('touchstart MSPointerDown', function(){
+      	$(".next, .prev, .home, .musica").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       	});
 
       /*MENU START*/
       	avanti = "Quadro2.html";
-      	$(".testina").bind('touchstart MSPointerDown', function(){
+      	$(".testina").bind(toccomagico, function(){
       			sym.getSymbol(".menu").play();
       	});
         sym.$(".prev").css({'display': 'none'});

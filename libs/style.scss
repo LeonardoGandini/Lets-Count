@@ -58,6 +58,7 @@ body{
 {visibility:hidden;}
 */
 
+/*
 .Quadro01,
 .Quadro02,
 .Quadro03,
@@ -71,24 +72,9 @@ body{
 	padding:0;
 	position:absolute;
     width: 1024px;
-/*     top: 100px !important; */
     left:calc(50% - 1024px/2) !important;
-/*
-	-moz-box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
-	-moz-transform-origin:50% 0;
-	-ms-box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
-	-ms-transform-origin:50% 0;
-	-o-box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
-	-o-transform-origin:50% 0;
-	-webkit-box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
-	-webkit-transform-origin:50% 0;
-	box-shadow:18px 0 25px rgba(0,0,0,0.4),-18px 0 25px rgba(0,0,0,0.4);
-	padding:0;
-	position:absolute;
-	transform-origin:50% 0;
-    width: 1024px;
-    left:calc(50% - 1024px/2);
-*/
+
+
 	@media #{$MediaQ} {
 	
 	    @include vendor-prefix(transform-origin, 40% 0 0);
@@ -103,6 +89,20 @@ body{
 		}		
 
 }
+*/
+
+
+#Stage{
+   @include vendor-prefix(transform-origin-y,0);
+
+
+   // @include vendor-prefix(transform-origin,0 0 0);
+	@include vendor-prefix(box-shadow, (18px 0px 25px $Ombra, -18px 0px 25px $Ombra));
+	    display: block;
+	    margin: 0 auto;
+	    border: 0;	
+}
+
 
 /*
 .welldone{

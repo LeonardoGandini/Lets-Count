@@ -17,6 +17,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
 	
 	
+/*
 		if((navigator.userAgent.match(/MSIE/i))){
 		  yepnope({load: ["libs/cordovaIE.js"],complete: init});
 		}
@@ -28,7 +29,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
 			yepnope({load: ["libs/cordovaIOS.js"],complete: init});
 		}
-
+*/
+yepnope({load: ["cordova.js"],complete: init});
+toccomagico = 'touchstart MSPointerDown pointerdown'    
       
       function init(){
 
@@ -45,7 +48,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /* Tappetino Start*/	        
         function playAudio(src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	my_media = new Media(src);
         	my_media.play();
         }      
@@ -58,7 +61,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /* Testo Q2 Start*/	        
         function playAudioQ2(src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	AudioQ2 = new Media(src);
         	AudioQ2.play();
         }
@@ -81,35 +84,35 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
        function playAudioQ2 (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioQ2 = new Media(src);
             AudioQ2.play();   
         }
 
        function playAudioFoglie (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioFoglie = new Media(src);
             AudioFoglie.play();   
         }
 
        function playAudioApi (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioApi = new Media(src);
             AudioApi.play();   
         }
 
        function playAudioAnt (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioAnt = new Media(src);
             AudioAnt.play();   
         }
        function playAudioUno (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioUno = new Media(src);
             AudioUno.play();   
         }
        function playAudioDue (src) {
-        if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioDue = new Media(src);
             AudioDue.play();   
         }
@@ -117,22 +120,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 
-         $(".playvoce").bind('touchstart MSPointerDown', function(){
+         $(".playvoce").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
 		 	playAudioQ2('Suoni/quadri/Q2.mp3');
       	 });
 
-	      $(".cavolini").bind('touchstart MSPointerDown', function(){
+	      $(".cavolini").bind(toccomagico, function(){
 	      	sym.getSymbol(this).play("in");
 		 	playAudioFoglie('Suoni/foglia.mp3');
 	      });
 
-	      $(".apibutton").bind('touchstart MSPointerDown', function(){
+	      $(".apibutton").bind(toccomagico, function(){
 	      	sym.getSymbol(".api").play("in");
 			 	playAudioApi ('Suoni/Bees.mp3');
 	      });
       
-	      $(".formica").bind('touchstart MSPointerDown', function(){
+	      $(".formica").bind(toccomagico, function(){
 			playAudioAnt ('Suoni/Lumaca01.mp3');
 	      	$(this).animate({top:'-=20px'},"140");
 	      	$(this).animate({top:'+=20px'},"1");
@@ -140,7 +143,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 
-         $(".CAVOLO_BIG_1").bind('touchstart MSPointerDown', function(){
+         $(".CAVOLO_BIG_1").bind(toccomagico, function(){
 	      	sym.getSymbol(this).play("in");
 	      	$(".cavolo2trigger").show();
         	setTimeout(function(){
@@ -148,7 +151,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 					sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
 			},1801);      
 	     });
-         $(".cavolo2trigger").bind('touchstart MSPointerDown', function(){
+         $(".cavolo2trigger").bind(toccomagico, function(){
 			sym.getSymbol(".CAVOLO_BIG_2").play("in");
         	setTimeout(function(){
         			playAudioDue('Suoni/numbers/two.mp3');
@@ -185,7 +188,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
       	//sym.$(".fumo").css({'-webkit-filter': 'blur(2px)'});
       
-      $(".fioreani, .innaffia").bind('touchstart MSPointerDown', function(){
+      $(".fioreani, .innaffia").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");
       });
       
@@ -197,10 +200,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
       sym.getSymbol(".coda").play("in");
-      $(".codatrigger").bind('touchstart MSPointerDown', function(){
+      $(".codatrigger").bind(toccomagico, function(){
       	sym.getSymbol(".coda").play("animaziocoda");
       });
-      $(".Sole_Button").bind('touchstart MSPointerDown', function(){
+      $(".Sole_Button").bind(toccomagico, function(){
       	sym.getSymbol(".SOLE").play("in");
       });
 
@@ -211,11 +214,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       /*MENU START*/
       	avanti = "Quadro3.html";
       	indietro = "Quadro1.html";
-      	$(".next, .prev, .musica, .home").bind('touchstart MSPointerDown', function(){
+      	$(".next, .prev, .musica, .home").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       	});
 
-      	$(".testina").bind('touchstart MSPointerDown', function(){
+      	$(".testina").bind(toccomagico, function(){
       			sym.getSymbol(".menu").play();
       	});
       	sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
