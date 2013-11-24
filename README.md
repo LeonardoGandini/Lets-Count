@@ -1,16 +1,15 @@
-Let's Count to 5 - Let's Count to 10
-==============
+<h1>Let's Count to 5 - Let's Count to 10</h1>
 
 
-sviluppato per iPad, Android, Windows 8
+<p>developed for <strong>iPad</strong> | <strong>Android</strong> | <strong>Windows 8</strong> | <strong>Kindle</strong></p>
+<p>developed with <strong>Adobe Edge Animate</strong> and <strong>Phonegap</strong></p>
 
 
-Let's Count to 5:
+<h4>Let's Count to 5:</h4>
 
-iPad: https://itunes.apple.com/us/app/lets-count-to-5!/id667017719?ls=1
+<h5>iPad: <a href="http://leo.pw/LetsCount1-5-iPad" target="_blank">leo.pw/LetsCount1-5-iPad</a></h5>
+<h5>Android: <a href="http://leo.pw/LetsCount1-5-Android" target="_blank">leo.pw/LetsCount1-5-Android</a></h5>
+<h5>Windows 8: <a href="http://leo.pw/LetsCount1-5-Windows8" target="_blank">leo.pw/LetsCount1-5-Windows8</a></h5>
+<h5>Kindle: <a href="http://leo.pw/LetsCount1-5-Amazon" target="_blank">leo.pw/LetsCount1-5-Amazon</a></h5>
 
-Android: https://play.google.com/store/apps/details?id=com.leonardogandini.letscountto5
 
-Windows 8: http://apps.microsoft.com/windows/app/lets-count-to-5/ce9156bc-badd-4464-81b9-a620ce80f1e1
-
-Kindle: http://www.amazon.com/Lets-Count-Kindle-Tablet-Edition/dp/B00DONQ43M/ref=sr_1_4?ie=UTF8
