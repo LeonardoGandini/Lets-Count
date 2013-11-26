@@ -90,4 +90,64 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("foglie-bird");
    //Edge symbol end:'foglie-bird'
 
+   //=========================================================
+   
+   //Edge symbol: 'Fiore-Rosa'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1632, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("Fiore-Rosa");
+   //Edge symbol end:'Fiore-Rosa'
+
+   //=========================================================
+   
+   //Edge symbol: 'Fiore-Bianco'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1341, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("Fiore-Bianco");
+   //Edge symbol end:'Fiore-Bianco'
+
+   //=========================================================
+   
+   //Edge symbol: 'Fiore-Giallo'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2697, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("Fiore-Giallo");
+   //Edge symbol end:'Fiore-Giallo'
+
+   //=========================================================
+   
+   //Edge symbol: 'Fiore-Arancione'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("Fiore-Arancione");
+   //Edge symbol end:'Fiore-Arancione'
+
 })(jQuery, AdobeEdge, "Quadro-06");
