@@ -14,21 +14,79 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-         
          //yepnope({load: ["cordova.js"],complete: init});
          
-         
          toccomagico = 'click touchstart MSPointerDown pointerdown'
-         
+         //$(".num-10").css({'display':'none'});
          
          function init(){
+         $(".numeris").hide();
+         sym.$("resetto").css({'display':'none'});
+         //sym.$("resetto").off(toccomagico);
          
          		 $(".fiore, .foglie-spare").bind(toccomagico, function(){
          		  		sym.getSymbol(this).play("in");
          		 });
-         		 
-         		 
-         		 
+         
+         		 $(".fogliebird").bind(toccomagico, function(){
+         
+         		  		$(this).addClass("clicked");
+         			 	var value = $(".clicked").length;
+         			 	//alert(value);
+         			 	sym.$('temp'+ value).css({'color':'red'});
+         
+         			$(".numeris").hide();
+         			sym.getSymbol("numerazio").$('Num-'+ value).show();
+         			sym.getSymbol("numerazio").play("in");
+         
+         			sym.getSymbol("Scoiattolo").play("ani");
+         
+         
+         			 if ( value >= 6 ){
+         
+         				 sym.$("resetto").css({'display':'block'});
+         				 //sym.$("resetto").on(toccomagico);
+         				 
+         				 sym.getSymbol("Scoiattolo").play("ultima6");
+         					/*
+         					sym.getSymbol('Bird-1').stop(0);
+         					sym.getSymbol("Bird-2").stop(0);
+         					sym.getSymbol("Bird-3").stop(0);
+         					sym.getSymbol("Bird-4").stop(0);
+         					sym.getSymbol("Bird-5").stop(0);
+         					sym.getSymbol("Bird-6").stop(0);
+         
+         
+         					//sym.$('[id^=Stage_Bird-]').stop(0);
+         					$(".fogliebird").removeClass("clicked");
+         
+         					sym.$('[id^=Stage_temp]').css({'color':'black'});
+         */
+         				};
+         			 	//sym.$("resetto").hide()
+         
+         
+         		 });
+         
+         
+         		 sym.$("resetto").bind(toccomagico, function(){
+         
+         		  	      sym.getSymbol("Bird-1").play("resetto");
+         					sym.getSymbol("Bird-2").play("resetto");
+         					sym.getSymbol("Bird-3").play("resetto");
+         					sym.getSymbol("Bird-4").play("resetto");
+         					sym.getSymbol("Bird-5").play("resetto");
+         					sym.getSymbol("Bird-6").play("resetto");
+         
+         					$(".fogliebird").removeClass("clicked");
+         					sym.$('[id^=Stage_temp]').css({'color':'black'});	
+         					$(".numeris").hide();
+         					sym.$("resetto").css({'display':'none'});
+         					//sym.$("resetto").off(toccomagico);
+         			 });
+         
+         
+         
          		 sym.$("foglie-bird-1").bind(toccomagico, function(){
          		  		sym.getSymbol("Bird-1").play("in");
          		 });
@@ -46,12 +104,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		 });
          		 sym.$("foglie-bird-6").bind(toccomagico, function(){
          		  		sym.getSymbol("Bird-6").play("in");
-         		  		alert("row number: " +($(this).index() + 1));
          		 });
-         		 
-         		 
-         		 
-         		 
+         
+         
+         
+         
          		 /*			 	 
          		 sym.$("Scoiattolo").bind(toccomagico, function(){
          		  		sym.getSymbol(this).play("in");
@@ -63,10 +120,24 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		 sym.$("trigger-mucca-coda").bind(toccomagico, function(){
          		  		sym.getSymbol("Mucca").play("coda");
          		 });			 
+         		 sym.$("trigger-coda").bind(toccomagico, function(){
+         		  		sym.getSymbol("Scoiattolo").play("coda");
+         		 });	 
+         
+         		 var clicked = 0;
+         		  sym.$("Scoiattolo").bind(toccomagico, function (e) {
+         			  clicked++;
+         			  if (clicked >= 6) {
+         					clicked = 0;
+         					sym.getSymbol("Scoiattolo").play("speciale");
+         			  } else {
+         					return false;
+         			  }
+         		 })	
          		 
          		 
-         		 
-         }
+         
+         }/*FINE INIT*/
          
          init();
 
@@ -84,6 +155,30 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
 
       
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 865, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2250, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3614, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5259, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
 
    })("Scoiattolo");
    //Edge symbol end:'Scoiattolo'
@@ -118,6 +213,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1060, function(sym, e) {
          sym.stop();
          
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2366, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+         // insert code here
 
       });
       //Edge binding end
@@ -207,5 +310,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("foglie-spare");
    //Edge symbol end:'foglie-spare'
+
+   //=========================================================
+   
+   //Edge symbol: 'numerazio'
+   (function(symbolName) {   
+   
+   })("numerazio");
+   //Edge symbol end:'numerazio'
 
 })(jQuery, AdobeEdge, "Quadro-06");
