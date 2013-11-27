@@ -1,7 +1,7 @@
 {
 
 	"PubChromeFrameInstallerPrompt":"none",
-	"pref__general__AutoKeyframeProperties":"true",
+	"pref__general__AutoKeyframeProperties":"false",
 	"Fiore-Arancione-Default Timeline_playhead_ms":"0",
 	"Bird-Default Timeline_playhead_ms":"0",
 	"pref__general__codeView":"sectionalView",
@@ -106,7 +106,7 @@
 			"timelineColor":"0xdb619d"}},
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"77",
-	"pixelsPerMs":"0.2",
+	"pixelsPerMs":"0.46914683762073",
 	"Mucca-Default Timeline_playhead_ms":"0",
 	"Scoiattolo-Default Timeline_playhead_ms":"0",
 	"nextElementColorIndex":"5",
@@ -843,7 +843,8 @@
 			"timelineColor3":"0x456a55",
 			"animationEnabled":"false",
 			"timelineColor":"0x50bd82"}},
-	"pref__general__AutoKeyframePropertiesArmed":"true",
+	"viewStartMs":"5294.1010742188",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"Fiore-Rosa-Default Timeline_playhead_ms":"0",
 	"symbol_Mucca":{
 		"element_${_Q6-mucca-campana}":{
@@ -865,7 +866,7 @@
 			"timelineColor2":"0x5a558a",
 			"timelineColor3":"0x4a485e",
 			"timelineColor":"0x63599f"}},
-	"TransitionIdCounter":"3303",
+	"TransitionIdCounter":"3413",
 	"symbol_Bird":{
 		"element_${_Q6-bird-ala-DX}":{
 			"timelineColor2":"0x4fa275",
@@ -899,7 +900,7 @@
 			"timelineColor3":"0x29647e",
 			"animationEnabled":"true",
 			"timelineColor":"0x00a9fa"}},
-	"viewStartY":"716",
+	"viewStartY":"0",
 	"foglie-spare-Default Timeline_playhead_ms":"0",
 	"Scoiattolo-Default Timeline_mark_ms":"-1",
 	"Fiore-Giallo-Default Timeline_playhead_ms":"0",
