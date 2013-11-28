@@ -53,6 +53,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 	            my_media = new Media(src);
 	            my_media.play();
 	        }    
+	    	function pauseAudio() {
+	    		if (my_media) {
+	    			my_media.pause();
+	    		}
+	    	}
+
 
 	       var AudioVoce = null;
 	       function playAudioVoce (src) {
@@ -136,10 +142,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 						sym.getSymbol(".menu").play();
-						setTimeout(function(){
-								//suonatore['suono'+ value]('audio/numbers/S00'+ value +'.mp3');
+/* 						setTimeout(function(){ */
+								suonatore['suono'+ value]('audio/numbers/S00'+ value +'.mp3');
 								sym.$('.fumnum'+value).css({'background-image': 'url(images/svgNum'+value+'.svg)'});
-						},1000); 
+/* 						},1000);  */
 
 						setTimeout(function(){
 								sym.getSymbol(".menu").play("chiusura");
@@ -309,36 +315,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
 /**********MENU STOP**********/
-   $('img.svg').each( function(){
-            var $img = $(this);
-            var imgID = $img.attr('id'), imgClass = $img.attr('class'), imgURL = $img.attr('src');
-            /* New line: returns image position */
-            var position = $img.position();
-
-            $.get(imgURL, function(data) {
-                // Get the SVG tag, ignore the rest
-                var $svg = $(data).find('svg');
-                // Add replaced image's ID to the new SVG
-                if(typeof imgID !== 'undefined') { $svg = $svg.attr('id', imgID); }
-                // Add replaced image's classes to the new SVG
-                if(typeof imgClass !== 'undefined') { $svg = $svg.attr('class', imgClass+' replaced-svg'); }
-                // Remove any invalid XML tags as per http://validator.w3.org
-                $svg = $svg.removeAttr('xmlns:a');
-                // Replace image with new SVG
-                $img.replaceWith($svg);
-                /* New line: svg position */
-                $svg.css({"position": "relative", "left": position.left, "top": position.top});
-                /* New line: mouse effect */
-                $svg.hover(
-                                function(){
-                                                $('path').css("fill", "red");
-                                                $('rect').css("fill", "green");},
-                                function(){
-                                                $('path').css("fill", "");
-                                                $('rect').css("fill", "");}
-                                );
-                });
-         });
 
 
       $('.musica').toggle(function () {
