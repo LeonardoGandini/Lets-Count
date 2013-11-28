@@ -1236,15 +1236,15 @@
       "initialSize" : 200936,
       "fileType" : 8192
     },
-    "\/images\/Q7-Q8-cespuglio.png" : {
+    "\/publish\/web\/images\/Q6-fiore-gambo2.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q7-Q8-cespuglio.png",
+      "inputAbbreviatedPath" : "\/publish\/web\/images\/Q6-fiore-gambo2.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q7-Q8-cespuglio.png",
-      "initialSize" : 65871,
+      "outputAbbreviatedPath" : "\/publish\/web\/images\/Q6-fiore-gambo2.png",
+      "initialSize" : 27986,
       "fileType" : 8192
     },
     "\/publish\/web\/images\/Q7-rana-testa.png" : {
@@ -1258,15 +1258,15 @@
       "initialSize" : 160455,
       "fileType" : 8192
     },
-    "\/publish\/web\/images\/Q6-fiore-gambo2.png" : {
+    "\/images\/Q7-Q8-cespuglio.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/publish\/web\/images\/Q6-fiore-gambo2.png",
+      "inputAbbreviatedPath" : "\/images\/Q7-Q8-cespuglio.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/publish\/web\/images\/Q6-fiore-gambo2.png",
-      "initialSize" : 27986,
+      "outputAbbreviatedPath" : "\/images\/Q7-Q8-cespuglio.png",
+      "initialSize" : 65871,
       "fileType" : 8192
     },
     "\/images\/G-Menu.png" : {
@@ -1531,17 +1531,6 @@
       "initialSize" : 149365,
       "fileType" : 8192
     },
-    "\/images\/Q6-braccio-SX.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q6-braccio-SX.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q6-braccio-SX.png",
-      "initialSize" : 36400,
-      "fileType" : 8192
-    },
     "\/publish\/web\/images\/Q6-fiore-giallo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1551,6 +1540,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/publish\/web\/images\/Q6-fiore-giallo.png",
       "initialSize" : 42125,
+      "fileType" : 8192
+    },
+    "\/images\/Q6-braccio-SX.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q6-braccio-SX.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q6-braccio-SX.png",
+      "initialSize" : 36400,
       "fileType" : 8192
     },
     "\/images\/Q6-fiore-gambo2.png" : {

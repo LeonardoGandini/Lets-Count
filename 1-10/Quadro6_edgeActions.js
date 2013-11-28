@@ -14,9 +14,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-       yepnope({load: ["https://raw.github.com/GianlucaGuarini/jQuery.BlackAndWhite/master/src/jquery.BlackAndWhite.min.js"],complete: init});
+       yepnope({load: ["cordova.js"],complete: init});
        
-       toccomagico = 'click touchstart MSPointerDown pointerdown'
+       toccomagico = 'touchstart MSPointerDown pointerdown'
        
        
        

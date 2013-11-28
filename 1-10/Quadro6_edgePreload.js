@@ -39,7 +39,7 @@ if(document.addEventListener ){
 
    requiresSVG=true;
 
-   doDelayLoad=false;
+   doDelayLoad=true;
    htFallbacks={
     };
 
