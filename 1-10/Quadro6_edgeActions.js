@@ -17,10 +17,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
        yepnope({load: ["cordova.js"],complete: init});
        
        toccomagico = 'touchstart MSPointerDown pointerdown'
-       
-       
-       
-       
+ 
+        
       function fumelo(){
          var position = sym.$(".fumello").position();
           if (position.top >= 100){
@@ -107,13 +105,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 							    Audio6 = new Media(src);
 							    Audio6.play();   
 						}
-
-
 			};
 
 
          $(".numeris").hide();
-         sym.$("resetto").css({'display':'none'});
+         $(".reload").css({'display':'none'});
 
          		 $(".fiore").bind(toccomagico, function(){
          		  		sym.getSymbol(this).play("in");
@@ -157,10 +153,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
          			sym.getSymbol("Scoiattolo").play("ani");
 
+						if ( value >= 6 ){
 
-         			 if ( value >= 6 ){
-
-         				 sym.$("resetto").css({'display':'block'});
+         				 $(".reload").fadeIn();
          				 sym.getSymbol("Scoiattolo").play("ultima6");
 
          				};
@@ -170,9 +165,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 /**********LA CONTA STOP**********/         		 
 
 
-         		 sym.$(".reload").bind(toccomagico, function(){
+         		  $(".reload").bind(toccomagico, function(){
 							sym.getSymbol(this).play("in");
-         		  	        sym.getSymbol("Bird-1").play("resetto");
+
+         		  	      sym.getSymbol("Bird-1").play("resetto");
          					sym.getSymbol("Bird-2").play("resetto");
          					sym.getSymbol("Bird-3").play("resetto");
          					sym.getSymbol("Bird-4").play("resetto");
@@ -182,7 +178,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          					$(".fogliebird").removeClass("clicked");
          					sym.$('[id^=Stage_temp]').css({'color':'black'});	
          					$(".numeris").hide();
-         					//sym.$(".reload").fadeOut();
+         					$(".reload").fadeOut();
+
+
+         					sym.$('.fumnum1').css({'background-image': 'url(images/svgBWNum1.svg)'});
+         					sym.$('.fumnum2').css({'background-image': 'url(images/svgBWNum2.svg)'});
+         					sym.$('.fumnum3').css({'background-image': 'url(images/svgBWNum3.svg)'});
+         					sym.$('.fumnum4').css({'background-image': 'url(images/svgBWNum4.svg)'});
+         					sym.$('.fumnum5').css({'background-image': 'url(images/svgBWNum5.svg)'});
+         					sym.$('.fumnum6').css({'background-image': 'url(images/svgBWNum6.svg)'});
+
          			 });
 
 
@@ -269,6 +274,25 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		  		sym.getSymbol("Scoiattolo").play("coda");
          		 });	 
 
+ 					var i=0;
+					setInterval(function() {
+						 sym.getSymbol("Scoiattolo").play("coda");
+					}, 3000);
+
+					/*
+					var i=0;
+					setInterval(function() {
+						 switch(i++%3) {
+							  case 0: sym.getSymbol("Scoiattolo").play("coda");
+							  break;
+							  case 1: alert("variation 2");
+							  break;
+							  case 2: alert("variation 3");
+							  break;
+						 }
+					}, 3000);
+*/
+
          		  var clicked = 0;
          		  sym.$("Scoiattolo").bind(toccomagico, function (e) {
          			  clicked++;
@@ -309,9 +333,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	});
       	//sym.$(".fumnum1, .fumnum2, .fumnum3, .fumnum4, .fumnum5, .fumnum6, .fumnum7, .fumnum8, .fumnum9, .fumnum10").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
       	//sym.$(".fumnum1, .fumnum2, .fumnum3, .fumnum4, .fumnum5, .fumnum6, .fumnum7, .fumnum8, .fumnum9, .fumnum10").css({'background-image': 'url(images/svgNum7.svg)'});
-
-
-
 
       	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
 /**********MENU STOP**********/
@@ -715,5 +736,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("reload");
    //Edge symbol end:'reload'
+
+   //=========================================================
+   
+   //Edge symbol: 'NUVOLA'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 105000, function(sym, e) {
+         // play the timeline from the given position (ms or label)
+         sym.play(0);
+      
+      });
+      //Edge binding end
+
+   })("NUVOLA");
+   //Edge symbol end:'NUVOLA'
 
 })(jQuery, AdobeEdge, "Quadro-06");

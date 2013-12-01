@@ -187,17 +187,6 @@
       "initialSize" : 147561,
       "fileType" : 8192
     },
-    "\/www\/Quadro6_edge.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/Quadro6_edge.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/www\/Quadro6_edge-min.js",
-      "fileType" : 64
-    },
     "\/publish\/web\/images\/Q6-foglia-albero.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -208,6 +197,17 @@
       "outputAbbreviatedPath" : "\/publish\/web\/images\/Q6-foglia-albero.png",
       "initialSize" : 97645,
       "fileType" : 8192
+    },
+    "\/www\/Quadro6_edge.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/Quadro6_edge.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/www\/Quadro6_edge-min.js",
+      "fileType" : 64
     },
     "\/images\/Q7-ninfeafiore-small.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1006,6 +1006,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/publish\/web\/images\/Q6-fattoria.png",
       "initialSize" : 238342,
+      "fileType" : 8192
+    },
+    "\/images\/G-Nuvola.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/G-Nuvola.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/G-Nuvola.png",
+      "initialSize" : 214228,
       "fileType" : 8192
     },
     "\/images\/Q6-foglia-albero2.png" : {
