@@ -14,11 +14,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-       yepnope({load: ["cordova.js"],complete: init});
-       
+      yepnope({load: ["cordova.js"],complete: init});
+      
        toccomagico = 'touchstart MSPointerDown pointerdown'
-       
-       
+       //toccomagico = 'click'
+      
       function fumelo(){
          var position = sym.$(".fumello").position();
           if (position.top >= 100){
@@ -31,7 +31,37 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 	   if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
    }   
 
-         function init(){
+   function resetRane(){
+		$(".ranas1").css({'z-index':'0'});
+		$(".ranas2").css({'z-index':'0'});
+		$(".ranas3").css({'z-index':'0'});
+		$(".ranas4").css({'z-index':'0'});
+		$(".ranas5").css({'z-index':'0'});
+		$(".ranas6").css({'z-index':'0'});
+		$(".ranas7").css({'z-index':'0'});
+
+		sym.getSymbol("rana1").stop(0);
+		sym.getSymbol("rana2").stop(0);
+		sym.getSymbol("rana3").stop(0);
+		sym.getSymbol("rana4").stop(0);
+		sym.getSymbol("rana5").stop(0);
+		sym.getSymbol("rana6").stop(0);
+		sym.getSymbol("rana7").stop(0);
+
+   }   
+
+
+	sym.$("TriggerRana1").css({'z-index':'150'});
+	sym.$("TriggerRana2").css({'z-index':'150'});
+	sym.$("TriggerRana3").css({'z-index':'150'});
+	sym.$("TriggerRana4").css({'z-index':'150'});
+	sym.$("TriggerRana5").css({'z-index':'150'});
+	sym.$("TriggerRana6").css({'z-index':'150'});
+	sym.$("TriggerRana7").css({'z-index':'150'});
+
+
+	function init(){
+			resetRane();
 
 	      document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -73,7 +103,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			var Audio5 = null;
 			var Audio6 = null;
 			var Audio7 = null;
-			
+
 			var suonatore = {
 
 			    suono1: function playAudio1 (src) {
@@ -115,9 +145,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
          $(".numeris").hide();
-         $(".reload").css({'display':'none'});
+         $(".reload").hide();
 
-         		 $(".fiore").bind(toccomagico, function(){
+         	/*	 $(".fiore").bind(toccomagico, function(){
          		  		sym.getSymbol(this).play("in");
          		 });
 
@@ -130,24 +160,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 					$(".foglie-spare").bind(toccomagico, function(){
 					   	sym.getSymbol(this).play("in");		
 						playAudioFoglie("audio/grass1.mp3");
-					});         
+					});   */      
 
 /**********LA CONTA START**********/         		 
 
-         		 $(".fogliebird").bind(toccomagico, function(){
+         		 $(".triggers").bind(toccomagico, function(){
 
-         		  		$(this).addClass("clicked");
-         			 	var value = $(".clicked").length;
-         			 	//alert(value);
-         			 	//sym.$('temp'+ value).css({'color':'red'});
-		 			   //eval("playAudio" + value + "('audio/numbers/S00'+ value +'.mp3')");
+         		  	$(this).addClass("clicked");
+         			var value = $(".clicked").length;
 
-
-						sym.getSymbol(".menu").play();
-/* 						setTimeout(function(){ */
-								suonatore['suono'+ value]('audio/numbers/S00'+ value +'.mp3');
-								sym.$('.fumnum'+value).css({'background-image': 'url(images/svgNum'+value+'.svg)'});
-/* 						},1000);  */
+					   sym.getSymbol(".menu").play();
+						suonatore['suono'+ value]('audio/numbers/S00'+ value +'.mp3');
+						sym.$('.fumnum'+ value).css({'background-image': 'url(images/svgNum'+value+'.svg)'});
 
 						setTimeout(function(){
 								sym.getSymbol(".menu").play("chiusura");
@@ -162,9 +186,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 						if ( value >= 7 ){
 
          				 $(".reload").fadeIn();
-         				 sym.getSymbol("Scoiattolo").play("ultima6");
+         				// sym.getSymbol("Scoiattolo").play("ultima6");
 
          				};
+
+
+
 
 
          		 });
@@ -174,15 +201,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		  $(".reload").bind(toccomagico, function(){
 							sym.getSymbol(this).play("in");
 
-         		  	      sym.getSymbol("Bird-1").play("resetto");
-         					sym.getSymbol("Bird-2").play("resetto");
-         					sym.getSymbol("Bird-3").play("resetto");
-         					sym.getSymbol("Bird-4").play("resetto");
-         					sym.getSymbol("Bird-5").play("resetto");
-         					sym.getSymbol("Bird-6").play("resetto");
+							resetRane();
 
-         					$(".fogliebird").removeClass("clicked");
-         					sym.$('[id^=Stage_temp]').css({'color':'black'});	
+         					$(".triggers").removeClass("clicked");		
          					$(".numeris").hide();
          					$(".reload").fadeOut();
 
@@ -193,87 +214,61 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          					sym.$('.fumnum4').css({'background-image': 'url(images/svgBWNum4.svg)'});
          					sym.$('.fumnum5').css({'background-image': 'url(images/svgBWNum5.svg)'});
          					sym.$('.fumnum6').css({'background-image': 'url(images/svgBWNum6.svg)'});
+         					sym.$('.fumnum7').css({'background-image': 'url(images/svgBWNum7.svg)'});
+         					sym.$('.fumnum8').css({'background-image': 'url(images/svgBWNum8.svg)'});
+         					sym.$('.fumnum9').css({'background-image': 'url(images/svgBWNum9.svg)'});
+         					sym.$('.fumnum10').css({'background-image': 'url(images/svgBWNum10.svg)'});
 
          			 });
 
 
 
-         		 sym.$("foglie-bird-1").bind(toccomagico, function(){
-         		  		sym.getSymbol("Bird-1").play("in");         		  		
+          		 sym.$("TriggerRana1").bind(toccomagico, function(){
+         		  		sym.getSymbol("rana1").play("in");		         		  		
          		  		fumelo();
          		 });
-         		 sym.$("foglie-bird-2").bind(toccomagico, function(){
-         		  		sym.getSymbol("Bird-2").play("in");
+         		 sym.$("TriggerRana2").bind(toccomagico, function(){
+         		  		sym.getSymbol("rana2").play("in");		         		  		
          		  		fumelo();
          		 });
-         		sym.$("foglie-bird-3").bind(toccomagico, function(){
-         		  		sym.getSymbol("Bird-3").play("in");
+         		 sym.$("TriggerRana3").bind(toccomagico, function(){
+         		  		sym.getSymbol("rana3").play("in");		         		  		
          		  		fumelo();
          		 });
-         		 sym.$("foglie-bird-4").bind(toccomagico, function(){
-         		  		sym.getSymbol("Bird-4").play("in");
+         		 sym.$("TriggerRana4").bind(toccomagico, function(){
+         		  		sym.getSymbol("rana4").play("in");		         		  		
          		  		fumelo();
+         		 });
+         		 sym.$("TriggerRana5").bind(toccomagico, function(){
+         		  		sym.getSymbol("rana5").play("in");		         		  		
+         		  		fumelo();
+         		 });
+         		 sym.$("TriggerRana6").bind(toccomagico, function(){
+         		  		sym.getSymbol("rana6").play("in");		         		  		
+         		  		fumelo();
+         		 });
+         		 sym.$("TriggerRana7").bind(toccomagico, function(){
+         		  		sym.getSymbol("rana7").play("in");		         		  		
+         		  		fumelo();
+         		 });   			 
 
-         		 });
-         		 sym.$("foglie-bird-5").bind(toccomagico, function(){
-         		  		sym.getSymbol("Bird-5").play("in");
-         		  		fumelo();
-         		 });
-         		 sym.$("foglie-bird-6").bind(toccomagico, function(){
-         		  		sym.getSymbol("Bird-6").play("in");
-         		  		fumelo();
-         		 });
 
+/**********PECORA START**********/         		 
 
-
-/**********MUCCA START**********/         		 
-			       var AudioCowBell = null;
-			       function playAudioCowBell (src) {
+			       var AudioPecora = null;
+			       function playAudioPecora (src) {
 			       seAndroid();
-			            AudioCowBell = new Media(src);
-			            AudioCowBell.play();
+			            AudioPecora = new Media(src);
+			            AudioPecora.play();
 			        }       
-					sym.$("trigger-mucca-testa").bind(toccomagico, function(){
-					   	sym.getSymbol("Mucca").play("testa");		
-
-					setTimeout(function(){
-	        			playAudioCowBell("audio/cow-bell.mp3");
-	        		},850);  	
-					});            		 
-
-			       var AudioCow = null;
-			       function playAudioCow (src) {
-			       seAndroid();
-			            AudioCow = new Media(src);
-			            AudioCow.play();
-			        }       
-					sym.$("trigger-mucca-coda").bind(toccomagico, function(){
-					   	sym.getSymbol("Mucca").play("coda");		
-						playAudioCow("audio/Mucca2.mp3");
-					});     
+					sym.$("Trigger-Pecora").bind(toccomagico, function(){
+						sym.getSymbol("Pecora").play("in");	
+						playAudioPecora("audio/pecora.mp3");
+					});  
 
 
 
-         		  var clickedo = 0;
-         		  sym.$("trigger-mucca-corpo").bind(toccomagico, function (e) {
-         			  clickedo++;
-         			  if (clickedo >= 15) {
-         					clickedo = 0;
-
-					var AudioCowLong = null;
-					 function playAudioCowLong (src) {
-							seAndroid();
-							AudioCowLong = new Media(src);
-							AudioCowLong.play();
-					  } 
-					  playAudioCowLong("audio/cowlong.mp3");
-					  sym.getSymbol("Mucca").play("speciale");
-
-         			  } else {
-         					return false;
-         			  }
-         		 });	
-/**********MUCCA STOP**********/
+/**********PECORA STOP**********/
 
 /**********SCOIATTOLO START**********/
          		 sym.$("trigger-coda").bind(toccomagico, function(){
@@ -283,7 +278,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
  					var i=0;
 					setInterval(function() {
 						 sym.getSymbol("Scoiattolo").play("coda");
-					}, 3000);
+					}, 3500);
 
 					/*
 					var i=0;
@@ -323,13 +318,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			});	         
             $(".playvoce").bind(toccomagico, function(){
       	     	sym.getSymbol(this).play("in");
-		    	playAudioVoce('audio/quadri/Q6.mp3');
+		    	playAudioVoce('audio/quadri/Q7.mp3');
       	    });
 /**********FUMELLO STOP**********/ 
 
 
 /**********MENU START**********/
-      	avanti = "Quadro7.html";
+      	avanti = "Quadro8.html";
       	indietro = "Quadro6.html";
       	$(".next, .prev, .musica, .home").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
@@ -337,8 +332,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	$(".testina").bind(toccomagico, function(){
       			sym.getSymbol(".menu").play();
       	});
-      	//sym.$(".fumnum1, .fumnum2, .fumnum3, .fumnum4, .fumnum5, .fumnum6, .fumnum7, .fumnum8, .fumnum9, .fumnum10").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
-      	//sym.$(".fumnum1, .fumnum2, .fumnum3, .fumnum4, .fumnum5, .fumnum6, .fumnum7, .fumnum8, .fumnum9, .fumnum10").css({'background-image': 'url(images/svgNum7.svg)'});
 
       	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
 /**********MENU STOP**********/
@@ -355,6 +348,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			})();			
 
       });
+
+
+      sym.$('giuncamento').toggle(function () {
+          sym.getSymbol('giuncamento').play("soffiogiunchiuno");
+      }, function () {
+           sym.getSymbol('giuncamento').play("soffiogiunchidue");
+      });  
 
 }/**********FINE INIT**********/
 
@@ -592,7 +592,202 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'Scoiattolo'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2339, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 529, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
    })("Scoiattolo");
    //Edge symbol end:'Scoiattolo'
+
+   //=========================================================
+   
+   //Edge symbol: 'Pecora'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("Pecora");
+   //Edge symbol end:'Pecora'
+
+   //=========================================================
+   
+   //Edge symbol: 'ranaanim'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
+         $(".ranas1").css({'z-index':'99'});
+
+      });
+      //Edge binding end
+
+   })("rana1");
+   //Edge symbol end:'rana1'
+
+   //=========================================================
+   
+   //Edge symbol: 'rana1_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
+         $(".ranas2").css({'z-index':'99'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("rana2");
+   //Edge symbol end:'rana2'
+
+   //=========================================================
+   
+   //Edge symbol: 'rana1_2'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
+         $(".ranas3").css({'z-index':'99'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("rana3");
+   //Edge symbol end:'rana3'
+
+   //=========================================================
+   
+   //Edge symbol: 'rana1_3'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
+         $(".ranas4").css({'z-index':'99'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("rana4");
+   //Edge symbol end:'rana4'
+
+   //=========================================================
+   
+   //Edge symbol: 'rana1_4'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
+         $(".ranas5").css({'z-index':'99'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("rana5");
+   //Edge symbol end:'rana5'
+
+   //=========================================================
+   
+   //Edge symbol: 'rana1_5'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
+         $(".ranas6").css({'z-index':'99'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("rana6");
+   //Edge symbol end:'rana6'
+
+   //=========================================================
+   
+   //Edge symbol: 'rana1_6'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
+         $(".ranas7").css({'z-index':'99'});
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("rana7");
+   //Edge symbol end:'rana7'
+
+   //=========================================================
+   
+   //Edge symbol: 'giunco'
+   (function(symbolName) {   
+   
+   })("giunco");
+   //Edge symbol end:'giunco'
+
+   //=========================================================
+   
+   //Edge symbol: 'giuncamento'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8000, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 14250, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("giuncamento");
+   //Edge symbol end:'giuncamento'
 
 })(jQuery, AdobeEdge, "Quadro-07");

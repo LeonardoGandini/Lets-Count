@@ -324,7 +324,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /**********MENU START**********/
       	avanti = "Quadro7.html";
-      	indietro = "Quadro6.html";
+      	//indietro = "Quadro6.html";
       	$(".next, .prev, .musica, .home").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       	});
