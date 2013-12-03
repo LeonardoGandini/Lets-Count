@@ -164,6 +164,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /**********LA CONTA START**********/         		 
 
+			       var AudioRana = null;
+			       function playAudioRana (src) {
+			       seAndroid();
+			            AudioRana = new Media(src);
+			            AudioRana.play();
+			        }
+
          		 $(".triggers").bind(toccomagico, function(){
 
          		  	$(this).addClass("clicked");
@@ -175,8 +182,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 						setTimeout(function(){
 								sym.getSymbol(".menu").play("chiusura");
-						},2500); 					
+						},3000); 					
 
+					playAudioRana("audio/boing_01.mp3");
          			$(".numeris").hide();
          			sym.getSymbol("numerazio").$('Num-'+value).show();
          			sym.getSymbol("numerazio").play("in");
@@ -223,32 +231,62 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 
+
+			       var AudioWaterSplash = null;
+			       function playAudioWaterSplash (src) {
+			       seAndroid();
+			            AudioAudioWaterSplash = new Media(src);
+			            AudioAudioWaterSplash.play();
+			        }
+
+
+
+        		  sym.$("triggerwater1").bind(toccomagico, function(){
+         		  		sym.getSymbol("ninfeabig1-water").play("in");
+         		  		playAudioWaterSplash("audio/watersplash.mp3");		         		  		
+	         	  });
+	         	  sym.$("triggerwater2").bind(toccomagico, function(){
+	         		  		sym.getSymbol("ninfeabig2-water").play("in");
+	         		  		playAudioWaterSplash("audio/watersplash.mp3");		         		  		
+	         	  });        		 
+
+					  
+					  
+					  
+					  
           		 sym.$("TriggerRana1").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana1").play("in");		         		  		
+         		  		sym.getSymbol("rana1").play("in");
+         		  		sym.getSymbol("ninfeabig1-water").play("in");		         		  		
          		  		fumelo();
          		 });
          		 sym.$("TriggerRana2").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana2").play("in");		         		  		
+         		  		sym.getSymbol("rana2").play("in");
+         		  		sym.getSymbol("ninfeabig1-water").play("in");			         		  		
          		  		fumelo();
          		 });
          		 sym.$("TriggerRana3").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana3").play("in");		         		  		
+         		  		sym.getSymbol("rana3").play("in");
+         		  		sym.getSymbol("ninfeabig2-water").play("in");		         		  		
          		  		fumelo();
          		 });
          		 sym.$("TriggerRana4").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana4").play("in");		         		  		
+         		  		sym.getSymbol("rana4").play("in");
+         		  		sym.getSymbol("ninfeabig2-water").play("in");		         		  		
          		  		fumelo();
          		 });
          		 sym.$("TriggerRana5").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana5").play("in");		         		  		
+         		  		sym.getSymbol("rana5").play("in");
+         		  		sym.getSymbol("ninfeabig2-water").play("in");		         		  		
          		  		fumelo();
          		 });
          		 sym.$("TriggerRana6").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana6").play("in");		         		  		
+         		  		sym.getSymbol("rana6").play("in");
+         		  		sym.getSymbol("ninfeabig1-water").play("in");			         		  		
          		  		fumelo();
          		 });
          		 sym.$("TriggerRana7").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana7").play("in");		         		  		
+         		  		sym.getSymbol("rana7").play("in");
+         		  		sym.getSymbol("ninfeabig1-water").play("in");			         		  		
          		  		fumelo();
          		 });   			 
 
@@ -278,22 +316,19 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
  					var i=0;
 					setInterval(function() {
 						 sym.getSymbol("Scoiattolo").play("coda");
-					}, 3500);
+					}, 4500);
+					
 
-					/*
-					var i=0;
 					setInterval(function() {
 						 switch(i++%3) {
-							  case 0: sym.getSymbol("Scoiattolo").play("coda");
+							  case 0: sym.getSymbol("ninfeabig1-water").play("in");
 							  break;
-							  case 1: alert("variation 2");
-							  break;
-							  case 2: alert("variation 3");
+							  case 1: sym.getSymbol("ninfeabig2-water").play("in");
 							  break;
 						 }
-					}, 3000);
-*/
+					}, 7000);
 
+/*
          		  var clicked = 0;
          		  sym.$("Scoiattolo").bind(toccomagico, function (e) {
          			  clicked++;
@@ -303,7 +338,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          			  } else {
          					return false;
          			  }
-         		 });	
+         		 });	*/
 
 /**********SCOIATTOLO STOP**********/
 
@@ -789,5 +824,48 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("giuncamento");
    //Edge symbol end:'giuncamento'
+
+   //=========================================================
+   
+   //Edge symbol: 'giuncame-water'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3078, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("giuncame-water");
+   //Edge symbol end:'giuncame-water'
+
+   //=========================================================
+   
+   //Edge symbol: 'ninfeabig-water'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3750, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("ninfeabig-water");
+   //Edge symbol end:'ninfeabig-water'
+
+   //=========================================================
+   
+   //Edge symbol: 'ninfeabig2-water'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function(sym, e) {
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("ninfeabig2-water");
+   //Edge symbol end:'ninfeabig2-water'
 
 })(jQuery, AdobeEdge, "Quadro-07");

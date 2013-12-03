@@ -3,8 +3,16 @@
 	"HTMLFileName":"Menu-110.html",
 	"symbol_stage":{
 		"defaultStageParentHeight":"768px",
+		"element_${_TextCopy}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"timelineColor":"0x50bd82"},
 		"dummyStageParentHeight":"768px",
 		"defaultStageParentWidth":"1024px",
+		"element_${_Text}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767"},
 		"element_${_Stage}":{
 			"timelineColor2":"0xcbbd71",
 			"timelineColor3":"0x7b7652",
@@ -13,9 +21,10 @@
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"100",
 	"usedBOM":"false",
-	"nextElementColorIndex":"2",
+	"nextElementColorIndex":"4",
 	"stage-Default Timeline_playhead_ms":"0",
 	"pref__general__FilterNonAnimatedElements":"false",
+	"viewStartY":"0",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -30,5 +39,4 @@
    \"timelines\": {\
 \
    }}\
-}",
-	"viewStartY":"0"}
+}"}
