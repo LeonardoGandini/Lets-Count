@@ -102,9 +102,15 @@ var symbols = {
             fill:["rgba(0,0,0,0)",im+"Q8-fronda.png",'0px','0px']
          },
          {
+            id:'Q8-Sciagiusta',
+            type:'image',
+            rect:['44px','647px','482px','50px','auto','auto'],
+            fill:["rgba(0,0,0,0)",im+"Q8-Sciagiusta.png",'0px','0px']
+         },
+         {
             id:'papera',
             type:'rect',
-            rect:['550px','539px','auto','auto','auto','auto'],
+            rect:['460px','590px','auto','auto','auto','auto'],
             clip:['rect(-17.857177734375px 119px 140.607177734375px -66.9642333984375px)'],
             transform:[[],[],[],['0.5967','0.5967']]
          },
@@ -125,6 +131,30 @@ var symbols = {
             type:'image',
             rect:['36px','40px','340px','691px','auto','auto'],
             fill:["rgba(0,0,0,0)",im+"Q8-fronde1.png",'0px','0px']
+         },
+         {
+            id:'Q8-giunco',
+            type:'image',
+            rect:['229px','179px','89px','500px','auto','auto'],
+            fill:["rgba(0,0,0,0)",im+"Q8-giunco.png",'0px','0px']
+         },
+         {
+            id:'Q8-loto22',
+            type:'image',
+            rect:['501px','407px','40px','32px','auto','auto'],
+            fill:["rgba(0,0,0,0)",im+"Q8-loto2.png",'0px','0px']
+         },
+         {
+            id:'Q8-ninfea1',
+            type:'image',
+            rect:['575px','393px','69px','44px','auto','auto'],
+            fill:["rgba(0,0,0,0)",im+"Q8-ninfea1.png",'0px','0px']
+         },
+         {
+            id:'Q8-loto1',
+            type:'image',
+            rect:['589px','393px','42px','34px','auto','auto'],
+            fill:["rgba(0,0,0,0)",im+"Q8-loto1.png",'0px','0px']
          }],
          symbolInstances: [
          {
@@ -159,6 +189,10 @@ var symbols = {
             ["style", "left", '319px'],
             ["style", "top", '75px']
          ],
+         "${_Q8-loto1}": [
+            ["style", "left", '589px'],
+            ["style", "top", '393px']
+         ],
          "${_trigger-coda}": [
             ["style", "top", '308px'],
             ["style", "opacity", '0'],
@@ -184,9 +218,21 @@ var symbols = {
             ["style", "left", '-65px'],
             ["transform", "scaleX", '0.85623']
          ],
+         "${_Q8-Sciagiusta}": [
+            ["style", "left", '44px'],
+            ["style", "top", '647px']
+         ],
          "${_FUMELLO}": [
             ["style", "top", '-232px'],
             ["style", "left", '521px']
+         ],
+         "${_Q8-giunco}": [
+            ["style", "left", '229px'],
+            ["style", "top", '179px']
+         ],
+         "${_Q8-loto22}": [
+            ["style", "left", '501px'],
+            ["style", "top", '407px']
          ],
          "${_Q7-Q8-prato-front}": [
             ["style", "left", '-40px'],
@@ -205,11 +251,11 @@ var symbols = {
             ["style", "top", '40px']
          ],
          "${_papera}": [
-            ["style", "top", '539px'],
+            ["style", "top", '590px'],
             ["transform", "scaleY", '0.5967'],
             ["transform", "scaleX", '0.5967'],
             ["style", "clip", [-17.857177734375,119,140.607177734375,-66.9642333984375], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
-            ["style", "left", '550px']
+            ["style", "left", '460px']
          ],
          "${_Q8-fronda}": [
             ["style", "left", '418px'],
@@ -218,6 +264,10 @@ var symbols = {
          "${_Menu}": [
             ["style", "left", '-68px'],
             ["style", "top", '697px']
+         ],
+         "${_Q8-ninfea1}": [
+            ["style", "left", '575px'],
+            ["style", "top", '393px']
          ],
          "${_G-Cielo}": [
             ["style", "left", '-111px'],
