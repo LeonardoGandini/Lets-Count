@@ -14,9 +14,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-    //  yepnope({load: ["cordova.js"],complete: init});
+      yepnope({load: ["cordova.js"],complete: init});
       
-       toccomagico = 'touchstart MSPointerDown pointerdown'
+      toccomagico = 'touchstart MSPointerDown pointerdown'
        //toccomagico = 'click'
       
       function fumelo(){
@@ -34,7 +34,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 	function init(){
-			
+
 	      document.addEventListener("deviceready", onDeviceReady, false);
 
 	        function onDeviceReady() {
@@ -125,22 +125,28 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          $(".numeris").hide();
          $(".reload").hide();
 
-         	/*	 $(".fiore").bind(toccomagico, function(){
-         		  		sym.getSymbol(this).play("in");
-         		 });
 
-			       var AudioFoglie = null;
-			       function playAudioFoglie (src) {
-			       seAndroid();
-			            AudioFoglie = new Media(src);
-			            AudioFoglie.play();
-			        }       
-					$(".foglie-spare").bind(toccomagico, function(){
-					   	sym.getSymbol(this).play("in");		
-						playAudioFoglie("audio/grass1.mp3");
-					});   */      
+
 
 /**********LA CONTA START**********/         		 
+
+
+					$('.paperatutto2').hide();
+					$('.paperatutto3').hide();
+					$('.paperatutto4').hide();
+					$('.paperatutto5').hide();
+					$('.paperatutto6').hide();
+					$('.paperatutto7').hide();
+					$('.paperatutto8').hide();
+
+					$(".trigduck2").hide();
+					$(".trigduck3").hide();
+					$(".trigduck4").hide();
+					$(".trigduck5").hide();
+					$(".trigduck6").hide();
+					$(".trigduck7").hide();
+					$(".trigduck8").hide();
+
 
 			       var AudioDuck = null;
 			       function playAudioDuck (src) {
@@ -149,47 +155,238 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			            AudioDuck.play();
 			        }
 
-         		 $(".triggers").bind(toccomagico, function(){
+     		$(".trigduck1").bind(toccomagico, function() {
+     			var value = 1;
+     			playAudioDuck("audio/duck.mp3");
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play();
+     				fumelo();
+     				suonatore['suono' + value]('audio/numbers/S00' + value + '.mp3');
+     				sym.$('.fumnum' + value).css({
+     					'background-image': 'url(images/svgNum' + value + '.svg)'
+     				});
+     				$(".numeris").hide();
+     				sym.getSymbol("numerazio").$('Num-' + value).show();
+     				sym.getSymbol("numerazio").play("in");
+     				sym.getSymbol("Scoiattolo").play("ani");
+     			}, 3000);
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play("chiusura");
+     			}, 6000);
+     			$(this).fadeOut();
+     			sym.getSymbol("paperatutto" + value).play("in");
+     		});
+     		$(".trigduck2").bind(toccomagico, function() {
+     			var value = 2;
+     			playAudioDuck("audio/duck.mp3");
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play();
+     				fumelo();
+     				suonatore['suono' + value]('audio/numbers/S00' + value + '.mp3');
+     				sym.$('.fumnum' + value).css({
+     					'background-image': 'url(images/svgNum' + value + '.svg)'
+     				});
+     				$(".numeris").hide();
+     				sym.getSymbol("numerazio").$('Num-' + value).show();
+     				sym.getSymbol("numerazio").play("in");
+     				sym.getSymbol("Scoiattolo").play("ani");
+     			}, 3000);
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play("chiusura");
+     			}, 6000);
+     			$(this).fadeOut();
+     			sym.getSymbol("paperatutto" + value).play("in");
+     		});
+     		$(".trigduck3").bind(toccomagico, function() {
+     			var value = 3;
+     			playAudioDuck("audio/duck.mp3");
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play();
+     				fumelo();
+     				suonatore['suono' + value]('audio/numbers/S00' + value + '.mp3');
+     				sym.$('.fumnum' + value).css({
+     					'background-image': 'url(images/svgNum' + value + '.svg)'
+     				});
+     				$(".numeris").hide();
+     				sym.getSymbol("numerazio").$('Num-' + value).show();
+     				sym.getSymbol("numerazio").play("in");
+     				sym.getSymbol("Scoiattolo").play("ani");
+     			}, 3000);
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play("chiusura");
+     			}, 6000);
+     			$(this).fadeOut();
+     			sym.getSymbol("paperatutto" + value).play("in");
+     		});
+     		$(".trigduck4").bind(toccomagico, function() {
+     			var value = 4;
+     			playAudioDuck("audio/duck.mp3");
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play();
+     				fumelo();
+     				suonatore['suono' + value]('audio/numbers/S00' + value + '.mp3');
+     				sym.$('.fumnum' + value).css({
+     					'background-image': 'url(images/svgNum' + value + '.svg)'
+     				});
+     				$(".numeris").hide();
+     				sym.getSymbol("numerazio").$('Num-' + value).show();
+     				sym.getSymbol("numerazio").play("in");
+     				sym.getSymbol("Scoiattolo").play("ani");
+     			}, 3000);
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play("chiusura");
+     			}, 6000);
+     			$(this).fadeOut();
+     			sym.getSymbol("paperatutto" + value).play("in");
+     		});
+     		$(".trigduck5").bind(toccomagico, function() {
+     			var value = 5;
+     			playAudioDuck("audio/duck.mp3");
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play();
+     				fumelo();
+     				suonatore['suono' + value]('audio/numbers/S00' + value + '.mp3');
+     				sym.$('.fumnum' + value).css({
+     					'background-image': 'url(images/svgNum' + value + '.svg)'
+     				});
+     				$(".numeris").hide();
+     				sym.getSymbol("numerazio").$('Num-' + value).show();
+     				sym.getSymbol("numerazio").play("in");
+     				sym.getSymbol("Scoiattolo").play("ani");
+     			}, 3000);
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play("chiusura");
+     			}, 6000);
+     			$(this).fadeOut();
+     			sym.getSymbol("paperatutto" + value).play("in");
+     		});
+     		$(".trigduck6").bind(toccomagico, function() {
+     			var value = 6;
+     			playAudioDuck("audio/duck.mp3");
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play();
+     				fumelo();
+     				suonatore['suono' + value]('audio/numbers/S00' + value + '.mp3');
+     				sym.$('.fumnum' + value).css({
+     					'background-image': 'url(images/svgNum' + value + '.svg)'
+     				});
+     				$(".numeris").hide();
+     				sym.getSymbol("numerazio").$('Num-' + value).show();
+     				sym.getSymbol("numerazio").play("in");
+     				sym.getSymbol("Scoiattolo").play("ani");
+     			}, 3000);
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play("chiusura");
+     			}, 6000);
+     			$(this).fadeOut();
+     			sym.getSymbol("paperatutto" + value).play("in");
+     		});
+     		$(".trigduck7").bind(toccomagico, function() {
+     			var value = 7;
+     			playAudioDuck("audio/duck.mp3");
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play();
+     				fumelo();
+     				suonatore['suono' + value]('audio/numbers/S00' + value + '.mp3');
+     				sym.$('.fumnum' + value).css({
+     					'background-image': 'url(images/svgNum' + value + '.svg)'
+     				});
+     				$(".numeris").hide();
+     				sym.getSymbol("numerazio").$('Num-' + value).show();
+     				sym.getSymbol("numerazio").play("in");
+     				sym.getSymbol("Scoiattolo").play("ani");
+     			}, 3000);
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play("chiusura");
+     			}, 6000);
+     			$(this).fadeOut();
+     			sym.getSymbol("paperatutto" + value).play("in");
+     		});
+     		$(".trigduck8").bind(toccomagico, function() {
+     			var value = 8;
+     			playAudioDuck("audio/duck.mp3");
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play();
+     				fumelo();
+     				suonatore['suono' + value]('audio/numbers/S00' + value + '.mp3');
+     				sym.$('.fumnum' + value).css({
+     					'background-image': 'url(images/svgNum' + value + '.svg)'
+     				});
+     				$(".numeris").hide();
+     				sym.getSymbol("numerazio").$('Num-' + value).show();
+     				sym.getSymbol("numerazio").play("in");
+     				sym.getSymbol("Scoiattolo").play("ani");
+     			}, 3000);
+     			setTimeout(function() {
+     				sym.getSymbol(".menu").play("chiusura");
+     			}, 6000);
+     			$(".reload").fadeIn();
+     			$(this).fadeOut();
+     			sym.getSymbol("paperatutto" + value).play("in");
+     		});
 
-         		  	$(this).addClass("clicked");
-         			var value = $(".clicked").length;
-
-					   sym.getSymbol(".menu").play();
-						suonatore['suono'+ value]('audio/numbers/S00'+ value +'.mp3');
-						sym.$('.fumnum'+ value).css({'background-image': 'url(images/svgNum'+value+'.svg)'});
-
-						setTimeout(function(){
-								sym.getSymbol(".menu").play("chiusura");
-						},3000); 					
-
-					playAudioRana("audio/boing_01.mp3");
-         			$(".numeris").hide();
-         			sym.getSymbol("numerazio").$('Num-'+value).show();
-         			sym.getSymbol("numerazio").play("in");
-
-         			sym.getSymbol("Scoiattolo").play("ani");
-
-						if ( value >= 8 ){
-
-         				 $(".reload").fadeIn();
-         				// sym.getSymbol("Scoiattolo").play("ultima6");
-
-         				};
 
 
 
+			$('.paperatutto1').bind(toccomagico, function() {
+				 sym.getComposition().getStage().getSymbol('paperatutto1').getSymbol('papera1').play("testa");
+				 playAudioDuck("audio/duck.mp3");
+			});
+			$('.paperatutto2').bind(toccomagico, function() {
+				 sym.getComposition().getStage().getSymbol('paperatutto2').getSymbol('papera2').play("testa");
+				 playAudioDuck("audio/duck.mp3");
+			});
+			$('.paperatutto3').bind(toccomagico, function() {
+				 sym.getComposition().getStage().getSymbol('paperatutto3').getSymbol('papera3').play("testa");
+				 playAudioDuck("audio/duck.mp3");
+			});
+			$('.paperatutto4').bind(toccomagico, function() {
+				 sym.getComposition().getStage().getSymbol('paperatutto4').getSymbol('papera4').play("testa");
+				 playAudioDuck("audio/duck.mp3");
+			});
+			$('.paperatutto5').bind(toccomagico, function() {
+				 sym.getComposition().getStage().getSymbol('paperatutto5').getSymbol('papera5').play("testa");
+				 playAudioDuck("audio/duck.mp3");
+			});
+			$('.paperatutto6').bind(toccomagico, function() {
+				 sym.getComposition().getStage().getSymbol('paperatutto6').getSymbol('papera6').play("testa");
+				 playAudioDuck("audio/duck.mp3");
+			});
+			$('.paperatutto7').bind(toccomagico, function() {
+				 sym.getComposition().getStage().getSymbol('paperatutto7').getSymbol('papera7').play("testa");
+				 playAudioDuck("audio/duck.mp3");
+			});
+			$('.paperatutto8').bind(toccomagico, function() {
+				 sym.getComposition().getStage().getSymbol('paperatutto8').getSymbol('papera8').play("testa");
+				 playAudioDuck("audio/duck.mp3");
+			});
 
 
-         		 });
 /**********LA CONTA STOP**********/         		 
 
 
          		  $(".reload").bind(toccomagico, function(){
 							sym.getSymbol(this).play("in");
 
+							sym.getComposition().getStage().getSymbol('paperatutto1').stop(0);
+							sym.getComposition().getStage().getSymbol('paperatutto2').stop(0);
+							sym.getComposition().getStage().getSymbol('paperatutto3').stop(0);
+							sym.getComposition().getStage().getSymbol('paperatutto4').stop(0);
+							sym.getComposition().getStage().getSymbol('paperatutto5').stop(0);
+							sym.getComposition().getStage().getSymbol('paperatutto6').stop(0);
+							sym.getComposition().getStage().getSymbol('paperatutto7').stop(0);
+							sym.getComposition().getStage().getSymbol('paperatutto8').stop(0);
 
+							$(".trigduck1").show();
+							$(".trigduck2").show();
+							$(".trigduck3").show();
+							$(".trigduck4").show();
+							$(".trigduck5").show();
+							$(".trigduck6").show();
+							$(".trigduck7").show();
+							$(".trigduck8").show();		
 
-         					$(".triggers").removeClass("clicked");		
+         					//$(".triggers").removeClass("clicked");		
          					$(".numeris").hide();
          					$(".reload").fadeOut();
 
@@ -209,7 +406,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 
-
+/*
 			       var AudioWaterSplash = null;
 			       function playAudioWaterSplash (src) {
 			       seAndroid();
@@ -228,48 +425,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 	         		  		playAudioWaterSplash("audio/watersplash.mp3");		         		  		
 	         	  });        		 
 
-
-
-
-/*
-          		 sym.$("TriggerRana1").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana1").play("in");
-         		  		sym.getSymbol("ninfeabig1-water").play("in");		         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana2").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana2").play("in");
-         		  		sym.getSymbol("ninfeabig1-water").play("in");			         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana3").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana3").play("in");
-         		  		sym.getSymbol("ninfeabig2-water").play("in");		         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana4").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana4").play("in");
-         		  		sym.getSymbol("ninfeabig2-water").play("in");		         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana5").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana5").play("in");
-         		  		sym.getSymbol("ninfeabig2-water").play("in");		         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana6").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana6").play("in");
-         		  		sym.getSymbol("ninfeabig1-water").play("in");			         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana7").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana7").play("in");
-         		  		sym.getSymbol("ninfeabig1-water").play("in");			         		  		
-         		  		fumelo();
-         		 });   			 
-
 */
-
 
 /**********SCOIATTOLO START**********/
          		 sym.$("trigger-coda").bind(toccomagico, function(){
@@ -281,27 +437,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 						 sym.getSymbol("Scoiattolo").play("coda");
 					}, 4500);
 
-/*
-					setInterval(function() {
-						 switch(i++%3) {
-							  case 0: sym.getSymbol("ninfeabig1-water").play("in");
-							  break;
-							  case 1: sym.getSymbol("ninfeabig2-water").play("in");
-							  break;
-						 }
-					}, 7000);*/
-
-/*
-         		  var clicked = 0;
-         		  sym.$("Scoiattolo").bind(toccomagico, function (e) {
-         			  clicked++;
-         			  if (clicked >= 6) {
-         					clicked = 0;
-         					sym.getSymbol("Scoiattolo").play("speciale");
-         			  } else {
-         					return false;
-         			  }
-         		 });	*/
 
 /**********SCOIATTOLO STOP**********/
 
@@ -329,6 +464,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	});
       	$(".testina").bind(toccomagico, function(){
       			sym.getSymbol(".menu").play();
+     				fumelo();
       	});
 
       	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
@@ -348,11 +484,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
 
 
-      sym.$('giuncamento').toggle(function () {
-          sym.getSymbol('giuncamento').play("soffiogiunchiuno");
-      }, function () {
-           sym.getSymbol('giuncamento').play("soffiogiunchidue");
-      });  
+		setInterval(function() {
+			 switch(i++%4) {
+				  case 0: sym.getComposition().getStage().getSymbol('giunco').play("breve");
+				  break;
+				  case 1: sym.getComposition().getStage().getSymbol('giunco2').play("breve");
+				  break;
+				  case 2: sym.getComposition().getStage().getSymbol('giunco3').play("breve");
+				  break;
+				  case 3: sym.getComposition().getStage().getSymbol('giunco4').play("breve");
+				  break;				  
+			 }
+		}, 6000);		
+		
+		
 
 }/**********FINE INIT**********/
 
@@ -372,32 +517,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 149, function(sym, e) {
-         sym.getSymbol('giunco4').play("breve");
+      
 
-      });
-      //Edge binding end
+      
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         sym.getSymbol('giunco3').play("breve");
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1068, function(sym, e) {
-         sym.getSymbol('giunco').play("breve");
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4383, function(sym, e) {
-         sym.getSymbol('giunco2').play("breve");
-         sym.getSymbol('giunco').play("normale");
-         sym.getSymbol('giunco4').play("normale");
-         sym.getSymbol('giunco3').play("normale");
-
-      });
-      //Edge binding end
+      
 
    })("stage");
    //Edge symbol end:'stage'
@@ -682,5 +808,336 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("giunco");
    //Edge symbol end:'giunco'
+
+   //=========================================================
+   
+   //Edge symbol: 'paperatutto1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('giunco').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco2').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco4').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco3').play("normale");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 351, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto1').getSymbol('papera1').play("becco");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 919, function(sym, e) {
+         $('.paperatutto2').fadeIn();
+         $(".trigduck2").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4234, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto1').getSymbol('papera1').play("testa");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4500, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("paperatutto1");
+   //Edge symbol end:'paperatutto1'
+
+   //=========================================================
+   
+   //Edge symbol: 'paperatutto2'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('giunco').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco2').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco4').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco3').play("normale");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 351, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto2').getSymbol('papera2').play("becco");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 919, function(sym, e) {
+         $('.paperatutto3').fadeIn();
+         $(".trigduck3").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4234, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto2').getSymbol('papera2').play("testa");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4500, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("paperatutto2");
+   //Edge symbol end:'paperatutto2'
+
+   //=========================================================
+   
+   //Edge symbol: 'paperatutto4'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('giunco').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco2').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco4').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco3').play("normale");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 351, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto4').getSymbol('papera4').play("becco");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 919, function(sym, e) {
+         $('.paperatutto5').fadeIn();
+         $(".trigduck5").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4250, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto4').getSymbol('papera4').play("testa");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4500, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("paperatutto4");
+   //Edge symbol end:'paperatutto4'
+
+   //=========================================================
+   
+   //Edge symbol: 'paperatutto8'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('giunco').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco2').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco4').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco3').play("normale");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 351, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto8').getSymbol('papera8').play("becco");
+
+      });
+      //Edge binding end
+
+      
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4234, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto8').getSymbol('papera8').play("testa");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4500, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("paperatutto8");
+   //Edge symbol end:'paperatutto8'
+
+   //=========================================================
+   
+   //Edge symbol: 'paperatutto6'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('giunco').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco2').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco4').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco3').play("normale");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 351, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto6').getSymbol('papera6').play("becco");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 919, function(sym, e) {
+         $('.paperatutto7').fadeIn();
+         $(".trigduck7").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4234, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto6').getSymbol('papera6').play("testa");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4500, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("paperatutto6");
+   //Edge symbol end:'paperatutto6'
+
+   //=========================================================
+   
+   //Edge symbol: 'paperatutto3'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('giunco').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco2').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco4').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco3').play("normale");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 351, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto3').getSymbol('papera3').play("becco");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 919, function(sym, e) {
+         $('.paperatutto4').fadeIn();
+         $(".trigduck4").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4234, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto3').getSymbol('papera3').play("testa");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4500, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("paperatutto3");
+   //Edge symbol end:'paperatutto3'
+
+   //=========================================================
+   
+   //Edge symbol: 'paperatutto5'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('giunco').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco2').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco4').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco3').play("normale");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 351, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto5').getSymbol('papera5').play("becco");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 919, function(sym, e) {
+         $('.paperatutto6').fadeIn();
+         $(".trigduck6").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4234, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto5').getSymbol('papera5').play("testa");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4500, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("paperatutto5");
+   //Edge symbol end:'paperatutto5'
+
+   //=========================================================
+   
+   //Edge symbol: 'paperatutto7'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('giunco').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco2').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco4').play("normale");
+         sym.getComposition().getStage().getSymbol('giunco3').play("normale");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 351, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto7').getSymbol('papera7').play("becco");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 919, function(sym, e) {
+         $('.paperatutto8').fadeIn();
+         $(".trigduck8").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4234, function(sym, e) {
+         sym.getComposition().getStage().getSymbol('paperatutto7').getSymbol('papera7').play("testa");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4500, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("paperatutto7");
+   //Edge symbol end:'paperatutto7'
 
 })(jQuery, AdobeEdge, "Quadro-08");
