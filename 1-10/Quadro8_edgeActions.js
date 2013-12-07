@@ -14,7 +14,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-      yepnope({load: ["cordova.js"],complete: init});
+    //  yepnope({load: ["cordova.js"],complete: init});
       
        toccomagico = 'touchstart MSPointerDown pointerdown'
        //toccomagico = 'click'
@@ -31,38 +31,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 	   if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
    }   
 
-   function resetRane(){
-		$(".ranas1").css({'z-index':'0'});
-		$(".ranas2").css({'z-index':'0'});
-		$(".ranas3").css({'z-index':'0'});
-		$(".ranas4").css({'z-index':'0'});
-		$(".ranas5").css({'z-index':'0'});
-		$(".ranas6").css({'z-index':'0'});
-		$(".ranas7").css({'z-index':'0'});
-
-		sym.getSymbol("rana1").stop(0);
-		sym.getSymbol("rana2").stop(0);
-		sym.getSymbol("rana3").stop(0);
-		sym.getSymbol("rana4").stop(0);
-		sym.getSymbol("rana5").stop(0);
-		sym.getSymbol("rana6").stop(0);
-		sym.getSymbol("rana7").stop(0);
-
-   }   
-
-
-	sym.$("TriggerRana1").css({'z-index':'150'});
-	sym.$("TriggerRana2").css({'z-index':'150'});
-	sym.$("TriggerRana3").css({'z-index':'150'});
-	sym.$("TriggerRana4").css({'z-index':'150'});
-	sym.$("TriggerRana5").css({'z-index':'150'});
-	sym.$("TriggerRana6").css({'z-index':'150'});
-	sym.$("TriggerRana7").css({'z-index':'150'});
 
 
 	function init(){
-			resetRane();
-
+			
 	      document.addEventListener("deviceready", onDeviceReady, false);
 
 	        function onDeviceReady() {
@@ -71,7 +43,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 				    setTimeout(arguments.callee, 301200);
 				})();
 				setTimeout(function(){
-        			playAudioVoce('audio/quadri/Q7.mp3');
+        			playAudioVoce('audio/quadri/Q8.mp3');
         		},2000);      
 	        }        
 
@@ -171,7 +143,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 /**********LA CONTA START**********/         		 
 
 			       var AudioDuck = null;
-			       function playAudioRana (src) {
+			       function playAudioDuck (src) {
 			       seAndroid();
 			            AudioDuck = new Media(src);
 			            AudioDuck.play();
@@ -215,7 +187,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		  $(".reload").bind(toccomagico, function(){
 							sym.getSymbol(this).play("in");
 
-							resetRane();
+
 
          					$(".triggers").removeClass("clicked");		
          					$(".numeris").hide();
@@ -259,7 +231,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 
-
+/*
           		 sym.$("TriggerRana1").bind(toccomagico, function(){
          		  		sym.getSymbol("rana1").play("in");
          		  		sym.getSymbol("ninfeabig1-water").play("in");		         		  		
@@ -296,23 +268,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		  		fumelo();
          		 });   			 
 
+*/
 
-/**********PECORA START**********/         		 
-
-			       var AudioPecora = null;
-			       function playAudioPecora (src) {
-			       seAndroid();
-			            AudioPecora = new Media(src);
-			            AudioPecora.play();
-			        }       
-					sym.$("Trigger-Pecora").bind(toccomagico, function(){
-						sym.getSymbol("Pecora").play("in");	
-						playAudioPecora("audio/pecora.mp3");
-					});  
-
-
-
-/**********PECORA STOP**********/
 
 /**********SCOIATTOLO START**********/
          		 sym.$("trigger-coda").bind(toccomagico, function(){
@@ -324,7 +281,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 						 sym.getSymbol("Scoiattolo").play("coda");
 					}, 4500);
 
-
+/*
 					setInterval(function() {
 						 switch(i++%3) {
 							  case 0: sym.getSymbol("ninfeabig1-water").play("in");
@@ -332,7 +289,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 							  case 1: sym.getSymbol("ninfeabig2-water").play("in");
 							  break;
 						 }
-					}, 7000);
+					}, 7000);*/
 
 /*
          		  var clicked = 0;
@@ -359,14 +316,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			});	         
             $(".playvoce").bind(toccomagico, function(){
       	     	sym.getSymbol(this).play("in");
-		    	playAudioVoce('audio/quadri/Q7.mp3');
+		    		playAudioVoce('audio/quadri/Q8.mp3');
       	    });
 /**********FUMELLO STOP**********/ 
 
 
 /**********MENU START**********/
-      	avanti = "Quadro8.html";
-      	indietro = "Quadro6.html";
+      	avanti = "Quadro9.html";
+      	indietro = "Quadro7.html";
       	$(".next, .prev, .musica, .home").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       	});
@@ -411,6 +368,33 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 149, function(sym, e) {
+         sym.getSymbol('giunco4').play("breve");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
+         sym.getSymbol('giunco3').play("breve");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1068, function(sym, e) {
+         sym.getSymbol('giunco').play("breve");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4383, function(sym, e) {
+         sym.getSymbol('giunco2').play("breve");
+         sym.getSymbol('giunco').play("normale");
+         sym.getSymbol('giunco4').play("normale");
+         sym.getSymbol('giunco3').play("normale");
 
       });
       //Edge binding end
@@ -677,4 +661,26 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("papera");
    //Edge symbol end:'papera'
 
-})(jQuery, AdobeEdge, "Quadro-07");
+   //=========================================================
+   
+   //Edge symbol: 'giunco'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4101, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 7750, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("giunco");
+   //Edge symbol end:'giunco'
+
+})(jQuery, AdobeEdge, "Quadro-08");

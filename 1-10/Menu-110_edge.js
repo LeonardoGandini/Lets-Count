@@ -36,6 +36,14 @@ var symbols = {
             text:"Q7",
             align:"center",
             font:['Arial, Helvetica, sans-serif',94,"rgba(0,0,0,1)","normal","none",""]
+         },
+         {
+            id:'TextCopy2',
+            type:'text',
+            rect:['632px','93px','139px','103px','auto','auto'],
+            text:"Q8",
+            align:"center",
+            font:['Arial, Helvetica, sans-serif',94,"rgba(0,0,0,1)","normal","none",""]
          }],
          symbolInstances: [
 
@@ -45,22 +53,29 @@ var symbols = {
       "Base State": {
          "${_Stage}": [
             ["color", "background-color", 'rgba(255,255,255,1)'],
-            ["style", "overflow", 'hidden'],
+            ["style", "width", '1024px'],
             ["style", "height", '768px'],
-            ["style", "width", '1024px']
-         ],
-         "${_Text}": [
-            ["style", "top", '102px'],
-            ["style", "text-align", 'center'],
-            ["style", "width", '139px'],
-            ["style", "left", '210px'],
-            ["style", "font-size", '94px']
+            ["style", "overflow", 'hidden']
          ],
          "${_TextCopy}": [
             ["style", "top", '102px'],
             ["style", "text-align", 'center'],
-            ["style", "font-size", '94px'],
+            ["style", "width", '139px'],
             ["style", "left", '433px'],
+            ["style", "font-size", '94px']
+         ],
+         "${_Text}": [
+            ["style", "top", '102px'],
+            ["style", "text-align", 'center'],
+            ["style", "font-size", '94px'],
+            ["style", "left", '210px'],
+            ["style", "width", '139px']
+         ],
+         "${_TextCopy2}": [
+            ["style", "top", '93px'],
+            ["style", "text-align", 'center'],
+            ["style", "font-size", '94px'],
+            ["style", "left", '632px'],
             ["style", "width", '139px']
          ]
       }

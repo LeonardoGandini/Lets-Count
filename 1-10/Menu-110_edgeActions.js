@@ -31,6 +31,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
+      Symbol.bindElementAction(compId, symbolName, "${_TextCopy2}", "touchstart", function(sym, e) {
+         window.open("Quadro8.html", "_self");
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 
