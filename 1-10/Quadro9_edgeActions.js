@@ -645,227 +645,32 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'Pecora'
+   //Edge symbol: 'cespuglissimo'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-   })("Pecora");
-   //Edge symbol end:'Pecora'
+   })("cespuglissimo");
+   //Edge symbol end:'cespuglissimo'
 
    //=========================================================
    
-   //Edge symbol: 'ranaanim'
+   //Edge symbol: 'alberogufo'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
+   })("alberogufo");
+   //Edge symbol end:'alberogufo'
+
+   //=========================================================
+   
+   //Edge symbol: 'bunny'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1554, function(sym, e) {
          sym.stop();
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
-         $(".ranas1").css({'z-index':'99'});
-
-      });
-      //Edge binding end
-
-   })("rana1");
-   //Edge symbol end:'rana1'
-
-   //=========================================================
-   
-   //Edge symbol: 'rana1_1'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
-         $(".ranas2").css({'z-index':'99'});
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
-         sym.stop();
-
-      });
-      //Edge binding end
-
-   })("rana2");
-   //Edge symbol end:'rana2'
-
-   //=========================================================
-   
-   //Edge symbol: 'rana1_2'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
-         $(".ranas3").css({'z-index':'99'});
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
-         sym.stop();
-
-      });
-      //Edge binding end
-
-   })("rana3");
-   //Edge symbol end:'rana3'
-
-   //=========================================================
-   
-   //Edge symbol: 'rana1_3'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
-         $(".ranas4").css({'z-index':'99'});
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
-         sym.stop();
-
-      });
-      //Edge binding end
-
-   })("rana4");
-   //Edge symbol end:'rana4'
-
-   //=========================================================
-   
-   //Edge symbol: 'rana1_4'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
-         $(".ranas5").css({'z-index':'99'});
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
-         sym.stop();
-
-      });
-      //Edge binding end
-
-   })("rana5");
-   //Edge symbol end:'rana5'
-
-   //=========================================================
-   
-   //Edge symbol: 'rana1_5'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
-         $(".ranas6").css({'z-index':'99'});
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
-         sym.stop();
-
-      });
-      //Edge binding end
-
-   })("rana6");
-   //Edge symbol end:'rana6'
-
-   //=========================================================
-   
-   //Edge symbol: 'rana1_6'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 198, function(sym, e) {
-         $(".ranas7").css({'z-index':'99'});
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 851, function(sym, e) {
-         sym.stop();
-
-      });
-      //Edge binding end
-
-   })("rana7");
-   //Edge symbol end:'rana7'
-
-   //=========================================================
-   
-   //Edge symbol: 'giunco'
-   (function(symbolName) {   
-   
-   })("giunco");
-   //Edge symbol end:'giunco'
-
-   //=========================================================
-   
-   //Edge symbol: 'giuncamento'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8000, function(sym, e) {
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 14250, function(sym, e) {
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-   })("giuncamento");
-   //Edge symbol end:'giuncamento'
-
-   //=========================================================
-   
-   //Edge symbol: 'giuncame-water'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3078, function(sym, e) {
-         // stop the timeline at the given position (ms or label)
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-   })("giuncame-water");
-   //Edge symbol end:'giuncame-water'
-
-   //=========================================================
-   
-   //Edge symbol: 'ninfeabig-water'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3750, function(sym, e) {
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-   })("ninfeabig-water");
-   //Edge symbol end:'ninfeabig-water'
-
-   //=========================================================
-   
-   //Edge symbol: 'ninfeabig2-water'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function(sym, e) {
-         sym.stop(0);
-
-      });
-      //Edge binding end
-
-   })("ninfeabig2-water");
-   //Edge symbol end:'ninfeabig2-water'
+   })("bunny");
+   //Edge symbol end:'bunny'
 
 })(jQuery, AdobeEdge, "Quadro-09");

@@ -2,15 +2,15 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
-    "\/images\/Q8-scoia-braccio2.png" : {
+    "\/images\/Q7-scoiattolo-braccio-steso.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q8-scoia-braccio2.png",
+      "inputAbbreviatedPath" : "\/images\/Q7-scoiattolo-braccio-steso.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q8-scoia-braccio2.png",
-      "initialSize" : 46618,
+      "outputAbbreviatedPath" : "\/images\/Q7-scoiattolo-braccio-steso.png",
+      "initialSize" : 34712,
       "fileType" : 8192
     },
     "\/Quadro8.html" : {
@@ -906,17 +906,6 @@
       "initialSize" : 121683,
       "fileType" : 8192
     },
-    "\/images\/Q9-gufo-corpo.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q9-gufo-corpo.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q9-gufo-corpo.png",
-      "initialSize" : 106607,
-      "fileType" : 8192
-    },
     "\/images\/Q6-fiore-gambo1.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -926,6 +915,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q6-fiore-gambo1.png",
       "initialSize" : 34871,
+      "fileType" : 8192
+    },
+    "\/images\/Q9-gufo-corpo.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q9-gufo-corpo.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q9-gufo-corpo.png",
+      "initialSize" : 106607,
       "fileType" : 8192
     },
     "\/www\/Quadro9_edge.js" : {
@@ -961,17 +961,6 @@
       "initialSize" : 120921,
       "fileType" : 8192
     },
-    "\/images\/G-Testina.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/G-Testina.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/G-Testina.png",
-      "initialSize" : 21978,
-      "fileType" : 8192
-    },
     "\/images\/Q9-bunny-testa.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -981,6 +970,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q9-bunny-testa.png",
       "initialSize" : 216287,
+      "fileType" : 8192
+    },
+    "\/images\/G-Testina.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/G-Testina.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/G-Testina.png",
+      "initialSize" : 21978,
       "fileType" : 8192
     },
     "\/images\/Q7-erbetta.png" : {
@@ -1111,6 +1111,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/images\/Fumello-Q6.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Fumello-Q6.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Fumello-Q6.png",
+      "initialSize" : 63483,
+      "fileType" : 8192
+    },
     "\/images\/Q9-Cespuglio1-4.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1131,17 +1142,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q9-pino.png",
       "initialSize" : 310804,
-      "fileType" : 8192
-    },
-    "\/images\/Fumello-Q6.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Fumello-Q6.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Fumello-Q6.png",
-      "initialSize" : 63483,
       "fileType" : 8192
     },
     "\/www\/edge_includes\/edge.2.0.1.min.js" : {
@@ -1253,17 +1253,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/www\/Quadro8_edge.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/Quadro8_edge.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/www\/Quadro8_edge-min.js",
-      "fileType" : 64
-    },
     "\/images\/Q6-mucca-coda.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1274,6 +1263,17 @@
       "outputAbbreviatedPath" : "\/images\/Q6-mucca-coda.png",
       "initialSize" : 56741,
       "fileType" : 8192
+    },
+    "\/www\/Quadro8_edge.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/Quadro8_edge.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/www\/Quadro8_edge-min.js",
+      "fileType" : 64
     },
     "\/images\/Q7-pecora-corpo.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1418,15 +1418,15 @@
       "initialSize" : 46349,
       "fileType" : 8192
     },
-    "\/images\/G-Cielo.png" : {
+    "\/images\/Q8-fronde2.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/G-Cielo.png",
+      "inputAbbreviatedPath" : "\/images\/Q8-fronde2.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/G-Cielo.png",
-      "initialSize" : 1589034,
+      "outputAbbreviatedPath" : "\/images\/Q8-fronde2.png",
+      "initialSize" : 308060,
       "fileType" : 8192
     },
     "\/images\/Q10-erba-back.png" : {
@@ -1451,27 +1451,27 @@
       "outputAbbreviatedPath" : "\/www\/Quadro8_edgePreload-min.js",
       "fileType" : 64
     },
-    "\/images\/Q8-fronde2.png" : {
+    "\/images\/G-Cielo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q8-fronde2.png",
+      "inputAbbreviatedPath" : "\/images\/G-Cielo.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q8-fronde2.png",
-      "initialSize" : 308060,
+      "outputAbbreviatedPath" : "\/images\/G-Cielo.png",
+      "initialSize" : 1589034,
       "fileType" : 8192
     },
-    "\/images\/Q8-fiore-corpo.png" : {
+    "\/Quadro9_edgePreload.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q8-fiore-corpo.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q8-fiore-corpo.png",
-      "initialSize" : 33622,
-      "fileType" : 8192
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/Quadro9_edgePreload.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/www\/Quadro9_edgePreload.js",
+      "fileType" : 64
     },
     "\/images\/Q7-ninfea-small.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1495,16 +1495,16 @@
       "initialSize" : 59297,
       "fileType" : 8192
     },
-    "\/Quadro9_edgePreload.js" : {
+    "\/images\/Q8-fiore-corpo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/Quadro9_edgePreload.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/www\/Quadro9_edgePreload.js",
-      "fileType" : 64
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q8-fiore-corpo.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q8-fiore-corpo.png",
+      "initialSize" : 33622,
+      "fileType" : 8192
     },
     "\/images\/Q7-fiore-small.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1583,17 +1583,6 @@
       "initialSize" : 38334,
       "fileType" : 8192
     },
-    "\/images\/Q6-bird-ala-SX.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q6-bird-ala-SX.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q6-bird-ala-SX.png",
-      "initialSize" : 31439,
-      "fileType" : 8192
-    },
     "\/images\/Q8-papera-becco1.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1603,6 +1592,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q8-papera-becco1.png",
       "initialSize" : 18154,
+      "fileType" : 8192
+    },
+    "\/images\/Q6-bird-ala-SX.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q6-bird-ala-SX.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q6-bird-ala-SX.png",
+      "initialSize" : 31439,
       "fileType" : 8192
     },
     "\/images\/Q9-erba2.png" : {
@@ -1907,15 +1907,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/images\/Q7-scoiattolo-braccio-steso.png" : {
+    "\/images\/Q8-scoia-braccio2.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q7-scoiattolo-braccio-steso.png",
+      "inputAbbreviatedPath" : "\/images\/Q8-scoia-braccio2.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q7-scoiattolo-braccio-steso.png",
-      "initialSize" : 34712,
+      "outputAbbreviatedPath" : "\/images\/Q8-scoia-braccio2.png",
+      "initialSize" : 46618,
       "fileType" : 8192
     },
     "\/images\/Q8-giunco.png" : {
