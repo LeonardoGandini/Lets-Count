@@ -324,7 +324,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 /**********MENU START**********/
       	avanti = "Quadro10.html";
       	indietro = "Quadro8.html";
-      	$(".next, .prev, .musica, .home").bind(toccomagico, function(){
+      	$(".next, .prev, .musica, .home, .fiore").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       	});
       	$(".testina").bind(toccomagico, function(){
@@ -347,9 +347,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       });
 
-
-
-
+      	sym.$("trigger-pino").bind(toccomagico, function(){
+      		sym.getSymbol(".pino").play("in");
+      	});
 }/**********FINE INIT**********/
 
 
@@ -638,5 +638,35 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("bunny");
    //Edge symbol end:'bunny'
+
+   //=========================================================
+   
+   //Edge symbol: 'fiore'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1045, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("fiore");
+   //Edge symbol end:'fiore'
+
+   //=========================================================
+   
+   //Edge symbol: 'pino'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1917, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("pino");
+   //Edge symbol end:'pino'
 
 })(jQuery, AdobeEdge, "Quadro-09");
