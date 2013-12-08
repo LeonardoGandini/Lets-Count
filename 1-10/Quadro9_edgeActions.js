@@ -31,37 +31,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 	   if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
    }   
 
-   function resetRane(){
-		$(".ranas1").css({'z-index':'0'});
-		$(".ranas2").css({'z-index':'0'});
-		$(".ranas3").css({'z-index':'0'});
-		$(".ranas4").css({'z-index':'0'});
-		$(".ranas5").css({'z-index':'0'});
-		$(".ranas6").css({'z-index':'0'});
-		$(".ranas7").css({'z-index':'0'});
-
-		sym.getSymbol("rana1").stop(0);
-		sym.getSymbol("rana2").stop(0);
-		sym.getSymbol("rana3").stop(0);
-		sym.getSymbol("rana4").stop(0);
-		sym.getSymbol("rana5").stop(0);
-		sym.getSymbol("rana6").stop(0);
-		sym.getSymbol("rana7").stop(0);
-
-   }   
 
 
-	sym.$("TriggerRana1").css({'z-index':'150'});
-	sym.$("TriggerRana2").css({'z-index':'150'});
-	sym.$("TriggerRana3").css({'z-index':'150'});
-	sym.$("TriggerRana4").css({'z-index':'150'});
-	sym.$("TriggerRana5").css({'z-index':'150'});
-	sym.$("TriggerRana6").css({'z-index':'150'});
-	sym.$("TriggerRana7").css({'z-index':'150'});
 
 
 	function init(){
-			resetRane();
 
 	      document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -71,7 +45,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 				    setTimeout(arguments.callee, 301200);
 				})();
 				setTimeout(function(){
-        			playAudioVoce('audio/quadri/Q7.mp3');
+        			playAudioVoce('audio/quadri/Q9.mp3');
         		},2000);      
 	        }        
 
@@ -103,6 +77,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			var Audio5 = null;
 			var Audio6 = null;
 			var Audio7 = null;
+			var Audio8 = null;
+			var Audio9 = null;
 
 			var suonatore = {
 
@@ -140,35 +116,31 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 								seAndroid(); 
 							    Audio7 = new Media(src);
 							    Audio7.play();   
+						},
+			    suono8: function playAudio8 (src) {
+								seAndroid(); 
+							    Audio8 = new Media(src);
+							    Audio8.play();   
+						},
+			    suono9: function playAudio9 (src) {
+								seAndroid(); 
+							    Audio9 = new Media(src);
+							    Audio9.play();   
 						}	
+
 			};
 
 
          $(".numeris").hide();
          $(".reload").hide();
 
-         	/*	 $(".fiore").bind(toccomagico, function(){
-         		  		sym.getSymbol(this).play("in");
-         		 });
-
-			       var AudioFoglie = null;
-			       function playAudioFoglie (src) {
-			       seAndroid();
-			            AudioFoglie = new Media(src);
-			            AudioFoglie.play();
-			        }       
-					$(".foglie-spare").bind(toccomagico, function(){
-					   	sym.getSymbol(this).play("in");		
-						playAudioFoglie("audio/grass1.mp3");
-					});   */      
-
 /**********LA CONTA START**********/         		 
 
-			       var AudioRana = null;
-			       function playAudioRana (src) {
+			       var AudioBunny = null;
+			       function playAudioBunny (src) {
 			       seAndroid();
-			            AudioRana = new Media(src);
-			            AudioRana.play();
+			            AudioBunny = new Media(src);
+			            AudioBunny.play();
 			        }
 
          		 $(".triggers").bind(toccomagico, function(){
@@ -184,14 +156,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 								sym.getSymbol(".menu").play("chiusura");
 						},3000); 					
 
-					playAudioRana("audio/boing_01.mp3");
+						playAudioBunny("audio/boingbunny.mp3");
+
          			$(".numeris").hide();
          			sym.getSymbol("numerazio").$('Num-'+value).show();
          			sym.getSymbol("numerazio").play("in");
 
          			sym.getSymbol("Scoiattolo").play("ani");
 
-						if ( value >= 7 ){
+						if ( value >= 9 ){
 
          				 $(".reload").fadeIn();
          				// sym.getSymbol("Scoiattolo").play("ultima6");
@@ -207,9 +180,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
          		  $(".reload").bind(toccomagico, function(){
+
 							sym.getSymbol(this).play("in");
 
-							resetRane();
+						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("bunny1").stop(0);
+						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("bunny2").stop(0);
+						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("bunny3").stop(0);
+						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("bunny4").stop(0);
+						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("bunny5").stop(0);
+						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("bunny6").stop(0);
+						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("bunny7").stop(0);
+						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("bunny8").stop(0);
+						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("bunny9").stop(0);
 
          					$(".triggers").removeClass("clicked");		
          					$(".numeris").hide();
@@ -232,81 +214,62 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 
-			       var AudioWaterSplash = null;
-			       function playAudioWaterSplash (src) {
+			       var AudioGufo = null;
+			       function playAudioGufo (src) {
 			       seAndroid();
-			            AudioAudioWaterSplash = new Media(src);
-			            AudioAudioWaterSplash.play();
+			            AudioGufo = new Media(src);
+			            AudioGufo.play();
 			        }
 
 
 
-        		  sym.$("triggerwater1").bind(toccomagico, function(){
-         		  		sym.getSymbol("ninfeabig1-water").play("in");
-         		  		playAudioWaterSplash("audio/watersplash.mp3");		         		  		
-	         	  });
-	         	  sym.$("triggerwater2").bind(toccomagico, function(){
-	         		  		sym.getSymbol("ninfeabig2-water").play("in");
-	         		  		playAudioWaterSplash("audio/watersplash.mp3");		         		  		
+	         	  sym.$("Trigger-Gufo").bind(toccomagico, function(){
+	         		  		sym.getSymbol("alberogufo").play("in");
+	         		  		playAudioGufo("audio/gufo1.mp3");		         		  		
 	         	  });        		 
 
-					  
-					  
-					  
-					  
-          		 sym.$("TriggerRana1").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana1").play("in");
-         		  		sym.getSymbol("ninfeabig1-water").play("in");		         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana2").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana2").play("in");
-         		  		sym.getSymbol("ninfeabig1-water").play("in");			         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana3").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana3").play("in");
-         		  		sym.getSymbol("ninfeabig2-water").play("in");		         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana4").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana4").play("in");
-         		  		sym.getSymbol("ninfeabig2-water").play("in");		         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana5").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana5").play("in");
-         		  		sym.getSymbol("ninfeabig2-water").play("in");		         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana6").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana6").play("in");
-         		  		sym.getSymbol("ninfeabig1-water").play("in");			         		  		
-         		  		fumelo();
-         		 });
-         		 sym.$("TriggerRana7").bind(toccomagico, function(){
-         		  		sym.getSymbol("rana7").play("in");
-         		  		sym.getSymbol("ninfeabig1-water").play("in");			         		  		
-         		  		fumelo();
-         		 });   			 
-
-
-/**********PECORA START**********/         		 
-
-			       var AudioPecora = null;
-			       function playAudioPecora (src) {
-			       seAndroid();
-			            AudioPecora = new Media(src);
-			            AudioPecora.play();
-			        }       
-					sym.$("Trigger-Pecora").bind(toccomagico, function(){
-						sym.getSymbol("Pecora").play("in");	
-						playAudioPecora("audio/pecora.mp3");
-					});  
 
 
 
-/**********PECORA STOP**********/
+
+          		 sym.$("trigger-bunny1").bind(toccomagico, function(){
+         		  		sym.getSymbol(".bunny1").play("uscita");
+	  						fumelo();
+         		 });
+          		 sym.$("trigger-bunny2").bind(toccomagico, function(){
+         		  		sym.getSymbol(".bunny2").play("uscita");
+	  						fumelo();
+         		 });
+          		 sym.$("trigger-bunny3").bind(toccomagico, function(){
+         		  		sym.getSymbol(".bunny3").play("uscita");
+	  						fumelo();
+         		 });
+          		 sym.$("trigger-bunny4").bind(toccomagico, function(){
+         		  		sym.getSymbol(".bunny4").play("uscita");
+	  						fumelo();
+         		 });
+          		 sym.$("trigger-bunny5").bind(toccomagico, function(){
+         		  		sym.getSymbol(".bunny5").play("uscita");
+	  						fumelo();
+         		 });
+          		 sym.$("trigger-bunny6").bind(toccomagico, function(){
+         		  		sym.getSymbol(".bunny6").play("uscita");
+	  						fumelo();
+         		 });
+          		 sym.$("trigger-bunny7").bind(toccomagico, function(){
+         		  		sym.getSymbol(".bunny7").play("uscita");
+	  						fumelo();
+         		 });
+          		 sym.$("trigger-bunny8").bind(toccomagico, function(){
+         		  		sym.getSymbol(".bunny8").play("uscita");
+	  						fumelo();
+         		 });
+          		 sym.$("trigger-bunny9").bind(toccomagico, function(){
+         		  		sym.getSymbol(".bunny9").play("uscita");
+	  						fumelo();
+         		 });
+
+
 
 /**********SCOIATTOLO START**********/
          		 sym.$("trigger-coda").bind(toccomagico, function(){
@@ -316,17 +279,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
  					var i=0;
 					setInterval(function() {
 						 sym.getSymbol("Scoiattolo").play("coda");
-					}, 4500);
-					
+					}, 5500);
 
-					setInterval(function() {
+
+					/*setInterval(function() {
 						 switch(i++%3) {
 							  case 0: sym.getSymbol("ninfeabig1-water").play("in");
 							  break;
 							  case 1: sym.getSymbol("ninfeabig2-water").play("in");
 							  break;
 						 }
-					}, 7000);
+					}, 7000);*/
 
 /*
          		  var clicked = 0;
@@ -353,14 +316,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			});	         
             $(".playvoce").bind(toccomagico, function(){
       	     	sym.getSymbol(this).play("in");
-		    	playAudioVoce('audio/quadri/Q7.mp3');
+		    	playAudioVoce('audio/quadri/Q9.mp3');
       	    });
 /**********FUMELLO STOP**********/ 
 
 
 /**********MENU START**********/
-      	avanti = "Quadro8.html";
-      	indietro = "Quadro6.html";
+      	avanti = "Quadro10.html";
+      	indietro = "Quadro8.html";
       	$(".next, .prev, .musica, .home").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       	});
@@ -385,11 +348,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
 
 
-      sym.$('giuncamento').toggle(function () {
-          sym.getSymbol('giuncamento').play("soffiogiunchiuno");
-      }, function () {
-           sym.getSymbol('giuncamento').play("soffiogiunchidue");
-      });  
+
 
 }/**********FINE INIT**********/
 
@@ -656,6 +615,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'alberogufo'
    (function(symbolName) {   
    
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1975, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
    })("alberogufo");
    //Edge symbol end:'alberogufo'
 
@@ -664,7 +630,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'bunny'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1554, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1250, function(sym, e) {
          sym.stop();
 
       });

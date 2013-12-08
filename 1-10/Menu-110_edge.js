@@ -44,6 +44,14 @@ var symbols = {
             text:"Q8",
             align:"center",
             font:['Arial, Helvetica, sans-serif',94,"rgba(0,0,0,1)","normal","none",""]
+         },
+         {
+            id:'TextCopy3',
+            type:'text',
+            rect:['265px','275px','139px','103px','auto','auto'],
+            text:"Q9",
+            align:"center",
+            font:['Arial, Helvetica, sans-serif',94,"rgba(0,0,0,1)","normal","none",""]
          }],
          symbolInstances: [
 
@@ -51,31 +59,38 @@ var symbols = {
       },
    states: {
       "Base State": {
-         "${_Stage}": [
-            ["color", "background-color", 'rgba(255,255,255,1)'],
-            ["style", "width", '1024px'],
-            ["style", "height", '768px'],
-            ["style", "overflow", 'hidden']
-         ],
-         "${_TextCopy}": [
-            ["style", "top", '102px'],
+         "${_TextCopy3}": [
+            ["style", "top", '275px'],
             ["style", "text-align", 'center'],
-            ["style", "width", '139px'],
-            ["style", "left", '433px'],
-            ["style", "font-size", '94px']
+            ["style", "font-size", '94px'],
+            ["style", "left", '265px'],
+            ["style", "width", '139px']
          ],
          "${_Text}": [
             ["style", "top", '102px'],
             ["style", "text-align", 'center'],
-            ["style", "font-size", '94px'],
+            ["style", "width", '139px'],
             ["style", "left", '210px'],
-            ["style", "width", '139px']
+            ["style", "font-size", '94px']
          ],
          "${_TextCopy2}": [
             ["style", "top", '93px'],
             ["style", "text-align", 'center'],
-            ["style", "font-size", '94px'],
+            ["style", "width", '139px'],
             ["style", "left", '632px'],
+            ["style", "font-size", '94px']
+         ],
+         "${_Stage}": [
+            ["color", "background-color", 'rgba(255,255,255,1)'],
+            ["style", "overflow", 'hidden'],
+            ["style", "height", '768px'],
+            ["style", "width", '1024px']
+         ],
+         "${_TextCopy}": [
+            ["style", "top", '102px'],
+            ["style", "text-align", 'center'],
+            ["style", "font-size", '94px'],
+            ["style", "left", '433px'],
             ["style", "width", '139px']
          ]
       }
