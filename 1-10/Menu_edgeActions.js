@@ -50,6 +50,7 @@ function init(){
 
 
 
+/*
       $('.musica').toggle(function () {
           $(".musica").css({
           	'-webkit-filter': 'saturate(0%)',
@@ -62,10 +63,27 @@ function init(){
           	'opacity':'1'
           	});
         	(function(){
-			    playAudio("Suoni/Ghost.mp3");
+			    playAudio("audio/Ghost.mp3");
 			    setTimeout(arguments.callee, 38000);
 			})();
 		});	        
+*/
+
+
+
+
+      $('.musica').toggle(function () {
+          $(".musicasvg").css({'background-image': 'url(images/svg-musicBW.svg)'});
+          	pauseAudio();
+      }, function () {
+          $(".musicasvg").css({'background-image': 'url(images/svg-music.svg)'});
+         (function(){
+			    playAudio("audio/Ghost.mp3");
+			    setTimeout(arguments.callee, 301200);
+			})();			
+
+      });
+
 
        function playAudioLetsCount (src) {
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
@@ -75,7 +93,7 @@ function init(){
 
       $(".letscount").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");	
-		playAudioLetsCount('Suoni/LetsCount.mp3');
+		playAudioLetsCount('audio/LetsCount.mp3');
 
       });	        
 
