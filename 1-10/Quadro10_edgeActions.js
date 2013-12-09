@@ -45,7 +45,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 				    setTimeout(arguments.callee, 301200);
 				})();
 				setTimeout(function(){
-        			playAudioVoce('audio/quadri/Q9.mp3');
+        			playAudioVoce('audio/quadri/Q10.mp3');
         		},2000);      
 	        }        
 
@@ -162,18 +162,22 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 								sym.getSymbol(".menu").play("chiusura");
 						},3000); 					
 
-						playAudiolb("audio/boinglb.mp3");
+						playAudiolb("audio/bee1.mp3");
 
          			$(".numeris").hide();
          			sym.getSymbol("numerazio").$('Num-'+value).show();
          			sym.getSymbol("numerazio").play("in");
 
+         			sym.getSymbol("scoiattolo-braccio-front").play("ani");
          			sym.getSymbol("Scoiattolo").play("ani");
+         			
+         			
 
 						if ( value >= 10 ){
 
          				 $(".reload").fadeIn();
-         				// sym.getSymbol("Scoiattolo").play("ultima6");
+         				 sym.getSymbol("scoiattolo-braccio-front").play("finale");
+         				 sym.getSymbol("Scoiattolo").play("finale");
 
          				};
 
@@ -189,15 +193,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 							sym.getSymbol(this).play("in");
 
-						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("lb1").stop(0);
-						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("lb2").stop(0);
-						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("lb3").stop(0);
-						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("lb4").stop(0);
-						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("lb5").stop(0);
-						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("lb6").stop(0);
-						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("lb7").stop(0);
-						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("lb8").stop(0);
-						    sym.getComposition().getStage().getSymbol("cespuglissimo").getSymbol("lb9").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb1").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb2").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb3").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb4").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb5").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb6").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb7").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb8").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb9").stop(0);
+						    sym.getComposition().getStage().getSymbol("lb10").stop(0);
 
          					$(".triggers").removeClass("clicked");		
          					$(".numeris").hide();
@@ -276,7 +281,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		  		sym.getSymbol(".lb9").play("uscita");
 	  						fumelo();
          		 });
-
+          		 sym.$("trigger-lb10").bind(toccomagico, function(){
+         		  		sym.getSymbol(".lb10").play("uscita");
+	  						fumelo();
+         		 });
 
 
 /**********SCOIATTOLO START**********/
@@ -312,7 +320,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 /**********MENU START**********/
       	avanti = "QuadroFinale.html";
       	indietro = "Quadro9.html";
-      	$(".next, .prev, .musica, .home, .fiore").bind(toccomagico, function(){
+      	$(".next, .prev, .musica, .home").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       	});
       	$(".testina").bind(toccomagico, function(){
@@ -340,6 +348,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       		sym.getSymbol(".pino").play("in");
       	});
 */
+			       var AudioFoglie = null;
+			       function playAudioFoglie (src) {
+			       seAndroid();
+			            AudioFoglie = new Media(src);
+			            AudioFoglie.play();
+			        }  		
+					$(".fiore").bind(toccomagico, function(){
+					   sym.getSymbol(this).play("in");		
+						playAudioFoglie("audio/grass1.mp3");
+					});   
 }/**********FINE INIT**********/
 
 
@@ -576,13 +594,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'Scoiattolo'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2339, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function(sym, e) {
          sym.stop(0);
 
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 529, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5574, function(sym, e) {
          // stop the timeline at the given position (ms or label)
          sym.stop(0);
 
@@ -627,5 +652,57 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("fiorelb");
    //Edge symbol end:'fiorelb'
+
+   //=========================================================
+   
+   //Edge symbol: 'fiore'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 928, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("fiore");
+   //Edge symbol end:'fiore'
+
+   //=========================================================
+   
+   //Edge symbol: 'scoiattolo-braccio-front'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1750, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3911, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("scoiattolo-braccio-front");
+   //Edge symbol end:'scoiattolo-braccio-front'
+
+   //=========================================================
+   
+   //Edge symbol: 'foglielb'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1436, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("foglielb");
+   //Edge symbol end:'foglielb'
 
 })(jQuery, AdobeEdge, "Quadro-10");
