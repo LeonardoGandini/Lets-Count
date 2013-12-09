@@ -37,7 +37,7 @@ if(document.addEventListener ){
    window.attachEvent("onload", onDocLoaded );
 }
 
-   requiresSVG=false;
+   requiresSVG=true;
 
    doDelayLoad=false;
    htFallbacks={
@@ -46,8 +46,8 @@ if(document.addEventListener ){
    aLoader = [
     { load: "edge_includes/jquery-1.7.1.min.js"},
     { load: "edge_includes/edge.2.0.1.min.js"},
-          { load: "Menu-110_edge.js"},
-          { load: "Menu-110_edgeActions.js"}];
+          { load: "Menu_edge.js"},
+          { load: "Menu_edgeActions.js"}];
 
 if (AdobeEdge.bootstrapLoading) { signaledLoading = true; AdobeEdge.loadResources=doLoadResources; AdobeEdge.playWhenReady=playWhenReady; }
 
@@ -57,4 +57,4 @@ preContent={dom: [ ]};//simpleContent
 
 dlContent={dom: [ ]};//simpleContent
 
-})( "LC-110-Menu");
+})( "Menu");
