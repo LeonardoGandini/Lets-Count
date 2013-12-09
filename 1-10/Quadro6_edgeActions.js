@@ -27,11 +27,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       }   
       
       
-   function seAndroid(){
-	   if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
-   }   
+		sym.$('.fumnum1').css({'opacity':'0.4'});
+		sym.$('.fumnum2').css({'opacity':'0.4'});
+		sym.$('.fumnum3').css({'opacity':'0.4'});
+		sym.$('.fumnum4').css({'opacity':'0.4'});
+		sym.$('.fumnum5').css({'opacity':'0.4'});
+		sym.$('.fumnum6').css({'opacity':'0.4'});
+		sym.$('.fumnum7').css({'opacity':'0.4'});
+		sym.$('.fumnum8').css({'opacity':'0.4'});
+		sym.$('.fumnum9').css({'opacity':'0.4'});
+		sym.$('.fumnum10').css({'opacity':'0.4'});
+
+
 
          function init(){
+
 
 	      document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -47,7 +57,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 	        var my_media = null;
 	        function playAudio(src) {
-				seAndroid();        
+				if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}        
 	            my_media = new Media(src);
 	            my_media.play();
 	        }    
@@ -60,7 +70,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 	       var AudioVoce = null;
 	       function playAudioVoce (src) {
-	      		seAndroid();
+	      		if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 	            AudioVoce = new Media(src);
 	            AudioVoce.play();
 	        }  
@@ -76,32 +86,32 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			var suonatore = {
 
 			    suono1: function playAudio1 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio1 = new Media(src);
 							    Audio1.play();   
 						},
 			    suono2: function playAudio2 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio2 = new Media(src);
 							    Audio2.play();   
 						},
 			    suono3: function playAudio3 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio3 = new Media(src);
 							    Audio3.play();   
 						},
 			    suono4: function playAudio4 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio4 = new Media(src);
 							    Audio4.play();   
 						},
 			    suono5: function playAudio5 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio5 = new Media(src);
 							    Audio5.play();   
 						},
 			    suono6: function playAudio6 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio6 = new Media(src);
 							    Audio6.play();   
 						}
@@ -117,7 +127,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 			       var AudioFoglie = null;
 			       function playAudioFoglie (src) {
-			       seAndroid();
+			       if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 			            AudioFoglie = new Media(src);
 			            AudioFoglie.play();
 			        }       
@@ -131,7 +141,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		
  	       var AudioCip = null;
 	       function playAudioCip (src) {
-	      		seAndroid();
+	      		if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 	            AudioCip = new Media(src);
 	            AudioCip.play();
 	        }          		
@@ -148,7 +158,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 						sym.getSymbol(".menu").play();
 /* 						setTimeout(function(){ */
 								suonatore['suono'+ value]('audio/numbers/S00'+ value +'.mp3');
-								sym.$('.fumnum'+value).css({'background-image': 'url(images/svgNum'+value+'.svg)'});
+						sym.$('.fumnum'+ value).css({'background-image': 'url(images/svgNum'+value+'.svg)'});
 /* 						},1000);  */
 
 						setTimeout(function(){
@@ -188,13 +198,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          					$(".numeris").hide();
          					$(".reload").fadeOut();
 
-
          					sym.$('.fumnum1').css({'background-image': 'url(images/svgBWNum1.svg)'});
          					sym.$('.fumnum2').css({'background-image': 'url(images/svgBWNum2.svg)'});
          					sym.$('.fumnum3').css({'background-image': 'url(images/svgBWNum3.svg)'});
          					sym.$('.fumnum4').css({'background-image': 'url(images/svgBWNum4.svg)'});
          					sym.$('.fumnum5').css({'background-image': 'url(images/svgBWNum5.svg)'});
          					sym.$('.fumnum6').css({'background-image': 'url(images/svgBWNum6.svg)'});
+         					sym.$('.fumnum7').css({'background-image': 'url(images/svgBWNum7.svg)'});
+         					sym.$('.fumnum8').css({'background-image': 'url(images/svgBWNum8.svg)'});
+         					sym.$('.fumnum9').css({'background-image': 'url(images/svgBWNum9.svg)'});
+         					sym.$('.fumnum10').css({'background-image': 'url(images/svgBWNum10.svg)'});
 
          			 });
 
@@ -231,7 +244,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 /**********MUCCA START**********/         		 
 			       var AudioCowBell = null;
 			       function playAudioCowBell (src) {
-			       seAndroid();
+			       if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 			            AudioCowBell = new Media(src);
 			            AudioCowBell.play();
 			        }       
@@ -245,7 +258,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 			       var AudioCow = null;
 			       function playAudioCow (src) {
-			       seAndroid();
+			       if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 			            AudioCow = new Media(src);
 			            AudioCow.play();
 			        }       
@@ -264,7 +277,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 					var AudioCowLong = null;
 					 function playAudioCowLong (src) {
-							seAndroid();
+							if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 							AudioCowLong = new Media(src);
 							AudioCowLong.play();
 					  } 
@@ -339,7 +352,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	$(".testina").bind(toccomagico, function(){
       			sym.getSymbol(".menu").play();
       	});
-      	//sym.$(".fumnum1, .fumnum2, .fumnum3, .fumnum4, .fumnum5, .fumnum6, .fumnum7, .fumnum8, .fumnum9, .fumnum10").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
+      	//sym.$(".fumnum1, .fumnum2, .fumnum3, .fumnum4, .fumnum5, .fumnum6, .fumnum7, .fumnum8, .fumnum9, .fumnum10").css({'-webkit-filter': 'saturate(0%)'});
       	//sym.$(".fumnum1, .fumnum2, .fumnum3, .fumnum4, .fumnum5, .fumnum6, .fumnum7, .fumnum8, .fumnum9, .fumnum10").css({'background-image': 'url(images/svgNum7.svg)'});
 
       	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});

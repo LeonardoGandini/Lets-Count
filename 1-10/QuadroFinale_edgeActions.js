@@ -29,9 +29,7 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
 
 
-   function seAndroid(){
-	   if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
-   }   
+     
 
       function init(){
 
@@ -52,7 +50,7 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
 /* Tappetino Start*/	        
         function playAudio(src) {
-        seAndroid(); 
+        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	my_media = new Media(src);
         	my_media.play();
         }      
@@ -72,52 +70,52 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
         }
        function playAudioUno (src) {
-         	seAndroid(); 
+         	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioUno = new Media(src);
             AudioUno.play();   
         }
        function playAudioDue (src) {
-        	seAndroid();
+        	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
             AudioDue = new Media(src);
             AudioDue.play();   
         }
        function playAudioTre (src) {
-        	seAndroid();
+        	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
             AudioTre = new Media(src);
             AudioTre.play();   
         }
        function playAudioQuattro (src) {
-        	seAndroid(); 
+        	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioQuattro = new Media(src);
             AudioQuattro.play();   
         }
        function playAudioCinque (src) {
-        	seAndroid(); 
+        	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioCinque = new Media(src);
             AudioCinque.play();   
         }
        function playAudioSei (src) {
-        	seAndroid(); 
+        	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioSei = new Media(src);
             AudioSei.play();   
         }
        function playAudioSette (src) {
-        	seAndroid(); 
+        	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioSette = new Media(src);
             AudioSette.play();   
         }
        function playAudioOtto (src) {
-        	seAndroid(); 
+        	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioOtto = new Media(src);
             AudioOtto.play();   
         }
        function playAudioNove (src) {
-        	seAndroid(); 
+        	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioNove = new Media(src);
             AudioNove.play();   
         }
        function playAudioDieci (src) {
-        	seAndroid(); 
+        	if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioDieci = new Media(src);
             AudioDieci.play();   
         }

@@ -49,29 +49,6 @@ function init(){
         }
 
 
-
-/*
-      $('.musica').toggle(function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(0%)',
-          	'opacity':'0.6'
-          	});
-          	pauseAudio();
-      }, function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(100%)',
-          	'opacity':'1'
-          	});
-        	(function(){
-			    playAudio("audio/Ghost.mp3");
-			    setTimeout(arguments.callee, 38000);
-			})();
-		});	        
-*/
-
-
-
-
       $('.musica').toggle(function () {
           $(".musicasvg").css({'background-image': 'url(images/svg-musicBW.svg)'});
           	pauseAudio();
@@ -109,9 +86,6 @@ function init(){
 
       $("#prelo").css({'display':'none'});
 
-		$(".musica").bind(toccomagico, function() {
-	    	sym.getSymbol(this).play("in");
-		});      
 
       $(".popuppo").hide();
 
@@ -122,7 +96,7 @@ function init(){
       		$(".popuppo").hide();
       }); 			
 
-      $(".fioreani, .play, .sei, .sette, .otto, .nove, .dieci, .roberta").bind(toccomagico, function(){
+      $(".fioreani, .play, .sei, .sette, .otto, .nove, .dieci, .roberta, .ucelo, .musica").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");
       });
 

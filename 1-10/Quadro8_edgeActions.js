@@ -27,13 +27,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       }   
       
       
-   function seAndroid(){
-	   if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
-   }   
+     
 
 
 
-	function init(){
+function init(){
 
 	      document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -49,7 +47,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 	        var my_media = null;
 	        function playAudio(src) {
-				seAndroid();        
+				if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}        
 	            my_media = new Media(src);
 	            my_media.play();
 	        }    
@@ -62,7 +60,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 	       var AudioVoce = null;
 	       function playAudioVoce (src) {
-	      		seAndroid();
+	      		if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 	            AudioVoce = new Media(src);
 	            AudioVoce.play();
 	        }  
@@ -80,42 +78,42 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			var suonatore = {
 
 			    suono1: function playAudio1 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio1 = new Media(src);
 							    Audio1.play();   
 						},
 			    suono2: function playAudio2 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio2 = new Media(src);
 							    Audio2.play();   
 						},
 			    suono3: function playAudio3 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio3 = new Media(src);
 							    Audio3.play();   
 						},
 			    suono4: function playAudio4 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio4 = new Media(src);
 							    Audio4.play();   
 						},
 			    suono5: function playAudio5 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio5 = new Media(src);
 							    Audio5.play();   
 						},
 			    suono6: function playAudio6 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio6 = new Media(src);
 							    Audio6.play();   
 						},
 			    suono7: function playAudio7 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio7 = new Media(src);
 							    Audio7.play();   
 						},
 			    suono8: function playAudio8 (src) {
-								seAndroid(); 
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
 							    Audio8 = new Media(src);
 							    Audio8.play();   
 						}		
@@ -150,7 +148,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 			       var AudioDuck = null;
 			       function playAudioDuck (src) {
-			       seAndroid();
+			       if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 			            AudioDuck = new Media(src);
 			            AudioDuck.play();
 			        }
@@ -409,7 +407,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 /*
 			       var AudioWaterSplash = null;
 			       function playAudioWaterSplash (src) {
-			       seAndroid();
+			       if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 			            AudioAudioWaterSplash = new Media(src);
 			            AudioAudioWaterSplash.play();
 			        }
