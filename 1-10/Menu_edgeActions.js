@@ -322,4 +322,20 @@ function init(){
    })("fiore2");
    //Edge symbol end:'fiore2'
 
+   //=========================================================
+   
+   //Edge symbol: 'Bird'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 973, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+         
+
+      });
+      //Edge binding end
+
+   })("Bird");
+   //Edge symbol end:'Bird'
+
 })(jQuery, AdobeEdge, "Menu");

@@ -17,8 +17,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
        yepnope({load: ["cordova.js"],complete: init});
        
        toccomagico = 'touchstart MSPointerDown pointerdown'
- 
-        
+       
+       
       function fumelo(){
          var position = sym.$(".fumello").position();
           if (position.top >= 100){
@@ -128,6 +128,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /**********LA CONTA START**********/         		 
 
+         		
+ 	       var AudioCip = null;
+	       function playAudioCip (src) {
+	      		seAndroid();
+	            AudioCip = new Media(src);
+	            AudioCip.play();
+	        }          		
+         		
          		 $(".fogliebird").bind(toccomagico, function(){
 
          		  		$(this).addClass("clicked");
@@ -136,7 +144,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          			 	//sym.$('temp'+ value).css({'color':'red'});
 		 			   //eval("playAudio" + value + "('audio/numbers/S00'+ value +'.mp3')");
 
-
+						playAudioCip("audio/cipQ6.mp3");
 						sym.getSymbol(".menu").play();
 /* 						setTimeout(function(){ */
 								suonatore['suono'+ value]('audio/numbers/S00'+ value +'.mp3');

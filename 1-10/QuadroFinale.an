@@ -259,9 +259,9 @@
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
 			"timelineColor":"0x2f73ad",
-			"locked":"true",
+			"locked":"false",
 			"animationEnabled":"true",
-			"invisible":"true",
+			"invisible":"false",
 			"timelineTreeOpened":"false"},
 		"element_${_home}":{
 			"timelineColor2":"0xcbbd71",
@@ -417,9 +417,9 @@
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
 			"timelineColor":"0x2f73ad",
-			"locked":"true",
+			"locked":"false",
 			"animationEnabled":"true",
-			"invisible":"true",
+			"invisible":"false",
 			"timelineTreeOpened":"false"},
 		"element_${_G-Cielo}":{
 			"timelineColor2":"0x168c84",

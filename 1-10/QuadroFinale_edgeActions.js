@@ -66,7 +66,7 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
         function onDeviceReady() {    
 			(function(){
-			    playAudio("Suoni/LaMadeline.mp3");
+			    playAudio("audio/LaMadeline.mp3");
 			    setTimeout(arguments.callee, 301200);
 			})();			
 
