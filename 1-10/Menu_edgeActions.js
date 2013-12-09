@@ -244,20 +244,6 @@ function init(){
 
    //=========================================================
    
-   //Edge symbol: 'dieci'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 586, function(sym, e) {
-         window.open("Quadro10.html", "_self");
-
-      });
-      //Edge binding end
-
-   })("dieci");
-   //Edge symbol end:'dieci'
-
-   //=========================================================
-   
    //Edge symbol: 'sei'
    (function(symbolName) {   
    
@@ -269,50 +255,8 @@ function init(){
       });
       //Edge binding end
 
-   })("sei");
-   //Edge symbol end:'sei'
-
-   //=========================================================
-   
-   //Edge symbol: 'nove'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 586, function(sym, e) {
-         window.open("Quadro9.html", "_self");
-
-      });
-      //Edge binding end
-
-   })("nove");
-   //Edge symbol end:'nove'
-
-   //=========================================================
-   
-   //Edge symbol: 'otto'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 586, function(sym, e) {
-         window.open("Quadro8.html", "_self");
-
-      });
-      //Edge binding end
-
-   })("otto");
-   //Edge symbol end:'otto'
-
-   //=========================================================
-   
-   //Edge symbol: 'sette'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 586, function(sym, e) {
-         window.open("Quadro7.html", "_self");
-
-      });
-      //Edge binding end
-
-   })("sette");
-   //Edge symbol end:'sette'
+   })("seiold");
+   //Edge symbol end:'seiold'
 
    //=========================================================
    
@@ -337,5 +281,85 @@ function init(){
 
    })("Bird");
    //Edge symbol end:'Bird'
+
+   //=========================================================
+   
+   //Edge symbol: 'sei'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 586, function(sym, e) {
+         // Navigate to a new URL in the current window
+         // (replace "_self" with appropriate target attribute for a new window)
+         window.open("Quadro6.html", "_self");
+
+      });
+      //Edge binding end
+
+   })("sei");
+   //Edge symbol end:'sei'
+
+   //=========================================================
+   
+   //Edge symbol: 'sette'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 586, function(sym, e) {
+         // Navigate to a new URL in the current window
+         // (replace "_self" with appropriate target attribute for a new window)
+         window.open("Quadro7.html", "_self");
+
+      });
+      //Edge binding end
+
+   })("sette");
+   //Edge symbol end:'sette'
+
+   //=========================================================
+   
+   //Edge symbol: 'otto'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 586, function(sym, e) {
+         // Navigate to a new URL in the current window
+         // (replace "_self" with appropriate target attribute for a new window)
+         window.open("Quadro8.html", "_self");
+
+      });
+      //Edge binding end
+
+   })("otto");
+   //Edge symbol end:'otto'
+
+   //=========================================================
+   
+   //Edge symbol: 'nove'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 586, function(sym, e) {
+         // Navigate to a new URL in the current window
+         // (replace "_self" with appropriate target attribute for a new window)
+         window.open("Quadro9.html", "_self");
+
+      });
+      //Edge binding end
+
+   })("nove");
+   //Edge symbol end:'nove'
+
+   //=========================================================
+   
+   //Edge symbol: 'dieci'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 586, function(sym, e) {
+         // Navigate to a new URL in the current window
+         // (replace "_self" with appropriate target attribute for a new window)
+         window.open("Quadro10.html", "_self");
+
+      });
+      //Edge binding end
+
+   })("dieci");
+   //Edge symbol end:'dieci'
 
 })(jQuery, AdobeEdge, "Menu");
