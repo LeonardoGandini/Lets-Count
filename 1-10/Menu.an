@@ -446,7 +446,7 @@
 			"animationEnabled":"true",
 			"timelineColor":"0xffd46d"}},
 	"CAROTA-Default Timeline_mark_ms":"-1",
-	"viewStartY":"0",
+	"viewStartY":"171",
 	"tre-Default Timeline_playhead_ms":"0",
 	"Braccio-Default Timeline_mark_ms":"-1",
 	"symbol_FioreGialllo":{
@@ -3008,7 +3008,7 @@
 			"timelineColor3":"0x7b7652",
 			"animationEnabled":"true",
 			"timelineColor":"0xeedf79"}},
-	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"pref__general__AutoKeyframePropertiesArmed":"true",
 	"symbol_Giallo":{
 		"dummyStageParentWidth":"1024px",
 		"dummyStageParentHeight":"768px",

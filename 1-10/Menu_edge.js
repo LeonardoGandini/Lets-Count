@@ -403,10 +403,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
+      rect: ['0px','0px','189px','175px','auto','auto'],
       filter: [0,0,1,1,0,0,0,0,'rgba(0,0,0,0)',0,0,0],
       id: 'Q0-Layer-4',
-      rect: ['0px','0px','189px','175px','auto','auto'],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/Q0-Layer-4.png','0px','0px']
    },
    {

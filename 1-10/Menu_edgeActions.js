@@ -157,7 +157,7 @@ function init(){
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 408, function(sym, e) {
          // Navigate to a new URL in the current window
          // (replace "_self" with appropriate target attribute for a new window)
-         window.open("Quadro1.html", "_self");
+         window.open("Quadro6.html", "_self");
 
       });
       //Edge binding end
