@@ -2,34 +2,38 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
-    "\/images\/Q7-scoiattolo-braccio-steso.png" : {
+    "\/images\/Q8-papera-corpo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q7-scoiattolo-braccio-steso.png",
+      "inputAbbreviatedPath" : "\/images\/Q8-papera-corpo.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q7-scoiattolo-braccio-steso.png",
-      "initialSize" : 34712,
+      "outputAbbreviatedPath" : "\/images\/Q8-papera-corpo.png",
+      "initialSize" : 33640,
       "fileType" : 8192
     },
-    "\/Quadro9.html" : {
+    "\/images\/Q8-giunco.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/Quadro9.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/images\/Q8-giunco.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q8-giunco.png",
+      "initialSize" : 49338,
+      "fileType" : 8192
     },
-    "\/www\/Quadro10.html" : {
+    "\/images\/Q0-Play.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/Quadro10.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/images\/Q0-Play.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q0-Play.png",
+      "initialSize" : 10275,
+      "fileType" : 8192
     },
     "\/Quadro8.html" : {
       "ignoreWasSetByUser" : 0,
@@ -146,6 +150,17 @@
       "initialSize" : 1343673,
       "fileType" : 8192
     },
+    "\/images\/Q0-Cespuglio.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q0-Cespuglio.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q0-Cespuglio.png",
+      "initialSize" : 119866,
+      "fileType" : 8192
+    },
     "\/www\/libs\/jquery-2.0.1.min.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -166,17 +181,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q6-fiore-rosa.png",
       "initialSize" : 39264,
-      "fileType" : 8192
-    },
-    "\/images\/Q0-Cespuglio.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q0-Cespuglio.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q0-Cespuglio.png",
-      "initialSize" : 119866,
       "fileType" : 8192
     },
     "\/images\/Q9-scoia-testa.png" : {
@@ -419,17 +423,6 @@
       "outputAbbreviatedPath" : "\/www\/Menu_edgeActions.js",
       "fileType" : 64
     },
-    "\/images\/Q8-fronda.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q8-fronda.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q8-fronda.png",
-      "initialSize" : 90321,
-      "fileType" : 8192
-    },
     "\/images\/Q9-erba1.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -439,6 +432,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q9-erba1.png",
       "initialSize" : 939695,
+      "fileType" : 8192
+    },
+    "\/images\/Q8-fronda.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q8-fronda.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q8-fronda.png",
+      "initialSize" : 90321,
       "fileType" : 8192
     },
     "\/images\/Q6-fiore-giallo2.png" : {
@@ -527,17 +531,6 @@
       "outputAbbreviatedPath" : "\/www\/Quadro7.html",
       "fileType" : 65536
     },
-    "\/images\/Q7-rana-testa.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q7-rana-testa.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q7-rana-testa.png",
-      "initialSize" : 160455,
-      "fileType" : 8192
-    },
     "\/Quadro9_edge.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -548,6 +541,17 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/www\/Quadro9_edge.js",
       "fileType" : 64
+    },
+    "\/images\/Q7-rana-testa.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q7-rana-testa.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q7-rana-testa.png",
+      "initialSize" : 160455,
+      "fileType" : 8192
     },
     "\/images\/Q0-Nuvola.png" : {
       "ignoreWasSetByUser" : 0,
@@ -840,17 +844,6 @@
       "initialSize" : 1702622,
       "fileType" : 8192
     },
-    "\/Quadro6_edgePreload.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/Quadro6_edgePreload.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/www\/Quadro6_edgePreload.js",
-      "fileType" : 64
-    },
     "\/images\/Q0-Layer-4.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -861,6 +854,17 @@
       "outputAbbreviatedPath" : "\/images\/Q0-Layer-4.png",
       "initialSize" : 46927,
       "fileType" : 8192
+    },
+    "\/Quadro6_edgePreload.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/Quadro6_edgePreload.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/www\/Quadro6_edgePreload.js",
+      "fileType" : 64
     },
     "\/images\/Fumello-Q10.png" : {
       "ignoreWasSetByUser" : 0,
@@ -884,17 +888,6 @@
       "initialSize" : 33935,
       "fileType" : 8192
     },
-    "\/images\/Q0-Lets.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q0-Lets.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q0-Lets.png",
-      "initialSize" : 17085,
-      "fileType" : 8192
-    },
     "\/images\/Q7-scoiattolo-corpo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -915,6 +908,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q7-erba-fiore.png",
       "initialSize" : 295508,
+      "fileType" : 8192
+    },
+    "\/images\/Q0-Lets.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q0-Lets.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q0-Lets.png",
+      "initialSize" : 17085,
       "fileType" : 8192
     },
     "\/images\/Q10-coccinella.png" : {
@@ -950,17 +954,6 @@
       "outputAbbreviatedPath" : "\/www\/Quadro6_edgeActions.js",
       "fileType" : 64
     },
-    "\/images\/Q7-Q8-pratobg.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q7-Q8-pratobg.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q7-Q8-pratobg.png",
-      "initialSize" : 439586,
-      "fileType" : 8192
-    },
     "\/images\/Q6-corpo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -970,6 +963,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q6-corpo.png",
       "initialSize" : 122784,
+      "fileType" : 8192
+    },
+    "\/images\/Q7-Q8-pratobg.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q7-Q8-pratobg.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q7-Q8-pratobg.png",
+      "initialSize" : 439586,
       "fileType" : 8192
     },
     "\/images\/Q9-Cespuglio5-7.png" : {
@@ -1155,17 +1159,6 @@
       "initialSize" : 120921,
       "fileType" : 8192
     },
-    "\/images\/G-Testina.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/G-Testina.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/G-Testina.png",
-      "initialSize" : 21978,
-      "fileType" : 8192
-    },
     "\/images\/Q9-bunny-testa.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1175,6 +1168,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q9-bunny-testa.png",
       "initialSize" : 216287,
+      "fileType" : 8192
+    },
+    "\/images\/G-Testina.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/G-Testina.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/G-Testina.png",
+      "initialSize" : 21978,
       "fileType" : 8192
     },
     "\/images\/Q10-fiore-foglia2.png" : {
@@ -1241,17 +1245,6 @@
       "initialSize" : 22955,
       "fileType" : 8192
     },
-    "\/images\/G-Next.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/G-Next.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/G-Next.png",
-      "initialSize" : 12354,
-      "fileType" : 8192
-    },
     "\/images\/Q8-lago.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1261,6 +1254,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q8-lago.png",
       "initialSize" : 898677,
+      "fileType" : 8192
+    },
+    "\/images\/G-Next.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/G-Next.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/G-Next.png",
+      "initialSize" : 12354,
       "fileType" : 8192
     },
     "\/images\/G-Nuvola.png" : {
@@ -1338,6 +1342,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/images\/Fumello-Q6.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Fumello-Q6.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Fumello-Q6.png",
+      "initialSize" : 63483,
+      "fileType" : 8192
+    },
     "\/images\/Q9-Cespuglio1-4.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1358,17 +1373,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q9-pino.png",
       "initialSize" : 310804,
-      "fileType" : 8192
-    },
-    "\/images\/Fumello-Q6.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Fumello-Q6.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Fumello-Q6.png",
-      "initialSize" : 63483,
       "fileType" : 8192
     },
     "\/www\/edge_includes\/edge.2.0.1.min.js" : {
@@ -1608,17 +1612,6 @@
       "outputAbbreviatedPath" : "\/www\/QuadroFinale.html",
       "fileType" : 65536
     },
-    "\/images\/G-Menu.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/G-Menu.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/G-Menu.png",
-      "initialSize" : 34571,
-      "fileType" : 8192
-    },
     "\/images\/Q6-mucca-campana.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1628,6 +1621,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q6-mucca-campana.png",
       "initialSize" : 29690,
+      "fileType" : 8192
+    },
+    "\/images\/G-Menu.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/G-Menu.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/G-Menu.png",
+      "initialSize" : 34571,
       "fileType" : 8192
     },
     "\/images\/Q7-giuncame-water.png" : {
@@ -1641,17 +1645,6 @@
       "initialSize" : 37924,
       "fileType" : 8192
     },
-    "\/images\/Q0-Splash.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q0-Splash.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q0-Splash.png",
-      "initialSize" : 17900,
-      "fileType" : 8192
-    },
     "\/images\/Q7-fiore-fiore.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1661,6 +1654,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q7-fiore-fiore.png",
       "initialSize" : 159395,
+      "fileType" : 8192
+    },
+    "\/images\/Q0-Splash.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q0-Splash.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q0-Splash.png",
+      "initialSize" : 17900,
       "fileType" : 8192
     },
     "\/images\/Q8-scie-papera.png" : {
@@ -1727,6 +1731,17 @@
       "initialSize" : 308060,
       "fileType" : 8192
     },
+    "\/www\/Menu_edgePreload.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/Menu_edgePreload.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/www\/Menu_edgePreload-min.js",
+      "fileType" : 64
+    },
     "\/images\/Q10-erba-back.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1749,48 +1764,15 @@
       "initialSize" : 1589034,
       "fileType" : 8192
     },
-    "\/www\/Quadro8_edgePreload.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/Quadro8_edgePreload.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/www\/Quadro8_edgePreload-min.js",
-      "fileType" : 64
-    },
-    "\/images\/Q7-ninfea-small.png" : {
+    "\/images\/Q8-fiore-corpo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q7-ninfea-small.png",
+      "inputAbbreviatedPath" : "\/images\/Q8-fiore-corpo.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q7-ninfea-small.png",
-      "initialSize" : 152089,
-      "fileType" : 8192
-    },
-    "\/www\/Menu_edgePreload.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/Menu_edgePreload.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/www\/Menu_edgePreload-min.js",
-      "fileType" : 64
-    },
-    "\/images\/Q6-foglia-albero3.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q6-foglia-albero3.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q6-foglia-albero3.png",
-      "initialSize" : 59297,
+      "outputAbbreviatedPath" : "\/images\/Q8-fiore-corpo.png",
+      "initialSize" : 33622,
       "fileType" : 8192
     },
     "\/Quadro9_edgePreload.js" : {
@@ -1804,15 +1786,37 @@
       "outputAbbreviatedPath" : "\/www\/Quadro9_edgePreload.js",
       "fileType" : 64
     },
-    "\/images\/Q8-fiore-corpo.png" : {
+    "\/www\/Quadro8_edgePreload.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/Quadro8_edgePreload.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/www\/Quadro8_edgePreload-min.js",
+      "fileType" : 64
+    },
+    "\/images\/Q6-foglia-albero3.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q8-fiore-corpo.png",
+      "inputAbbreviatedPath" : "\/images\/Q6-foglia-albero3.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q8-fiore-corpo.png",
-      "initialSize" : 33622,
+      "outputAbbreviatedPath" : "\/images\/Q6-foglia-albero3.png",
+      "initialSize" : 59297,
+      "fileType" : 8192
+    },
+    "\/images\/Q7-ninfea-small.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q7-ninfea-small.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q7-ninfea-small.png",
+      "initialSize" : 152089,
       "fileType" : 8192
     },
     "\/images\/Q7-fiore-small.png" : {
@@ -1826,15 +1830,15 @@
       "initialSize" : 60851,
       "fileType" : 8192
     },
-    "\/images\/Q7-ninfea-big-water.png" : {
+    "\/images\/Q7-Q8-prato-front.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q7-ninfea-big-water.png",
+      "inputAbbreviatedPath" : "\/images\/Q7-Q8-prato-front.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q7-ninfea-big-water.png",
-      "initialSize" : 36261,
+      "outputAbbreviatedPath" : "\/images\/Q7-Q8-prato-front.png",
+      "initialSize" : 1358793,
       "fileType" : 8192
     },
     "\/Quadro10_edge.js" : {
@@ -1848,26 +1852,15 @@
       "outputAbbreviatedPath" : "\/www\/Quadro10_edge.js",
       "fileType" : 64
     },
-    "\/images\/Q7-Q8-prato-front.png" : {
+    "\/images\/Q7-ninfea-big-water.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q7-Q8-prato-front.png",
+      "inputAbbreviatedPath" : "\/images\/Q7-ninfea-big-water.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q7-Q8-prato-front.png",
-      "initialSize" : 1358793,
-      "fileType" : 8192
-    },
-    "\/images\/Q7-giunco.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q7-giunco.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q7-giunco.png",
-      "initialSize" : 147561,
+      "outputAbbreviatedPath" : "\/images\/Q7-ninfea-big-water.png",
+      "initialSize" : 36261,
       "fileType" : 8192
     },
     "\/images\/Q10-Scoiattolo-Braccio-SX.png" : {
@@ -1879,6 +1872,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q10-Scoiattolo-Braccio-SX.png",
       "initialSize" : 99044,
+      "fileType" : 8192
+    },
+    "\/images\/Q7-giunco.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q7-giunco.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q7-giunco.png",
+      "initialSize" : 147561,
       "fileType" : 8192
     },
     "\/www\/QuadroFinale_edge.js" : {
@@ -2053,16 +2057,16 @@
       "initialSize" : 152976,
       "fileType" : 8192
     },
-    "\/images\/Q6-braccio-SX.png" : {
+    "\/QuadroFinale_edgeActions.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q6-braccio-SX.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q6-braccio-SX.png",
-      "initialSize" : 36400,
-      "fileType" : 8192
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/QuadroFinale_edgeActions.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/www\/QuadroFinale_edgeActions.js",
+      "fileType" : 64
     },
     "\/www\/Quadro7_edge.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2086,27 +2090,25 @@
       "initialSize" : 66306,
       "fileType" : 8192
     },
-    "\/QuadroFinale_edgeActions.js" : {
+    "\/images\/Q6-braccio-SX.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q6-braccio-SX.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q6-braccio-SX.png",
+      "initialSize" : 36400,
+      "fileType" : 8192
+    },
+    "\/Quadro9.kit" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/QuadroFinale_edgeActions.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/www\/QuadroFinale_edgeActions.js",
-      "fileType" : 64
-    },
-    "\/www\/Quadro10_edgeActions.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/Quadro10_edgeActions.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/www\/Quadro10_edgeActions-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/Quadro9.kit",
+      "outputAbbreviatedPath" : "\/www\/Quadro9.html",
+      "fileType" : 65536
     },
     "\/Quadro7_edgeActions.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2119,14 +2121,16 @@
       "outputAbbreviatedPath" : "\/www\/Quadro7_edgeActions.js",
       "fileType" : 64
     },
-    "\/Quadro9.kit" : {
+    "\/www\/Quadro10_edgeActions.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/Quadro9.kit",
-      "outputAbbreviatedPath" : "\/www\/Quadro9.html",
-      "fileType" : 65536
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/Quadro10_edgeActions.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/www\/Quadro10_edgeActions-min.js",
+      "fileType" : 64
     },
     "\/images\/Q6-fiore-gambo2.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2161,6 +2165,17 @@
       "initialSize" : 431115,
       "fileType" : 8192
     },
+    "\/images\/Q6-fiore-giallo.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q6-fiore-giallo.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/Q6-fiore-giallo.png",
+      "initialSize" : 42125,
+      "fileType" : 8192
+    },
     "\/images\/Q6-bird-corpo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2181,17 +2196,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/Q10-fiore.png",
       "initialSize" : 311600,
-      "fileType" : 8192
-    },
-    "\/images\/Q6-fiore-giallo.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q6-fiore-giallo.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q6-fiore-giallo.png",
-      "initialSize" : 42125,
       "fileType" : 8192
     },
     "\/www\/index.html" : {
@@ -2247,6 +2251,17 @@
       "initialSize" : 56800,
       "fileType" : 8192
     },
+    "\/www\/Quadro7_edgeActions.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/Quadro7_edgeActions.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/www\/Quadro7_edgeActions-min.js",
+      "fileType" : 64
+    },
     "\/images\/Q0-bracc2.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2258,27 +2273,14 @@
       "initialSize" : 57554,
       "fileType" : 8192
     },
-    "\/images\/Q8-papera-corpo.png" : {
+    "\/www\/Quadro10.html" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q8-papera-corpo.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q8-papera-corpo.png",
-      "initialSize" : 33640,
-      "fileType" : 8192
-    },
-    "\/images\/Q0-Play.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q0-Play.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q0-Play.png",
-      "initialSize" : 10275,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/www\/Quadro10.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/Fumello-Q7.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2302,16 +2304,14 @@
       "outputAbbreviatedPath" : "\/www\/edge_includes\/jquery-1.7.1.min.js",
       "fileType" : 64
     },
-    "\/www\/Quadro7_edgeActions.js" : {
+    "\/Quadro9.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/Quadro7_edgeActions.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/www\/Quadro7_edgeActions-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/Quadro9.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/Q8-scoia-braccio2.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2324,15 +2324,15 @@
       "initialSize" : 46618,
       "fileType" : 8192
     },
-    "\/images\/Q8-giunco.png" : {
+    "\/images\/Q7-scoiattolo-braccio-steso.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q8-giunco.png",
+      "inputAbbreviatedPath" : "\/images\/Q7-scoiattolo-braccio-steso.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/Q8-giunco.png",
-      "initialSize" : 49338,
+      "outputAbbreviatedPath" : "\/images\/Q7-scoiattolo-braccio-steso.png",
+      "initialSize" : 34712,
       "fileType" : 8192
     }
   },

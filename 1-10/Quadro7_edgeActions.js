@@ -27,8 +27,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       }   
       
       
-     
-
+      $(".menu").css({'z-index':'200'});
+      
    function resetRane(){
 		$(".ranas1").css({'z-index':'0'});
 		$(".ranas2").css({'z-index':'0'});
@@ -59,7 +59,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
 function init(){
-		
+
 		resetRane();
 
 	      document.addEventListener("deviceready", onDeviceReady, false);
@@ -249,10 +249,10 @@ function init(){
 	         		  		playAudioWaterSplash("audio/watersplash.mp3");		         		  		
 	         	  });        		 
 
-					  
-					  
-					  
-					  
+
+
+
+
           		 sym.$("TriggerRana1").bind(toccomagico, function(){
          		  		sym.getSymbol("rana1").play("in");
          		  		sym.getSymbol("ninfeabig1-water").play("in");		         		  		
@@ -316,7 +316,7 @@ function init(){
 					setInterval(function() {
 						 sym.getSymbol("Scoiattolo").play("coda");
 					}, 4500);
-					
+
 
 					setInterval(function() {
 						 switch(i++%3) {

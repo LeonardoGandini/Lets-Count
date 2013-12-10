@@ -27,19 +27,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       }   
       
       
-		sym.$('.fumnum1').css({'opacity':'0.4'});
-		sym.$('.fumnum2').css({'opacity':'0.4'});
-		sym.$('.fumnum3').css({'opacity':'0.4'});
-		sym.$('.fumnum4').css({'opacity':'0.4'});
-		sym.$('.fumnum5').css({'opacity':'0.4'});
-		sym.$('.fumnum6').css({'opacity':'0.4'});
-		sym.$('.fumnum7').css({'opacity':'0.4'});
-		sym.$('.fumnum8').css({'opacity':'0.4'});
-		sym.$('.fumnum9').css({'opacity':'0.4'});
-		sym.$('.fumnum10').css({'opacity':'0.4'});
-
-
-
          function init(){
 
 
@@ -138,14 +125,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 /**********LA CONTA START**********/         		 
 
-         		
+
  	       var AudioCip = null;
 	       function playAudioCip (src) {
 	      		if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
 	            AudioCip = new Media(src);
 	            AudioCip.play();
 	        }          		
-         		
+
          		 $(".fogliebird").bind(toccomagico, function(){
 
          		  		$(this).addClass("clicked");

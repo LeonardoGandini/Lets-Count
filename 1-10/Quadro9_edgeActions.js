@@ -27,14 +27,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       }   
       
       
-     
-
-
-
-
-
-function init(){
-
+      
+      
+      
+      
+      
+      
+      function init(){
+      
 	      document.addEventListener("deviceready", onDeviceReady, false);
 
 	        function onDeviceReady() {
@@ -58,6 +58,7 @@ function init(){
 	    			my_media.pause();
 	    		}
 	    	}
+
 
 
 	       var AudioVoce = null;
@@ -127,6 +128,18 @@ function init(){
 						}	
 
 			};
+
+			      var AudioFoglie = null;
+					 function playAudioFoglie (src) {
+					 if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
+							AudioFoglie = new Media(src);
+							AudioFoglie.play();
+					} 
+			      $(".fiore").bind(toccomagico, function(){ 	
+						playAudioFoglie("audio/grass1.mp3");
+					});       	
+
+
 
 
          $(".numeris").hide();
