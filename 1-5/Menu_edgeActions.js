@@ -15,24 +15,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
 Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-        
-
-/*-- /IEMobile/i --*/
-/*
-if((navigator.userAgent.match(/MSIE/i))){
-  yepnope({load: ["libs/cordovaIE.js"],complete: init});
-}
-           
-if((navigator.userAgent.match(/android/gi))){
-	yepnope({load: ["libs/cordova.js"],complete: init});
-}
-
-if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
-	yepnope({load: ["libs/cordovaIOS.js"],complete: init});
-}
-*/
 yepnope({load: ["cordova.js"],complete: init});
-  toccomagico = 'touchstart MSPointerDown pointerdown'
+
+toccomagico = 'touchstart MSPointerDown pointerdown'
 function init(){
 
        	//$(".testona").draggable();
@@ -45,58 +30,53 @@ function init(){
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
         	my_media = new Media(src);
         	my_media.play();
-        	
+
         }
     	function pauseAudio() {
     		if (my_media) {
     			my_media.pause();
     		}
     	}
-    	
+
         function onDeviceReady() {
-        	
+
         	(function(){
 			    playAudio("Suoni/Ghost.mp3");
 			    setTimeout(arguments.callee, 38000);
 			})();
-			
+
         }
-	        
-	        
-	        
+
+
+
       $('.musica').toggle(function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(0%)',
-          	'opacity':'0.6'
-          	});
+          $(".musicasvg").css({'background-image': 'url(images/svg-musicBW.svg)'});
           	pauseAudio();
       }, function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(100%)',
-          	'opacity':'1'
-          	});
-        	(function(){
+          $(".musicasvg").css({'background-image': 'url(images/svg-music.svg)'});
+         (function(){
 			    playAudio("Suoni/Ghost.mp3");
-			    setTimeout(arguments.callee, 38000);
-			})();
-		});	        
-	        
+			    setTimeout(arguments.callee, 301200);
+			})();			
+
+      });	        
+
        function playAudioLetsCount (src) {
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioLetsCount = new Media(src);
             AudioLetsCount.play();
         }
-      
+
       $(".letscount").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");	
 		playAudioLetsCount('Suoni/LetsCount.mp3');
-				
-      });	        
-	        
 
-	        
+      });	        
+
+
+
 };/*INIT STOP*/
-      
+
 
 
 
@@ -104,24 +84,24 @@ function init(){
 
 
         $("#prelo").css({'display':'none'});
-        
+
 		$(".musica").bind(toccomagico, function() {
 	    	sym.getSymbol(this).play("in");
 		});      
-      
+
       $(".popuppo").hide();
-      
+
       $(".InfoButt").bind(toccomagico, function(){
       		sym.getSymbol(this).play("in");
       });  
       $(".chiudix").bind(toccomagico, function(){
       		$(".popuppo").hide();
       }); 			
-      
+
       $(".fioreani, .play, .uno, .due, .tre, .quattro, .cinquo, .roberta").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");
       });
-      
+
 
 
       });//Edge binding end
