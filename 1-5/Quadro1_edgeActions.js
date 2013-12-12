@@ -45,9 +45,6 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
        var AudioUno = null;
 
 
-///***BK***///
-////if (device.platform == 'Android') {src = '/android_asset/www/' + src;}
-
 /* Tappetino Start*/	        
         function playAudio(src) {
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
@@ -136,7 +133,7 @@ $(".reload").css({'display':'none'});
 			sym.getSymbol(this).play("in");
         	setTimeout(function(){
         			playAudioUno('Suoni/numbers/one.mp3');
-					sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
+					sym.$('.fumnum1').css({'background-image': 'url(images/svgNum1.svg)'});
 					$(".reload").fadeIn();
 			},1801);      
 	     });
@@ -159,22 +156,18 @@ $(".reload").css({'display':'none'});
 
 			sym.getSymbol("CAROTA").stop(0);
 			$(".reload").fadeOut();
-			
+
 			sym.$('.fumnum1').css({'background-image': 'url(images/svgBWNum1.svg)'});
 			sym.$('.fumnum2').css({'background-image': 'url(images/svgBWNum2.svg)'});
 			sym.$('.fumnum3').css({'background-image': 'url(images/svgBWNum3.svg)'});
 			sym.$('.fumnum4').css({'background-image': 'url(images/svgBWNum4.svg)'});
 			sym.$('.fumnum5').css({'background-image': 'url(images/svgBWNum5.svg)'});
-			sym.$('.fumnum6').css({'background-image': 'url(images/svgBWNum6.svg)'});
-			sym.$('.fumnum7').css({'background-image': 'url(images/svgBWNum7.svg)'});
-			sym.$('.fumnum8').css({'background-image': 'url(images/svgBWNum8.svg)'});
-			sym.$('.fumnum9').css({'background-image': 'url(images/svgBWNum9.svg)'});
-			sym.$('.fumnum10').css({'background-image': 'url(images/svgBWNum10.svg)'});
+
 
 	 });  
 
 
-      	$("#prelo").css({'display':'none'});     
+   $("#prelo").css({'display':'none'});
 
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
 
@@ -210,10 +203,10 @@ $(".reload").css({'display':'none'});
 		sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
 /**********MENU STOP**********/
 
- 
-	 
-	 
-	 
+
+
+
+
 };/*INIT STOP*/      
 
 

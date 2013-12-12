@@ -41,8 +41,6 @@ function init(){
        var AudioApi = null;
        var AudioAnt = null;
        var AudioFoglie = null;
-       var AudioUno = null;
-       var AudioDue = null;
 
 /* Tappetino Start*/	        
         function playAudio(src) {
@@ -80,16 +78,7 @@ function init(){
             AudioAnt = new Media(src);
             AudioAnt.play();   
         }
-       function playAudioUno (src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-            AudioUno = new Media(src);
-            AudioUno.play();   
-        }
-       function playAudioDue (src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-            AudioDue = new Media(src);
-            AudioDue.play();   
-        }
+
         
         function onDeviceReady() {
 
@@ -218,24 +207,7 @@ function init(){
 	      	$(this).animate({top:'+=20px'},"1");
 	      });
 
-/*
 
-         $(".CAVOLO_BIG_1").bind(toccomagico, function(){
-	      	sym.getSymbol(this).play("in");
-	      	$(".cavolo2trigger").show();
-        	setTimeout(function(){
-        			playAudioUno('Suoni/numbers/one.mp3');
-					sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
-			},1801);      
-	     });
-         $(".cavolo2trigger").bind(toccomagico, function(){
-			sym.getSymbol(".CAVOLO_BIG_2").play("in");
-        	setTimeout(function(){
-        			playAudioDue('Suoni/numbers/two.mp3');
-					sym.$(".due").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
-			},1801);      
-	     });
-*/
 
      $('.musica').toggle(function () {
           $(".musicasvg").css({'background-image': 'url(images/svg-musicBW.svg)'});

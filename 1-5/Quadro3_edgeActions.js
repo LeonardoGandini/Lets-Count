@@ -63,9 +63,6 @@ function init(){
        var my_media = null;
        var AudioQ3 = null;
        var AudioFoglie = null;
-       var AudioUno = null;
-       var AudioDue = null;
-       var AudioTre = null;
        var AudioTalpa = null;
        var AudioTalpe = null;
 
@@ -115,21 +112,6 @@ function init(){
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioFoglie = new Media(src);
             AudioFoglie.play();   
-        }
-       function playAudioUno (src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-            AudioUno = new Media(src);
-            AudioUno.play();   
-        }
-       function playAudioDue (src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-            AudioDue = new Media(src);
-            AudioDue.play();   
-        }
-       function playAudioTre (src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-            AudioTre = new Media(src);
-            AudioTre.play();   
         }
        function playAudioTalpa (src) {
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 

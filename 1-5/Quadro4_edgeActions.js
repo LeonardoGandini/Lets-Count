@@ -70,10 +70,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
        var my_media = null;
        var AudioQ4 = null;
        var AudioFoglie = null;
-       /*var AudioUno = null;
-       var AudioDue = null;
-       var AudioTre = null;
-       var AudioQuattro = null;*/
        var AudioRicci = null;
 
 /* Tappetino Start*/	        
@@ -121,26 +117,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
             AudioFoglie = new Media(src);
             AudioFoglie.play();   
         }
-      /* function playAudioUno (src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-            AudioUno = new Media(src);
-            AudioUno.play();   
-        }
-       function playAudioDue (src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-            AudioDue = new Media(src);
-            AudioDue.play();   
-        }
-       function playAudioTre (src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-            AudioTre = new Media(src);
-            AudioTre.play();   
-        }
-       function playAudioQuattro (src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-            AudioQuattro = new Media(src);
-            AudioQuattro.play();   
-        }*/
        function playAudioRicci (src) {
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioRicci = new Media(src);
