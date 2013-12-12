@@ -15,44 +15,65 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-		
-/*
-		if((navigator.userAgent.match(/MSIE/i))){
-		  yepnope({load: ["libs/cordovaIE.js"],complete: init});
-		}
-		
-		if((navigator.userAgent.match(/android/gi))){
-			yepnope({load: ["libs/cordova.js"],complete: init});
-		}
-		
-		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
-			yepnope({load: ["libs/cordovaIOS.js"],complete: init});
-		}
-*/
+ 
+ 
  yepnope({load: ["cordova.js"],complete: init});  
  
  toccomagico = 'touchstart MSPointerDown pointerdown'
-    
-             
+ 
+ 
       function fumelo(){
          var position = sym.$(".fumello").position();
           if (position.top >= 100){
          	sym.getComposition().getStage().getSymbol("FUMELLO").play("USCITA");
          }	      
       }   
-      
-      
-         function init(){
+ 
+ 
+ function init(){
+ 
+			var Audio1 = null;
+			var Audio2 = null;
+			var Audio3 = null;
+			var Audio4 = null;
+
+			var suonatore = {
+
+			    suono1: function playAudio1 (src) {
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
+							    Audio1 = new Media(src);
+							    Audio1.play();   
+						},
+			    suono2: function playAudio2 (src) {
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
+							    Audio2 = new Media(src);
+							    Audio2.play();   
+						},
+			    suono3: function playAudio3 (src) {
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
+							    Audio3 = new Media(src);
+							    Audio3.play();   
+						},
+			    suono4: function playAudio4 (src) {
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
+							    Audio4 = new Media(src);
+							    Audio4.play();   
+						}
+			};
+
+
+         $(".numeris").hide();
+         $(".reload").css({'display':'none'});
 
        document.addEventListener("deviceready", onDeviceReady, false);
 
        var my_media = null;
        var AudioQ4 = null;
        var AudioFoglie = null;
-       var AudioUno = null;
+       /*var AudioUno = null;
        var AudioDue = null;
        var AudioTre = null;
-       var AudioQuattro = null;
+       var AudioQuattro = null;*/
        var AudioRicci = null;
 
 /* Tappetino Start*/	        
@@ -100,7 +121,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
             AudioFoglie = new Media(src);
             AudioFoglie.play();   
         }
-       function playAudioUno (src) {
+      /* function playAudioUno (src) {
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioUno = new Media(src);
             AudioUno.play();   
@@ -119,7 +140,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioQuattro = new Media(src);
             AudioQuattro.play();   
-        }
+        }*/
        function playAudioRicci (src) {
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioRicci = new Media(src);
@@ -133,10 +154,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 		 	playAudioQ4('Suoni/quadri/Q4.mp3');
       	 });
 	      $(".FragStat").bind(toccomagico, function(){
-		      	sym.getSymbol(this).play("in");
+		      sym.getSymbol(this).play("in");
 			 	playAudioFoglie('Suoni/foglia.mp3');
 	      });
-	  
+
 	      $(".riccio").bind(toccomagico, function(){
 			playAudioRicci('Suoni/Lumaca01.mp3');
 	      	$(this).animate({top:'-=20px'},"200");
@@ -144,38 +165,84 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 	      });
 
 
-      $(".fragola1").bind(toccomagico, function(){
-      	sym.getSymbol(this).play("in");
-      	$(".fragola2trigger").show();
-        	setTimeout(function(){
-        			playAudioUno('Suoni/numbers/one.mp3');
-					sym.$(".uno").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
-			},1000);          	      	
-      });
-      
-      $(".fragola2trigger").bind(toccomagico, function(){
-      	sym.getSymbol(".fragola2").play("in");
-      	$(".fragola3trigger").show();
-        	setTimeout(function(){
-        			playAudioDue('Suoni/numbers/two.mp3');
-					sym.$(".due").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
-			},1000);          	      	
-      });
-      $(".fragola3trigger").bind(toccomagico, function(){
-      	sym.getSymbol(".fragola3").play("in");
-      	$(".fragola4trigger").show();
-        	setTimeout(function(){
-        			playAudioTre('Suoni/numbers/three.mp3');
-					sym.$(".tre").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
-			},1000);            	
-      });
-      $(".fragola4trigger").bind(toccomagico, function(){
-      	sym.getSymbol(".fragola4").play("in");
-        	setTimeout(function(){
-        			playAudioQuattro('Suoni/numbers/four.mp3');
-					sym.$(".quattro").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
-			},1000);            	
-      });
+/**********LA CONTA START**********/         		 
+
+
+ 	       var AudioCip = null;
+	       function playAudioCip (src) {
+	      		if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
+	            AudioCip = new Media(src);
+	            AudioCip.play();
+	        }          		
+
+         		 $(".triggers").bind(toccomagico, function(){
+
+         		  	$(this).addClass("clicked");
+         			var value = $(".clicked").length;
+
+						sym.getSymbol(".menu").play();
+
+						suonatore['suono'+ value]('Suoni/numbers/S00'+ value +'.mp3');
+						sym.$('.fumnum'+ value).css({'background-image': 'url(images/svgNum'+value+'.svg)'});
+
+						setTimeout(function(){
+								sym.getSymbol(".menu").play("chiusura");
+						},2500); 					
+
+         			$(".numeris").hide();
+         			sym.getSymbol("numerazio").$('Num-'+value).show();
+         			sym.getSymbol("numerazio").play("in");
+
+         			sym.getSymbol("Scoiattolo").play("ani");
+
+						if ( value >= 4 ){
+
+         				 $(".reload").fadeIn();
+
+         			};
+
+
+         		 });
+
+         		 sym.$("fragolatrigger1").bind(toccomagico, function(){
+         		  		sym.getSymbol("Fragola-1").play("in");         		  		
+         		  		fumelo();
+         		 });
+         		 sym.$("fragolatrigger2").bind(toccomagico, function(){
+         		  		sym.getSymbol("Fragola-2").play("in");
+         		  		fumelo();
+         		 });
+         		 sym.$("fragolatrigger3").bind(toccomagico, function(){
+         		  		sym.getSymbol("Fragola-3").play("in");
+         		  		fumelo();
+         		 });             		         		 
+         		 sym.$("fragolatrigger4").bind(toccomagico, function(){
+         		  		sym.getSymbol("Fragola-4").play("in");
+         		  		fumelo();
+         		 });             		         		 
+/**********LA CONTA STOP**********/         		 
+
+
+         		  $(".reload").bind(toccomagico, function(){
+						sym.getSymbol(this).play("in");
+
+         		  	        sym.getSymbol("Fragola-1").stop(0);
+         		  	        sym.getSymbol("Fragola-2").stop(0);
+         		  	        sym.getSymbol("Fragola-3").stop(0);
+         		  	        sym.getSymbol("Fragola-4").stop(0);
+
+         					$(".triggers").removeClass("clicked");
+         					$(".numeris").hide();
+         					$(".reload").fadeOut();
+
+         					sym.$('.fumnum1').css({'background-image': 'url(images/svgBWNum1.svg)'});
+         					sym.$('.fumnum2').css({'background-image': 'url(images/svgBWNum2.svg)'});
+         					sym.$('.fumnum3').css({'background-image': 'url(images/svgBWNum3.svg)'});
+         					sym.$('.fumnum4').css({'background-image': 'url(images/svgBWNum4.svg)'});
+         					sym.$('.fumnum5').css({'background-image': 'url(images/svgBWNum5.svg)'});
+
+         			 });
+
 
 
 
@@ -190,49 +257,38 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 			    setTimeout(arguments.callee, 301200);
 			})();			
 
-      });		        
-};/*INIT STOP*/  
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      });	
+
+
+
          $("#prelo").css({'display':'none'});
 
          /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
-      
+
 	      $(".fioreani, .FioreFragole").bind(toccomagico, function(){
 	      	sym.getSymbol(this).play("in");
 	      });
-      
 
-      
-      
+
+
+
       $(".libellulaTrigger").bind(toccomagico, function(){
       	sym.getSymbol(".libellulalat").play("in");
       });
-      
+
       $(".fragola2trigger, .fragola3trigger, .fragola4trigger").hide();
-      
-      
-      
+
+
+
       sym.getSymbol(".codaani").play("in");
       $(".codatrigger").bind(toccomagico, function(){
       	sym.getSymbol(".codaani").play("animaziocoda");
       });
-      
+
       sym.getSymbol("FUMELLO").play("in");
-      
-      
-      
+
+
+
       /*MENU START*/
       	avanti = "Quadro5.html";
       	indietro = "Quadro3.html";
@@ -246,6 +302,23 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       	sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
       	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
       /*MENU STOP*/
+
+
+
+};/*INIT STOP*/  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       });//Edge binding end
       
@@ -383,11 +456,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 433, function(sym, e) {
          sym.getSymbol(".scoiattolo").play("in");
-         //Se il fumello è giù, tiralo su!
-         var position = sym.$(".fumello").position();
-          if (position.top >= 100){
-         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
-         }
 
       });
       //Edge binding end
@@ -396,15 +464,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2336, function(sym, e) {
-         sym.getSymbol(".menu").play("in");
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3448, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2221, function(sym, e) {
          sym.stop();
-         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
@@ -456,11 +519,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 428, function(sym, e) {
          sym.getSymbol(".scoiattolo").play("in");
-         //Se il fumello è giù, tiralo su!
-         var position = sym.$(".fumello").position();
-          if (position.top >= 100){
-         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
-         }
 
       });
          //Edge binding end
@@ -469,18 +527,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3451, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2062, function(sym, e) {
          sym.stop();
-         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2426, function(sym, e) {
-         sym.getSymbol(".menu").play("in");
-
-      });
-      //Edge binding end
+      
 
       })("Fragola-2");
    //Edge symbol end:'Fragola-2'
@@ -492,11 +545,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 428, function(sym, e) {
          sym.getSymbol(".scoiattolo").play("in");
-         //Se il fumello è giù, tiralo su!
-         var position = sym.$(".fumello").position();
-          if (position.top >= 100){
-         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
-         }
 
       });
          //Edge binding end
@@ -505,15 +553,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2437, function(sym, e) {
-         sym.getSymbol(".menu").play("in");
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3651, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2184, function(sym, e) {
          sym.stop();
-         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
@@ -528,12 +571,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 428, function(sym, e) {
          sym.getSymbol(".scoiattolo").play("in");
-         //Se il fumello è giù, tiralo su!
-         var position = sym.$(".fumello").position();
-          if (position.top >= 100){
-         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
-         }
-      
+
       });
          //Edge binding end
       
@@ -541,18 +579,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3449, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
          sym.stop();
-         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2385, function(sym, e) {
-         sym.getSymbol(".menu").play("in");
-
-      });
-      //Edge binding end
+      
 
       })("Fragola-4");
    //Edge symbol end:'Fragola-4'
@@ -727,5 +760,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("HOME_butt");
    //Edge symbol end:'HOME_butt'
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'numerazio'
+   (function(symbolName) {   
+   
+   })("numerazio");
+   //Edge symbol end:'numerazio'
 
 })(jQuery, AdobeEdge, "Quadro04");
