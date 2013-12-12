@@ -36,17 +36,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/images\/Q4-Riccio-piccolo.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/Q4-Riccio-piccolo.png",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/images\/Q4-Riccio-piccolo.png",
-      "initialSize" : 190817,
-      "fileType" : 8192
-    },
     "\/images\/G-Nuvola.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -56,6 +45,17 @@
       "processed" : 1,
       "outputAbbreviatedPath" : "\/images\/G-Nuvola.png",
       "initialSize" : 214228,
+      "fileType" : 8192
+    },
+    "\/images\/Q4-Riccio-piccolo.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/Q4-Riccio-piccolo.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/Q4-Riccio-piccolo.png",
+      "initialSize" : 190817,
       "fileType" : 8192
     },
     "\/images\/play.png" : {
@@ -1601,6 +1601,15 @@
       "initialSize" : 785812,
       "fileType" : 8192
     },
+    "\/www\/Quadro2.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/Quadro2.html",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 2048
+    },
     "\/libs\/cordova.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1611,15 +1620,6 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/libs\/cordova-min.js",
       "fileType" : 64
-    },
-    "\/www\/Quadro2.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/Quadro2.html",
-      "outputAbbreviatedPath" : "\/No Output Path",
-      "fileType" : 2048
     },
     "\/images\/Q3-Talpa-Piccola-1.png" : {
       "ignoreWasSetByUser" : 0,

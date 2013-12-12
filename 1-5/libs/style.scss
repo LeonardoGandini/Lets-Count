@@ -128,12 +128,12 @@ body{
 
 #prelo {
 	position: fixed;
-	z-index: 1;
+	z-index: -1;
 	color:rgba(255,255,255,0.99);
 	font-family:'Luckiest Guy';
 	font-size:3em;
 	width: 100%;
 	top: 40%;
 	text-align:center;
-	text-shadow:2px 2px 2px rgba(255,0,0,0.81);
+	text-shadow:2px 2px 2px rgba(0,0,0,0.94);
 }
