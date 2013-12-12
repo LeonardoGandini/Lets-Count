@@ -208,30 +208,29 @@ var symbols = {
       },
    states: {
       "Base State": {
-         "${_tre}": [
+         "${_uno}": [
             ["transform", "scaleX", '0.69948'],
-            ["style", "left", '573px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '159px']
+            ["style", "top", '298px'],
+            ["style", "left", '343px'],
+            ["transform", "scaleY", '0.68964']
          ],
          "${_quattro}": [
             ["transform", "scaleX", '0.69948'],
+            ["style", "top", '157px'],
             ["style", "left", '718px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '157px']
+            ["transform", "scaleY", '0.68964']
          ],
-         "${_HOME_butt}": [
-            ["style", "top", '662px'],
-            ["transform", "scaleY", '0.7403'],
-            ["style", "overflow", 'hidden'],
-            ["transform", "scaleX", '0.7403'],
-            ["style", "left", '831px']
+         "${_musica}": [
+            ["style", "top", '673px'],
+            ["transform", "scaleX", '0.92312'],
+            ["transform", "scaleY", '0.92312'],
+            ["style", "left", '922px']
          ],
          "${_due}": [
             ["transform", "scaleX", '0.69948'],
+            ["style", "top", '205px'],
             ["style", "left", '432px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '205px']
+            ["transform", "scaleY", '0.68964']
          ],
          "${_Q9-erba2}": [
             ["style", "left", '-43px'],
@@ -239,15 +238,15 @@ var symbols = {
          ],
          "${_dieci}": [
             ["transform", "scaleX", '0.69948'],
+            ["style", "top", '432px'],
             ["style", "left", '845px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '432px']
+            ["transform", "scaleY", '0.68964']
          ],
          "${_nove}": [
             ["transform", "scaleX", '0.69948'],
+            ["style", "top", '334px'],
             ["style", "left", '768px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '334px']
+            ["transform", "scaleY", '0.68964']
          ],
          "${_G-Cielo-Finale}": [
             ["style", "left", '0px'],
@@ -255,71 +254,9 @@ var symbols = {
          ],
          "${_otto}": [
             ["transform", "scaleX", '0.69948'],
+            ["style", "top", '282px'],
             ["style", "left", '633px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '282px']
-         ],
-         "${_sette}": [
-            ["transform", "scaleX", '0.69948'],
-            ["style", "left", '494px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '317px']
-         ],
-         "${_musica}": [
-            ["style", "top", '673px'],
-            ["transform", "scaleY", '0.92312'],
-            ["style", "left", '922px'],
-            ["transform", "scaleX", '0.92312']
-         ],
-         "${_AudioTappeto}": [
-            ["style", "top", '172px'],
-            ["style", "opacity", '0'],
-            ["style", "left", '-267px'],
-            ["style", "overflow", 'hidden']
-         ],
-         "${_uno}": [
-            ["transform", "scaleX", '0.69948'],
-            ["style", "left", '343px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '298px']
-         ],
-         "${_QU-well-done2}": [
-            ["style", "height", '144px'],
-            ["style", "top", '21px'],
-            ["style", "left", '197px'],
-            ["style", "width", '700px']
-         ],
-         "${_Text}": [
-            ["style", "top", '786px'],
-            ["style", "text-align", 'center'],
-            ["style", "display", 'none'],
-            ["color", "color", 'rgba(210,14,14,1.00)'],
-            ["style", "left", '-272px'],
-            ["style", "font-size", '40px']
-         ],
-         "${_Stage}": [
-            ["color", "background-color", 'rgba(255,255,255,1)'],
-            ["style", "overflow", 'hidden'],
-            ["style", "height", '768px'],
-            ["style", "width", '1024px']
-         ],
-         "${_Q9-erba1}": [
-            ["style", "height", '383px'],
-            ["style", "top", '680px'],
-            ["style", "left", '-31px'],
-            ["style", "width", '1378px']
-         ],
-         "${_sei}": [
-            ["transform", "scaleX", '0.69948'],
-            ["style", "left", '383px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '425px']
-         ],
-         "${_cinque}": [
-            ["transform", "scaleX", '0.69948'],
-            ["style", "left", '853px'],
-            ["transform", "scaleY", '0.68964'],
-            ["style", "top", '229px']
+            ["transform", "scaleY", '0.68964']
          ],
          "${_Scoia}": [
             ["style", "-webkit-transform-origin", [54.36,96.98], {valueTemplate:'@@0@@% @@1@@%'} ],
@@ -331,6 +268,69 @@ var symbols = {
             ["transform", "scaleX", '0.77232'],
             ["style", "left", '6px'],
             ["style", "top", '106px']
+         ],
+         "${_cinque}": [
+            ["transform", "scaleX", '0.69948'],
+            ["style", "top", '229px'],
+            ["style", "left", '853px'],
+            ["transform", "scaleY", '0.68964']
+         ],
+         "${_AudioTappeto}": [
+            ["style", "top", '172px'],
+            ["style", "opacity", '0'],
+            ["style", "left", '-267px'],
+            ["style", "overflow", 'hidden']
+         ],
+         "${_tre}": [
+            ["transform", "scaleX", '0.69948'],
+            ["style", "top", '159px'],
+            ["style", "left", '573px'],
+            ["transform", "scaleY", '0.68964']
+         ],
+         "${_QU-well-done2}": [
+            ["style", "top", '21px'],
+            ["style", "height", '144px'],
+            ["style", "left", '197px'],
+            ["style", "width", '700px']
+         ],
+         "${_Text}": [
+            ["style", "top", '786px'],
+            ["style", "text-align", 'center'],
+            ["style", "display", 'none'],
+            ["color", "color", 'rgba(210,14,14,1.00)'],
+            ["style", "left", '-272px'],
+            ["style", "font-size", '40px']
+         ],
+         "${_Q9-erba1}": [
+            ["style", "top", '680px'],
+            ["style", "height", '383px'],
+            ["style", "left", '-31px'],
+            ["style", "width", '1378px']
+         ],
+         "${_Stage}": [
+            ["color", "background-color", 'rgba(255,255,255,1)'],
+            ["style", "width", '1024px'],
+            ["style", "height", '768px'],
+            ["style", "overflow", 'hidden']
+         ],
+         "${_sei}": [
+            ["transform", "scaleX", '0.69948'],
+            ["style", "top", '425px'],
+            ["style", "left", '383px'],
+            ["transform", "scaleY", '0.68964']
+         ],
+         "${_HOME_butt}": [
+            ["style", "top", '662px'],
+            ["transform", "scaleY", '0.7403'],
+            ["style", "overflow", 'hidden'],
+            ["transform", "scaleX", '0.7403'],
+            ["style", "left", '831px']
+         ],
+         "${_sette}": [
+            ["transform", "scaleX", '0.69948'],
+            ["style", "top", '317px'],
+            ["style", "left", '494px'],
+            ["transform", "scaleY", '0.68964']
          ]
       }
    },
@@ -356,10 +356,10 @@ var symbols = {
    content: {
    dom: [
    {
-      userClass: 'musicasvg',
-      id: 'Q0-Music',
       type: 'image',
+      id: 'Q0-Music',
       rect: ['0px','0px','80px','80px','auto','auto'],
+      userClass: 'musicasvg',
       fill: ['rgba(0,0,0,0)','images/svg-music.svg','0px','0px']
    }],
    symbolInstances: [
@@ -367,16 +367,16 @@ var symbols = {
    },
    states: {
       "Base State": {
-         "${symbolSelector}": [
-            ["style", "height", '80px'],
-            ["style", "width", '80px']
-         ],
          "${_Q0-Music}": [
             ["style", "top", '0px'],
             ["transform", "scaleY", '1'],
             ["transform", "scaleX", '1'],
             ["style", "left", '0px'],
             ["subproperty", "filter.saturate", '1']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '80px'],
+            ["style", "width", '80px']
          ]
       }
    },
@@ -405,12 +405,12 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      fill: ['rgba(0,0,0,0)','images/G-HOME.png','0px','0px'],
-      id: 'HOME',
       rect: ['0px','0px','103px','97px','auto','auto'],
+      boxShadow: ['inset',8,3,18,6,'rgba(0,0,0,0.648438)'],
+      id: 'HOME',
       transform: [],
-      boxShadow: ['inset',8,3,18,6,'rgba(0,0,0,0.648438)']
+      type: 'image',
+      fill: ['rgba(0,0,0,0)','images/G-HOME.png','0px','0px']
    }],
    symbolInstances: [
    ]
@@ -419,17 +419,17 @@ var symbols = {
       "Base State": {
          "${_HOME}": [
             ["subproperty", "boxShadow.inset", 'inset'],
-            ["subproperty", "boxShadow.blur", '0px'],
+            ["subproperty", "boxShadow.color", 'rgba(225,0,0,0.65)'],
             ["transform", "scaleX", '1'],
             ["style", "left", '0px'],
             ["style", "width", '103px'],
             ["style", "top", '0px'],
             ["transform", "scaleY", '1'],
-            ["subproperty", "boxShadow.color", 'rgba(225,0,0,0.65)'],
+            ["subproperty", "boxShadow.offsetV", '0px'],
             ["style", "height", '97px'],
             ["subproperty", "boxShadow.spread", '0px'],
             ["subproperty", "boxShadow.offsetH", '0px'],
-            ["subproperty", "boxShadow.offsetV", '0px']
+            ["subproperty", "boxShadow.blur", '0px']
          ],
          "${symbolSelector}": [
             ["style", "height", '97px'],
@@ -462,10 +462,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: '_1_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      id: '_1_col',
       transform: [[0,0],[],[],['0.44285','0.44285']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/svgNum1.svg','0px','0px']
    }],
    symbolInstances: [
@@ -513,10 +513,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: '_2_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      id: '_2_col',
       transform: [[0,0],[],[],['0.44285','0.44285']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/svgNum2.svg','0px','0px']
    }],
    symbolInstances: [
@@ -546,10 +546,10 @@ var symbols = {
          timeline: [
             { id: "eid74", tween: [ "transform", "${__2_col}", "rotateZ", '16deg', { fromValue: '0deg'}], position: 0, duration: 250 },
             { id: "eid75", tween: [ "transform", "${__2_col}", "rotateZ", '0deg', { fromValue: '16deg'}], position: 250, duration: 370, easing: "easeOutElastic" },
-            { id: "eid72", tween: [ "transform", "${__2_col}", "scaleY", '0.6', { fromValue: '0.44285'}], position: 0, duration: 250 },
-            { id: "eid73", tween: [ "transform", "${__2_col}", "scaleY", '0.44', { fromValue: '0.6'}], position: 250, duration: 370, easing: "easeOutElastic" },
             { id: "eid70", tween: [ "transform", "${__2_col}", "scaleX", '0.6', { fromValue: '0.44285'}], position: 0, duration: 250 },
-            { id: "eid71", tween: [ "transform", "${__2_col}", "scaleX", '0.44', { fromValue: '0.6'}], position: 250, duration: 370, easing: "easeOutElastic" }         ]
+            { id: "eid71", tween: [ "transform", "${__2_col}", "scaleX", '0.44', { fromValue: '0.6'}], position: 250, duration: 370, easing: "easeOutElastic" },
+            { id: "eid72", tween: [ "transform", "${__2_col}", "scaleY", '0.6', { fromValue: '0.44285'}], position: 0, duration: 250 },
+            { id: "eid73", tween: [ "transform", "${__2_col}", "scaleY", '0.44', { fromValue: '0.6'}], position: 250, duration: 370, easing: "easeOutElastic" }         ]
       }
    }
 },
@@ -564,10 +564,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: '_3_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      id: '_3_col',
       transform: [[0,0],[],[],['0.44285','0.44285']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/svgNum3.svg','0px','0px']
    }],
    symbolInstances: [
@@ -575,16 +575,16 @@ var symbols = {
    },
    states: {
       "Base State": {
+         "${symbolSelector}": [
+            ["style", "height", '151px'],
+            ["style", "width", '193px']
+         ],
          "${__3_col}": [
             ["style", "top", '-95px'],
             ["transform", "scaleY", '0.44285'],
             ["transform", "rotateZ", '0deg'],
             ["transform", "scaleX", '0.44285'],
             ["style", "left", '-121px']
-         ],
-         "${symbolSelector}": [
-            ["style", "height", '151px'],
-            ["style", "width", '193px']
          ]
       }
    },
@@ -597,10 +597,10 @@ var symbols = {
          timeline: [
             { id: "eid80", tween: [ "transform", "${__3_col}", "rotateZ", '16deg', { fromValue: '0deg'}], position: 0, duration: 250 },
             { id: "eid81", tween: [ "transform", "${__3_col}", "rotateZ", '0deg', { fromValue: '16deg'}], position: 250, duration: 370, easing: "easeOutElastic" },
-            { id: "eid78", tween: [ "transform", "${__3_col}", "scaleY", '0.6', { fromValue: '0.44285'}], position: 0, duration: 250 },
-            { id: "eid79", tween: [ "transform", "${__3_col}", "scaleY", '0.44', { fromValue: '0.6'}], position: 250, duration: 370, easing: "easeOutElastic" },
             { id: "eid76", tween: [ "transform", "${__3_col}", "scaleX", '0.6', { fromValue: '0.44285'}], position: 0, duration: 250 },
-            { id: "eid77", tween: [ "transform", "${__3_col}", "scaleX", '0.44', { fromValue: '0.6'}], position: 250, duration: 370, easing: "easeOutElastic" }         ]
+            { id: "eid77", tween: [ "transform", "${__3_col}", "scaleX", '0.44', { fromValue: '0.6'}], position: 250, duration: 370, easing: "easeOutElastic" },
+            { id: "eid78", tween: [ "transform", "${__3_col}", "scaleY", '0.6', { fromValue: '0.44285'}], position: 0, duration: 250 },
+            { id: "eid79", tween: [ "transform", "${__3_col}", "scaleY", '0.44', { fromValue: '0.6'}], position: 250, duration: 370, easing: "easeOutElastic" }         ]
       }
    }
 },
@@ -615,10 +615,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: '_4_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      id: '_4_col',
       transform: [[0,0],[],[],['0.44285','0.44285']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/svgNum4.svg','0px','0px']
    }],
    symbolInstances: [
@@ -666,10 +666,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: '_5_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      id: '_5_col',
       transform: [[0,0],[],[],['0.44285','0.44285']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/svgNum5.svg','0px','0px']
    }],
    symbolInstances: [
@@ -726,7 +726,7 @@ var symbols = {
    {
       id: 'Q0-bracc2',
       type: 'image',
-      rect: ['240px','167px','233px','110px','auto','auto'],
+      rect: ['206px','179px','233px','110px','auto','auto'],
       fill: ['rgba(0,0,0,0)','images/Q0-bracc2.png','0px','0px']
    },
    {
@@ -738,14 +738,14 @@ var symbols = {
    {
       rect: ['35px','225px','113px','166px','auto','auto'],
       id: 'Q10-Scoiattolo-Braccio-DX',
-      transform: [[],['-21']],
+      transform: [[],['-21'],[],['0.96373','0.96373']],
       type: 'image',
       fill: ['rgba(0,0,0,0)','images/Q10-Scoiattolo-Braccio-DX.png','0px','0px']
    },
    {
-      rect: ['106px','-116px','240px','456px','auto','auto'],
+      rect: ['115px','-129px','240px','456px','auto','auto'],
       id: 'Q9-scoia-testa',
-      transform: [[],['-6'],[],['0.96905','0.96905']],
+      transform: [[],['-18'],[],['0.96905','0.96905']],
       type: 'image',
       fill: ['rgba(0,0,0,0)','images/Q9-scoia-testa.png','0px','0px']
    }],
@@ -754,12 +754,15 @@ var symbols = {
    },
    states: {
       "Base State": {
-         "${_Coda}": [
-            ["style", "top", '88px'],
-            ["transform", "scaleX", '-1'],
-            ["style", "height", '304px'],
-            ["style", "left", '-96px'],
+         "${_Q10-Scoiattolo-Corpo}": [
+            ["style", "height", '397px'],
+            ["style", "top", '210px'],
+            ["style", "left", '61px'],
             ["style", "width", '262px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '759px'],
+            ["style", "width", '577px']
          ],
          "${_Q9-scoia-testa}": [
             ["style", "-webkit-transform-origin", [42.69,80.49], {valueTemplate:'@@0@@% @@1@@%'} ],
@@ -767,40 +770,39 @@ var symbols = {
             ["style", "-ms-transform-origin", [42.69,80.49],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [42.69,80.49],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [42.69,80.49],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["transform", "scaleX", '0.96905'],
-            ["transform", "scaleY", '0.96905'],
-            ["transform", "rotateZ", '-6deg'],
             ["style", "height", '456px'],
-            ["style", "top", '-116px'],
-            ["style", "left", '106px'],
+            ["transform", "scaleY", '0.96905'],
+            ["transform", "rotateZ", '-18deg'],
+            ["transform", "scaleX", '0.96905'],
+            ["style", "top", '-129px'],
+            ["style", "left", '115px'],
             ["style", "width", '240px']
          ],
-         "${symbolSelector}": [
-            ["style", "height", '759px'],
-            ["style", "width", '577px']
+         "${_Coda}": [
+            ["style", "top", '88px'],
+            ["style", "height", '304px'],
+            ["transform", "scaleX", '-1'],
+            ["style", "left", '-96px'],
+            ["style", "width", '262px']
          ],
          "${_Q10-Scoiattolo-Braccio-DX}": [
+            ["style", "top", '225px'],
+            ["transform", "scaleX", '0.96373'],
+            ["transform", "scaleY", '0.96373'],
+            ["transform", "rotateZ", '-21deg'],
+            ["style", "height", '166px'],
             ["style", "-webkit-transform-origin", [88.55,12.13], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [88.55,12.13],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [88.55,12.13],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [88.55,12.13],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-o-transform-origin", [88.55,12.13],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["transform", "rotateZ", '-21deg'],
-            ["style", "height", '166px'],
-            ["style", "top", '225px'],
             ["style", "left", '35px'],
             ["style", "width", '113px']
          ],
-         "${_Q10-Scoiattolo-Corpo}": [
-            ["style", "top", '210px'],
-            ["style", "height", '397px'],
-            ["style", "left", '61px'],
-            ["style", "width", '262px']
-         ],
          "${_Q0-bracc2}": [
-            ["style", "top", '167px'],
             ["style", "height", '110px'],
-            ["style", "left", '240px'],
+            ["style", "top", '179px'],
+            ["style", "left", '206px'],
             ["style", "width", '233px']
          ]
       }
@@ -827,10 +829,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: '_5_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      id: '_5_col',
       transform: [[0,0],[],[],['0.44285','0.44285']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/svgNum6.svg','0px','0px']
    }],
    symbolInstances: [
@@ -878,10 +880,10 @@ var symbols = {
    content: {
    dom: [
    {
-      transform: [[0,0],[],[],['0.44285','0.44285']],
-      id: '_5_col',
       type: 'image',
+      id: '_5_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      transform: [[0,0],[],[],['0.44285','0.44285']],
       fill: ['rgba(0,0,0,0)','images/svgNum7.svg','0px','0px']
    }],
    symbolInstances: [
@@ -929,10 +931,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: '_5_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      id: '_5_col',
       transform: [[0,0],[],[],['0.44285','0.44285']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/svgNum8.svg','0px','0px']
    }],
    symbolInstances: [
@@ -980,10 +982,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: '_5_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      id: '_5_col',
       transform: [[0,0],[],[],['0.44285','0.44285']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/svgNum9.svg','0px','0px']
    }],
    symbolInstances: [
@@ -1031,10 +1033,10 @@ var symbols = {
    content: {
    dom: [
    {
-      type: 'image',
-      id: '_5_col',
       rect: ['-121px','-95px','435px','340px','auto','auto'],
+      id: '_5_col',
       transform: [[0,0],[],[],['0.44285','0.44285']],
+      type: 'image',
       fill: ['rgba(0,0,0,0)','images/svgNum10.svg','0px','0px']
    }],
    symbolInstances: [
