@@ -122,24 +122,18 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
          	});        
 
 
-      $('.musica').toggle(function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(0%)',
-          	'opacity':'0.6'
-          	});
+     $('.musica').toggle(function () {
+          $(".musicasvg").css({'background-image': 'url(images/svg-musicBW.svg)'});
           	pauseAudio();
       }, function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(100%)',
-          	'opacity':'1'
-          	});
-         
+          $(".musicasvg").css({'background-image': 'url(images/svg-music.svg)'});
          (function(){
-			    playAudio("Suoni/LaMadeline.mp3");
+			    playAudio("Suoni/Ghost.mp3");
 			    setTimeout(arguments.callee, 301200);
 			})();			
 
-      });		        
+      });
+		        
 };/*INIT STOP*/  
 
 
