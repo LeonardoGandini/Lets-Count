@@ -15,26 +15,24 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-	
-	
-/*
-		if((navigator.userAgent.match(/MSIE/i))){
-		  yepnope({load: ["libs/cordovaIE.js"],complete: init});
-		}
-		
-		if((navigator.userAgent.match(/android/gi))){
-			yepnope({load: ["libs/cordova.js"],complete: init});
-		}
-		
-		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))){
-			yepnope({load: ["libs/cordovaIOS.js"],complete: init});
-		}
-*/
+
+
 yepnope({load: ["cordova.js"],complete: init});
 toccomagico = 'touchstart MSPointerDown pointerdown'    
-      
-      function init(){
 
+
+      function fumelo(){
+         var position = sym.$(".fumello").position();
+          if (position.top >= 100){
+         	sym.getComposition().getStage().getSymbol("FUMELLO").play("USCITA");
+         }	      
+      }   
+
+
+function init(){
+
+         $(".numeris").hide();
+         $(".reload").css({'display':'none'});
 
        document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -58,31 +56,7 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
     		}
     	}
 /* Tappetino Stop*/	        
-
-/* Testo Q2 Start*/	        
-        function playAudioQ2(src) {
-        if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
-        	AudioQ2 = new Media(src);
-        	AudioQ2.play();
-        }
-/* Testo Q2 Stop*/	        
-
-        function onDeviceReady() {
-
-        	setTimeout(function(){
-        			playAudioQ2("Suoni/quadri/Q2.mp3");
-        		},2000);      
-
-			        	(function(){
-			    playAudio("Suoni/LaMadeline.mp3");
-			    setTimeout(arguments.callee, 301200);
-			})();			
-
-        }
-
-
-
-
+        
        function playAudioQ2 (src) {
         if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
             AudioQ2 = new Media(src);
@@ -116,8 +90,111 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
             AudioDue = new Media(src);
             AudioDue.play();   
         }
+        
+        function onDeviceReady() {
+
+        	setTimeout(function(){
+        			playAudioQ2("Suoni/quadri/Q2.mp3");
+        		},2000);      
+
+			        	(function(){
+			    playAudio("Suoni/LaMadeline.mp3");
+			    setTimeout(arguments.callee, 301200);
+			})();			
+
+        }
 
 
+			var Audio1 = null;
+			var Audio2 = null;
+
+		  var suonatore = {
+
+			    suono1: function playAudio1 (src) {
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
+							    Audio1 = new Media(src);
+							    Audio1.play();   
+						},
+			    suono2: function playAudio2 (src) {
+								if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;} 
+							    Audio2 = new Media(src);
+							    Audio2.play();   
+						}
+			};
+
+/**********LA CONTA START**********/         		 
+
+
+ 	       var AudioCip = null;
+	       function playAudioCip (src) {
+	      		if((navigator.userAgent.match(/android/gi))){src = '/android_asset/www/' + src;}
+	            AudioCip = new Media(src);
+	            AudioCip.play();
+	        }          		
+
+         		 $(".triggers").bind(toccomagico, function(){
+
+         		  	$(this).addClass("clicked");
+         			var value = $(".clicked").length;
+
+						sym.getSymbol(".menu").play();
+
+						suonatore['suono'+ value]('Suoni/numbers/S00'+ value +'.mp3');
+						sym.$('.fumnum'+ value).css({'background-image': 'url(images/svgNum'+value+'.svg)'});
+
+						setTimeout(function(){
+								sym.getSymbol(".menu").play("chiusura");
+						},2500); 					
+
+         			$(".numeris").hide();
+         			sym.getSymbol("numerazio").$('Num-'+value).show();
+         			sym.getSymbol("numerazio").play("in");
+
+         			sym.getSymbol("Scoiattolo").play("ani");
+
+						if ( value >= 2 ){
+
+         				 $(".reload").fadeIn();
+
+         			};
+
+
+         		 });
+
+         		 sym.$("Cavolo_Trigger1").bind(toccomagico, function(){
+         		  		sym.getSymbol("CAVOLO_BIG_1").play("in");         		  		
+         		  		fumelo();
+         		 });
+         		 sym.$("Cavolo_Trigger2").bind(toccomagico, function(){
+         		  		sym.getSymbol("CAVOLO_BIG_2").play("in");
+         		  		fumelo();
+         		 });         		 
+/**********LA CONTA STOP**********/         		 
+
+
+         		  $(".reload").bind(toccomagico, function(){
+						sym.getSymbol(this).play("in");
+
+         		  	        sym.getSymbol("CAVOLO_BIG_1").stop(0);
+         					sym.getSymbol("CAVOLO_BIG_2").stop(0);
+
+
+         					$(".triggers").removeClass("clicked");
+         					$(".numeris").hide();
+         					$(".reload").fadeOut();
+
+         					sym.$('.fumnum1').css({'background-image': 'url(images/svgBWNum1.svg)'});
+         					sym.$('.fumnum2').css({'background-image': 'url(images/svgBWNum2.svg)'});
+         					sym.$('.fumnum3').css({'background-image': 'url(images/svgBWNum3.svg)'});
+         					sym.$('.fumnum4').css({'background-image': 'url(images/svgBWNum4.svg)'});
+         					sym.$('.fumnum5').css({'background-image': 'url(images/svgBWNum5.svg)'});
+         					sym.$('.fumnum6').css({'background-image': 'url(images/svgBWNum6.svg)'});
+         					sym.$('.fumnum7').css({'background-image': 'url(images/svgBWNum7.svg)'});
+         					sym.$('.fumnum8').css({'background-image': 'url(images/svgBWNum8.svg)'});
+         					sym.$('.fumnum9').css({'background-image': 'url(images/svgBWNum9.svg)'});
+         					sym.$('.fumnum10').css({'background-image': 'url(images/svgBWNum10.svg)'});
+
+         			 });
 
 
          $(".playvoce").bind(toccomagico, function(){
@@ -134,14 +211,14 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 	      	sym.getSymbol(".api").play("in");
 			 	playAudioApi ('Suoni/Bees.mp3');
 	      });
-      
+
 	      $(".formica").bind(toccomagico, function(){
 			playAudioAnt ('Suoni/Lumaca01.mp3');
 	      	$(this).animate({top:'-=20px'},"140");
 	      	$(this).animate({top:'+=20px'},"1");
 	      });
 
-
+/*
 
          $(".CAVOLO_BIG_1").bind(toccomagico, function(){
 	      	sym.getSymbol(this).play("in");
@@ -158,47 +235,33 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 					sym.$(".due").css({'-webkit-filter': 'saturate(100%)', 'opacity':'1'});
 			},1801);      
 	     });
+*/
 
-
-      $('.musica').toggle(function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(0%)',
-          	'opacity':'0.6'
-          	});
+     $('.musica').toggle(function () {
+          $(".musicasvg").css({'background-image': 'url(images/svg-musicBW.svg)'});
           	pauseAudio();
       }, function () {
-          $(".musica").css({
-          	'-webkit-filter': 'saturate(100%)',
-          	'opacity':'1'
-          	});
-          	        	(function(){
-			    playAudio("Suoni/LaMadeline.mp3");
+          $(".musicasvg").css({'background-image': 'url(images/svg-music.svg)'});
+         (function(){
+			    playAudio("Suoni/Ghost.mp3");
 			    setTimeout(arguments.callee, 301200);
 			})();			
 
-      });		        
-};/*INIT STOP*/      
+      });
       
       
-      
-         $("#prelo").css({'display':'none'});
-      
-      
-      
-         /*Ombra Nuvola*/sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
-      	//sym.$(".fumo").css({'-webkit-filter': 'blur(2px)'});
-      
+   $("#prelo").css({'display':'none'});
+
+
+
+      sym.$(".Nuvola").css({'-webkit-filter': 'drop-shadow(0 5px 15px rgba(0,0,0,.4))'});
+
+
       $(".fioreani, .innaffia").bind(toccomagico, function(){
       	sym.getSymbol(this).play("in");
       });
-      
 
-      
-      $(".cavolo2trigger").hide();
-      
-      
 
-      
       sym.getSymbol(".coda").play("in");
       $(".codatrigger").bind(toccomagico, function(){
       	sym.getSymbol(".coda").play("animaziocoda");
@@ -207,10 +270,10 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
       	sym.getSymbol(".SOLE").play("in");
       });
 
-      
+
       sym.getSymbol("FUMELLO").play("in");
-      
-      
+
+
       /*MENU START*/
       	avanti = "Quadro3.html";
       	indietro = "Quadro1.html";
@@ -221,9 +284,16 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
       	$(".testina").bind(toccomagico, function(){
       			sym.getSymbol(".menu").play();
       	});
-      	sym.$(".uno, .due, .tre, .quattro, .cinque").css({'-webkit-filter': 'saturate(0%)', 'opacity':'0.4'});
+  
       	sym.$(".next, .prev").css({'-webkit-filter': 'drop-shadow(0 5px 10px rgba(0,0,0,.5))'});
       /*MENU STOP*/
+
+      		        
+};/*INIT STOP*/      
+
+
+
+   
 
       });//Edge binding end
       
@@ -237,14 +307,9 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
    //Edge symbol: 'CAROTA'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1205, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 375, function(sym, e) {
          sym.getSymbol(".testa").play("in");
          sym.getSymbol(".braccio").play("in");
-         //Se il fumello è giù, tiralo su!
-         var position = sym.$(".fumello").position();
-          if (position.top >= 100){
-         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
-         }
 
       });
       //Edge binding end
@@ -253,20 +318,15 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4675, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function(sym, e) {
          sym.stop();
-         sym.getSymbol(".menu").play(197);
 
       });
       //Edge binding end
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3125, function(sym, e) {
-         sym.getSymbol(".menu").play("in");
-
-      });
-      //Edge binding end
+      
 
    })("Cavolo");
    //Edge symbol end:'Cavolo'
@@ -432,14 +492,9 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
    
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1205, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 385, function(sym, e) {
          sym.getSymbol(".testa").play("in");
          sym.getSymbol(".braccio").play("in");
-         //Se il fumello è giù, tiralo su!
-         var position = sym.$(".fumello").position();
-          if (position.top >= 100){
-         	sym.getComposition().getStage().getSymbol("FUMELLO").play(1000);
-         }
 
       });
          //Edge binding end
@@ -448,18 +503,13 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4919, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2593, function(sym, e) {
          sym.stop();
-         sym.getSymbol(".menu").play(197);
 
       });
          //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3289, function(sym, e) {
-         sym.getSymbol(".menu").play("in");
-
-      });
-      //Edge binding end
+      
 
       })("Cavolo_2");
    //Edge symbol end:'Cavolo_2'
@@ -555,6 +605,26 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
    //Edge symbol end:'Formiche'
 
    //=========================================================
+   
+   //Edge symbol: 'play'
+   (function(symbolName) {   
+   
+   })("play");
+   //Edge symbol end:'play'
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'testina'
+   (function(symbolName) {   
+   
+   })("testina");
+   //Edge symbol end:'testina'
+
+   //=========================================================
+
+   //=========================================================
 
    //=========================================================
    
@@ -639,11 +709,17 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
    //=========================================================
    
-   //Edge symbol: 'testina'
+   //Edge symbol: 'NEXT_1'
    (function(symbolName) {   
    
-   })("testina");
-   //Edge symbol end:'testina'
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 140, function(sym, e) {
+         window.open(indietro, "_self");
+
+      });
+         //Edge binding end
+
+      })("PREV");
+   //Edge symbol end:'PREV'
 
    //=========================================================
    
@@ -661,17 +737,11 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
    //=========================================================
    
-   //Edge symbol: 'NEXT_1'
+   //Edge symbol: 'reload'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 140, function(sym, e) {
-         window.open(indietro, "_self");
-
-      });
-         //Edge binding end
-
-      })("PREV");
-   //Edge symbol end:'PREV'
+   })("reload");
+   //Edge symbol end:'reload'
 
    //=========================================================
    
@@ -688,11 +758,13 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
    //Edge symbol end:'HOME_butt'
 
    //=========================================================
+
+   //=========================================================
    
-   //Edge symbol: 'play'
+   //Edge symbol: 'numerazio'
    (function(symbolName) {   
    
-   })("play");
-   //Edge symbol end:'play'
+   })("numerazio");
+   //Edge symbol end:'numerazio'
 
 })(jQuery, AdobeEdge, "Quadro02");

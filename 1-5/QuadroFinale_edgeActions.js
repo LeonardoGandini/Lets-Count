@@ -23,7 +23,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
-      
+
 /*
 		if((navigator.userAgent.match(/MSIE/i))){
 		  yepnope({load: ["libs/cordovaIE.js"],complete: init});
@@ -133,7 +133,8 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
           	'-webkit-filter': 'saturate(100%)',
           	'opacity':'1'
           	});
-          	        	(function(){
+         
+         (function(){
 			    playAudio("Suoni/LaMadeline.mp3");
 			    setTimeout(arguments.callee, 301200);
 			})();			
@@ -146,7 +147,7 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
          $("#prelo").css({'display':'none'});
 
-            $(".home, .musica").bind(toccomagico, function(){
+            $(".home, .musica, .roberta").bind(toccomagico, function(){
          		sym.getSymbol(this).play("in");
          	});
 /*
@@ -243,5 +244,13 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
    })("Scoia");
    //Edge symbol end:'Scoia'
+
+   //=========================================================
+   
+   //Edge symbol: 'RobertaName'
+   (function(symbolName) {   
+   
+   })("RobertaName");
+   //Edge symbol end:'RobertaName'
 
 })(jQuery, AdobeEdge, "QuadroFinale");
