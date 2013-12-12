@@ -293,7 +293,7 @@ function init(){
  					var i=0;
 					setInterval(function() {
 						 sym.getSymbol("Scoiattolo").play("coda");
-					}, 5500);
+					}, 10000);
 
 
 

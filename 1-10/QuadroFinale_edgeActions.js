@@ -29,7 +29,7 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
 
 
-     
+
 
       function init(){
 
@@ -188,11 +188,11 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
 
          $("#prelo").css({'display':'none'});
 
-            $(".home, .musica").bind(toccomagico, function(){
+            $(".home, .musica, .roberta").bind(toccomagico, function(){
          		sym.getSymbol(this).play("in");
          	});
 
-				
+
 
       });
       //Edge binding end
@@ -320,5 +320,13 @@ toccomagico = 'touchstart MSPointerDown pointerdown'
    
       })("dieci");
    //Edge symbol end:'dieci'
+
+   //=========================================================
+   
+   //Edge symbol: 'RobertaName'
+   (function(symbolName) {   
+   
+   })("RobertaName");
+   //Edge symbol end:'RobertaName'
 
 })(jQuery, AdobeEdge, "QuadroFinale");

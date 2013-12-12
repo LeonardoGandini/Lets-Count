@@ -27,12 +27,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       }   
       
       
-     
-
-
-
-function init(){
-
+      
+      
+      
+      
+      function init(){
+      
 	      document.addEventListener("deviceready", onDeviceReady, false);
 
 	        function onDeviceReady() {
@@ -433,7 +433,7 @@ function init(){
  					var i=0;
 					setInterval(function() {
 						 sym.getSymbol("Scoiattolo").play("coda");
-					}, 4500);
+					}, 10000);
 
 
 /**********SCOIATTOLO STOP**********/
@@ -494,8 +494,19 @@ function init(){
 				  break;				  
 			 }
 		}, 6000);		
-		
-		
+
+
+ 
+		setInterval(function() {
+			 switch(i++%4) {
+				  case 0: sym.getSymbol("wateruno").play("in");
+				  break;
+				  case 1: sym.getSymbol("waterdue").play("in");
+				  break;
+				  case 2: sym.getSymbol("watertre").play("in");
+				  break;
+			 }
+		}, 3000);
 
 }/**********FINE INIT**********/
 
@@ -1137,5 +1148,35 @@ function init(){
 
    })("paperatutto7");
    //Edge symbol end:'paperatutto7'
+
+   //=========================================================
+   
+   //Edge symbol: 'fronde3WATER'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4117, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("fronde3WATER");
+   //Edge symbol end:'fronde3WATER'
+
+   //=========================================================
+   
+   //Edge symbol: 'fronde3WATER_1'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4000, function(sym, e) {
+         // stop the timeline at the given position (ms or label)
+         sym.stop(0);
+
+      });
+      //Edge binding end
+
+   })("fronde2WATER");
+   //Edge symbol end:'fronde2WATER'
 
 })(jQuery, AdobeEdge, "Quadro-08");

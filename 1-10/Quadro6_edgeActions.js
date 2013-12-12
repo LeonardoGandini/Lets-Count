@@ -285,7 +285,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
  					var i=0;
 					setInterval(function() {
 						 sym.getSymbol("Scoiattolo").play("coda");
-					}, 7000);
+					}, 10000);
 
 					/*
 					var i=0;

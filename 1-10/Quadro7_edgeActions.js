@@ -315,7 +315,7 @@ function init(){
  					var i=0;
 					setInterval(function() {
 						 sym.getSymbol("Scoiattolo").play("coda");
-					}, 4500);
+					}, 10000);
 
 
 					setInterval(function() {
