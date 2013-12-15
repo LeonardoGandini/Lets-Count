@@ -132,7 +132,7 @@ $(".reload").css({'display':'none'});
          $(".carota").bind(toccomagico, function(){
 			sym.getSymbol(this).play("in");
         	setTimeout(function(){
-        			playAudioUno('Suoni/numbers/one.mp3');
+        			playAudioUno('Suoni/numbers/S001.mp3');
 					sym.$('.fumnum1').css({'background-image': 'url(images/svgNum1.svg)'});
 					$(".reload").fadeIn();
 			},1801);      
