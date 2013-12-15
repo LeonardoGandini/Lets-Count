@@ -162,7 +162,7 @@ function init(){
 
 
          		  $(".reload").bind(toccomagico, function(){
-						sym.getSymbol(this).play("in");
+						sym.getSymbol(".reload").play("in");
 
          		  	        sym.getSymbol("CAVOLO_BIG_1").stop(0);
          					sym.getSymbol("CAVOLO_BIG_2").stop(0);

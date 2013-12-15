@@ -219,7 +219,7 @@ function init(){
 
 
          		  $(".reload").bind(toccomagico, function(){
-						sym.getSymbol(this).play("in");
+						sym.getSymbol(".reload").play("in");
 
          		  	        sym.getSymbol("Mela-Bella-1").stop(0);
          		  	        sym.getSymbol("Mela-Bella-2").stop(0);

@@ -12,4 +12,7 @@
 <h5>Windows 8: <a href="http://leo.pw/LetsCount1-5-Windows8" target="_blank">leo.pw/LetsCount1-5-Windows8</a></h5>
 <h5>Kindle: <a href="http://leo.pw/LetsCount1-5-Amazon" target="_blank">leo.pw/LetsCount1-5-Amazon</a></h5>
 
+<h4>Let's Count to 10:</h4>
+
+<h5>iPad: <a href="http://leo.pw/LetsCount1-5-iPad" target="_blank">leo.pw/LetsCount1-5-iPad</a></h5>
 

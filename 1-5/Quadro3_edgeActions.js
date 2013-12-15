@@ -200,7 +200,7 @@ function init(){
 
 
          		  $(".reload").bind(toccomagico, function(){
-						sym.getSymbol(this).play("in");
+						sym.getSymbol(".reload").play("in");
 
          		  	        sym.getSymbol("PomodoroG-1").stop(0);
          		  	        sym.getSymbol("PomodoroG-2").stop(0);

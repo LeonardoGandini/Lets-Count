@@ -152,7 +152,7 @@ $(".reload").css({'display':'none'});
       });
 
   $(".reload").bind(toccomagico, function(){
-		sym.getSymbol(this).play("in");
+		sym.getSymbol(".reload").play("in");
 
 			sym.getSymbol("CAROTA").stop(0);
 			$(".reload").fadeOut();
