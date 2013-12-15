@@ -171,7 +171,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
 
          		  $(".reload").bind(toccomagico, function(){
-							sym.getSymbol(this).play("in");
+							sym.getSymbol(".reload").play("in");
 
          		  	      sym.getSymbol("Bird-1").play("resetto");
          					sym.getSymbol("Bird-2").play("resetto");

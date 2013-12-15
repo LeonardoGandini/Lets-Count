@@ -206,7 +206,7 @@ function init(){
 
 
          		  $(".reload").bind(toccomagico, function(){
-							sym.getSymbol(this).play("in");
+							sym.getSymbol(".reload").play("in");
 
 							resetRane();
 

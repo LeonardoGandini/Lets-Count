@@ -189,7 +189,7 @@ function init(){
 
          		  $(".reload").bind(toccomagico, function(){
 
-							sym.getSymbol(this).play("in");
+							sym.getSymbol(".reload").play("in");
 
 						    sym.getComposition().getStage().getSymbol("lb1").stop(0);
 						    sym.getComposition().getStage().getSymbol("lb2").stop(0);
