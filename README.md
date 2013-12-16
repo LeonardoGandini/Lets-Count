@@ -14,5 +14,6 @@
 
 <h4>Let's Count to 10:</h4>
 
+<h5>Android: <a href="http://leo.pw/LetsCount6-10-Android" target="_blank">leo.pw/LetsCount6-10-Android</a></h5>
 <h5>Kindle: <a href="http://leo.pw/LetsCount6-10-Amazon" target="_blank">leo.pw/LetsCount6-10-Amazon</a></h5>
 
