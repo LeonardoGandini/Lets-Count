@@ -14,6 +14,7 @@
 
 <h4>Let's Count to 10:</h4>
 
+<h5>iPad: <a href="http://leo.pw/LetsCount6-10-iPad" target="_blank">leo.pw/LetsCount6-10-iPad</a></h5>
 <h5>Android: <a href="http://leo.pw/LetsCount6-10-Android" target="_blank">leo.pw/LetsCount6-10-Android</a></h5>
 <h5>Windows 8: <a href="http://leo.pw/LetsCount6-10-Windows8" target="_blank">leo.pw/LetsCount6-10-Windows8</a></h5>
 <h5>Kindle: <a href="http://leo.pw/LetsCount6-10-Amazon" target="_blank">leo.pw/LetsCount6-10-Amazon</a></h5>
